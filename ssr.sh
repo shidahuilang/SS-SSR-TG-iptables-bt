@@ -264,7 +264,7 @@ Set_config_port(){
 Set_config_password(){
 	echo "请输入要设置的ShadowsocksR账号 密码"
 	read -e -p "(默认: langlang):" ssr_password
-	[[ -z "${ssr_password}" ]] && ssr_password="doub.io"
+	[[ -z "${ssr_password}" ]] && ssr_password="langlang"
 	echo && echo ${Separator_1} && echo -e "	密码 : ${Green_font_prefix}${ssr_password}${Font_color_suffix}" && echo ${Separator_1} && echo
 }
 Set_config_method(){
@@ -1450,7 +1450,7 @@ menu_status(){
 check_sys
 [[ ${release} != "debian" ]] && [[ ${release} != "ubuntu" ]] && [[ ${release} != "centos" ]] && echo -e "${Error} 本脚本不支持当前系统 ${release} !" && exit 1
 echo -e "  ShadowsocksR 一键管理脚本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
-  ---- Toyo | doub.io/ss-jc42 ----
+  ---- Toyo | langlang/ss-jc42 ----
 
   ${Green_font_prefix}1.${Font_color_suffix} 安装 ShadowsocksR
   ${Green_font_prefix}2.${Font_color_suffix} 更新 ShadowsocksR
