@@ -6,8 +6,7 @@ export PATH
 #	System Required: CentOS/Debian/Ubuntu
 #	Description: GoGo Server
 #	Version: 1.0.0
-#	Author: Toyo
-#	Blog: https://doub.io/wlzy-24/
+
 #=================================================
 
 gogo_directory="/etc/gogoserver"
