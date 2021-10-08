@@ -5,8 +5,7 @@ export PATH
 #=================================================
 #	System Required: CentOS 6+/Debian 7+/Ubuntu 14.04+
 #	Description: ShadowsocksR mujson mode traffic clear script
-#	Version: 1.0.1
-#	Author: Toyo
+
 #=================================================
 SSR_file="/usr/local/shadowsocksr"
 # 这里填写 mujson_mgr.py 文件的上层绝对路径
