@@ -204,46 +204,13 @@ start() {
     source "$MTG_ENV"
     set +a
 
-Set_passwd(){
-	while true
-		do
-		echo "请输入 MTProxy 密匙（普通密钥必须为32位，[0-9][a-z][A-Z]，建议留空随机生成）"
-		read -e -p "(若需要开启TLS伪装建议直接回车):" mtp_passwd
-		if [[ -z "${mtp_passwd}" ]]; then
-			echo -e "是否开启TLS伪装？[Y/n]"
-			read -e -p "(默认：Y 启用):" mtp_tls
-			[[ -z "${mtp_tls}" ]] && mtp_tls="Y"
-			if [[ "${mtp_tls}" == [Yy] ]]; then
-				echo -e "请输入TLS伪装域名"
-				read -e -p "(默认：itunes.apple.com):" fake_domain
-				[[ -z "${fake_domain}" ]] && fake_domain="itunes.apple.com"
-				mtp_tls="YES"
-				mtp_passwd=$(${file}/mtg generate-secret -c ${fake_domain} tls)
-			else
-				mtp_tls="NO"
-				mtp_passwd=$(date +%s%N | md5sum | head -c 32)
-			fi
-		else
-			if [[ ${#mtp_passwd} != 32 ]]; then
-				echo -e "你输入的密钥不是标准秘钥，是否为启用TLS伪装的密钥？[Y/n]"
-				read -e -p "(默认：N 不是):" mtp_tls
-				[[ -z "${mtp_tls}" ]] && mtp_tls="N"
-				if [[ "${mtp_tls}" == [Nn] ]]; then
-					echo -e "${Error} 你输入的密钥不是标准秘钥（32位字符）。" && continue
-				else
-					mtp_tls="YES"
-				fi
-			else
-				mtp_tls="NO"
-			fi
-		fi
-		echo && echo "========================"
-		echo -e "	密码 : ${Red_background_prefix} ${mtp_passwd} ${Font_color_suffix}"
-		echo -e "	是否启用TLS伪装 : ${Red_background_prefix} ${mtp_tls} ${Font_color_suffix}"
-		echo "========================" && echo
-		break
-	done
-}
+    if [[ ! -f "$MTG_SECRET" ]]; then
+        $DOCKER_CMD run \
+                --rm \
+                "$MTG_IMAGENAME" \
+            generate-secret tls -c "$(openssl rand 32).com" \
+        > "$MTG_SECRET"
+    fi
 
     $DOCKER_CMD ps --filter "Name=$MTG_CONTAINER" -aq | xargs -r $DOCKER_CMD rm -fv > /dev/null
     $DOCKER_CMD run \
