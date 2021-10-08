@@ -225,7 +225,7 @@ start() {
     res=`ss -ntlp| grep ${MTG_PORT} | grep docker`
     if [[ "$res" = "" ]]; then
         docker logs $MTG_CONTAINER | tail
-        echo -e " ${RED}$OSNAME 启动docker镜像失败，请到 https://github.com/279437541/TG-mtproto 反馈${PLAIN}"
+        echo -e " ${RED}$OSNAME 启动docker镜像失败，${PLAIN}"
         exit 1
     else
         colorEcho $BLUE " MTProto启动成功！"
@@ -351,7 +351,12 @@ showLog() {
 menu() {
     clear
     echo ""
-
+    echo -e ""
+    echo -e ""
+    echo -e ""
+    echo -e ""
+    echo -e ""
+    echo -e ""
     echo ""
     echo ""
 
