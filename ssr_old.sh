@@ -6,8 +6,7 @@ export PATH
 #	System Required: CentOS 6/Debian/Ubuntu 14.04+
 #	Description: Install the ShadowsocksR server
 #	Version: 1.2.9
-#	Author: Toyo
-#	Blog: https://doub.io/ss-jc42/
+
 #=================================================
 
 #ssr_pid="/var/run/shadowsocks.pid"
@@ -867,8 +866,8 @@ centos_yum(){
 JQ_install(){
 	JQ_ver=`jq -V`
 	if [[ -z ${JQ_ver} ]]; then
-		#wget --no-check-certificate -N "https://softs.pw/Bash/other/jq-1.5.tar.gz"
-		wget --no-check-certificate -N "https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/other/jq-1.5.tar.gz"
+		
+		wget --no-check-certificate -N "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/other/jq-1.5.tar.gz"
 		tar -xzf jq-1.5.tar.gz && cd jq-1.5
 		./configure --disable-maintainer-mode && make && make install
 		ldconfig
