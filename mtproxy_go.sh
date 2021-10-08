@@ -145,7 +145,7 @@ installDocker() {
 
     DOCKER_CMD="$(command -v docker)"
     if [[ "$DOCKER_CMD" = "" ]]; then
-        echo -e " ${RED}$OSNAME docker安装失败，请到https://hijk.art反馈${PLAIN}"
+        echo -e " ${RED}$OSNAME docker安装失败${PLAIN}"
         exit 1
     fi
     systemctl enable docker
