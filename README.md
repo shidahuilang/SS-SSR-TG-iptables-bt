@@ -1,8 +1,5 @@
 
 
-![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
-[![GitHub stars](https://img.shields.io/github/stars/ToyoDAdoubiBackup/doubi.svg?style=popout&label=Stars)](https://github.com/ToyoDAdoubiBackup/doubi/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/ToyoDAdoubiBackup/doubi.svg?style=popout&label=Fork)](https://github.com/ToyoDAdoubiBackup/doubi/fork)
 ## 脚本索引
 
 * [***代理相关***](#代理相关)
