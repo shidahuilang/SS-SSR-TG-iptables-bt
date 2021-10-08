@@ -208,7 +208,7 @@ start() {
         $DOCKER_CMD run \
                 --rm \
                 "$MTG_IMAGENAME" \
-            generate-secret tls -c "$(openssl rand -hex 16).com" \
+            generate-secret tls -c "$(openssl rand -hex 32).com" \
         > "$MTG_SECRET"
     fi
 
