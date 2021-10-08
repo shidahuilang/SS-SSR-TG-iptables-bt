@@ -349,7 +349,7 @@ showLog() {
 }
 
 menu() {
-    clear
+    
 
     echo ""
 
