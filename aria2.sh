@@ -130,7 +130,7 @@ Download_aria2(){
 }
 Download_aria2_conf(){
 	mkdir "${file}" && cd "${file}"
-	wget --no-check-certificate -N "https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/other/Aria2/aria2.conf"
+	wget --no-check-certificate -N "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/other/Aria2/aria2.conf"
 	[[ ! -s "aria2.conf" ]] && echo -e "${Error} Aria2 配置文件下载失败 !" && rm -rf "${file}" && exit 1
 	wget --no-check-certificate -N "https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/other/Aria2/dht.dat"
 	[[ ! -s "dht.dat" ]] && echo -e "${Error} Aria2 DHT文件下载失败 !" && rm -rf "${file}" && exit 1
@@ -139,14 +139,14 @@ Download_aria2_conf(){
 }
 Service_aria2(){
 	if [[ ${release} = "centos" ]]; then
-		if ! wget --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/service/aria2_centos -O /etc/init.d/aria2; then
+		if ! wget --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/service/aria2_centos -O /etc/init.d/aria2; then
 			echo -e "${Error} Aria2服务 管理脚本下载失败 !" && exit 1
 		fi
 		chmod +x /etc/init.d/aria2
 		chkconfig --add aria2
 		chkconfig aria2 on
 	else
-		if ! wget --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/service/aria2_debian -O /etc/init.d/aria2; then
+		if ! wget --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/service/aria2_debian -O /etc/init.d/aria2; then
 			echo -e "${Error} Aria2服务 管理脚本下载失败 !" && exit 1
 		fi
 		chmod +x /etc/init.d/aria2
@@ -562,7 +562,7 @@ Set_iptables(){
 	fi
 }
 Update_Shell(){
-	sh_new_ver=$(wget --no-check-certificate -qO- -t1 -T3 "https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/aria2.sh"|grep 'sh_ver="'|awk -F "=" '{print $NF}'|sed 's/\"//g'|head -1) && sh_new_type="github"
+	sh_new_ver=$(wget --no-check-certificate -qO- -t1 -T3 "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/aria2.sh"|grep 'sh_ver="'|awk -F "=" '{print $NF}'|sed 's/\"//g'|head -1) && sh_new_type="github"
 	[[ -z ${sh_new_ver} ]] && echo -e "${Error} 无法链接到 Github !" && exit 0
 	if [[ -e "/etc/init.d/aria2" ]]; then
 		rm -rf /etc/init.d/aria2
