@@ -2,17 +2,13 @@
 # MTProto一键安装脚本
 # Author: 大灰狼<https://github.com/279437541/TG-mtproto>
 
-#RED="\033[31m"      # Error message
-#GREEN="\033[32m"    # Success message
-#YELLOW="\033[33m"   # Warning message
-#BLUE="\033[36m"     # Info message
-#PLAIN='\033[0m'
+RED="\033[31m"      # Error message
+GREEN="\033[32m"    # Success message
+YELLOW="\033[33m"   # Warning message
+BLUE="\033[36m"     # Info message
+PLAIN='\033[0m'
 
-export MTG_CONFIG="${MTG_CONFIG:-$HOME/.config/mtg}"
-export MTG_ENV="$MTG_CONFIG/env"
-export MTG_SECRET="$MTG_CONFIG/secret"
-export MTG_CONTAINER="${MTG_CONTAINER:-mtg}"
-export MTG_IMAGENAME="${MTG_IMAGENAME:-nineseconds/mtg:1}"
+
 
 DOCKER_CMD="$(command -v docker)"
 OSNAME=`hostnamectl | grep -i system | cut -d: -f2`
