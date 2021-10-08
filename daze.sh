@@ -117,14 +117,14 @@ Download(){
 }
 Service(){
 	if [[ ${release} = "centos" ]]; then
-		if ! wget --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/service/daze_centos -O /etc/init.d/daze; then
+		if ! wget --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/service/daze_centos -O /etc/init.d/daze; then
 			echo -e "${Error} DAZE 服务管理脚本下载失败 !" && rm -rf "${Folder}" && exit 1
 		fi
 		chmod +x /etc/init.d/daze
 		chkconfig --add daze
 		chkconfig daze on
 	else
-		if ! wget --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/service/daze_debian -O /etc/init.d/daze; then
+		if ! wget --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/service/daze_debian -O /etc/init.d/daze; then
 			echo -e "${Error} DAZE 服务管理脚本下载失败 !" && rm -rf "${Folder}" && exit 1
 		fi
 		chmod +x /etc/init.d/daze
@@ -636,7 +636,7 @@ Set_iptables(){
 	fi
 }
 Update_Shell(){
-	sh_new_ver=$(wget --no-check-certificate -qO- -t1 -T3 "https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/daze.sh"|grep 'sh_ver="'|awk -F "=" '{print $NF}'|sed 's/\"//g'|head -1) && sh_new_type="github"
+	sh_new_ver=$(wget --no-check-certificate -qO- -t1 -T3 "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/daze.sh"|grep 'sh_ver="'|awk -F "=" '{print $NF}'|sed 's/\"//g'|head -1) && sh_new_type="github"
 	[[ -z ${sh_new_ver} ]] && echo -e "${Error} 无法链接到 Github !" && exit 0
 	if [[ -e "/etc/init.d/daze" ]]; then
 		rm -rf /etc/init.d/daze
