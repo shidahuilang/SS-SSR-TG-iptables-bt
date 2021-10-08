@@ -8,11 +8,11 @@ YELLOW="\033[33m"   # Warning message
 BLUE="\033[36m"     # Info message
 PLAIN='\033[0m'
 
-export MTG_CONFIG="${MTG_CONFIG:-$HOME/.config/mtg}"
-export MTG_ENV="$MTG_CONFIG/env"
-export MTG_SECRET="$MTG_CONFIG/secret"
-export MTG_CONTAINER="${MTG_CONTAINER:-mtg}"
-export MTG_IMAGENAME="${MTG_IMAGENAME:-nineseconds/mtg:1}"
+#export MTG_CONFIG="${MTG_CONFIG:-$HOME/.config/mtg}"
+#export MTG_ENV="$MTG_CONFIG/env"
+#export MTG_SECRET="$MTG_CONFIG/secret"
+#export MTG_CONTAINER="${MTG_CONTAINER:-mtg}"
+#export MTG_IMAGENAME="${MTG_IMAGENAME:-nineseconds/mtg:1}"
 
 DOCKER_CMD="$(command -v docker)"
 OSNAME=`hostnamectl | grep -i system | cut -d: -f2`
