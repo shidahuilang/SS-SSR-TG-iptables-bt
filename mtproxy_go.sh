@@ -351,12 +351,7 @@ showLog() {
 menu() {
     clear
     echo ""
-    echo -e ""
-    echo -e ""
-    echo -e ""
-    echo -e ""
-    echo -e ""
-    echo -e ""
+
     echo ""
     echo ""
 
