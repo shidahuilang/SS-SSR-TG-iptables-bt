@@ -208,7 +208,10 @@ start() {
         $DOCKER_CMD run \
                 --rm \
                 "$MTG_IMAGENAME" \
-            generate-secret tls -c "$(date +%s%N | md5sum | head -c 32).com" \
+	mtp_passwd=$(${file}/mtg generate-secret -c ${fake_domain} tls)
+   else
+        mtp_tls="NO"
+	mtp_passwd=$(date +%s%N | md5sum | head -c 32)
         > "$MTG_SECRET"
     fi
 
