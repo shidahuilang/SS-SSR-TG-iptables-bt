@@ -714,7 +714,7 @@ Install_caddy(){
 		Set_server
 		Set_server_port
 		if [[ ! -e "/usr/local/caddy/caddy" ]]; then
-			wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/caddy_install.sh
+			wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/caddy_install.sh
 			chmod +x caddy_install.sh
 			bash caddy_install.sh install
 			[[ ! -e "/usr/local/caddy/caddy" ]] && echo -e "${Error} Caddy安装失败，请手动部署，Web网页文件位置：${Web_file}" && exit 0
