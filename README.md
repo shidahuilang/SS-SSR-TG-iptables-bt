@@ -77,8 +77,7 @@ chmod 700 ./install-frps.sh
 Usage: /etc/init.d/frps {start|stop|restart|status|config|version}
 ```
 
-## Docker-Compose
-
+## Docker-Compose安装
 
 ## DockerInstallation.sh
 
