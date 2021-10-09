@@ -3,7 +3,7 @@
 ## 脚本索引
 
 * [***Docker-Compose***](#Docker)
-  * [install.sh](#installsh)
+  * [DockerInstallation.sh](#DockerInstallation.sh)
 * [***代理相关***](#代理相关)
   * [install.sh](#installsh)
   * [ss-go.sh](#ss_gosh)
