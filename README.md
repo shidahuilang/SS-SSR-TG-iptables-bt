@@ -47,10 +47,10 @@
 
 ## 代理相关
 
-##install.sh
+## install.sh
 
--八合一共存脚本+伪装站点
--系统支持: CentOS6+ / Debian6+ / Ubuntu
+- 八合一共存脚本+伪装站点
+- 系统支持: CentOS6+ / Debian6+ / Ubuntu
 
 #### 脚本特点:
 - VLESS+TCP+TLS
