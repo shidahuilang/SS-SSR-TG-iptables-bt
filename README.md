@@ -1,7 +1,8 @@
 
 
 ## 传送阵
-
+* [***FRP内网穿刺***](#内网穿刺)
+  * [install-frps.sh](#install-frps.sh)
 * [***Docker-Compose***](#Docker)
   * [DockerInstallation.sh](#DockerInstallation.sh)
 * [***代理相关***](#代理相关)
@@ -46,6 +47,36 @@
   * [ssr_ip_check.sh](#ssr_ip_checksh)
 
 ---
+## FRP内网穿刺
+- Frps服务端一键配置脚本
+- Frp 是一个高性能的反向代理应用，可以帮助您轻松地进行内网穿透，对外网提供服务，支持 tcp, http, https 等协议类型，并且 web 服务支持根据域名进行路由转发。
+- 系统支持: CentOS6+ / Debian6+ / Ubuntu(32bit/64bit)
+#### 下载安装:
+- Aliyun
+``` bash
+wget https://code.aliyun.com/MvsCode/frps-onekey/raw/master/install-frps.sh -O ./install-frps.sh
+chmod 700 ./install-frps.sh
+./install-frps.sh install
+```
+- Github
+``` bash
+wget https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/frps/install-frps.sh -O ./install-frps.sh
+chmod 700 ./install-frps.sh
+./install-frps.sh install
+```
+#### Uninstall（卸载）
+``` bash
+./install-frps.sh uninstall
+```
+## Update（更新）
+``` bash
+./install-frps.sh update
+```
+## Server management（服务管理器）
+``` bash
+Usage: /etc/init.d/frps {start|stop|restart|status|config|version}
+```
+
 ## Docker-Compose
 
 ## ChangeMirrors.sh
