@@ -3,7 +3,7 @@
 ## 脚本索引
 
 * [***代理相关***](#代理相关)
-  * [https://github.com/shidahuilang/SS-SSR-TG-iptables-bt/edit/main/README.md#install.sh](#install.sh)
+  * [install.sh](#install.sh)
   * [ss-go.sh](#ss_gosh)
   * [ssr.sh](#ssrsh)
   * [ssrmu.sh](#ssrmush)
