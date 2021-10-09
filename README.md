@@ -3,6 +3,7 @@
 ## 脚本索引
 
 * [***代理相关***](#代理相关)
+  * [install.sh](#install.sh)
   * [ss-go.sh](#ss_gosh)
   * [ssr.sh](#ssrsh)
   * [ssrmu.sh](#ssrmush)
