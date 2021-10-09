@@ -2,6 +2,8 @@
 
 ## 脚本索引
 
+* [***Docker-Compose***](#Docker)
+  * [install.sh](#installsh)
 * [***代理相关***](#代理相关)
   * [install.sh](#installsh)
   * [ss-go.sh](#ss_gosh)
@@ -44,6 +46,21 @@
   * [ssr_ip_check.sh](#ssr_ip_checksh)
 
 ---
+## Docker-Compose
+
+## ChangeMirrors.sh
+
+- 系统支持: CentOS6+ / Debian6+ / Ubuntu
+- 一键更换国内软件源
+- 脚本集成安装 Docker Engine Docker Compose
+#### 下载安装:
+``` bash
+bash <(curl -sSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/DockerInstallation.sh)
+```
+#### 一键切换国内源:
+``` bash
+bash <(curl -sSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/ChangeMirrors.sh)
+```
 
 ## 代理相关
 
