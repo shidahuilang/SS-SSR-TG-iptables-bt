@@ -79,7 +79,7 @@ Usage: /etc/init.d/frps {start|stop|restart|status|config|version}
 
 ## Docker-Compose
 
-## ChangeMirrors.sh
+## DockerInstallation.sh
 
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu
 - 一键更换国内软件源
