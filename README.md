@@ -47,6 +47,26 @@
 
 ## 代理相关
 
+##install.sh
+
+-八合一共存脚本+伪装站点
+-系统支持: CentOS6+ / Debian6+ / Ubuntu
+
+#### 脚本特点:
+- VLESS+TCP+TLS
+- VLESS+TCP+xtls-rprx-direct【推荐】
+- VLESS+gRPC+TLS【支持CDN、IPv6、延迟低】
+- VLESS+WS+TLS【支持CDN、IPv6】
+- Trojan+TCP+TLS【推荐】
+- Trojan+TCP+xtls-rprx-direct【推荐】
+- Trojan+gRPC+TLS【支持CDN、IPv6、延迟低】
+- VMess+WS+TLS【支持CDN、IPv6】
+#### 下载安装:
+``` bash
+wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/install.sh" && chmod 700 /root/install.sh && /root/install.sh
+```
+
+
 ## ss_go.sh
 
 - 脚本说明: Shadowsocks 一键安装管理脚本
