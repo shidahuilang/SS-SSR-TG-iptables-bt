@@ -4,7 +4,7 @@
 * [***FRP内网穿刺***](#内网穿刺)
   * [install-frps.sh](#install-frps.sh)
 * [***Docker-Compose***](#Docker)
-*  [DockerInstallation.sh](#DockerInstallation.sh)
+*  [DockerInstallation.sh](#https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/DockerInstallation.sh)
 * [***代理相关***](#代理相关)
   * [install.sh](#installsh)
   * [ss-go.sh](#ss_gosh)
