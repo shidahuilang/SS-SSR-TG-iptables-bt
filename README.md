@@ -32,6 +32,7 @@
   * [ban_iptables.sh](#ban_iptablessh)
   * [ssh_port.sh](#ssh_portsh)
 * [***VPN 相关***](#vpn相关)
+  * [L2TP.sh](#L2TPsh)
   * [ocserv.sh](#ocservsh)
 * [***DNS 相关***](#dns相关)
   * [dowsdns.sh](#dowsdnssh)
@@ -415,6 +416,14 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/ocserv.sh && chmod +x ocserv.sh && bash ocserv.sh
 ```
 
+## L2TP一键安装
+
+- 脚本说明: L2TP一键安装脚本: 支持的系统：CentOS 6+ / Debian 7+ / Ubuntu 12+
+``` bash
+wget --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/L2TP.sh
+chmod a+x install.sh
+./install.sh
+```
 ---
 
 ## DNS相关
