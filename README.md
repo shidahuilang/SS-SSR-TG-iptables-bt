@@ -416,13 +416,14 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/ocserv.sh && chmod +x ocserv.sh && bash ocserv.sh
 ```
 
-## L2TP一键安装
+## L2TP.sh  
 
+-L2TP一键安装
 - 脚本说明: L2TP一键安装脚本: 支持的系统：CentOS 6+ / Debian 7+ / Ubuntu 12+
 ``` bash
 wget --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/L2TP.sh
-chmod a+x install.sh
-./install.sh
+chmod a+x L2TP.sh
+./L2TP.sh
 ```
 ---
 
