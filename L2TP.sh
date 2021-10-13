@@ -677,7 +677,7 @@ finally(){
     echo "l2tp -l (列出所有用户)"
     echo "l2tp -m (修改用户密码)"
     echo
-    echo "Welcome to visit our website: https://merciless.cn/"
+    echo "Welcome to visit our website: https://github.com/shidahuilang/SS-SSR-TG-iptables-bt"
     echo "Enjoy it!"
     echo
 }
