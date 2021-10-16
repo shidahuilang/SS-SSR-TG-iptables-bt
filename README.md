@@ -17,6 +17,7 @@
   * [mtproxy.sh](#mtproxysh)
   * [mtproxy_go.sh](#mtproxy_gosh)
 * [***中转相关***](#中转相关)
+* * [xiandan.sh](#xiandansh)
   * [iptables-pf.sh](#iptables-pfsh)
   * [brook-pf.sh](#brook-pfsh)
   * [haproxy.sh](#haproxysh)
@@ -248,6 +249,16 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ---
 
 ## 中转相关
+
+## xiandan.sh
+
+- 脚本说明:闲蛋面板一键部署
+- - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
+
+#### 下载安装:
+``` bash
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/xiandan/xiandan.sh')
+```
 
 ## iptables-pf.sh
 
