@@ -46,6 +46,7 @@
   * [ssrstatus.sh](#ssrstatussh)
   * [ssr_check.sh](#ssr_checksh)
   * [ssr_ip_check.sh](#ssr_ip_checksh)
+  * [superspeed.sh](#superspeedsh)
 
 ---
 ## FRP内网穿刺
@@ -543,27 +544,16 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## ~~pipes.sh~~
+## superspeed.sh
 
-- 脚本说明: PipeSocks 一键安装管理脚本（该软件已停更）
+- 脚本说明: VPS一键测速脚本
 - 系统支持: CentOS7 / Debian7+ / Ubuntu14+
 
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/install.sh && mv install.sh pipes.sh && chmod +x pipes.sh && bash pipes.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/superspeed.sh && chmod +x superspeed.sh && bash superspeed.sh
 ```
 
----
-## ~~gogo.sh~~
-
-- 脚本说明: GoGo Tunnel 一键安装管理脚本（该软件已停更）
-- 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
-
-
-#### 下载安装:
-``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/gogo.sh && chmod +x gogo.sh && bash gogo.sh
-```
 
 
