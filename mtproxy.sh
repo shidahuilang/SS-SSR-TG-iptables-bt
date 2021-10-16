@@ -4,19 +4,20 @@ export PATH
 
 #=================================================
 #	System Required: CentOS/Debian/Ubuntu
-#	Description: MTProxy Golang
-#	Version: 1.0.1
-#
+#	Description: MTProxy
+#	Version: 1.0.8
+
 #=================================================
 
-sh_ver="1.0.1"
+sh_ver="1.0.8"
 filepath=$(cd "$(dirname "$0")"; pwd)
 file_1=$(echo -e "${filepath}"|awk -F "$0" '{print $1}')
-file="/usr/local/mtproxy-go"
-mtproxy_file="/usr/local/mtproxy-go/mtg"
-mtproxy_conf="/usr/local/mtproxy-go/mtproxy.conf"
-mtproxy_log="/usr/local/mtproxy-go/mtproxy.log"
-Now_ver_File="/usr/local/mtproxy-go/ver.txt"
+file="/usr/local/mtproxy"
+mtproxy_file="/usr/local/mtproxy/mtproto-proxy"
+mtproxy_conf="/usr/local/mtproxy/mtproxy.conf"
+mtproxy_log="/usr/local/mtproxy/mtproxy.log"
+mtproxy_secret="/usr/local/mtproxy/proxy-secret"
+mtproxy_multi="/usr/local/mtproxy/proxy-multi.conf"
 Crontab_file="/usr/bin/crontab"
 
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
@@ -44,7 +45,7 @@ check_sys(){
 	elif cat /proc/version | grep -q -E -i "centos|red hat|redhat"; then
 		release="centos"
     fi
-	bit=`uname -m`
+	#bit=`uname -m`
 }
 check_installed_status(){
 	[[ ! -e ${mtproxy_file} ]] && echo -e "${Error} MTProxy 没有安装，请检查 !" && exit 1
@@ -65,85 +66,89 @@ check_crontab_installed_status(){
 	fi
 }
 check_pid(){
-	PID=$(ps -ef| grep "./mtg "| grep -v "grep" | grep -v "init.d" |grep -v "service" |awk '{print $2}')
+	PID=`ps -ef| grep "./mtproto-proxy "| grep -v "grep" | grep -v "init.d" |grep -v "service" |awk '{print $2}'`
 }
-check_new_ver(){
-	new_ver=$(wget -qO- https://api.github.com/repos/9seconds/mtg/releases| grep "tag_name"| head -n 1| awk -F ":" '{print $2}'| sed 's/\"//g;s/,//g;s/ //g')
-	[[ -z ${new_ver} ]] && echo -e "${Error} MTProxy 最新版本获取失败！" && exit 1
-	echo -e "${Info} 检测到 MTProxy 最新版本为 [ ${new_ver} ]"
+Download_mtproxy(){
+	mkdir '/tmp/mtproxy'
+	cd '/tmp/mtproxy'
+	# wget -N --no-check-certificate "https://github.com/TelegramMessenger/MTProxy/archive/master.zip"
+	git clone https://github.com/TelegramMessenger/MTProxy.git
+	[[ ! -e "MTProxy/" ]] && echo -e "${Error} MTProxy 下载失败!" && cd '/tmp' && rm -rf '/tmp/mtproxy' && exit 1
+	cd MTProxy
+	make
+	[[ ! -e "objs/bin/mtproto-proxy" ]] && echo -e "${Error} MTProxy 编译失败!" && echo -e "另外，如果在上面几行看到 ${Green_font_prefix}xxxxx option \"-std=gnu11\"${Font_color_suffix} 字样，说明是系统版本过低，请尝试更换系统重试！" && make clean && cd '/tmp' && rm -rf '/tmp/mtproxy' && exit 1
+	[[ ! -e "${file}" ]] && mkdir "${file}"
+	\cp -f objs/bin/mtproto-proxy "${file}"
+	chmod +x "${mtproxy_file}"
+	cd '/tmp'
+	rm -rf '/tmp/mtproxy'
 }
-check_ver_comparison(){
-	now_ver=$(cat ${Now_ver_File})
-	if [[ "${now_ver}" != "${new_ver}" ]]; then
-		echo -e "${Info} 发现 MTProxy 已有新版本 [ ${new_ver} ]，旧版本 [ ${now_ver} ]"
-		read -e -p "是否更新 ? [Y/n] :" yn
-		[[ -z "${yn}" ]] && yn="y"
-		if [[ $yn == [Yy] ]]; then
-			check_pid
-			[[ ! -z $PID ]] && kill -9 ${PID}
-			\cp "${mtproxy_conf}" "/tmp/mtproxy.conf"
-			rm -rf ${file}
-			Download
-			mv "/tmp/mtproxy.conf" "${mtproxy_conf}"
-			Start
-		fi
-	else
-		echo -e "${Info} 当前 MTProxy 已是最新版本 [ ${new_ver} ]" && exit 1
-	fi
+Download_secret(){
+	[[ -e "${mtproxy_secret}" ]] && rm -rf "${mtproxy_secret}"
+	wget --no-check-certificate -q "https://core.telegram.org/getProxySecret" -O "${mtproxy_secret}"
+	[[ ! -e "${mtproxy_secret}" ]] && echo -e "${Error} MTProxy Secret下载失败! 脚本将会继续安装但会启动失败，请尝试手动下载：${Green_font_prefix}wget --no-check-certificate -q \"https://core.telegram.org/getProxySecret\" -O \"${mtproxy_secret}\"${Font_color_suffix}"
+	echo -e "${Info} MTProxy Secret下载成功!"
 }
-Download(){
-	if [[ ! -e "${file}" ]]; then
-		mkdir "${file}"
-	else
-		[[ -e "${mtproxy_file}" ]] && rm -rf "${mtproxy_file}"
-	fi
-	cd "${file}"
-	if [[ ${bit} == "x86_64" ]]; then
-		bit="amd64"
-	elif [[ ${bit} == "i386" || ${bit} == "i686" ]]; then
-		bit="386"
-	else
-		bit="arm"
-	fi
-	wget --no-check-certificate -N "https://github.com/9seconds/mtg/releases/download/${new_ver}/mtg-linux-${bit}"
-	[[ ! -e "mtg-linux-${bit}" ]] && echo -e "${Error} MTProxy 下载失败 !" && rm -rf "${file}" && exit 1
-	mv "mtg-linux-${bit}" "mtg"
-	[[ ! -e "mtg" ]] && echo -e "${Error} MTProxy 重命名失败 !" && rm -rf "${file}" && exit 1
-	chmod +x mtg
-	echo "${new_ver}" > ${Now_ver_File}
+Download_multi(){
+	[[ -e "${mtproxy_multi}" ]] && rm -rf "${mtproxy_multi}"
+	wget --no-check-certificate -q "https://core.telegram.org/getProxyConfig" -O "${mtproxy_multi}"
+	[[ ! -e "${mtproxy_multi}" ]] && echo -e "${Error} MTProxy Multi下载失败!脚本将会继续安装但会启动失败，请尝试手动下载：${Green_font_prefix}wget --no-check-certificate -q \"https://core.telegram.org/getProxyConfig\" -O \"${mtproxy_multi}\"${Font_color_suffix}"
+	echo -e "${Info} MTProxy Secret下载成功!"
 }
-Service(){
+Service_mtproxy(){
 	if [[ ${release} = "centos" ]]; then
-		if ! wget --no-check-certificate "https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/service/mtproxy_go_centos" -O /etc/init.d/mtproxy-go; then
+		if ! wget --no-check-certificate "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/service/mtproxy_centos" -O /etc/init.d/mtproxy; then
 			echo -e "${Error} MTProxy服务 管理脚本下载失败 !"
 			rm -rf "${file}"
 			exit 1
 		fi
-		chmod +x "/etc/init.d/mtproxy-go"
-		chkconfig --add mtproxy-go
-		chkconfig mtproxy-go on
+		chmod +x "/etc/init.d/mtproxy"
+		chkconfig --add mtproxy
+		chkconfig mtproxy on
 	else
-		if ! wget --no-check-certificate "https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/service/mtproxy_go_debian" -O /etc/init.d/mtproxy-go; then
+		if ! wget --no-check-certificate "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/service/mtproxy_debian" -O /etc/init.d/mtproxy; then
 			echo -e "${Error} MTProxy服务 管理脚本下载失败 !"
 			rm -rf "${file}"
 			exit 1
 		fi
-		chmod +x "/etc/init.d/mtproxy-go"
-		update-rc.d -f mtproxy-go defaults
+		chmod +x "/etc/init.d/mtproxy"
+		update-rc.d -f mtproxy defaults
 	fi
 	echo -e "${Info} MTProxy服务 管理脚本下载完成 !"
 }
 Installation_dependency(){
+	if [[ ${release} == "centos" ]]; then
+		Centos_yum
+	else
+		Debian_apt
+	fi
 	\cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+}
+Centos_yum(){
+	cat /etc/redhat-release |grep 7\..*|grep -i centos>/dev/null
+	yum update
+	if [[ $? = 0 ]]; then
+		yum install -y openssl-devel zlib-devel git
+	else
+		yum install -y openssl-devel zlib-devel git
+	fi
+	yum groupinstall "Development Tools" -y
+}
+Debian_apt(){
+	cat /etc/issue |grep 9\..*>/dev/null
+	apt-get update
+	if [[ $? = 0 ]]; then
+		apt-get install -y build-essential libssl-dev zlib1g-dev git
+	else
+		apt-get install -y build-essential libssl-dev zlib1g-dev git
+	fi
 }
 Write_config(){
 	cat > ${mtproxy_conf}<<-EOF
 PORT = ${mtp_port}
 PASSWORD = ${mtp_passwd}
 TAG = ${mtp_tag}
-NAT-IPv4 = ${mtp_nat_ipv4}
-NAT-IPv6 = ${mtp_nat_ipv6}
-SECURE = ${mtp_secure}
+NAT = ${mtp_nat}
 EOF
 }
 Read_config(){
@@ -151,9 +156,7 @@ Read_config(){
 	port=$(cat ${mtproxy_conf}|grep 'PORT = '|awk -F 'PORT = ' '{print $NF}')
 	passwd=$(cat ${mtproxy_conf}|grep 'PASSWORD = '|awk -F 'PASSWORD = ' '{print $NF}')
 	tag=$(cat ${mtproxy_conf}|grep 'TAG = '|awk -F 'TAG = ' '{print $NF}')
-	nat_ipv4=$(cat ${mtproxy_conf}|grep 'NAT-IPv4 = '|awk -F 'NAT-IPv4 = ' '{print $NF}')
-	nat_ipv6=$(cat ${mtproxy_conf}|grep 'NAT-IPv6 = '|awk -F 'NAT-IPv6 = ' '{print $NF}')
-	secure=$(cat ${mtproxy_conf}|grep 'SECURE = '|awk -F 'SECURE = ' '{print $NF}')
+	nat=$(cat ${mtproxy_conf}|grep 'NAT = '|awk -F 'NAT = ' '{print $NF}')
 }
 Set_port(){
 	while true
@@ -199,64 +202,44 @@ Set_tag(){
 		echo && echo "========================"
 		echo -e "	TAG : ${Red_background_prefix} ${mtp_tag} ${Font_color_suffix}"
 		echo "========================" && echo
-	else
-		echo
 	fi
 }
 Set_nat(){
-	echo -e "如果本机是NAT服务器（谷歌云、微软云、阿里云等，网卡绑定的IP为 10.xx.xx.xx 开头的），则需要指定公网 IPv4。"
-	read -e -p "(默认：自动检测 IPv4 地址):" mtp_nat_ipv4
-	if [[ -z "${mtp_nat_ipv4}" ]]; then
-		getipv4
-		if [[ "${ipv4}" == "IPv4_Error" ]]; then
-			mtp_nat_ipv4=""
-		else
-			mtp_nat_ipv4="${ipv4}"
-		fi
-		echo && echo "========================"
-		echo -e "	NAT-IPv4 : ${Red_background_prefix} ${mtp_nat_ipv4} ${Font_color_suffix}"
-		echo "========================" && echo
-	fi
-	echo -e "如果本机是NAT服务器（谷歌云、微软云、阿里云等），则需要指定公网 IPv6。"
-	read -e -p "(默认：自动检测 IPv6 地址):" mtp_nat_ipv6
-	if [[ -z "${mtp_nat_ipv6}" ]]; then
-		getipv6
-		if [[ "${ipv6}" == "IPv6_Error" ]]; then
-			mtp_nat_ipv6=""
-		else
-			mtp_nat_ipv6="${ipv6}"
-		fi
-		echo && echo "========================"
-		echo -e "	NAT-IPv6 : ${Red_background_prefix} ${mtp_nat_ipv6} ${Font_color_suffix}"
-		echo "========================" && echo
-	fi
-}
-Set_secure(){
-	echo -e "是否启用强制安全模式？[Y/n]
-只有启用[安全混淆模式]的客户端才能链接(即密匙头部有 dd 字符)，降低服务器被墙几率，建议开启。"
-	read -e -p "(默认：Y 启用):" mtp_secure
-	[[ -z "${mtp_secure}" ]] && mtp_secure="Y"
-	if [[ "${mtp_secure}" == [Yy] ]]; then
-		mtp_secure="YES"
+	echo -e "\n=== 当前服务器所有网卡信息：\n"
+	if [[ -e "/sbin/ip" ]]; then
+		ip addr show
 	else
-		mtp_secure="NO"
+		ifconfig
 	fi
-	echo && echo "========================"
-	echo -e "	强制安全模式 : ${Red_background_prefix} ${mtp_secure} ${Font_color_suffix}"
-	echo "========================" && echo
+	echo -e "\n== 解释：网卡名 lo 指的是本机，请无视。
+== 解释：一般情况下，主网卡名为 eth0，Debian9系统为 ens3，CentOS Ubuntu最新系统可能为 enpXsX(X代表数字或字母)。OpenVZ 虚拟化为 venet0\n"
+	echo -e "如果本机是NAT服务器（谷歌云、微软云、阿里云等，网卡绑定的IP为 10.xx.xx.xx 开头的），则请输入你的服务器内网IP，否则会导致无法使用。如果不是请直接回车！"
+	read -e -p "(默认：回车跳过):" mtp_nat
+	if [[ -z "${mtp_nat}" ]]; then
+		mtp_nat=""
+	else
+		getip
+		mtp_nat="${mtp_nat}:${ip}"
+		echo && echo "========================"
+		echo -e "	NAT : ${Red_background_prefix} ${mtp_nat} ${Font_color_suffix}"
+		echo "========================" && echo
+	fi
 }
-Set(){
+Set_mtproxy(){
 	check_installed_status
 	echo && echo -e "你要做什么？
- ${Green_font_prefix}1.${Font_color_suffix}  修改 端口配置
- ${Green_font_prefix}2.${Font_color_suffix}  修改 密码配置
- ${Green_font_prefix}3.${Font_color_suffix}  修改 TAG 配置
- ${Green_font_prefix}4.${Font_color_suffix}  修改 NAT 配置
- ${Green_font_prefix}5.${Font_color_suffix}  修改 强制安全模式 配置
- ${Green_font_prefix}6.${Font_color_suffix}  修改 全部配置
+ ${Green_font_prefix} 1.${Font_color_suffix}  修改 端口配置
+ ${Green_font_prefix} 2.${Font_color_suffix}  修改 密码配置
+ ${Green_font_prefix} 3.${Font_color_suffix}  修改 TAG 配置
+ ${Green_font_prefix} 4.${Font_color_suffix}  修改 NAT 配置
+ ${Green_font_prefix} 5.${Font_color_suffix}  修改 全部配置
 ————————————————
- ${Green_font_prefix}7.${Font_color_suffix}  监控 运行状态
- ${Green_font_prefix}8.${Font_color_suffix}  监控 外网IP变更" && echo
+ ${Green_font_prefix} 6.${Font_color_suffix}  更新 Telegram IP段(无需频繁更新)
+ ${Green_font_prefix} 7.${Font_color_suffix}  更新 Telegram 密匙(一般不用管)
+————————————————
+ ${Green_font_prefix} 8.${Font_color_suffix}  定时 更新 Telegram IP段
+ ${Green_font_prefix} 9.${Font_color_suffix}  监控 运行状态
+ ${Green_font_prefix}10.${Font_color_suffix}  监控 外网IP变更" && echo
 	read -e -p "(默认: 取消):" mtp_modify
 	[[ -z "${mtp_modify}" ]] && echo "已取消..." && exit 1
 	if [[ "${mtp_modify}" == "1" ]]; then
@@ -264,70 +247,58 @@ Set(){
 		Set_port
 		mtp_passwd=${passwd}
 		mtp_tag=${tag}
-		mtp_nat_ipv4=${nat_ipv4}
-		mtp_nat_ipv6=${nat_ipv6}
-		mtp_secure=${secure}
+		mtp_nat=${nat}
 		Write_config
 		Del_iptables
 		Add_iptables
-		Restart
+		Restart_mtproxy
 	elif [[ "${mtp_modify}" == "2" ]]; then
 		Read_config
 		Set_passwd
 		mtp_port=${port}
 		mtp_tag=${tag}
-		mtp_nat_ipv4=${nat_ipv4}
-		mtp_nat_ipv6=${nat_ipv6}
-		mtp_secure=${secure}
+		mtp_nat=${nat}
 		Write_config
-		Restart
+		Restart_mtproxy
 	elif [[ "${mtp_modify}" == "3" ]]; then
 		Read_config
 		Set_tag
 		mtp_port=${port}
 		mtp_passwd=${passwd}
-		mtp_nat_ipv4=${nat_ipv4}
-		mtp_nat_ipv6=${nat_ipv6}
-		mtp_secure=${secure}
+		mtp_nat=${nat}
 		Write_config
-		Restart
+		Restart_mtproxy
 	elif [[ "${mtp_modify}" == "4" ]]; then
 		Read_config
 		Set_nat
 		mtp_port=${port}
 		mtp_passwd=${passwd}
 		mtp_tag=${tag}
-		mtp_secure=${secure}
 		Write_config
-		Restart
+		Restart_mtproxy
 	elif [[ "${mtp_modify}" == "5" ]]; then
-		Read_config
-		Set_secure
-		mtp_port=${port}
-		mtp_passwd=${passwd}
-		mtp_tag=${tag}
-		mtp_nat_ipv4=${nat_ipv4}
-		mtp_nat_ipv6=${nat_ipv6}
-		Write_config
-		Restart
-	elif [[ "${mtp_modify}" == "6" ]]; then
 		Read_config
 		Set_port
 		Set_passwd
 		Set_tag
 		Set_nat
-		Set_secure
 		Write_config
-		Restart
+		Restart_mtproxy
+	elif [[ "${mtp_modify}" == "6" ]]; then
+		Update_multi
 	elif [[ "${mtp_modify}" == "7" ]]; then
-		Set_crontab_monitor
+		Update_secret
 	elif [[ "${mtp_modify}" == "8" ]]; then
+		Set_crontab_update_multi
+	elif [[ "${mtp_modify}" == "9" ]]; then
+		Set_crontab_monitor_mtproxy
+	elif [[ "${mtp_modify}" == "10" ]]; then
 		Set_crontab_monitorip
 	else
-		echo -e "${Error} 请输入正确的数字(1-8)" && exit 1
+		echo -e "${Error} 请输入正确的数字(1-10)" && exit 1
 	fi
 }
-Install(){
+Install_mtproxy(){
 	check_root
 	[[ -e ${mtproxy_file} ]] && echo -e "${Error} 检测到 MTProxy 已安装 !" && exit 1
 	echo -e "${Info} 开始设置 用户配置..."
@@ -335,14 +306,14 @@ Install(){
 	Set_passwd
 	Set_tag
 	Set_nat
-	Set_secure
 	echo -e "${Info} 开始安装/配置 依赖..."
 	Installation_dependency
 	echo -e "${Info} 开始下载/安装..."
-	check_new_ver
-	Download
+	Download_mtproxy
+	Download_secret
+	Download_multi
 	echo -e "${Info} 开始下载/安装 服务脚本(init)..."
-	Service
+	Service_mtproxy
 	echo -e "${Info} 开始写入 配置文件..."
 	Write_config
 	echo -e "${Info} 开始设置 iptables防火墙..."
@@ -352,38 +323,48 @@ Install(){
 	echo -e "${Info} 开始保存 iptables防火墙规则..."
 	Save_iptables
 	echo -e "${Info} 所有步骤 安装完毕，开始启动..."
-	Start
+	Start_mtproxy
 }
-Start(){
+Start_mtproxy(){
 	check_installed_status
 	check_pid
 	[[ ! -z ${PID} ]] && echo -e "${Error} MTProxy 正在运行，请检查 !" && exit 1
-	/etc/init.d/mtproxy-go start
+	/etc/init.d/mtproxy start
 	sleep 1s
 	check_pid
-	[[ ! -z ${PID} ]] && View
+	[[ ! -z ${PID} ]] && View_mtproxy
 }
-Stop(){
+Stop_mtproxy(){
 	check_installed_status
 	check_pid
 	[[ -z ${PID} ]] && echo -e "${Error} MTProxy 没有运行，请检查 !" && exit 1
-	/etc/init.d/mtproxy-go stop
+	/etc/init.d/mtproxy stop
 }
-Restart(){
+Restart_mtproxy(){
 	check_installed_status
 	check_pid
-	[[ ! -z ${PID} ]] && /etc/init.d/mtproxy-go stop
-	/etc/init.d/mtproxy-go start
+	[[ ! -z ${PID} ]] && /etc/init.d/mtproxy stop
+	/etc/init.d/mtproxy start
 	sleep 1s
 	check_pid
-	[[ ! -z ${PID} ]] && View
+	[[ ! -z ${PID} ]] && View_mtproxy
 }
-Update(){
-	check_installed_status
-	check_new_ver
-	check_ver_comparison
+Update_mtproxy(){
+	echo -e "${Tip} 因为官方无最新版本号，所以无法对比版本，请自行判断是否需要更新。是否更新？[Y/n]"
+	read -e -p "(默认: y):" yn
+	[[ -z "${yn}" ]] && yn="y"
+	if [[ ${yn} == [Yy] ]]; then
+		check_installed_status
+		check_pid
+		[[ ! -z $PID ]] && /etc/init.d/mtproxy stop
+		rm -rf ${mtproxy_file}
+		Download_mtproxy
+		echo -e "${Info} MTProxy 更新完成..."
+		Start_mtproxy
+	fi
+	
 }
-Uninstall(){
+Uninstall_mtproxy(){
 	check_installed_status
 	echo "确定要卸载 MTProxy ? (y/N)"
 	echo
@@ -397,60 +378,52 @@ Uninstall(){
 			Del_iptables
 			Save_iptables
 		fi
-		if [[ ! -z $(crontab -l | grep "mtproxy_go.sh monitor") ]]; then
-			crontab_monitor_cron_stop
+		if [[ ! -z $(crontab -l | grep "mtproxy.sh monitor") ]]; then
+			crontab_monitor_mtproxy_cron_stop
+		fi
+		if [[ ! -z $(crontab -l | grep "mtproxy.sh update") ]]; then
+			crontab_update_mtproxy_cron_stop
 		fi
 		rm -rf "${file}"
 		if [[ ${release} = "centos" ]]; then
-			chkconfig --del mtproxy-go
+			chkconfig --del mtproxy
 		else
-			update-rc.d -f mtproxy-go remove
+			update-rc.d -f mtproxy remove
 		fi
-		rm -rf "/etc/init.d/mtproxy-go"
+		rm -rf "/etc/init.d/mtproxy"
 		echo && echo "MTProxy 卸载完成 !" && echo
 	else
 		echo && echo "卸载已取消..." && echo
 	fi
 }
-getipv4(){
-	ipv4=$(wget -qO- -4 -t1 -T2 ipinfo.io/ip)
-	if [[ -z "${ipv4}" ]]; then
-		ipv4=$(wget -qO- -4 -t1 -T2 api.ip.sb/ip)
-		if [[ -z "${ipv4}" ]]; then
-			ipv4=$(wget -qO- -4 -t1 -T2 members.3322.org/dyndns/getip)
-			if [[ -z "${ipv4}" ]]; then
-				ipv4="IPv4_Error"
+getip(){
+	ip=$(wget -qO- -t1 -T2 ipinfo.io/ip)
+	if [[ -z "${ip}" ]]; then
+		ip=$(wget -qO- -t1 -T2 api.ip.sb/ip)
+		if [[ -z "${ip}" ]]; then
+			ip=$(wget -qO- -t1 -T2 members.3322.org/dyndns/getip)
+			if [[ -z "${ip}" ]]; then
+				ip="VPS_IP"
 			fi
 		fi
 	fi
 }
-getipv6(){
-	ipv6=$(wget -qO- -6 -t1 -T3 ifconfig.co)
-	if [[ -z "${ipv6}" ]]; then
-		ipv6="IPv6_Error"
-	fi
-}
-View(){
+View_mtproxy(){
 	check_installed_status
 	Read_config
-	#getipv4
-	#getipv6
+	getip
 	clear && echo
 	echo -e "Mtproto Proxy 用户配置："
 	echo -e "————————————————"
-	echo -e " 地址\t: ${Green_font_prefix}${nat_ipv4}${Font_color_suffix}"
-	[[ ! -z "${nat_ipv6}" ]] && echo -e " 地址\t: ${Green_font_prefix}${nat_ipv6}${Font_color_suffix}"
+	echo -e " 地址\t: ${Green_font_prefix}${ip}${Font_color_suffix}"
 	echo -e " 端口\t: ${Green_font_prefix}${port}${Font_color_suffix}"
 	echo -e " 密匙\t: ${Green_font_prefix}dd${passwd}${Font_color_suffix}"
+	[[ ! -z "${nat}" ]] && echo -e " NAT \t: ${Green_font_prefix}${nat}${Font_color_suffix}"
 	[[ ! -z "${tag}" ]] && echo -e " TAG \t: ${Green_font_prefix}${tag}${Font_color_suffix}"
-	echo -e " 链接\t: ${Red_font_prefix}tg://proxy?server=${nat_ipv4}&port=${port}&secret=dd${passwd}${Font_color_suffix}"
-	echo -e " 链接\t: ${Red_font_prefix}https://t.me/proxy?server=${nat_ipv4}&port=${port}&secret=dd${passwd}${Font_color_suffix}"
-	[[ ! -z "${nat_ipv6}" ]] && echo -e " 链接\t: ${Red_font_prefix}tg://proxy?server=${nat_ipv6}&port=${port}&secret=dd${passwd}${Font_color_suffix}"
-	[[ ! -z "${nat_ipv6}" ]] && echo -e " 链接\t: ${Red_font_prefix}https://t.me/proxy?server=${nat_ipv6}&port=${port}&secret=dd${passwd}${Font_color_suffix}"
+	echo -e " 链接\t: ${Red_font_prefix}tg://proxy?server=${ip}&port=${port}&secret=dd${passwd}${Font_color_suffix}"
+	echo -e " 链接\t: ${Red_font_prefix}https://t.me/proxy?server=${ip}&port=${port}&secret=dd${passwd}${Font_color_suffix}"
 	echo
-	echo -e " 强制安全模式\t: ${Green_font_prefix}${secure}${Font_color_suffix}"
-	echo
-	echo -e " ${Red_font_prefix}注意\t:${Font_color_suffix} 密匙头部的 ${Green_font_prefix}dd${Font_color_suffix} 字符是代表客户端启用${Green_font_prefix}安全混淆模式${Font_color_suffix}，可以降低服务器被墙几率。\n     \t  另外，在官方机器人处分享账号获取TAG标签时记得删除，获取TAG标签后分享时可以再加上。"
+	echo -e " ${Red_font_prefix}注意\t:${Font_color_suffix} 密匙头部的 ${Green_font_prefix}dd${Font_color_suffix} 字符是代表客户端启用${Green_font_prefix}随机填充混淆模式${Font_color_suffix}，如果不需要请手动删除。\n     \t  另外，在官方机器人处分享账号获取TAG标签时记得删除，获取TAG标签后分享时可以再加上。"
 }
 View_Log(){
 	check_installed_status
@@ -458,16 +431,26 @@ View_Log(){
 	echo && echo -e "${Tip} 按 ${Red_font_prefix}Ctrl+C${Font_color_suffix} 终止查看日志" && echo -e "如果需要查看完整日志内容，请用 ${Red_font_prefix}cat ${mtproxy_log}${Font_color_suffix} 命令。" && echo
 	tail -f ${mtproxy_log}
 }
+Update_secret(){
+	rm -rf "${mtproxy_secret}"
+	Download_secret
+	Restart_mtproxy
+}
+Update_multi(){
+	rm -rf "${mtproxy_multi}"
+	Download_multi
+	Restart_mtproxy
+}
 # 显示 连接信息
 debian_View_user_connection_info(){
 	format_1=$1
 	Read_config
-	user_IP=$(ss state connected sport = :${port} -tn|sed '1d'|awk '{print $NF}'|awk -F ':' '{print $(NF-1)}'|sort -u)
+	user_IP=`netstat -anp |grep 'ESTABLISHED' |grep 'mtproto' |grep 'tcp' |grep ":${port} " |awk '{print $5}' |awk -F ":" '{print $1}' |sort -u |grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}"`
 	if [[ -z ${user_IP} ]]; then
 		user_IP_total="0"
 		echo -e "端口: ${Green_font_prefix}"${port}"${Font_color_suffix}\t 链接IP总数: ${Green_font_prefix}"${user_IP_total}"${Font_color_suffix}\t 当前链接IP: "
 	else
-		user_IP_total=$(echo -e "${user_IP}"|wc -l)
+		user_IP_total=`echo -e "${user_IP}"|wc -l`
 		if [[ ${format_1} == "IP_address" ]]; then
 			echo -e "端口: ${Green_font_prefix}"${port}"${Font_color_suffix}\t 链接IP总数: ${Green_font_prefix}"${user_IP_total}"${Font_color_suffix}\t 当前链接IP: "
 			get_IP_address
@@ -475,6 +458,26 @@ debian_View_user_connection_info(){
 		else
 			user_IP=$(echo -e "\n${user_IP}")
 			echo -e "端口: ${Green_font_prefix}"${user_port}"${Font_color_suffix}\t 链接IP总数: ${Green_font_prefix}"${user_IP_total}"${Font_color_suffix}\t 当前链接IP: ${Green_font_prefix}${user_IP}${Font_color_suffix}\n"
+		fi
+	fi
+	user_IP=""
+}
+centos_View_user_connection_info(){
+	format_1=$1
+	Read_config
+	user_IP=`netstat -anp |grep 'ESTABLISHED' |grep 'mtproto' |grep 'tcp' |grep ":${port} "|awk '{print $5}' |awk -F ":" '{print $1}' |sort -u |grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}"`
+	if [[ -z ${user_IP} ]]; then
+		user_IP_total="0"
+		echo -e "端口: ${Green_font_prefix}"${port}"${Font_color_suffix}\t 链接IP总数: ${Green_font_prefix}"${user_IP_total}"${Font_color_suffix}\t 当前链接IP: "
+	else
+		user_IP_total=`echo -e "${user_IP}"|wc -l`
+		if [[ ${format_1} == "IP_address" ]]; then
+			echo -e "端口: ${Green_font_prefix}"${port}"${Font_color_suffix}\t 链接IP总数: ${Green_font_prefix}"${user_IP_total}"${Font_color_suffix}\t 当前链接IP: "
+			get_IP_address
+			echo
+		else
+			user_IP=$(echo -e "\n${user_IP}")
+			echo -e "端口: ${Green_font_prefix}"${port}"${Font_color_suffix}\t 链接IP总数: ${Green_font_prefix}"${user_IP_total}"${Font_color_suffix}\t 当前链接IP: ${Green_font_prefix}${user_IP}${Font_color_suffix}\n"
 		fi
 	fi
 	user_IP=""
@@ -497,7 +500,16 @@ View_user_connection_info(){
 }
 View_user_connection_info_1(){
 	format=$1
-	debian_View_user_connection_info "$format"
+	if [[ ${release} = "centos" ]]; then
+		cat /etc/redhat-release |grep 7\..*|grep -i centos>/dev/null
+		if [[ $? = 0 ]]; then
+			debian_View_user_connection_info "$format"
+		else
+			centos_View_user_connection_info "$format"
+		fi
+	else
+		debian_View_user_connection_info "$format"
+	fi
 }
 get_IP_address(){
 	if [[ ! -z ${user_IP} ]]; then
@@ -510,63 +522,63 @@ get_IP_address(){
 		done
 	fi
 }
-Set_crontab_monitor(){
+Set_crontab_monitor_mtproxy(){
 	check_crontab_installed_status
-	crontab_monitor_status=$(crontab -l|grep "mtproxy_go.sh monitor")
-	if [[ -z "${crontab_monitor_status}" ]]; then
+	crontab_monitor_mtproxy_status=$(crontab -l|grep "mtproxy.sh monitor")
+	if [[ -z "${crontab_monitor_mtproxy_status}" ]]; then
 		echo && echo -e "当前监控运行状态模式: ${Red_font_prefix}未开启${Font_color_suffix}" && echo
 		echo -e "确定要开启 ${Green_font_prefix}MTProxy 服务端运行状态监控${Font_color_suffix} 功能吗？(当进程关闭则自动启动 MTProxy 服务端)[Y/n]"
-		read -e -p "(默认: y):" crontab_monitor_status_ny
-		[[ -z "${crontab_monitor_status_ny}" ]] && crontab_monitor_status_ny="y"
-		if [[ ${crontab_monitor_status_ny} == [Yy] ]]; then
-			crontab_monitor_cron_start
+		read -e -p "(默认: y):" crontab_monitor_mtproxy_status_ny
+		[[ -z "${crontab_monitor_mtproxy_status_ny}" ]] && crontab_monitor_mtproxy_status_ny="y"
+		if [[ ${crontab_monitor_mtproxy_status_ny} == [Yy] ]]; then
+			crontab_monitor_mtproxy_cron_start
 		else
 			echo && echo "	已取消..." && echo
 		fi
 	else
 		echo && echo -e "当前监控运行状态模式: ${Green_font_prefix}已开启${Font_color_suffix}" && echo
 		echo -e "确定要关闭 ${Red_font_prefix}MTProxy 服务端运行状态监控${Font_color_suffix} 功能吗？(当进程关闭则自动启动 MTProxy 服务端)[y/N]"
-		read -e -p "(默认: n):" crontab_monitor_status_ny
-		[[ -z "${crontab_monitor_status_ny}" ]] && crontab_monitor_status_ny="n"
-		if [[ ${crontab_monitor_status_ny} == [Yy] ]]; then
-			crontab_monitor_cron_stop
+		read -e -p "(默认: n):" crontab_monitor_mtproxy_status_ny
+		[[ -z "${crontab_monitor_mtproxy_status_ny}" ]] && crontab_monitor_mtproxy_status_ny="n"
+		if [[ ${crontab_monitor_mtproxy_status_ny} == [Yy] ]]; then
+			crontab_monitor_mtproxy_cron_stop
 		else
 			echo && echo "	已取消..." && echo
 		fi
 	fi
 }
-crontab_monitor_cron_start(){
+crontab_monitor_mtproxy_cron_start(){
 	crontab -l > "$file_1/crontab.bak"
-	sed -i "/mtproxy_go.sh monitor/d" "$file_1/crontab.bak"
-	echo -e "\n* * * * * /bin/bash $file_1/mtproxy_go.sh monitor" >> "$file_1/crontab.bak"
+	sed -i "/mtproxy.sh monitor/d" "$file_1/crontab.bak"
+	echo -e "\n* * * * * /bin/bash $file_1/mtproxy.sh monitor" >> "$file_1/crontab.bak"
 	crontab "$file_1/crontab.bak"
 	rm -r "$file_1/crontab.bak"
-	cron_config=$(crontab -l | grep "mtproxy_go.sh monitor")
+	cron_config=$(crontab -l | grep "mtproxy.sh monitor")
 	if [[ -z ${cron_config} ]]; then
 		echo -e "${Error} MTProxy 服务端运行状态监控功能 启动失败 !" && exit 1
 	else
 		echo -e "${Info} MTProxy 服务端运行状态监控功能 启动成功 !"
 	fi
 }
-crontab_monitor_cron_stop(){
+crontab_monitor_mtproxy_cron_stop(){
 	crontab -l > "$file_1/crontab.bak"
-	sed -i "/mtproxy_go.sh monitor/d" "$file_1/crontab.bak"
+	sed -i "/mtproxy.sh monitor/d" "$file_1/crontab.bak"
 	crontab "$file_1/crontab.bak"
 	rm -r "$file_1/crontab.bak"
-	cron_config=$(crontab -l | grep "mtproxy_go.sh monitor")
+	cron_config=$(crontab -l | grep "mtproxy.sh monitor")
 	if [[ ! -z ${cron_config} ]]; then
 		echo -e "${Error} MTProxy 服务端运行状态监控功能 停止失败 !" && exit 1
 	else
 		echo -e "${Info} MTProxy 服务端运行状态监控功能 停止成功 !"
 	fi
 }
-crontab_monitor(){
+crontab_monitor_mtproxy(){
 	check_installed_status
 	check_pid
 	#echo "${PID}"
 	if [[ -z ${PID} ]]; then
 		echo -e "${Error} [$(date "+%Y-%m-%d %H:%M:%S %u %Z")] 检测到 MTProxy服务端 未运行 , 开始启动..." | tee -a ${mtproxy_log}
-		/etc/init.d/mtproxy-go start
+		/etc/init.d/mtproxy start
 		sleep 1s
 		check_pid
 		if [[ -z ${PID} ]]; then
@@ -578,9 +590,67 @@ crontab_monitor(){
 		echo -e "${Info} [$(date "+%Y-%m-%d %H:%M:%S %u %Z")] MTProxy服务端 进程运行正常..." | tee -a ${mtproxy_log}
 	fi
 }
+Set_crontab_update_multi(){
+	check_crontab_installed_status
+	crontab_update_mtproxy_status=$(crontab -l|grep "mtproxy.sh update")
+	if [[ -z "${crontab_update_mtproxy_status}" ]]; then
+		echo && echo -e "当前自动更新 Telegram IP段功能: ${Red_font_prefix}未开启${Font_color_suffix}" && echo
+		echo -e "确定要开启 ${Green_font_prefix}MTProxy 自动更新 Telegram IP段${Font_color_suffix} 功能吗？[Y/n]"
+		read -e -p "(默认: y):" crontab_update_mtproxy_status_ny
+		[[ -z "${crontab_update_mtproxy_status_ny}" ]] && crontab_update_mtproxy_status_ny="y"
+		if [[ ${crontab_update_mtproxy_status_ny} == [Yy] ]]; then
+			crontab_update_mtproxy_cron_start
+		else
+			echo && echo "	已取消..." && echo
+		fi
+	else
+		echo && echo -e "当前自动更新 Telegram IP段功能: ${Green_font_prefix}已开启${Font_color_suffix}" && echo
+		echo -e "确定要关闭 ${Red_font_prefix}MTProxy 自动更新 Telegram IP段${Font_color_suffix} 功能吗？[y/N]"
+		read -e -p "(默认: n):" crontab_update_mtproxy_status_ny
+		[[ -z "${crontab_update_mtproxy_status_ny}" ]] && crontab_update_mtproxy_status_ny="n"
+		if [[ ${crontab_update_mtproxy_status_ny} == [Yy] ]]; then
+			crontab_update_mtproxy_cron_stop
+		else
+			echo && echo "	已取消..." && echo
+		fi
+	fi
+}
+crontab_update_mtproxy_cron_start(){
+	crontab -l > "$file_1/crontab.bak"
+	sed -i "/mtproxy.sh update/d" "$file_1/crontab.bak"
+	echo -e "\n10 3 * * * /bin/bash $file_1/mtproxy.sh update" >> "$file_1/crontab.bak"
+	crontab "$file_1/crontab.bak"
+	rm -r "$file_1/crontab.bak"
+	cron_config=$(crontab -l | grep "mtproxy.sh update")
+	if [[ -z ${cron_config} ]]; then
+		echo -e "${Error} MTProxy 自动更新 Telegram IP段功能 启动失败 !" && exit 1
+	else
+		echo -e "${Info} MTProxy 自动更新 Telegram IP段功能 启动成功 !"
+	fi
+}
+crontab_update_mtproxy_cron_stop(){
+	crontab -l > "$file_1/crontab.bak"
+	sed -i "/mtproxy.sh update/d" "$file_1/crontab.bak"
+	crontab "$file_1/crontab.bak"
+	rm -r "$file_1/crontab.bak"
+	cron_config=$(crontab -l | grep "mtproxy.sh update")
+	if [[ ! -z ${cron_config} ]]; then
+		echo -e "${Error} MTProxy 自动更新 Telegram IP段功能 停止失败 !" && exit 1
+	else
+		echo -e "${Info} MTProxy 自动更新 Telegram IP段功能 停止成功 !"
+	fi
+}
+crontab_update_mtproxy(){
+	check_installed_status
+	check_pid
+	rm -rf "${mtproxy_multi}"
+	Download_multi
+	echo -e "${Info} [$(date "+%Y-%m-%d %H:%M:%S %u %Z")] Telegram IP段自动更新完成..." | tee -a ${mtproxy_log}
+	/etc/init.d/mtproxy restart
+}
 Set_crontab_monitorip(){
 	check_crontab_installed_status
-	crontab_monitor_status=$(crontab -l|grep "mtproxy_go.sh monitorip")
+	crontab_monitor_status=$(crontab -l|grep "mtproxy.sh monitorip")
 	if [[ -z "${crontab_monitor_status}" ]]; then
 		echo && echo -e "当前监控外网IP模式: ${Red_font_prefix}未开启${Font_color_suffix}" && echo
 		echo -e "确定要开启 ${Green_font_prefix}服务器外网IP变更监控${Font_color_suffix} 功能吗？(当服务器外网IP变化后，自动重新配置并重启服务端)[Y/n]"
@@ -605,11 +675,11 @@ Set_crontab_monitorip(){
 }
 crontab_monitor_cron_start2(){
 	crontab -l > "$file_1/crontab.bak"
-	sed -i "/mtproxy_go.sh monitorip/d" "$file_1/crontab.bak"
-	echo -e "\n* * * * * /bin/bash $file_1/mtproxy_go.sh monitorip" >> "$file_1/crontab.bak"
+	sed -i "/mtproxy.sh monitorip/d" "$file_1/crontab.bak"
+	echo -e "\n* * * * * /bin/bash $file_1/mtproxy.sh monitorip" >> "$file_1/crontab.bak"
 	crontab "$file_1/crontab.bak"
 	rm -r "$file_1/crontab.bak"
-	cron_config=$(crontab -l | grep "mtproxy_go.sh monitorip")
+	cron_config=$(crontab -l | grep "mtproxy.sh monitorip")
 	if [[ -z ${cron_config} ]]; then
 		echo -e "${Error} 服务器外网IP变更监控功能 启动失败 !" && exit 1
 	else
@@ -618,10 +688,10 @@ crontab_monitor_cron_start2(){
 }
 crontab_monitor_cron_stop2(){
 	crontab -l > "$file_1/crontab.bak"
-	sed -i "/mtproxy_go.sh monitorip/d" "$file_1/crontab.bak"
+	sed -i "/mtproxy.sh monitorip/d" "$file_1/crontab.bak"
 	crontab "$file_1/crontab.bak"
 	rm -r "$file_1/crontab.bak"
-	cron_config=$(crontab -l | grep "mtproxy_go.sh monitorip")
+	cron_config=$(crontab -l | grep "mtproxy.sh monitorip")
 	if [[ ! -z ${cron_config} ]]; then
 		echo -e "${Error} 服务器外网IP变更监控功能 停止失败 !" && exit 1
 	else
@@ -631,87 +701,69 @@ crontab_monitor_cron_stop2(){
 crontab_monitorip(){
 	check_installed_status
 	Read_config
-	getipv4
-	getipv6
-	monitorip_yn="NO"
-	if [[ "${ipv4}" != "IPv4_Error" ]]; then
-		if [[ "${ipv4}" != "${nat_ipv4}" ]]; then
-			echo -e "${Info} [$(date "+%Y-%m-%d %H:%M:%S %u %Z")] 检测到 服务器外网IPv4变更[旧: ${nat_ipv4}，新: ${ipv4}], 开始重新配置并准备重启服务端..." | tee -a ${mtproxy_log}
-			monitorip_yn="YES"
-			mtp_nat_ipv4=${ipv4}
+	getip
+	ipv4=$(echo "${nat}"|awk -F ':' '{print $2}')
+	nat_ipv4=$(echo "${nat}"|awk -F ':' '{print $1}')
+	if [[ "${ip}" != "VPS_IP" ]]; then
+		if [[ "${ip}" != "${ipv4}" ]]; then
+			echo -e "${Info} [$(date "+%Y-%m-%d %H:%M:%S %u %Z")] 检测到 服务器外网IP变更[旧: ${ipv4}，新: ${ip}], 开始重新配置并准备重启服务端..." | tee -a ${mtproxy_log}
+			mtp_nat="${nat_ipv4}:${ip}"
+			mtp_port=${port}
+			mtp_passwd=${passwd}
+			mtp_tag=${tag}
+			Write_config
+			Restart_mtproxy
 		fi
 	else
 		echo -e "${Error} [$(date "+%Y-%m-%d %H:%M:%S %u %Z")] 服务器外网IPv4获取失败..." | tee -a ${mtproxy_log}
-		mtp_nat_ipv4=${nat_ipv4}
-	fi
-	if [[ "${ipv6}" != "IPv6_Error" ]]; then
-		if [[ "${ipv6}" != "${nat_ipv6}" ]]; then
-			echo -e "${Info} [$(date "+%Y-%m-%d %H:%M:%S %u %Z")] 检测到 服务器外网IPv6变更[旧: ${nat_ipv6}，新: ${ipv6}], 开始重新配置并准备重启服务端..." | tee -a ${mtproxy_log}
-			monitorip_yn="YES"
-			mtp_nat_ipv6=${ipv6}
-		fi
-	else
-		echo -e "${Error} [$(date "+%Y-%m-%d %H:%M:%S %u %Z")] 服务器外网IPv6获取失败..." | tee -a ${mtproxy_log}
-		mtp_nat_ipv6=${nat_ipv6}
-	fi
-	if [[ ${monitorip_yn} == "YES" ]]; then
-		mtp_port=${port}
-		mtp_passwd=${passwd}
-		mtp_tag=${tag}
-		mtp_secure=${secure}
-		Write_config
-		Restart
 	fi
 }
 Add_iptables(){
 	iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport ${mtp_port} -j ACCEPT
-	ip6tables -I INPUT -m state --state NEW -m tcp -p tcp --dport ${mtp_port} -j ACCEPT
+	#iptables -I INPUT -m state --state NEW -m udp -p udp --dport ${mtp_port} -j ACCEPT
 }
 Del_iptables(){
 	iptables -D INPUT -m state --state NEW -m tcp -p tcp --dport ${port} -j ACCEPT
-	ip6tables -D INPUT -m state --state NEW -m tcp -p tcp --dport ${port} -j ACCEPT
+	#iptables -D INPUT -m state --state NEW -m udp -p udp --dport ${port} -j ACCEPT
 }
 Save_iptables(){
 	if [[ ${release} == "centos" ]]; then
 		service iptables save
-		service ip6tables save
 	else
 		iptables-save > /etc/iptables.up.rules
-		ip6tables-save > /etc/ip6tables.up.rules
 	fi
 }
 Set_iptables(){
 	if [[ ${release} == "centos" ]]; then
 		service iptables save
-		service ip6tables save
 		chkconfig --level 2345 iptables on
-		chkconfig --level 2345 ip6tables on
 	else
 		iptables-save > /etc/iptables.up.rules
-		ip6tables-save > /etc/ip6tables.up.rules
-		echo -e '#!/bin/bash\n/sbin/iptables-restore < /etc/iptables.up.rules\n/sbin/ip6tables-restore < /etc/ip6tables.up.rules' > /etc/network/if-pre-up.d/iptables
+		echo -e '#!/bin/bash\n/sbin/iptables-restore < /etc/iptables.up.rules' > /etc/network/if-pre-up.d/iptables
 		chmod +x /etc/network/if-pre-up.d/iptables
 	fi
 }
 Update_Shell(){
-	sh_new_ver=$(wget --no-check-certificate -qO- -t1 -T3 "https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/mtproxy_go.sh"|grep 'sh_ver="'|awk -F "=" '{print $NF}'|sed 's/\"//g'|head -1) && sh_new_type="github"
+	sh_new_ver=$(wget --no-check-certificate -qO- -t1 -T3 "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/service/mtproxy.sh"|grep 'sh_ver="'|awk -F "=" '{print $NF}'|sed 's/\"//g'|head -1) && sh_new_type="github"
 	[[ -z ${sh_new_ver} ]] && echo -e "${Error} 无法链接到 Github !" && exit 0
-	if [[ -e "/etc/init.d/mtproxy-go" ]]; then
-		rm -rf /etc/init.d/mtproxy-go
-		Service
+	if [[ -e "/etc/init.d/mtproxy" ]]; then
+		rm -rf /etc/init.d/mtproxy
+		Service_mtproxy
 	fi
-	wget -N --no-check-certificate "https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/mtproxy_go.sh" && chmod +x mtproxy_go.sh
+	wget -N --no-check-certificate "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/service/mtproxy.sh" && chmod +x mtproxy.sh
 	echo -e "脚本已更新为最新版本[ ${sh_new_ver} ] !(注意：因为更新方式为直接覆盖当前运行的脚本，所以可能下面会提示一些报错，无视即可)" && exit 0
 }
 check_sys
 action=$1
 if [[ "${action}" == "monitor" ]]; then
-	crontab_monitor
+	crontab_monitor_mtproxy
+elif [[ "${action}" == "update" ]]; then
+	crontab_update_mtproxy
 elif [[ "${action}" == "monitorip" ]]; then
 	crontab_monitorip
 else
-	echo && echo -e "  MTProxy-Go 一键管理脚本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
-  ---- Toyo | doub.io/shell-jc9 ----
+	echo && echo -e "  MTProxy 一键管理脚本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
+  ---- Toyo | doub.io/shell-jc7 ----
   
  ${Green_font_prefix} 0.${Font_color_suffix} 升级脚本
 ————————————
@@ -745,28 +797,28 @@ else
 		Update_Shell
 		;;
 		1)
-		Install
+		Install_mtproxy
 		;;
 		2)
-		Update
+		Update_mtproxy
 		;;
 		3)
-		Uninstall
+		Uninstall_mtproxy
 		;;
 		4)
-		Start
+		Start_mtproxy
 		;;
 		5)
-		Stop
+		Stop_mtproxy
 		;;
 		6)
-		Restart
+		Restart_mtproxy
 		;;
 		7)
-		Set
+		Set_mtproxy
 		;;
 		8)
-		View
+		View_mtproxy
 		;;
 		9)
 		View_Log
