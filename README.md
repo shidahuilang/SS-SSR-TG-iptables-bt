@@ -253,7 +253,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ## xiandan.sh
 
 - 脚本说明:闲蛋面板一键部署
-- - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
+- 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
 
 #### 下载安装:
 ``` bash
