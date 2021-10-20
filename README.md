@@ -85,11 +85,11 @@ Usage: /etc/init.d/frps {start|stop|restart|status|config|version}
 - 脚本集成安装 Docker Engine Docker Compose
 #### 下载安装:
 ``` bash
-bash <(curl -sSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/DockerInstallation.sh)
+bash <(curl -sSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/DockerInstallation.sh)
 ```
 #### 一键切换国内源:
 ``` bash
-bash <(curl -sSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/ChangeMirrors.sh)
+bash <(curl -sSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ChangeMirrors.sh)
 ```
 
 ## 代理相关
@@ -110,7 +110,7 @@ bash <(curl -sSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptabl
 - VMess+WS+TLS【支持CDN、IPv6】
 #### 下载安装:
 ``` bash
-wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/install.sh" && chmod 700 /root/install.sh && /root/install.sh
+wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/install.sh" && chmod 700 /root/install.sh && /root/install.sh
 ```
 
 
@@ -124,7 +124,7 @@ wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/shida
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/ss-go.sh && chmod +x ss-go.sh && bash ss-go.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ss-go.sh && chmod +x ss-go.sh && bash ss-go.sh
 ```
 
 ---
@@ -148,7 +148,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/ssr.sh && chmod +x ssr.sh && bash ssr.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 ```
 
 ---
@@ -173,7 +173,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/ssrmu.sh && chmod +x ssrmu.sh && bash ssrmu.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ssrmu.sh && chmod +x ssrmu.sh && bash ssrmu.sh
 ```
 
 ---
@@ -184,7 +184,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/brook.sh && chmod +x brook.sh && bash brook.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/brook.sh && chmod +x brook.sh && bash brook.sh
 ```
 
 ---
@@ -196,7 +196,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/goflyway.sh && chmod +x goflyway.sh && bash goflyway.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/goflyway.sh && chmod +x goflyway.sh && bash goflyway.sh
 ```
 
 ---
@@ -208,7 +208,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/lightsocks.sh && chmod +x lightsocks.sh && bash lightsocks.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/lightsocks.sh && chmod +x lightsocks.sh && bash lightsocks.sh
 ```
 
 ---
@@ -219,7 +219,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/daze.sh && chmod +x daze.sh && bash daze.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/daze.sh && chmod +x daze.sh && bash daze.sh
 ```
 
 ---
@@ -231,7 +231,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/mtproxy.sh && chmod +x mtproxy.sh && bash mtproxy.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy.sh && chmod +x mtproxy.sh && bash mtproxy.sh
 ```
 
 ---
@@ -243,7 +243,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/mtproxy_go.sh && chmod +x mtproxy_go.sh && bash mtproxy_go.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy_go.sh && chmod +x mtproxy_go.sh && bash mtproxy_go.sh
 ```
 
 ---
@@ -257,7 +257,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/xiandan/xiandan.sh')
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/xiandan/xiandan.sh')
 ```
 
 ## iptables-pf.sh
@@ -268,7 +268,7 @@ bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/shida
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/iptables-pf.sh && chmod +x iptables-pf.sh && bash iptables-pf.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/iptables-pf.sh && chmod +x iptables-pf.sh && bash iptables-pf.sh
 ```
 
 ---
@@ -280,7 +280,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/brook-pf.sh && chmod +x brook-pf.sh && bash brook-pf.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/brook-pf.sh && chmod +x brook-pf.sh && bash brook-pf.sh
 ```
 
 ---
@@ -292,7 +292,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/haproxy.sh && chmod +x haproxy.sh && bash haproxy.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/haproxy.sh && chmod +x haproxy.sh && bash haproxy.sh
 ```
 
 ---
@@ -304,7 +304,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/socat.sh && chmod +x socat.sh && bash socat.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/socat.sh && chmod +x socat.sh && bash socat.sh
 ```
 
 ---
@@ -316,7 +316,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/tinymapper.sh && chmod +x tinymapper.sh && bash tinymapper.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/tinymapper.sh && chmod +x tinymapper.sh && bash tinymapper.sh
 ```
 
 ---
@@ -331,7 +331,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/aria2.sh && chmod +x aria2.sh && bash aria2.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/aria2.sh && chmod +x aria2.sh && bash aria2.sh
 ```
 
 ---
@@ -343,7 +343,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/cloudt.sh && chmod +x cloudt.sh && bash cloudt.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/cloudt.sh && chmod +x cloudt.sh && bash cloudt.sh
 ```
 
 ---
@@ -355,7 +355,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/pserver.sh && chmod +x pserver.sh && bash pserver.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/pserver.sh && chmod +x pserver.sh && bash pserver.sh
 ```
 
 ---
@@ -370,7 +370,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/bbr.sh && chmod +x bbr.sh && bash bbr.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/bbr.sh && chmod +x bbr.sh && bash bbr.sh
 ```
 
 ---
@@ -382,7 +382,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/status.sh && chmod +x status.sh && bash status.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/status.sh && chmod +x status.sh && bash status.sh
 ```
 
 ---
@@ -394,7 +394,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/ban_iptables.sh && chmod +x ban_iptables.sh && bash ban_iptables.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ban_iptables.sh && chmod +x ban_iptables.sh && bash ban_iptables.sh
 ```
 
 ---
@@ -406,7 +406,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/ssh_port.sh && chmod +x ssh_port.sh && bash ssh_port.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ssh_port.sh && chmod +x ssh_port.sh && bash ssh_port.sh
 ```
 
 ---
@@ -421,7 +421,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/ocserv.sh && chmod +x ocserv.sh && bash ocserv.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ocserv.sh && chmod +x ocserv.sh && bash ocserv.sh
 ```
 
 ## L2TP.sh  
@@ -429,7 +429,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 -L2TP一键安装
 - 脚本说明: L2TP一键安装脚本: 支持的系统：CentOS 6+ / Debian 7+ / Ubuntu 12+
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/L2TP.sh && chmod a+x L2TP.sh && bash L2TP.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/L2TP.sh && chmod a+x L2TP.sh && bash L2TP.sh
 ```
 ---
 
@@ -443,7 +443,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/dowsdns.sh && chmod +x dowsdns.sh && bash dowsdns.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/dowsdns.sh && chmod +x dowsdns.sh && bash dowsdns.sh
 ```
 
 ---
@@ -458,14 +458,14 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh
  # 安装插件：
  bash caddy_install.sh xxx,xxx
   # 例如同时安装 http.filemanager 和 http.webdav插件：
   bash caddy_install.sh http.filemanager,http.webdav
   # 插件和Caddy是集成在一起的(单个二进制文件)，多个插件必须同时安装。
 # 卸载命令：
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/caddy_install.sh && chmod +x caddy_install.sh && caddy_install.sh uninstall
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/caddy_install.sh && chmod +x caddy_install.sh && caddy_install.sh uninstall
 ```
 
 ---
@@ -477,7 +477,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/pythonhttp.sh && chmod +x pythonhttp.sh && bash pythonhttp.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/pythonhttp.sh && chmod +x pythonhttp.sh && bash pythonhttp.sh
 ```
 
 ---
@@ -492,7 +492,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/adbyby.sh && chmod +x adbyby.sh && bash adbyby.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/adbyby.sh && chmod +x adbyby.sh && bash adbyby.sh
 ```
 
 ## gfw_push.sh
@@ -503,7 +503,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/gfw_push.sh && chmod +x gfw_push.sh && bash gfw_push.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/gfw_push.sh && chmod +x gfw_push.sh && bash gfw_push.sh
 ```
 
 ---
@@ -515,7 +515,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/libsodium.sh && chmod +x libsodium.sh && bash libsodium.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/libsodium.sh && chmod +x libsodium.sh && bash libsodium.sh
 ```
 
 ---
@@ -527,7 +527,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/ssr_check.sh && chmod +x ssr_check.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ssr_check.sh && chmod +x ssr_check.sh
 ```
 
 ---
@@ -539,7 +539,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/ssrstatus.sh && chmod +x ssrstatus.sh && bash ssrstatus
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ssrstatus.sh && chmod +x ssrstatus.sh && bash ssrstatus
 ```
 
 ---
@@ -551,7 +551,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/ssr_ip_check.sh && chmod +x ssr_ip_check.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ssr_ip_check.sh && chmod +x ssr_ip_check.sh
 ```
 
 ---
@@ -563,7 +563,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/superspeed.sh && chmod +x superspeed.sh && bash superspeed.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/superspeed.sh && chmod +x superspeed.sh && bash superspeed.sh
 ```
 
 
