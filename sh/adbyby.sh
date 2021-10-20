@@ -6,8 +6,8 @@ export PATH
 #	System Required: CentOS/Debian/Ubuntu
 #	Description: ADbyby
 #	Version: 1.0.1
-#	
-#	
+#	Author: Toyo
+#	Blog: https://doub.io/adbyby-jc2/
 #=================================================
 
 file="/usr/local/adbyby"
