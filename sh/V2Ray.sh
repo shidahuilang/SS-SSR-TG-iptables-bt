@@ -1011,11 +1011,11 @@ esac
 clear
 while :; do
 	echo
-	echo "........... V2Ray 一键安装脚本 & 管理脚本 .........."
+	echo "........... V2Ray 一键安装脚本 & 管理脚本 by 233v2.com .........."
 	echo
-	echo "帮助说明: https://github.com/shidahuilang/SS-SSR-TG-iptables-bt"
+	echo "帮助说明: https://233v2.com/post/1/"
 	echo
-	echo "搭建教程: https://github.com/shidahuilang/SS-SSR-TG-iptables-bt"
+	echo "搭建教程: https://233v2.com/post/2/"
 	echo
 	echo " 1. 安装"
 	echo
