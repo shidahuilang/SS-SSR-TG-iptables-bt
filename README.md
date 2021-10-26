@@ -184,6 +184,8 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 - 脚本说明:V2Ray 一键安装脚本 & 管理脚本 功能特点 支持 V2Ray 多数传输协议
 - 系统支持:Ubuntu 16+ / Debian 8+ / CentOS 7+ 系统
 
+ - 输入 v2ray 查看面板
+
  - v2ray info 查看 V2Ray 配置信息
 
  - v2ray config 修改 V2Ray 配置
