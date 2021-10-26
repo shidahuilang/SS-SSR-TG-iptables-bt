@@ -802,7 +802,7 @@ install_v2ray() {
 		cp -rf $(pwd)/* /etc/v2ray/shidahuilang/v2ray
 	else
 		pushd /tmp
-		git clone https://github.com/shidahuilang/SS-SSR-TG-iptables-bt/v2ray -b "$_gitbranch" /etc/v2ray/shidahuilang/v2ray --depth=1
+		git clone https://github.com/shidahuilang/v2ray -b "$_gitbranch" /etc/v2ray/shidahuilang/v2ray --depth=1
 		popd
 
 	fi
