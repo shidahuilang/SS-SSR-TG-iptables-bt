@@ -798,16 +798,16 @@ install_v2ray() {
 			echo
 			exit 1
 		fi
-		mkdir -p /etc/v2ray/279437541/v2ray
-		cp -rf $(pwd)/* /etc/v2ray/279437541/v2ray
+		mkdir -p /etc/v2ray/shidahuilang/v2ray
+		cp -rf $(pwd)/* /etc/v2ray/shidahuilang/v2ray
 	else
 		pushd /tmp
 		git clone https://github.com/279437541/v2ray.git
-		popd
+
 
 	fi
 
-	if [[ ! -d /etc/v2ray/279437541/v2ray ]]; then
+	if [[ ! -d /etc/v2ray/shidahuilang/v2ray ]]; then
 		echo
 		echo -e "$red 哎呀呀...克隆脚本仓库出错了...$none"
 		echo
@@ -824,8 +824,8 @@ install_v2ray() {
 }
 
 config() {
-	cp -f /etc/v2ray/279437541/v2ray/config/backup.conf $backup
-	cp -f /etc/v2ray/279437541/v2ray/v2ray.sh $_v2ray_sh
+	cp -f /etc/v2ray/shidahuilang/v2ray/config/backup.conf $backup
+	cp -f /etc/v2ray/shidahuilang/v2ray/v2ray.sh $_v2ray_sh
 	chmod +x $_v2ray_sh
 
 	v2ray_id=$uuid
