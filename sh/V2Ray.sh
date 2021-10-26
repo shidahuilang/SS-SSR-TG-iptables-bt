@@ -120,7 +120,7 @@ ciphers=(
 )
 
 _load() {
-	local _dir="/etc/v2ray/279437541/v2ray/src/"
+	local _dir="/etc/v2ray/233boy/v2ray/src/"
 	. "${_dir}$@"
 }
 _sys_timezone() {
@@ -798,16 +798,16 @@ install_v2ray() {
 			echo
 			exit 1
 		fi
-		mkdir -p /etc/v2ray/shidahuilang/v2ray
-		cp -rf $(pwd)/* /etc/v2ray/shidahuilang/v2ray
+		mkdir -p /etc/v2ray/233boy/v2ray
+		cp -rf $(pwd)/* /etc/v2ray/233boy/v2ray
 	else
 		pushd /tmp
-		git clone https://github.com/279437541/v2ray.git
-
+		git clone https://github.com/233boy/v2ray -b "$_gitbranch" /etc/v2ray/233boy/v2ray --depth=1
+		popd
 
 	fi
 
-	if [[ ! -d /etc/v2ray/shidahuilang/v2ray ]]; then
+	if [[ ! -d /etc/v2ray/233boy/v2ray ]]; then
 		echo
 		echo -e "$red 哎呀呀...克隆脚本仓库出错了...$none"
 		echo
@@ -824,8 +824,8 @@ install_v2ray() {
 }
 
 config() {
-	cp -f /etc/v2ray/shidahuilang/v2ray/config/backup.conf $backup
-	cp -f /etc/v2ray/shidahuilang/v2ray/v2ray.sh $_v2ray_sh
+	cp -f /etc/v2ray/233boy/v2ray/config/backup.conf $backup
+	cp -f /etc/v2ray/233boy/v2ray/v2ray.sh $_v2ray_sh
 	chmod +x $_v2ray_sh
 
 	v2ray_id=$uuid
@@ -917,14 +917,14 @@ show_config_info() {
 }
 
 install() {
-	if [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f $backup && -d /etc/v2ray/279437541/v2ray ]]; then
+	if [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f $backup && -d /etc/v2ray/233boy/v2ray ]]; then
 		echo
 		echo " 大佬...你已经安装 V2Ray 啦...无需重新安装"
 		echo
 		echo -e " $yellow输入 ${cyan}v2ray${none} $yellow即可管理 V2Ray${none}"
 		echo
 		exit 1
-	elif [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f /etc/v2ray/233blog_v2ray_backup.txt && -d /etc/v2ray/279437541/v2ray ]]; then
+	elif [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f /etc/v2ray/233blog_v2ray_backup.txt && -d /etc/v2ray/233boy/v2ray ]]; then
 		echo
 		echo "  如果你需要继续安装.. 请先卸载旧版本"
 		echo
@@ -959,7 +959,7 @@ install() {
 }
 uninstall() {
 
-	if [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f $backup && -d /etc/v2ray/279437541/v2ray ]]; then
+	if [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f $backup && -d /etc/v2ray/233boy/v2ray ]]; then
 		. $backup
 		if [[ $mark ]]; then
 			_load uninstall.sh
@@ -969,7 +969,7 @@ uninstall() {
 			echo
 		fi
 
-	elif [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f /etc/v2ray/233blog_v2ray_backup.txt && -d /etc/v2ray/279437541/v2ray ]]; then
+	elif [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f /etc/v2ray/233blog_v2ray_backup.txt && -d /etc/v2ray/233boy/v2ray ]]; then
 		echo
 		echo -e " $yellow输入 ${cyan}v2ray uninstall${none} $yellow即可卸载${none}"
 		echo
@@ -1011,11 +1011,11 @@ esac
 clear
 while :; do
 	echo
-	echo "........... V2Ray 一键安装脚本 & 管理脚本 by 233v2.com .........."
+	echo "........... V2Ray 一键安装脚本 & 管理脚本  .........."
 	echo
-	echo "帮助说明: http://github.com/shidahuilang/SS-SSR-TG-iptables-bt"
+	echo "帮助说明: https://github.com/shidahuilang/SS-SSR-TG-iptables-bt"
 	echo
-	echo "搭建教程: http://github.com/shidahuilang/SS-SSR-TG-iptables-bt"
+	echo "搭建教程: https://github.com/shidahuilang/SS-SSR-TG-iptables-bt"
 	echo
 	echo " 1. 安装"
 	echo
