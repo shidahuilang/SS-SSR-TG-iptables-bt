@@ -120,7 +120,7 @@ ciphers=(
 )
 
 _load() {
-	local _dir="/etc/v2ray/langboy/v2ray/src/"
+	local _dir="/etc/v2ray/lang/v2ray/src/"
 	. "${_dir}$@"
 }
 _sys_timezone() {
@@ -794,20 +794,20 @@ install_v2ray() {
 			echo
 			echo -e "$red 哎呀呀...安装失败了咯...$none"
 			echo
-			echo -e " 请确保你有完整的上传 lang 的 V2Ray 一键安装脚本 & 管理脚本到当前 ${green}$(pwd) $none目录下"
+			echo -e " 请确保你有完整的上传 langv2.com 的 V2Ray 一键安装脚本 & 管理脚本到当前 ${green}$(pwd) $none目录下"
 			echo
 			exit 1
 		fi
-		mkdir -p /etc/v2ray/langboy/v2ray
-		cp -rf $(pwd)/* /etc/v2ray/langboy/v2ray
+		mkdir -p /etc/v2ray/lang/v2ray
+		cp -rf $(pwd)/* /etc/v2ray/lang/v2ray
 	else
 		pushd /tmp
-		git clone https://github.com/shidahuilang/v2ray -b "$_gitbranch" /etc/v2ray/langboy/v2ray --depth=1
+		git clone https://github.com/shidahuilang/v2ray -b "$_gitbranch" /etc/v2ray/lang/v2ray --depth=1
 		popd
 
 	fi
 
-	if [[ ! -d /etc/v2ray/langboy/v2ray ]]; then
+	if [[ ! -d /etc/v2ray/lang/v2ray ]]; then
 		echo
 		echo -e "$red 哎呀呀...克隆脚本仓库出错了...$none"
 		echo
@@ -824,8 +824,8 @@ install_v2ray() {
 }
 
 config() {
-	cp -f /etc/v2ray/langboy/v2ray/config/backup.conf $backup
-	cp -f /etc/v2ray/langboy/v2ray/v2ray.sh $_v2ray_sh
+	cp -f /etc/v2ray/lang/v2ray/config/backup.conf $backup
+	cp -f /etc/v2ray/lang/v2ray/v2ray.sh $_v2ray_sh
 	chmod +x $_v2ray_sh
 
 	v2ray_id=$uuid
@@ -917,14 +917,14 @@ show_config_info() {
 }
 
 install() {
-	if [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f $backup && -d /etc/v2ray/langboy/v2ray ]]; then
+	if [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f $backup && -d /etc/v2ray/lang/v2ray ]]; then
 		echo
 		echo " 大佬...你已经安装 V2Ray 啦...无需重新安装"
 		echo
 		echo -e " $yellow输入 ${cyan}v2ray${none} $yellow即可管理 V2Ray${none}"
 		echo
 		exit 1
-	elif [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f /etc/v2ray/langblog_v2ray_backup.txt && -d /etc/v2ray/langboy/v2ray ]]; then
+	elif [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f /etc/v2ray/langblog_v2ray_backup.txt && -d /etc/v2ray/lang/v2ray ]]; then
 		echo
 		echo "  如果你需要继续安装.. 请先卸载旧版本"
 		echo
@@ -959,7 +959,7 @@ install() {
 }
 uninstall() {
 
-	if [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f $backup && -d /etc/v2ray/langboy/v2ray ]]; then
+	if [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f $backup && -d /etc/v2ray/lang/v2ray ]]; then
 		. $backup
 		if [[ $mark ]]; then
 			_load uninstall.sh
@@ -969,7 +969,7 @@ uninstall() {
 			echo
 		fi
 
-	elif [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f /etc/v2ray/langblog_v2ray_backup.txt && -d /etc/v2ray/langboy/v2ray ]]; then
+	elif [[ -f /usr/bin/v2ray/v2ray && -f /etc/v2ray/config.json ]] && [[ -f /etc/v2ray/langblog_v2ray_backup.txt && -d /etc/v2ray/lang/v2ray ]]; then
 		echo
 		echo -e " $yellow输入 ${cyan}v2ray uninstall${none} $yellow即可卸载${none}"
 		echo
