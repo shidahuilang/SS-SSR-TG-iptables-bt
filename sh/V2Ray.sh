@@ -802,7 +802,7 @@ install_v2ray() {
 		cp -rf $(pwd)/* /etc/v2ray/279437541/v2ray
 	else
 		pushd /tmp
-		git clone https://github.com/279437541/v2ray -b "$_gitbranch" /etc/v2ray/279437541/v2ray --depth=1
+		git clone https://github.com/279437541/v2ray.git
 		popd
 
 	fi
