@@ -802,7 +802,7 @@ install_v2ray() {
 		cp -rf $(pwd)/* /etc/v2ray/233boy/v2ray
 	else
 		pushd /tmp
-		git clone https://github.com/233boy/v2ray -b "$_gitbranch" /etc/v2ray/233boy/v2ray --depth=1
+		git clone https://github.com/shidahuilang/v2ray -b "$_gitbranch" /etc/v2ray/233boy/v2ray --depth=1
 		popd
 
 	fi
@@ -977,7 +977,7 @@ uninstall() {
 		echo -e "
 		$red 大胸弟...你貌似毛有安装 V2Ray ....卸载个鸡鸡哦...$none
 
-		备注...仅支持卸载使用我 (233v2.com) 提供的 V2Ray 一键安装脚本
+		备注...仅支持卸载使用我 (dahuilang) 提供的 V2Ray 一键安装脚本
 		" && exit 1
 	fi
 
@@ -1011,11 +1011,8 @@ esac
 clear
 while :; do
 	echo
-	echo "........... V2Ray 一键安装脚本 & 管理脚本 .........."
-	echo
-	echo "帮助说明: https://github.com/shidahuilang/"
-	echo
-	echo "搭建教程: https://github.com/shidahuilang/"
+	echo "........... V2Ray 一键安装脚本 & 管理脚本 by 233v2.com .........."
+
 	echo
 	echo " 1. 安装"
 	echo
