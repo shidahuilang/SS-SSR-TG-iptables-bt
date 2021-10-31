@@ -246,9 +246,6 @@ curl https://get.acme.sh | sh
 ``` bash
 bash <(curl -Ls https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/x-ui.sh)
 ```
-## 使用教程
-
-
 
 ## brook.sh
 
