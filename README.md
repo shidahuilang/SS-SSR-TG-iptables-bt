@@ -8,6 +8,7 @@
 * [***代理相关***](#代理相关)
   * [install.sh](#installsh)
   * [V2Ray.sh](#V2Raysh)
+  * [x-ui.sh](#x-uish)
   * [ss-go.sh](#ss_gosh)
   * [ssr.sh](#ssrsh)
   * [ssrmu.sh](#ssrmush)
@@ -216,6 +217,38 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ``` bash
 bash <(curl -s -L https://git.io/Jicox)
 ```
+
+## X-UI面板安装
+
+- 系统状态监控
+- 支持多用户多协议，网页可视化操作
+- 支持的协议：vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http
+- 支持配置更多传输配置
+- 流量统计，限制流量，限制到期时间
+- 可自定义 xray 配置模板
+- 支持 https 访问面板（自备域名 + ssl 证书）
+
+## 使用教程
+``` bash
+curl https://get.acme.sh | sh
+
+~/.acme.sh/acme.sh --register-account -m xxxx@gmail.com
+
+~/.acme.sh/acme.sh  --issue -d 你的域名   --standalone
+
+~/.acme.sh/acme.sh --installcert -d 你的域名 --key-file /root/private.key --fullchain-file /root/cert.crt
+```
+顺利安装完成后，用IP+54321 端口登录页面，修改好用户名、密码、面板监听端口、面板证书公钥文件路径、面板证书密钥文件路径
+
+重启页面，然后就可以用你的域名+面板监听端口和你新设置的用户名跟密码登录页面了
+
+## 下载安装
+``` bash
+bash <(curl -Ls https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/x-ui.sh)
+```
+## 使用教程
+
+
 
 ## brook.sh
 
