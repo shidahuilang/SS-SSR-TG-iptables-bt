@@ -218,7 +218,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 bash <(curl -s -L https://git.io/Jicox)
 ```
 
-## X-UI面板安装 x-ui.sh
+## x-ui.sh X-UI面板安装 
 
 - 系统状态监控
 - 支持多用户多协议，网页可视化操作
