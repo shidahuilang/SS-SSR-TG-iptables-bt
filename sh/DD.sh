@@ -82,7 +82,7 @@ bash <(curl -sSL "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptab
 }
 #17 VPS一键3网测速脚本
 superspeed(){
-	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/superbench.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/superspeed.sh)
 }
 action=$1
 if [[ "${action}" == "monitor" ]]; then
