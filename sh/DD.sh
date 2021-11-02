@@ -110,7 +110,7 @@ echo && echo -e "
 |                     小鸡一键管理脚本                          |                   
 |                     一键在手小鸡无忧                          |
 |                          使用教程                             |
-|    https://github.com/shidahuilang/SS-SSR-TG-iptables-bt     |                     
+|    https://github.com/shidahuilang/SS-SSR-TG-iptables-bt      |                     
 +-------------------------------------------------------------+
  ${Green_font_prefix}0.${Font_color_suffix}  升级脚本
  ${Green_font_prefix}1.${Font_color_suffix}  加速系列：Bbr系列、锐速
