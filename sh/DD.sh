@@ -107,7 +107,11 @@ xiandan(){
 #23宝塔面板一键搭建
 install_panel(){
        curl -sSO http://download.bt.cn/install/install_panel.sh && bash install_panel.sh
-}       
+}
+#24流媒体检测
+check(){
+       bash <(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)
+}
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
@@ -147,11 +151,12 @@ echo && echo -e "
  ${Green_font_prefix}21.${Font_color_suffix} 支持多协议多用户的X-ui面板
  ${Green_font_prefix}22.${Font_color_suffix} 闲蛋探针+中转一键搭建
  ${Green_font_prefix}23.${Font_color_suffix} 宝塔面板一键搭建
+ ${Green_font_prefix}24.${Font_color_suffix} 流媒体检测
   " && echo
   
 fi
 echo
-read -e -p " 请输入数字 [0-23]:" num
+read -e -p " 请输入数字 [0-24]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -225,8 +230,11 @@ case "$num" in
         23)
 	install_panel
 	;;
+        24)
+	check
+	;;
 	*)
-	echo "请输入正确数字 [0-23]"
+	echo "请输入正确数字 [0-24]"
 	;;
 esac
   
