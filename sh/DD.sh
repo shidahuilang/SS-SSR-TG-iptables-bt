@@ -104,6 +104,10 @@ install(){
 xiandan(){
        bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/xiandan/xiandan.sh')
 }
+#23宝塔面板一键搭建
+install_panel(){
+       curl -sSO http://download.bt.cn/install/install_panel.sh && bash install_panel.sh
+}       
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
@@ -142,11 +146,12 @@ echo && echo -e "
  ${Green_font_prefix}20.${Font_color_suffix} Docker-Compose安装
  ${Green_font_prefix}21.${Font_color_suffix} 支持多协议多用户的X-ui面板
  ${Green_font_prefix}22.${Font_color_suffix} 闲蛋探针+中转一键搭建
+ ${Green_font_prefix}23.${Font_color_suffix} 宝塔面板一键搭建
   " && echo
   
 fi
 echo
-read -e -p " 请输入数字 [0-22]:" num
+read -e -p " 请输入数字 [0-23]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -217,8 +222,11 @@ case "$num" in
 	22)
 	xiandan
 	;;
+        23)
+	install_panel
+	;;
 	*)
-	echo "请输入正确数字 [0-22]"
+	echo "请输入正确数字 [0-23]"
 	;;
 esac
   
