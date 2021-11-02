@@ -96,7 +96,10 @@ install-frps(){
 DockerInstallation(){
        bash <(curl -sSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/DockerInstallation.sh)
 }
-
+#21X-ui面板一键安装
+install(){
+       bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+}
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
@@ -133,11 +136,12 @@ echo && echo -e "
  ${Green_font_prefix}18.${Font_color_suffix} VPS一键3网测速脚本
  ${Green_font_prefix}19.${Font_color_suffix} frp一键内网穿刺
  ${Green_font_prefix}20.${Font_color_suffix} Docker-Compose安装
+ ${Green_font_prefix}21.${Font_color_suffix} 支持多协议多用户的X-ui面板
   " && echo
   
 fi
 echo
-read -e -p " 请输入数字 [0-20]:" num
+read -e -p " 请输入数字 [0-21]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -202,8 +206,11 @@ case "$num" in
 	20)
 	DockerInstallation
 	;;
+	21)
+	install
 	*)
-	echo "请输入正确数字 [0-20]"
+	;;
+	echo "请输入正确数字 [0-21]"
 	;;
 esac
   
