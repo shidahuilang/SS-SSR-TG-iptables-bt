@@ -178,7 +178,7 @@ case "$num" in
 	xray	
 	;;
 	17)
-        superbench	
+        superspeed	
 	;;
 	*)
 	echo "请输入正确数字 [0-17]"
