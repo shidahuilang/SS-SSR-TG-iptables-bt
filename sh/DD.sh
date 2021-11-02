@@ -103,15 +103,15 @@ if [[ "${action}" == "monitor" ]]; then
 else
 echo && echo -e " 
 
+
+  
 +-------------------------------------------------------------+
 |                         大灰狼专用                          | 
 |                     小鸡一键管理脚本                        |                   
 |                     一键在手小鸡无忧                        |
 |                     欢迎提交一键脚本                        |
 +-------------------------------------------------------------+
-  
-
- ${Green_font_prefix} 0.${Font_color_suffix} 升级脚本
+ ${Green_font_prefix}0.${Font_color_suffix}  升级脚本
  ${Green_font_prefix}1.${Font_color_suffix}  加速系列：Bbr系列、锐速
  ${Green_font_prefix}2.${Font_color_suffix}  安装谷歌 BBR2 BBRV2
  ${Green_font_prefix}3.${Font_color_suffix}  安装KCPtun
