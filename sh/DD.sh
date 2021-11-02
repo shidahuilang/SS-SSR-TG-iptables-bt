@@ -177,6 +177,7 @@ case "$num" in
 	16)
 	xray	
 	;;
+	16)
         superbench	
 	;;
 	*)
