@@ -80,6 +80,10 @@ bash <(curl -sSL "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptab
 xray(){
 bash <(curl -sSL "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/xray.sh")	
 }
+#17 VPS一键3网测速脚本
+superspeed(){
+	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/superbench.sh)
+}
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
@@ -114,7 +118,8 @@ echo && echo -e "
  ${Green_font_prefix}14.${Font_color_suffix} 改ls颜色(debian)
  ——————————————————
  ${Green_font_prefix}15.${Font_color_suffix} Netflix解锁检测
- ${Green_font_prefix}16.${Font_color_suffix} xray安装 
+ ${Green_font_prefix}16.${Font_color_suffix} xray安装
+ ${Green_font_prefix}17.${Font_color_suffix} VPS一键3网测速脚本
   " && echo
 
 fi
