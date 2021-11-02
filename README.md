@@ -308,10 +308,10 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 - 脚本说明: Mtproto Proxy Go版 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian7+ / Ubuntu14+
 - 输入命令后显示：> Input service PORT, or press Enter to use a random port 这个是输入您要设置端口
-- 不设置的话回车默认端口
-然后显示：> Input a domain for FakeTLS, or press Enter to use "hostupdate.vmware.com" 回车默认hostupdate.vmware.com，
+不设置的话回车默认端口
+- 然后显示：> Input a domain for FakeTLS, or press Enter to use "hostupdate.vmware.com" 回车默认hostupdate.vmware.com，
 可以输入 FakeTLS 改协议
-搭建好以后要查看TG代理链接，输入：mtg access /etc/mtg.toml
+- 搭建好以后要查看TG代理链接，输入：mtg access /etc/mtg.toml
 
 #### 下载安装:
 ``` bash
