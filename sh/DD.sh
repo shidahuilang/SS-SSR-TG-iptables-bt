@@ -102,7 +102,7 @@ install(){
 }
 #22闲蛋探针+中转一键搭建
 xiandan(){
-       bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/xiandan/xiandan.sh')
+       bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/xiandan/xiandan.sh')
 }
 action=$1
 if [[ "${action}" == "monitor" ]]; then
