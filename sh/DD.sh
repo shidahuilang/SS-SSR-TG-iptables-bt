@@ -29,15 +29,15 @@ Kcptun(){
 }
 #4安装SSR多用户版
 Install_ssr(){
-	bash <(curl -s -L https://raw.githubusercontent.com/veip007/doubi/master/ssrmu.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ssr.sh)
 }
 #5安装V2ary_233一键
 Install_V2ray(){
-	bash <(curl -s -L https://raw.githubusercontent.com/veip007/v2ray/master/v2.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/V2Ray.sh)
 }
 #6安装Tg专用代理
 Tg_socks(){
-	bash <(curl -s -L https://raw.githubusercontent.com/veip007/mtg-dist/master/install.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy_go.sh)
 }
 #7安装Goflyway
 Install_goflyway(){
@@ -45,7 +45,7 @@ Install_goflyway(){
 }
 #8小鸡性能测试
 View_superbench(){
-	bash <(curl -s -L https://raw.githubusercontent.com/veip007/cesu/master/superbench.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/superbench.sh)
 }
 
 #9回程线路测试
@@ -87,7 +87,7 @@ else
 echo && echo -e " 
 +-------------------------------------------------------------+
 |                          懒人专用                           |
-|                 小鸡一键管理脚本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}                   |                      
+|                       小鸡一键管理脚本                      |                   
 |                     一键在手小鸡无忧                        |
 |                     欢迎提交一键脚本                        |
 +-------------------------------------------------------------+
