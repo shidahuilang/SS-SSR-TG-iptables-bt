@@ -74,11 +74,11 @@ ls_color(){
 }
 #15 Netflix解锁检测
 netflix(){
-bash <(curl -sSL "https://github.com/veip007/Netflix_Unlock_Information/raw/main/netflix.sh")	
+bash <(curl -sSL "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/netflix.sh")	
 }
 #16 xray
 xray(){
-bash <(curl -sSL "https://raw.githubusercontent.com/xiaoyaoguangshijie/xiaoyao1/master/DDfuhe/xray.sh")	
+bash <(curl -sSL "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/xray.sh")	
 }
 action=$1
 if [[ "${action}" == "monitor" ]]; then
