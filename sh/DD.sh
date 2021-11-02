@@ -88,13 +88,18 @@ superspeed(){
 install-frps(){
         wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/frps/install-frps.sh -O ./install-frps.sh && chmod 700 ./install-frps.sh && bash install-frps.sh install
 }
+#19Docker-Compose安装
+DockerInstallation(){
+       bash <(curl -sSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/DockerInstallation.sh)
+}
+
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
 else
 echo && echo -e " 
 +-------------------------------------------------------------+
-|                          懒人专用                          | 
+|                         大灰狼专用                          | 
 |                     小鸡一键管理脚本                        |                   
 |                     一键在手小鸡无忧                        |
 |                     欢迎提交一键脚本                        |
@@ -125,11 +130,12 @@ echo && echo -e "
  ${Green_font_prefix}16.${Font_color_suffix} xray安装
  ${Green_font_prefix}17.${Font_color_suffix} VPS一键3网测速脚本
  ${Green_font_prefix}18.${Font_color_suffix} frp一键内网穿刺
+ ${Green_font_prefix}18.${Font_color_suffix} Docker-Compose安装
   " && echo
 
 fi
 echo
-read -e -p " 请输入数字 [0-18]:" num
+read -e -p " 请输入数字 [0-19]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -188,7 +194,10 @@ case "$num" in
 	18)
 	install-frps
 	;;
+	19)
+	DockerInstallation
+	;;
 	*)
-	echo "请输入正确数字 [0-18]"
+	echo "请输入正确数字 [0-19]"
 	;;
 esac
