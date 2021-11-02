@@ -168,7 +168,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/DD.sh && chmod +x ssrmu.sh && bash DD.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/DD.sh && chmod +x DD.sh && bash DD.sh
 ```
 
 ---
