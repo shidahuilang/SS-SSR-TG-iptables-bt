@@ -2861,12 +2861,11 @@ function ScriptTitle(){
 	else
 		echo -e "【流媒体平台及游戏区域限制测试】";
 		echo ""
-		echo -e "${Font_Green}项目地址${Font_Suffix} ${Font_Yellow}https://github.com/lmc999/RegionRestrictionCheck ${Font_Suffix}";
-		echo -e "${Font_Green}BUG反馈或使用交流可加TG群组${Font_Suffix} ${Font_Yellow}https://t.me/gameaccelerate ${Font_Suffix}";
-		echo -e "${Font_Purple}脚本适配OS: CentOS 6+, Ubuntu 14.04+, Debian 8+, MacOS, Android with Termux${Font_Suffix}"
+                echo -e "${Font_Purple}脚本适配OS: CentOS 6+, Ubuntu 14.04+, Debian 8+, MacOS, Android with Termux${Font_Suffix}"
 		echo ""
 		echo -e " ** 测试时间: $(date)";
 		echo ""
+
 	fi
 }
 ScriptTitle
