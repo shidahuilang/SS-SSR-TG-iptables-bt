@@ -130,7 +130,7 @@ echo && echo -e "
  ${Green_font_prefix}16.${Font_color_suffix} xray安装
  ${Green_font_prefix}17.${Font_color_suffix} VPS一键3网测速脚本
  ${Green_font_prefix}18.${Font_color_suffix} frp一键内网穿刺
- ${Green_font_prefix}18.${Font_color_suffix} Docker-Compose安装
+ ${Green_font_prefix}19.${Font_color_suffix} Docker-Compose安装
   " && echo
 
 fi
