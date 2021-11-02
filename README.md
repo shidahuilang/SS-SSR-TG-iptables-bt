@@ -50,6 +50,7 @@
   * [ssr_check.sh](#ssr_checksh)
   * [ssr_ip_check.sh](#ssr_ip_checksh)
   * [superspeed.sh](#superspeedsh)
+  * [liumeiti.sh](#liumeitish)
 
 ---
 ## FRP内网穿刺
@@ -632,6 +633,11 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ``` bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/superspeed.sh && chmod +x superspeed.sh && bash superspeed.sh
 ```
+## liumeiti.sh
 
+- 脚本说明: 流媒体检测
+``` bash
+wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/liumeiti.sh && chmod +x liumeiti.sh && bash liumeiti.sh
+```
 
 
