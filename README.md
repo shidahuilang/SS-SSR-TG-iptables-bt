@@ -570,7 +570,7 @@ bash <(curl -fsSL git.io/JPMAe)
 bash <(curl -fsSL git.io/JPMAG)
 ```
 ---
-- 运行第三个命令，顺利运行后《[看这里](https://github.com/shidahuilang/SS-SSR-TG-iptables-bt/blob/main/clash/taota13.png)》
+- 运行第三个命令，就已经完事了
 ``` bash
 bash <(curl -fsSL git.io/JPMAF)
 ```
