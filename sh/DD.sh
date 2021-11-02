@@ -74,7 +74,7 @@ install(){
 }
 #15 Netflix解锁检测
 netflix(){
-bash <(curl -sSL "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/netflix.sh")	
+        bash <(curl -sSL "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/netflix.sh")	
 }
 #16 xray
 xray(){
@@ -83,6 +83,10 @@ bash <(curl -sSL "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptab
 #17 VPS一键3网测速脚本
 superspeed(){
 	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/superspeed.sh)
+}
+#18FRP内网穿刺
+install-frps(){
+        wget https://code.aliyun.com/MvsCode/frps-onekey/raw/master/install-frps.sh -O ./install-frps.sh && chmod 700 ./install-frps.sh && bash install-frps.sh install
 }
 action=$1
 if [[ "${action}" == "monitor" ]]; then
@@ -120,11 +124,12 @@ echo && echo -e "
  ${Green_font_prefix}15.${Font_color_suffix} Netflix解锁检测
  ${Green_font_prefix}16.${Font_color_suffix} xray安装
  ${Green_font_prefix}17.${Font_color_suffix} VPS一键3网测速脚本
+ ${Green_font_prefix}17.${Font_color_suffix} frp一键内网穿刺
   " && echo
 
 fi
 echo
-read -e -p " 请输入数字 [0-17]:" num
+read -e -p " 请输入数字 [0-18]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -180,7 +185,9 @@ case "$num" in
 	17)
         superspeed	
 	;;
+	18)
+	install-frps
 	*)
-	echo "请输入正确数字 [0-17]"
+	echo "请输入正确数字 [0-18]"
 	;;
 esac
