@@ -83,7 +83,7 @@ export LANGUAGE="en_US";
 export LC_ALL="en_US";
 clear;
 echo -e " ** Version: v4.2";
-echo -e "\033[31mBug反馈 https://t.me/zerocloud\033[0m";
+
 
 curl -V > /dev/null 2>&1;
 if [ $? -ne 0 ];then
