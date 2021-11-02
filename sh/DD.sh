@@ -39,7 +39,7 @@ Install_V2ray(){
 Tg_socks(){
 	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy_go.sh)
 }
-#7安装TG代理（中文版）
+#7安装TG专用代理（中文版）
 mtproxy(){
         wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy.sh && chmod +x mtproxy.sh && bash mtproxy.sh
 }
@@ -117,7 +117,7 @@ echo && echo -e "
  ${Green_font_prefix}3.${Font_color_suffix}  安装KCPtun
  ${Green_font_prefix}4.${Font_color_suffix}  安装SSR多用户版
  ${Green_font_prefix}5.${Font_color_suffix}  安装V2ary_233一键
- ${Green_font_prefix}6.${Font_color_suffix}  Tg专用代理（Go版）
+ ${Green_font_prefix}6.${Font_color_suffix}  TG专用代理（Go版）
  ${Green_font_prefix}7.${Font_color_suffix}  TG专用代理（中文版）
  ${Green_font_prefix}8.${Font_color_suffix}  安装Goflyway
  ${Green_font_prefix}9.${Font_color_suffix}  小鸡性能测试
