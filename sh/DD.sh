@@ -112,15 +112,15 @@ echo && echo -e "
   
  ${Green_font_prefix} 0.${Font_color_suffix} 升级脚本
  ——————————————————
- ${Green_font_prefix}1.${Font_color_suffix} 加速系列：Bbr系列、锐速
- ${Green_font_prefix}2.${Font_color_suffix} 安装谷歌 BBR2 BBRV2
- ${Green_font_prefix}3.${Font_color_suffix} 安装KCPtun
- ${Green_font_prefix}4.${Font_color_suffix} 安装SSR多用户版
- ${Green_font_prefix}5.${Font_color_suffix} 安装V2ary_233一键
- ${Green_font_prefix}6.${Font_color_suffix} Tg专用代理（Go版）
- ${Green_font_prefix}7.${Font_color_suffix}TG专用代理（中文版）
- ${Green_font_prefix}8.${Font_color_suffix} 安装Goflyway
- ${Green_font_prefix}9.${Font_color_suffix} 小鸡性能测试
+ ${Green_font_prefix}1.${Font_color_suffix}  加速系列：Bbr系列、锐速
+ ${Green_font_prefix}2.${Font_color_suffix}  安装谷歌 BBR2 BBRV2
+ ${Green_font_prefix}3.${Font_color_suffix}  安装KCPtun
+ ${Green_font_prefix}4.${Font_color_suffix}  安装SSR多用户版
+ ${Green_font_prefix}5.${Font_color_suffix}  安装V2ary_233一键
+ ${Green_font_prefix}6.${Font_color_suffix}  Tg专用代理（Go版）
+ ${Green_font_prefix}7.${Font_color_suffix}  TG专用代理（中文版）
+ ${Green_font_prefix}8.${Font_color_suffix}  安装Goflyway
+ ${Green_font_prefix}9.${Font_color_suffix}  小鸡性能测试
  ${Green_font_prefix}10.${Font_color_suffix} 回程线路测试:命令:./huicheng 您的IP
  ${Green_font_prefix}11.${Font_color_suffix} 云监控
  ${Green_font_prefix}12.${Font_color_suffix} 傻瓜式一键DD包（OD源）
