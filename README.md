@@ -575,12 +575,6 @@ bash <(curl -fsSL git.io/JPMAG)
 bash <(curl -fsSL git.io/JPMAF)
 ```
 
-
-#### 下载安装:
-``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/adbyby.sh && chmod +x adbyby.sh && bash adbyby.sh
-```
-
 ## gfw_push.sh
 
 - 脚本说明: 监测服务器IP是否被墙并推送至 Telegram 一键脚本
