@@ -76,7 +76,7 @@ open_bbr(){
 install(){
 	wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/install.sh" && chmod 700 /root/install.sh && /root/install.sh
 }
-#16Netflix解锁检测
+# 16Netflix解锁检测
 netflix(){
         bash <(curl -sSL "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/netflix.sh")	
 }
@@ -110,8 +110,8 @@ echo && echo -e "
 |                     欢迎提交一键脚本                        |
 +-------------------------------------------------------------+
   
+
  ${Green_font_prefix} 0.${Font_color_suffix} 升级脚本
- ——————————————————
  ${Green_font_prefix}1.${Font_color_suffix}  加速系列：Bbr系列、锐速
  ${Green_font_prefix}2.${Font_color_suffix}  安装谷歌 BBR2 BBRV2
  ${Green_font_prefix}3.${Font_color_suffix}  安装KCPtun
@@ -160,42 +160,45 @@ case "$num" in
 	Tg_socks
 	;;
 	7)
-	Install_goflyway
+	mtproxy
 	;;
 	8)
-	View_superbench
+	Install_goflyway
 	;;
 	9)
-	View_huicheng
+	View_superbench
 	;;
 	10)
-	Install_status
+	View_huicheng
 	;;
 	11)
-	DD_OD
+	Install_status
 	;;
 	12)
-	DD_GD
+	DD_OD
 	;;
 	13)
-	open_bbr
+	DD_GD
 	;;
 	14)
-	install
+	open_bbr
 	;;
 	15)
-	netflix	
+	install
 	;;
 	16)
-	xray	
+	netflix	
 	;;
 	17)
-        superspeed	
+	xray	
 	;;
 	18)
-	install-frps
+        superspeed	
 	;;
 	19)
+	install-frps
+	;;
+	20)
 	DockerInstallation
 	;;
 	*)
