@@ -43,7 +43,7 @@
   * [caddy_install.sh](#caddy_installsh)
   * [pythonhttp.sh](#pythonhttpsh)
 * [***其他***](#其他)
-  * [adbyby.sh](#adbybysh)
+  * [clash.sh](#clashsh)
   * [gfw_push.sh](#gfw_pushsh)
   * [libsodium.sh](#libsodiumsh)
   * [ssrstatus.sh](#ssrstatussh)
@@ -555,10 +555,25 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 ## 其他
 
-## adbyby.sh
+## clash.sh
 
-- 脚本说明: ADbyby 一键安装管理脚本
+- 脚本说明: 节点转换搭建前后端
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
+- 首先您要有域名跟解析好域名，分别为一个前端，一个后端，同一个域名解析两个子域名就可以了
+- 运行第一个命令，顺利运行后《[看这里](https://github.com/shidahuilang/SS-SSR-TG-iptables-bt/blob/main/clash/taota01.png)》
+``` bash
+bash <(curl -fsSL git.io/JPMAe)
+```
+---
+- 运行第二个命令，顺利运行后《[看这里](https://github.com/shidahuilang/SS-SSR-TG-iptables-bt/blob/main/clash/clash.md)》
+``` bash
+bash <(curl -fsSL git.io/JPMAG)
+```
+---
+- 运行第三个命令，顺利运行后《[看这里](https://github.com/shidahuilang/SS-SSR-TG-iptables-bt/blob/main/clash/taota13.png)》
+``` bash
+bash <(curl -fsSL git.io/JPMAF)
+```
 
 
 #### 下载安装:
