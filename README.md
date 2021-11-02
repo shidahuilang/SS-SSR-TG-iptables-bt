@@ -157,14 +157,13 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ---
 ## DD.sh
 
-- 脚本说明: ShadowsocksR 一键安装管理脚本，支持流量控制
+- 脚本说明: 多合一脚本，DD系统，BBR，xray,TG搭建等
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
 
 
 #### 脚本特点:
-目前网上的各个ShadowsocksR脚本基本都是只有 安装/启动/重启 等基础功能，对于小白来说还是不够简单方便。既然是一键脚本，那么就要尽可能地简单，小白更容易接受使用！
+目前网上的各个一键脚本基本都是只有 安装/启动/重启 等基础功能，对于小白来说还是不够简单方便。既然是一键脚本，那么就要尽可能地简单，小白更容易接受使用！
 
-- 多合一脚本，DD系统，BBR，xray,TG搭建等
 
 #### 下载安装:
 ``` bash
