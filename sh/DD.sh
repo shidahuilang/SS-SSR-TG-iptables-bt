@@ -98,13 +98,13 @@ if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
 else
 echo && echo -e " 
+
 +-------------------------------------------------------------+
 |                         大灰狼专用                          | 
 |                     小鸡一键管理脚本                        |                   
 |                     一键在手小鸡无忧                        |
 |                     欢迎提交一键脚本                        |
 +-------------------------------------------------------------+
-
   
  ${Green_font_prefix} 0.${Font_color_suffix} 升级脚本
  ——————————————————
@@ -112,27 +112,23 @@ echo && echo -e "
  ${Green_font_prefix} 2.${Font_color_suffix} 安装谷歌 BBR2 BBRV2
  ${Green_font_prefix} 3.${Font_color_suffix} 安装KCPtun
  ${Green_font_prefix} 4.${Font_color_suffix} 安装SSR多用户版
- ——————————————————
  ${Green_font_prefix} 5.${Font_color_suffix} 安装V2ary_233一键
  ${Green_font_prefix} 6.${Font_color_suffix} Tg专用代理（Go版）
  ${Green_font_prefix} 7.${Font_color_suffix} 安装Goflyway
  ${Green_font_prefix} 8.${Font_color_suffix} 小鸡性能测试
- ——————————————————
  ${Green_font_prefix} 9.${Font_color_suffix} 回程线路测试:命令:./huicheng 您的IP
  ${Green_font_prefix}10.${Font_color_suffix} 云监控
  ${Green_font_prefix}11.${Font_color_suffix} 傻瓜式一键DD包（OD源）
  ${Green_font_prefix}12.${Font_color_suffix} 傻瓜式一键DD包（GD源）
- ——————————————————
  ${Green_font_prefix}13.${Font_color_suffix} 一键开启默认bbr  
  ${Green_font_prefix}14.${Font_color_suffix} 八合一共存脚本+伪装站点
- ——————————————————
  ${Green_font_prefix}15.${Font_color_suffix} Netflix解锁检测
  ${Green_font_prefix}16.${Font_color_suffix} xray安装
  ${Green_font_prefix}17.${Font_color_suffix} VPS一键3网测速脚本
  ${Green_font_prefix}18.${Font_color_suffix} frp一键内网穿刺
  ${Green_font_prefix}19.${Font_color_suffix} Docker-Compose安装
   " && echo
-
+  
 fi
 echo
 read -e -p " 请输入数字 [0-19]:" num
@@ -201,3 +197,16 @@ case "$num" in
 	echo "请输入正确数字 [0-19]"
 	;;
 esac
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
