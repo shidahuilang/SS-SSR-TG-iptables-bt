@@ -218,7 +218,6 @@ case "$num" in
 	xiandan
 	;;
 	*)
-        ;;
 	echo "请输入正确数字 [0-22]"
 	;;
 esac
