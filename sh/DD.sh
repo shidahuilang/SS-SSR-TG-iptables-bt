@@ -109,8 +109,8 @@ install_panel(){
        curl -sSO http://download.bt.cn/install/install_panel.sh && bash install_panel.sh
 }
 #24流媒体检测
-check(){
-       bash <(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)
+liumeiti(){
+       bash <(curl -L -s https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/liumeiti.sh)
 }
 action=$1
 if [[ "${action}" == "monitor" ]]; then
@@ -231,7 +231,7 @@ case "$num" in
 	install_panel
 	;;
         24)
-	check
+	liumeiti
 	;;
 	*)
 	echo "请输入正确数字 [0-24]"
