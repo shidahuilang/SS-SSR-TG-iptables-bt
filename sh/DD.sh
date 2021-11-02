@@ -187,6 +187,7 @@ case "$num" in
 	;;
 	18)
 	install-frps
+	;;
 	*)
 	echo "请输入正确数字 [0-18]"
 	;;
