@@ -557,7 +557,9 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 - 脚本说明: 节点转换搭建前后端
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
-- 首先您要有域名跟解析好域名，分别为一个前端，一个后端，同一个域名解析两个子域名就可以了
+- 首先您要有域名跟解析好两个子域名，分别为一个前端（登录网页用），一个后端（服务器IP用）
+- 需要安装宝塔、Nginx和占用443端口，要看清楚跟你现在服务器的有没有冲突
+
 - 运行第一个命令，顺利运行后《[看这里](https://github.com/shidahuilang/SS-SSR-TG-iptables-bt/blob/main/clash/taota01.png)》
 ``` bash
 bash <(curl -fsSL git.io/JPMAe)
