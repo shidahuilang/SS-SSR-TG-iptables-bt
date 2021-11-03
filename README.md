@@ -4,14 +4,14 @@
 * [***FRP内网穿刺***](#内网穿刺)
   * [frp内网穿刺](#frp内网穿刺)
 * [***Docker-Compose***](#Docker)
-  *  [DockerInstallation.sh](#DockerInstallationsh)
+  *  [Docker一键安装](#Docker一键安装)
 * [***代理相关***](#代理相关)
-  * [install.sh](#installsh)
+  * [八合一脚本](#八合一脚本)
   * [V2Ray.sh](#V2Raysh)
   * [x-ui.sh](#x-uish)
   * [ss-go.sh](#ss_gosh)
   * [ssr.sh](#ssrsh)
-  * [DD.sh](#DDsh)
+  * [多功能脚本集合](#多功能脚本集合)
   * [brook.sh](#brooksh)
   * [goflyway.sh](#goflywaysh)
   * [daze.sh](#dazesh)
@@ -82,8 +82,6 @@ Usage: /etc/init.d/frps {start|stop|restart|status|config|version}
 
 ## Docker-Compose安装
 
-## DockerInstallation.sh
-
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu
 - 一键更换国内软件源
 - 脚本集成安装 Docker Engine Docker Compose
@@ -98,7 +96,7 @@ bash <(curl -sSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptabl
 
 ## 代理相关
 
-## install.sh
+## 八合一脚本
 
 - 八合一共存脚本+伪装站点
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu
@@ -156,7 +154,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## DD.sh
+## 多功能脚本集合
 
 - 脚本说明: 多合一脚本，DD系统，BBR，xray,TG搭建等等·常用的各种脚本基本都有！
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
