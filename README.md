@@ -329,7 +329,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/xiandan/xiandan.sh')
 ```
 
-## iptables 端口转发一键安装
+## iptables端口转发一键安装
 
 - 脚本说明: iptables 端口转发 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
