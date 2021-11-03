@@ -11,7 +11,7 @@
   * [x-ui面板一键安装](#x-ui面板一键安装)
   * [ss-go一键安装](#ss_go一键安装)
   * [ssr一键安装](#ssr一键安装)
-  * [多功能脚本集合](#多功能脚本集合)
+  * [多功能脚本集合你想要的都在这里](#多功能脚本集合你想要的都在这里)
   * [brook一键安装](#brook一键安装)
   * [goflyway一键安装](#goflyway一键安装)
   * [daze一键安装](#daze一键安装)
@@ -154,7 +154,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## 多功能脚本集合
+## 多功能脚本集合你想要的都在这里
 
 - 脚本说明: 多合一脚本，DD系统，BBR，xray,TG搭建等等·常用的各种脚本基本都有！
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
