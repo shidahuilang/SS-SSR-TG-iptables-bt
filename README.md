@@ -7,50 +7,50 @@
   *  [Docker一键安装](#Docker一键安装)
 * [***代理相关***](#代理相关)
   * [八合一脚本](#八合一脚本)
-  * [V2Ray.sh](#V2Raysh)
-  * [x-ui.sh](#x-uish)
-  * [ss-go.sh](#ss_gosh)
-  * [ssr.sh](#ssrsh)
+  * [V2Ray一键安装](#V2Ray一键安装)
+  * [x-ui面板一键安装](#x-ui面板一键安装)
+  * [ss-go一键安装](#ss_go一键安装)
+  * [ssr一键安装](#ssr一键安装)
   * [多功能脚本集合](#多功能脚本集合)
-  * [brook.sh](#brooksh)
-  * [goflyway.sh](#goflywaysh)
-  * [daze.sh](#dazesh)
-  * [lightsocks.sh](#lightsockssh)
-  * [mtproxy.sh](#mtproxysh)
-  * [mtproxy_go.sh](#mtproxy_gosh)
+  * [brook一键安装](#brook一键安装)
+  * [goflyway一键安装](#goflyway一键安装)
+  * [daze一键安装](#daze一键安装)
+  * [lightsocks一键安装](#lightsocks一键安装)
+  * [mtproxy一键安装](#mtproxy一键安装)
+  * [mtproxy_go一键安装](#mtproxy_go一键安装)
 * [***中转相关***](#中转相关)
-* * [xiandan.sh](#xiandansh)
-  * [iptables-pf.sh](#iptables-pfsh)
-  * [brook-pf.sh](#brook-pfsh)
-  * [haproxy.sh](#haproxysh)
-  * [socat.sh](#socatsh)
-  * [tinymapper.sh](#tinymappersh)
+* * [闲蛋面板一键安装](#闲蛋面板一键安装)
+  * [iptables 端口转发一键安装](#iptables 端口转发一键安装)
+  * [brook-pf一键安装](#brook-pf一键安装)
+  * [haproxy一键安装](#haproxy一键安装)
+  * [socat一键安装](#socat一键安装)
+  * [tinymapper一键安装](#tinymapper一键安装)
 * [***BT下载相关***](#bt下载相关)
-  * [aria2.sh](#aria2sh)
-  * [cloudt.sh](#cloudtsh)
-  * [pserver.sh](#pserversh)
+  * [aria2一键安装](#aria2一键安装)
+  * [cloudt一键安装](#cloudt一键安装)
+  * [pserver一键安装](#pserver一键安装)
 * [***服务器相关***](#服务器相关)
-  * [bbr.sh](#bbrsh)
-  * [status.sh](#statussh)
-  * [ban_iptables.sh](#ban_iptablessh)
-  * [ssh_port.sh](#ssh_portsh)
+  * [bbr一键安装](#bbr一键安装)
+  * [status一键安装](#status一键安装)
+  * [ban_iptables一键安装](#ban_iptables一键安装)
+  * [ssh_port一键安装](#ssh_port一键安装)
 * [***VPN 相关***](#vpn相关)
-  * [L2TP.sh](#L2TPsh)
-  * [ocserv.sh](#ocservsh)
+  * [L2TP一键安装](#L2TP一键安装)
+  * [ocserv一键安装](#ocserv一键安装)
 * [***DNS 相关***](#dns相关)
-  * [dowsdns.sh](#dowsdnssh)
+  * [dowsdns一键安装](#dowsdns一键安装)
 * [***HTTP 相关***](#http相关)
-  * [caddy_install.sh](#caddy_installsh)
-  * [pythonhttp.sh](#pythonhttpsh)
+  * [caddy_install一键安装](#caddy_install一键安装)
+  * [pythonhttp一键安装](#pythonhttp一键安装)
 * [***其他***](#其他)
-  * [clash.sh](#clashsh)
-  * [gfw_push.sh](#gfw_pushsh)
-  * [libsodium.sh](#libsodiumsh)
-  * [ssrstatus.sh](#ssrstatussh)
-  * [ssr_check.sh](#ssr_checksh)
-  * [ssr_ip_check.sh](#ssr_ip_checksh)
-  * [superspeed.sh](#superspeedsh)
-  * [liumeiti.sh](#liumeitish)
+  * [订阅转换网站一键安装](#订阅转换网站一键安装)
+  * [gfw_push一键安装](#gfw_push一键安装)
+  * [libsodium一键安装](#libsodium一键安装)
+  * [ssrstatus一键安装](#ssrstatus一键安装)
+  * [ssr_check一键安装](#ssr_check一键安装)
+  * [ssr_ip_check.一键安装](#ssr_ip_check一键安装)
+  * [vps测速](#vps测速)
+  * [流媒体检测](#流媒体检测)
 
 ---
 ## FRP内网穿刺
@@ -116,7 +116,7 @@ wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/shida
 ```
 
 
-## ss_go.sh
+## ss_go一键安装
 
 - 脚本说明: Shadowsocks 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -130,7 +130,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## ssr.sh
+## ssr一键安装
 
 - 脚本说明: ShadowsocksR 一键安装管理脚本，支持单端口/多端口切换和管理
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -177,7 +177,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 ---
 
-## V2Ray.sh
+## V2Ray一键安装
 - 脚本说明:V2Ray 一键安装脚本 & 管理脚本 功能特点 支持 V2Ray 多数传输协议
 - 系统支持:Ubuntu 16+ / Debian 8+ / CentOS 7+ 系统
 
@@ -214,7 +214,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 bash <(curl -s -L https://git.io/Jicox)
 ```
 
-## x-ui.sh 
+
 ## X-UI面板安装 
 
 - 系统状态监控
@@ -243,7 +243,7 @@ curl https://get.acme.sh | sh
 - 重启页面，然后就可以用你的域名+面板监听端口和你新设置的用户名跟密码登录页面了
 
 
-## brook.sh
+## brook一键安装
 
 - 脚本说明: Brook 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian7+ / Ubuntu14+
@@ -254,7 +254,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## goflyway.sh
+## goflyway一键安装
 
 - 脚本说明: GoFlyway 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian7+ / Ubuntu14+
@@ -266,7 +266,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## lightsocks.sh
+## lightsocks一键安装
 
 - 脚本说明: LightSocks 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian7+ / Ubuntu14+
@@ -278,7 +278,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## daze.sh
+## daze一键安装
 
 - 脚本说明: DAZE 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian7+ / Ubuntu14+
@@ -289,7 +289,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## mtproxy.sh
+## mtproxy一键安装
 
 - 脚本说明: Mtproto Proxy 一键安装管理脚本
 - 系统支持: CentOS7 / Debian7+ / Ubuntu14+
@@ -301,7 +301,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## mtproxy_go.sh
+## mtproxy_go一键安装
 
 - 脚本说明: Mtproto Proxy Go版 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian7+ / Ubuntu14+
@@ -319,7 +319,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 ## 中转相关
 
-## xiandan.sh
+## 闲蛋面板一键安装
 
 - 脚本说明:闲蛋面板一键部署
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -329,7 +329,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/xiandan/xiandan.sh')
 ```
 
-## iptables-pf.sh
+## iptables 端口转发一键安装
 
 - 脚本说明: iptables 端口转发 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -341,7 +341,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## brook-pf.sh
+## brook-pf一键安装
 
 - 脚本说明: Brook 端口转发 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -353,7 +353,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## haproxy.sh
+## haproxy一键安装
 
 - 脚本说明: HaProxy 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -365,7 +365,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## socat.sh
+## socat一键安装
 
 - 脚本说明: Socat 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -377,7 +377,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## tinymapper.sh
+## tinymapper一键安装
 
 - 脚本说明: tinyPortMapper 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -392,7 +392,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 ## BT下载相关
 
-## aria2.sh
+## aria2一键安装
 
 - 脚本说明: Aria2 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -404,7 +404,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## cloudt.sh
+## cloudt一键安装
 
 - 脚本说明: Cloud Torrent 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -416,7 +416,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## pserver.sh
+## pserver一键安装
 
 - 脚本说明: Peerflix Server 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -431,7 +431,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 ## 服务器相关
 
-## bbr.sh
+## bbr一键安装
 
 - 脚本说明: BBR 一键安装管理脚本
 - 系统支持: Debian6+ / Ubuntu14+
@@ -443,7 +443,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## status.sh
+## status一键安装
 
 - 脚本说明: ServerStatus 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -455,7 +455,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## ban_iptables.sh
+## ban_iptables一键安装
 
 - 脚本说明: iptables 垃圾邮件(SPAM)/BT/PT 一键封禁脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -467,7 +467,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## ssh_port.sh
+## ssh_port一键安装
 
 - 脚本说明: SSH 一键修改端口脚本
 - 系统支持: Debian6+ / Ubuntu14+
@@ -482,7 +482,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 ## VPN相关
 
-## ocserv.sh
+## ocserv一键安装
 
 - 脚本说明: Ocserv AnyConnect 一键安装管理脚本
 - 系统支持: Debian7+ / Ubuntu14+
@@ -493,7 +493,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ocserv.sh && chmod +x ocserv.sh && bash ocserv.sh
 ```
 
-## L2TP.sh  
+## L2TP一键安装 
 
 -L2TP一键安装
 - 脚本说明: L2TP一键安装脚本: 支持的系统：CentOS 6+ / Debian 7+ / Ubuntu 12+
@@ -504,7 +504,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 ## DNS相关
 
-## dowsdns.sh
+## dowsdns一键安装
 
 - 脚本说明: DowsDNS 一键安装管理脚本
 - 系统支持: CentOS7 / Debian7+ / Ubuntu14+
@@ -519,7 +519,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 ## HTTP相关
 
-## caddy_install.sh
+## caddy_install一键安装
 
 - 脚本说明: Caddy 一键安装脚本
 - 系统支持: CentOS6+ / Debian7+ / Ubuntu14+
@@ -538,7 +538,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## pythonhttp.sh
+## pythonhttp一键安装
 
 - 脚本说明: SimpleHTTPServer 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -553,7 +553,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 ## 其他
 
-## clash.sh
+## 订阅转换网站一键安装
 
 - 脚本说明: 节点转换搭建前后端
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -573,7 +573,7 @@ bash <(curl -fsSL git.io/JPMAG)
 bash <(curl -fsSL git.io/JPMAF)
 ```
 
-## gfw_push.sh
+## gfw_push一键安装
 
 - 脚本说明: 监测服务器IP是否被墙并推送至 Telegram 一键脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -585,7 +585,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## libsodium.sh
+## libsodium一键安装
 
 - 脚本说明: libsodium 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -597,7 +597,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## ssr_check.sh
+## ssr_check一键安装
 
 - 脚本说明: ShadowsocksR 批量快速验证账号可用性
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -609,7 +609,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## ssrstatus.sh
+## ssrstatus一键安装
 
 - 脚本说明: ShadowsocksR 账号在线监控网站
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -621,7 +621,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## ssr_ip_check.sh
+## ssr_ip_check一键安装
 
 - 脚本说明: ShadowsocksR 检测每个端口链接IP数
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
@@ -633,7 +633,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## superspeed.sh
+## vps测速
 
 - 脚本说明: VPS一键测速脚本
 - 系统支持: CentOS7 / Debian7+ / Ubuntu14+
@@ -643,7 +643,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ``` bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/superspeed.sh && chmod +x superspeed.sh && bash superspeed.sh
 ```
-## liumeiti.sh
+## 流媒体检测
 
 - 脚本说明: 流媒体检测
 ``` bash
