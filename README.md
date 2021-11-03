@@ -2,7 +2,7 @@
 
 ## 传送阵
 * [***FRP内网穿刺***](#内网穿刺)
-  * [install-frps.sh](#install-frpssh)
+  * [frp内网穿刺](#frp内网穿刺)
 * [***Docker-Compose***](#Docker)
   *  [DockerInstallation.sh](#DockerInstallationsh)
 * [***代理相关***](#代理相关)
