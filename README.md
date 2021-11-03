@@ -20,7 +20,7 @@
   * [mtproxy_go一键安装](#mtproxy_go一键安装)
 * [***中转相关***](#中转相关)
 * * [闲蛋面板一键安装](#闲蛋面板一键安装)
-  * [iptables 端口转发一键安装](#iptables 端口转发一键安装)
+  * [iptables端口转发一键安装](#iptables端口转发一键安装)
   * [brook-pf一键安装](#brook-pf一键安装)
   * [haproxy一键安装](#haproxy一键安装)
   * [socat一键安装](#socat一键安装)
