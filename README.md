@@ -215,7 +215,7 @@ bash <(curl -s -L https://git.io/Jicox)
 ```
 
 
-## X-UI面板安装 
+## x-ui面板一键安装
 
 - 系统状态监控
 - 支持多用户多协议，网页可视化操作
