@@ -4,7 +4,7 @@
 * [***FRP内网穿刺***](#内网穿刺)
   * [frp内网穿刺](#frp内网穿刺)
 * [***Docker-Compose***](#Docker)
-  *  [Docker一键安装](#Docker一键安装)
+  *  [Docker-Compose一键安装](#Docker-Compose一键安装)
 * [***代理相关***](#代理相关)
   * [八合一脚本](#八合一脚本)
   * [V2Ray一键安装](#V2Ray一键安装)
@@ -80,7 +80,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 Usage: /etc/init.d/frps {start|stop|restart|status|config|version}
 ```
 
-## Docker-Compose安装
+## Docker-Compose一键安装
 
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu
 - 一键更换国内软件源
