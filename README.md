@@ -86,7 +86,7 @@ wget https://code.aliyun.com/MvsCode/frps-onekey/raw/master/install-frps.sh -O .
 ```
 - Github
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/frps/install-frps.sh -O ./install-frps.sh && chmod 700 ./install-frps.sh && bash install-frps.sh install
+bash <(curl -s -L git.io/JPjzA)
 ```
 #### Uninstall（卸载）
 ``` bash
