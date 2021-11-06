@@ -23,9 +23,9 @@ bbr_ruisu(){
 Google_bbr2(){
 	bash <(curl -s -L https://raw.githubusercontent.com/yeyingorg/bbr2.sh/master/bbr2.sh)
 }
-#3安装宝塔面板
-install_panel.sh(){
-	curl -sSO http://download.bt.cn/install/install_panel.sh && bash install_panel.sh
+#3Cloudflare WARP 一键配置
+warp.sh(){
+	bash <(curl -fsSL git.io/warp.sh) menu
 }
 #4安装SSR多用户版
 Install_ssr(){
@@ -130,7 +130,7 @@ echo && echo -e "
  ${Green_font_prefix}0.${Font_color_suffix}  升级脚本
  ${Green_font_prefix}1.${Font_color_suffix}  加速系列：Bbr系列、锐速
  ${Green_font_prefix}2.${Font_color_suffix}  安装谷歌 BBR2 BBRV2
- ${Green_font_prefix}3.${Font_color_suffix}  安装宝塔面板
+ ${Green_font_prefix}3.${Font_color_suffix}  Cloudflare WARP 一键配置
  ${Green_font_prefix}4.${Font_color_suffix}  安装SSR多用户版
  ${Green_font_prefix}5.${Font_color_suffix}  安装V2ary_233一键
  ${Green_font_prefix}6.${Font_color_suffix}  TG专用代理（Go版）
@@ -168,7 +168,7 @@ case "$num" in
 	Google_bbr2
 	;;
 	3)
-	install_panel.sh
+	warp.sh
 	;;
 	4)
 	Install_ssr
