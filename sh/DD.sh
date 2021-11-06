@@ -58,7 +58,7 @@ View_huicheng(){
 }
 #11安装云监控
 Install_status(){
-	bash <(curl -s -L https://raw.githubusercontent.com/veip007/doubi/master/status.sh)
+	wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/status.sh && chmod +x status.sh && bash status.sh
 }
 #12一键DD包（OD源）
 DD_OD(){
