@@ -62,11 +62,11 @@ Install_status(){
 }
 #12一键DD包（OD源）
 DD_OD(){
-	bash <(curl -s -L https://raw.githubusercontent.com/veip007/dd/master/dd-od.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/dd-od.sh)
 }
 #13一键DD包（GD源）
 DD_GD(){
-	bash <(curl -s -L https://raw.githubusercontent.com/veip007/dd/master/dd-gd.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/dd-gd.sh)
 }
 #14一键开启默认bbr
 open_bbr(){
