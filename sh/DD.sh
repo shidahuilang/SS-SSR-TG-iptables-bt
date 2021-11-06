@@ -56,7 +56,7 @@ View_superbench(){
 View_huicheng(){
 	wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/huicheng/master/huicheng && chmod +x huicheng
 }
-#11安装云监控
+#11安装云监控探针
 Install_status(){
 	wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/status.sh && chmod +x status.sh && bash status.sh
 }
@@ -138,7 +138,7 @@ echo && echo -e "
  ${Green_font_prefix}8.${Font_color_suffix}  安装Goflyway
  ${Green_font_prefix}9.${Font_color_suffix}  小鸡性能测试
  ${Green_font_prefix}10.${Font_color_suffix} 回程线路测试:命令:./huicheng 您的IP
- ${Green_font_prefix}11.${Font_color_suffix} 云监控
+ ${Green_font_prefix}11.${Font_color_suffix} 云监控探针
  ${Green_font_prefix}12.${Font_color_suffix} 傻瓜式一键DD包（OD源）
  ${Green_font_prefix}13.${Font_color_suffix} 傻瓜式一键DD包（GD源）
  ${Green_font_prefix}14.${Font_color_suffix} 一键开启默认bbr  
