@@ -31,7 +31,7 @@
   * [pserver一键安装](#pserver一键安装)
 * [***服务器相关***](#服务器相关)
   * [bbr一键安装](#bbr一键安装)
-  * [status一键安装](#status一键安装)
+  * [status云监控一键安装](#status云监控一键安装)
   * [ban_iptables一键安装](#ban_iptables一键安装)
   * [ssh_port一键安装](#ssh_port一键安装)
 * [***VPN 相关***](#vpn相关)
@@ -440,8 +440,8 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 ```
 
 ---
-## status一键安装
-
+## status云监控一键安装
+- ServerStatus中文版是一个酷炫高逼格的云探针、云监控、服务器云监控、多服务器探针
 - 脚本说明: ServerStatus 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
 
