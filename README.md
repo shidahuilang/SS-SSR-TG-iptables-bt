@@ -472,7 +472,7 @@ bash <(curl -s -L git.io/JPjEu)
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ssh_port.sh && chmod +x ssh_port.sh && bash ssh_port.sh
+bash <(curl -s -L git.io/JPjul)
 ```
 
 ---
@@ -487,7 +487,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ocserv.sh && chmod +x ocserv.sh && bash ocserv.sh
+bash <(curl -s -L git.io/JPju0)
 ```
 
 ## L2TP一键安装 
@@ -495,7 +495,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 -L2TP一键安装
 - 脚本说明: L2TP一键安装脚本: 支持的系统：CentOS 6+ / Debian 7+ / Ubuntu 12+
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/L2TP.sh && chmod a+x L2TP.sh && bash L2TP.sh
+bash <(curl -s -L git.io/JPjuV)
 ```
 ---
 
@@ -509,7 +509,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/dowsdns.sh && chmod +x dowsdns.sh && bash dowsdns.sh
+bash <(curl -s -L git.io/JPju1)
 ```
 
 ---
@@ -524,7 +524,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh
+bash <(curl -s -L git.io/JPjuy)
  # 安装插件：
  bash caddy_install.sh xxx,xxx
   # 例如同时安装 http.filemanager 和 http.webdav插件：
@@ -543,7 +543,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/pythonhttp.sh && chmod +x pythonhttp.sh && bash pythonhttp.sh
+bash <(curl -s -L git.io/JPjzU)
 ```
 
 ---
@@ -580,7 +580,7 @@ bash <(curl -fsSL git.io/JPMAF)
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/gfw_push.sh && chmod +x gfw_push.sh && bash gfw_push.sh
+bash <(curl -s -L git.io/JPjzm)
 ```
 
 ---
@@ -592,7 +592,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/libsodium.sh && chmod +x libsodium.sh && bash libsodium.sh
+bash <(curl -s -L git.io/JPjzG)
 ```
 
 ---
@@ -604,7 +604,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ssr_check.sh && chmod +x ssr_check.sh
+bash <(curl -s -L git.io/JPjzn)
 ```
 
 ---
@@ -616,7 +616,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ssrstatus.sh && chmod +x ssrstatus.sh && bash ssrstatus
+bash <(curl -s -L git.io/JPjzW)
 ```
 
 ---
@@ -628,7 +628,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ssr_ip_check.sh && chmod +x ssr_ip_check.sh
+bash <(curl -s -L git.io/JPjzB)
 ```
 
 ---
@@ -637,16 +637,15 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 - 脚本说明: VPS一键测速脚本
 - 系统支持: CentOS7 / Debian7+ / Ubuntu14+
 
-
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/superspeed.sh && chmod +x superspeed.sh && bash superspeed.sh
+bash <(curl -s -L git.io/JPjzE)
 ```
 ## 流媒体检测
 
 - 脚本说明: 流媒体检测
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/liumeiti.sh && chmod +x liumeiti.sh && bash liumeiti.sh
+bash <(curl -s -L git.io/JPjzo)
 ```
 
 
