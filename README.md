@@ -72,7 +72,7 @@
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/DD.sh && chmod +x DD.sh && bash DD.sh
+bash <(curl -s -L https://git.io/JPj82)
 ```
 ## FRP内网穿刺
 
@@ -108,11 +108,11 @@ Usage: /etc/init.d/frps {start|stop|restart|status|config|version}
 - 脚本集成安装 Docker Engine Docker Compose
 #### 下载安装:
 ``` bash
-bash <(curl -sSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/DockerInstallation.sh)
+bash <(curl -sSL git.io/JPjlD)
 ```
 #### 一键切换国内源:
 ``` bash
-bash <(curl -sSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ChangeMirrors.sh)
+bash <(curl -sSL git.io/JPjlC)
 ```
 
 ## 代理相关
@@ -147,7 +147,7 @@ wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/shida
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ss-go.sh && chmod +x ss-go.sh && bash ss-go.sh
+bash <(curl -s -L git.io/JPj8D)
 ```
 
 ---
@@ -171,7 +171,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ssr.sh && chmod +x ssr.sh && bash ssr.sh
+bash <(curl -s -L git.io/JPj87)
 ```
 
 ## V2Ray一键安装
@@ -225,7 +225,7 @@ bash <(curl -s -L https://git.io/Jicox)
 ## 使用教程
 ## 下载安装
 ``` bash
-bash <(curl -Ls https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/x-ui.sh)
+bash <(curl -s -L git.io/JPj4L)
 
 curl https://get.acme.sh | sh
 
@@ -247,7 +247,7 @@ curl https://get.acme.sh | sh
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/brook.sh && chmod +x brook.sh && bash brook.sh
+bash <(curl -s -L git.io/JPj4g)
 ```
 
 ---
@@ -259,7 +259,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/goflyway.sh && chmod +x goflyway.sh && bash goflyway.sh
+bash <(curl -s -L git.io/JPj4o)
 ```
 
 ---
@@ -271,7 +271,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/lightsocks.sh && chmod +x lightsocks.sh && bash lightsocks.sh
+bash <(curl -s -L git.io/JPj4i)
 ```
 
 ---
@@ -282,7 +282,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/daze.sh && chmod +x daze.sh && bash daze.sh
+bash <(curl -s -L git.io/JPj4D)
 ```
 
 ---
