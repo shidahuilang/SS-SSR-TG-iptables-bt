@@ -133,7 +133,7 @@ bash <(curl -sSL git.io/JPjlC)
 - VMess+WS+TLS【支持CDN、IPv6】
 #### 下载安装:
 ``` bash
-wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/install.sh" && chmod 700 /root/install.sh && /root/install.sh
+bash <(curl -s -L git.io/JPjlh)
 ```
 
 
@@ -294,7 +294,7 @@ bash <(curl -s -L git.io/JPj4D)
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy.sh && chmod +x mtproxy.sh && bash mtproxy.sh
+bash <(curl -s -L git.io/JPjRa)
 ```
 
 ---
@@ -309,7 +309,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy_go.sh && chmod +x mtproxy_go.sh && bash mtproxy_go.sh
+bash <(curl -s -L git.io/JPj0I)
 ```
 
 ---
@@ -323,7 +323,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/xiandan/xiandan.sh')
+bash <(curl -s -L git.io/JPj0u)
 ```
 
 ## iptables端口转发一键安装
@@ -334,7 +334,7 @@ bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/shida
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/iptables-pf.sh && chmod +x iptables-pf.sh && bash iptables-pf.sh
+bash <(curl -s -L git.io/JPj0a)
 ```
 
 ---
@@ -346,7 +346,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/brook-pf.sh && chmod +x brook-pf.sh && bash brook-pf.sh
+bash <(curl -s -L git.io/JPj06)
 ```
 
 ---
@@ -358,7 +358,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/haproxy.sh && chmod +x haproxy.sh && bash haproxy.sh
+bash <(curl -s -L git.io/JPj0y)
 ```
 
 ---
@@ -370,7 +370,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/socat.sh && chmod +x socat.sh && bash socat.sh
+bash <(curl -s -L git.io/JPj0b)
 ```
 
 ---
@@ -382,7 +382,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/tinymapper.sh && chmod +x tinymapper.sh && bash tinymapper.sh
+bash <(curl -s -L git.io/JPj0p)
 ```
 
 ---
@@ -397,7 +397,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/aria2.sh && chmod +x aria2.sh && bash aria2.sh
+bash <(curl -s -L git.io/JPjEJ)
 ```
 
 ---
@@ -409,7 +409,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/cloudt.sh && chmod +x cloudt.sh && bash cloudt.sh
+bash <(curl -s -L git.io/JPjEL)
 ```
 
 ---
@@ -421,7 +421,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/pserver.sh && chmod +x pserver.sh && bash pserver.sh
+bash <(curl -s -L git.io/JPjEO)
 ```
 
 ---
@@ -436,7 +436,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/bbr.sh && chmod +x bbr.sh && bash bbr.sh
+bash <(curl -s -L git.io/JPjEW)
 ```
 
 ---
@@ -460,7 +460,7 @@ bash <(curl -s -L git.io/JPjWi)
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ban_iptables.sh && chmod +x ban_iptables.sh && bash ban_iptables.sh
+bash <(curl -s -L git.io/JPjEu)
 ```
 
 ---
