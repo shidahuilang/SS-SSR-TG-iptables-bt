@@ -448,7 +448,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 
 #### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/status.sh && chmod +x status.sh && bash status.sh
+bash <(curl -s -L git.io/JPjWi)
 ```
 
 ---
