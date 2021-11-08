@@ -11,7 +11,7 @@
   * [V2Ray一键安装](#V2Ray一键安装)
   * [x-ui面板一键安装](#x-ui面板一键安装)
   * [ss-go一键安装](#ss_go一键安装)
-  * [ssrmu一键安装](#ssmu一键安装arm)
+  * [ssrmu一键安装](#ssrmu一键安装)
   * [ssr一键安装](#ssr一键安装)
   * [brook一键安装](#brook一键安装)
   * [goflyway一键安装](#goflyway一键安装)
