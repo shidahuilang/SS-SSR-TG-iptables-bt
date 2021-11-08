@@ -11,6 +11,7 @@
   * [V2Ray一键安装](#V2Ray一键安装)
   * [x-ui面板一键安装](#x-ui面板一键安装)
   * [ss-go一键安装](#ss_go一键安装)
+  * [ssrmu一键安装](#ssmu一键安装arm)
   * [ssr一键安装](#ssr一键安装)
   * [brook一键安装](#brook一键安装)
   * [goflyway一键安装](#goflyway一键安装)
@@ -149,7 +150,12 @@ bash <(curl -s -L git.io/JPjlh)
 ``` bash
 bash <(curl -s -L git.io/JPj8D)
 ```
-
+## ssrmu一键安装
+- 脚本说明: Shadowsocks 一键安装管理脚本
+- 系统支持: CentOS6+ / Debian6+ / Ubuntu14+ /arm
+``` bash
+bash <(curl -s -L git.io/JX0Po)
+```
 ---
 ## ssr一键安装
 
