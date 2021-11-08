@@ -31,84 +31,88 @@ warp.sh(){
 Install_ssr(){
 	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ssr.sh)
 }
-#5安装V2ary_233一键
+#5安装ssrmu（arm）
+ssrmu(){
+        bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ssrmu.sh)
+}
+#6安装V2ary_233一键
 Install_V2ray(){
 	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/V2Ray.sh)
 }
-#6安装Tg专用代理（Go版）
+#7安装Tg专用代理（Go版）
 Tg_socks(){
 	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy_go.sh)
 }
-#7安装TG专用代理（中文版）
+#8安装TG专用代理（中文版）
 mtproxy(){
         wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy.sh && chmod +x mtproxy.sh && bash mtproxy.sh
 }
-#8安装Goflyway
+#9安装Goflyway
 Install_goflyway(){
 	bash <(curl -s -L https://git.io/goflyway.sh && chmod +x goflyway.sh)
 }
-#9小鸡性能测试
+#10小鸡性能测试
 View_superbench(){
 	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/superbench.sh)
 }
 
-#10回程线路测试
+#11回程线路测试
 View_huicheng(){
 	wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/huicheng/master/huicheng && chmod +x huicheng
 }
-#11安装云监控探针
+#12安装云监控探针
 Install_status(){
 	wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/status.sh && chmod +x status.sh && bash status.sh
 }
-#12一键DD包（OD源）
+#13一键DD包（OD源）
 DD_OD(){
 	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/dd-od.sh)
 }
-#13一键DD包（GD源）
+#14一键DD包（GD源）
 DD_GD(){
 	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/dd-gd.sh)
 }
-#14一键开启默认bbr
+#15一键开启默认bbr
 open_bbr(){
 	modprobe tcp_bbr && echo "tcp_bbr" | tee --append /etc/modules-load.d/modules.conf && echo "net.core.default_qdisc=fq" | tee --append /etc/sysctl.conf && echo "net.ipv4.tcp_congestion_control=bbr" | tee --append /etc/sysctl.conf && sysctl -p && sysctl net.ipv4.tcp_available_congestion_control && sysctl net.ipv4.tcp_congestion_control && lsmod | grep bbr
 }
-#15八合一共存脚本+伪装站点
+#16八合一共存脚本+伪装站点
 install(){
 	wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/install.sh" && chmod 700 /root/install.sh && /root/install.sh
 }
-# 16Netflix解锁检测
+# 17Netflix解锁检测
 netflix(){
         bash <(curl -sSL "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/netflix.sh")	
 }
-#17xray
+#18xray
 xray(){
 bash <(curl -sSL "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/xray.sh")	
 }
-#18VPS一键3网测速脚本
+#19VPS一键3网测速脚本
 superspeed(){
 	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/superspeed.sh)
 }
-#19FRP内网穿刺
+#20FRP内网穿刺
 install-frps(){
         wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/frps/install-frps.sh -O ./install-frps.sh && chmod 700 ./install-frps.sh && bash install-frps.sh install
 }
-#20Docker-Compose安装
+#21Docker-Compose安装
 DockerInstallation(){
        bash <(curl -sSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/DockerInstallation.sh)
 }
-#21X-ui面板一键安装
+#22X-ui面板一键安装
 install(){
        bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
 }
-#22闲蛋探针+中转一键搭建
+#23闲蛋探针+中转一键搭建
 xiandan(){
        bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/xiandan/xiandan.sh')
 }
-#23宝塔面板一键搭建
+#24宝塔面板一键搭建
 install_panel(){
        curl -sSO http://download.bt.cn/install/install_panel.sh && bash install_panel.sh
 }
-#24流媒体检测
+#25流媒体检测
 liumeiti(){
        bash <(curl -L -s https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/liumeiti.sh)
 }
@@ -132,31 +136,32 @@ echo && echo -e "
  ${Green_font_prefix}2.${Font_color_suffix}  安装谷歌 BBR2 BBRV2
  ${Green_font_prefix}3.${Font_color_suffix}  Cloudflare WARP 一键配置
  ${Green_font_prefix}4.${Font_color_suffix}  安装SSR多用户版
- ${Green_font_prefix}5.${Font_color_suffix}  安装V2ary_233一键
- ${Green_font_prefix}6.${Font_color_suffix}  TG专用代理（Go版）
- ${Green_font_prefix}7.${Font_color_suffix}  TG专用代理（中文版）
- ${Green_font_prefix}8.${Font_color_suffix}  安装Goflyway
- ${Green_font_prefix}9.${Font_color_suffix}  小鸡性能测试
- ${Green_font_prefix}10.${Font_color_suffix} 回程线路测试:命令:./huicheng 您的IP
- ${Green_font_prefix}11.${Font_color_suffix} 云监控探针
- ${Green_font_prefix}12.${Font_color_suffix} 傻瓜式一键DD包（OD源）
- ${Green_font_prefix}13.${Font_color_suffix} 傻瓜式一键DD包（GD源）
- ${Green_font_prefix}14.${Font_color_suffix} 一键开启默认bbr  
- ${Green_font_prefix}15.${Font_color_suffix} 八合一共存脚本+伪装站点
- ${Green_font_prefix}16.${Font_color_suffix} Netflix解锁检测
- ${Green_font_prefix}17.${Font_color_suffix} xray安装
- ${Green_font_prefix}18.${Font_color_suffix} VPS一键3网测速脚本
- ${Green_font_prefix}19.${Font_color_suffix} frp一键内网穿刺
- ${Green_font_prefix}20.${Font_color_suffix} Docker-Compose安装
- ${Green_font_prefix}21.${Font_color_suffix} 支持多协议多用户的X-ui面板
- ${Green_font_prefix}22.${Font_color_suffix} 闲蛋探针+中转一键搭建
- ${Green_font_prefix}23.${Font_color_suffix} 宝塔面板一键搭建
- ${Green_font_prefix}24.${Font_color_suffix} 流媒体检测
+ ${Green_font_prefix}5.${Font_color_suffix} 安装ssrmu脚本
+ ${Green_font_prefix}6.${Font_color_suffix}  安装V2ary_233一键
+ ${Green_font_prefix}7.${Font_color_suffix}  TG专用代理（Go版）
+ ${Green_font_prefix}8.${Font_color_suffix}  TG专用代理（中文版）
+ ${Green_font_prefix}9.${Font_color_suffix}  安装Goflyway
+ ${Green_font_prefix}10.${Font_color_suffix}  小鸡性能测试
+ ${Green_font_prefix}11.${Font_color_suffix} 回程线路测试:命令:./huicheng 您的IP
+ ${Green_font_prefix}12.${Font_color_suffix} 云监控探针
+ ${Green_font_prefix}13.${Font_color_suffix} 傻瓜式一键DD包（OD源）
+ ${Green_font_prefix}14.${Font_color_suffix} 傻瓜式一键DD包（GD源）
+ ${Green_font_prefix}15.${Font_color_suffix} 一键开启默认bbr  
+ ${Green_font_prefix}16.${Font_color_suffix} 八合一共存脚本+伪装站点
+ ${Green_font_prefix}17.${Font_color_suffix} Netflix解锁检测
+ ${Green_font_prefix}18.${Font_color_suffix} xray安装
+ ${Green_font_prefix}19.${Font_color_suffix} VPS一键3网测速脚本
+ ${Green_font_prefix}20.${Font_color_suffix} frp一键内网穿刺
+ ${Green_font_prefix}21.${Font_color_suffix} Docker-Compose安装
+ ${Green_font_prefix}22.${Font_color_suffix} 支持多协议多用户的X-ui面板
+ ${Green_font_prefix}23.${Font_color_suffix} 闲蛋探针+中转一键搭建
+ ${Green_font_prefix}24.${Font_color_suffix} 宝塔面板一键搭建
+ ${Green_font_prefix}25.${Font_color_suffix} 流媒体检测
   " && echo
   
 fi
 echo
-read -e -p " 请输入数字 [0-24]:" num
+read -e -p " 请输入数字 [0-25]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -174,67 +179,70 @@ case "$num" in
 	Install_ssr
 	;;
 	5)
-	Install_V2ray
+	ssrmu
 	;;
 	6)
-	Tg_socks
+	Install_V2ray
 	;;
 	7)
-	mtproxy
+	Tg_socks
 	;;
 	8)
-	Install_goflyway
+	mtproxy
 	;;
 	9)
-	View_superbench
+	Install_goflyway
 	;;
 	10)
-	View_huicheng
+	View_superbench
 	;;
 	11)
-	Install_status
+	View_huicheng
 	;;
 	12)
-	DD_OD
+	Install_status
 	;;
 	13)
-	DD_GD
+	DD_OD
 	;;
 	14)
-	open_bbr
+	DD_GD
 	;;
 	15)
-	install
+	open_bbr
 	;;
 	16)
-	netflix	
-	;;
-	17)
-	xray	
-	;;
-	18)
-        superspeed	
-	;;
-	19)
-	install-frps
-	;;
-	20)
-	DockerInstallation
-	;;
-	21)
 	install
 	;;
+	17)
+	netflix	
+	;;
+	18)
+	xray	
+	;;
+	19)
+        superspeed	
+	;;
+	20)
+	install-frps
+	;;
+	21)
+	DockerInstallation
+	;;
 	22)
+	install
+	;;
+	23)
 	xiandan
 	;;
-        23)
+        24)
 	install_panel
 	;;
-        24)
+        25)
 	liumeiti
 	;;
 	*)
-	echo "请输入正确数字 [0-24]"
+	echo "请输入正确数字 [0-25]"
 	;;
 esac
   
