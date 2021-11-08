@@ -150,7 +150,7 @@ bash <(curl -s -L git.io/JPjlh)
 ``` bash
 bash <(curl -s -L git.io/JPj8D)
 ```
-## ssrmu一键安装arm
+## ssrmu一键安装
 - 脚本说明: Shadowsocks 一键安装管理脚本
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+ /arm
 ``` bash
