@@ -136,7 +136,7 @@ echo && echo -e "
  ${Green_font_prefix}2.${Font_color_suffix}  安装谷歌 BBR2 BBRV2
  ${Green_font_prefix}3.${Font_color_suffix}  Cloudflare WARP 一键配置
  ${Green_font_prefix}4.${Font_color_suffix}  安装SSR多用户版
- ${Green_font_prefix}5.${Font_color_suffix} 安装ssrmu脚本
+ ${Green_font_prefix}5.${Font_color_suffix}  安装ssrmu脚本(arm)
  ${Green_font_prefix}6.${Font_color_suffix}  安装V2ary_233一键
  ${Green_font_prefix}7.${Font_color_suffix}  TG专用代理（Go版）
  ${Green_font_prefix}8.${Font_color_suffix}  TG专用代理（中文版）
