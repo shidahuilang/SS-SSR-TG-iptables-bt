@@ -141,7 +141,7 @@ echo && echo -e "
  ${Green_font_prefix}7.${Font_color_suffix}  TG专用代理（Go版）
  ${Green_font_prefix}8.${Font_color_suffix}  TG专用代理（中文版）
  ${Green_font_prefix}9.${Font_color_suffix}  安装Goflyway
- ${Green_font_prefix}10.${Font_color_suffix}  小鸡性能测试
+ ${Green_font_prefix}10.${Font_color_suffix} 小鸡性能测试
  ${Green_font_prefix}11.${Font_color_suffix} 回程线路测试:命令:./huicheng 您的IP
  ${Green_font_prefix}12.${Font_color_suffix} 云监控探针
  ${Green_font_prefix}13.${Font_color_suffix} 傻瓜式一键DD包（OD源）
