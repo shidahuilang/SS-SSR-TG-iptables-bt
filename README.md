@@ -52,7 +52,7 @@
   * [ssr_ip_check.一键安装](#ssr_ip_check一键安装)
   * [vps测速](#vps测速)
   * [流媒体检测](#流媒体检测)
-  * [cf-auto-passwall.sh](#CF自动优选IP)
+  * [cf-auto-passwallCF自动优选IP](#CF自动优选IP)
 
 ---
 ## 多功能脚本集合你想要的都在这里
