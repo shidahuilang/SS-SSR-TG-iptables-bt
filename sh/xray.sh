@@ -1872,12 +1872,6 @@ showLog() {
 
 menu() {
     clear
-    echo "#############################################################"
-    echo -e "#                     ${RED}Xray一键安装脚本${PLAIN}                                                        #"
-    echo -e "# ${GREEN}作者${PLAIN}: 网络跳越(hijk)                                                                      #"
-    echo -e "# ${GREEN}TG群${PLAIN}: https://t.me/xiaoyaoguanshijie                                                     #"
-    echo -e "# ${GREEN}Youtube频道${PLAIN}: https://www.youtube.com/channel/UC1xMnx_itCflgPMyo6LtxiQ?sub_confirmation=1 #"
-    echo "#############################################################"
     echo -e "  ${GREEN}1.${PLAIN}   安装Xray-VMESS"
     echo -e "  ${GREEN}2.${PLAIN}   安装Xray-${BLUE}VMESS+mKCP${PLAIN}"
     echo -e "  ${GREEN}3.${PLAIN}   安装Xray-VMESS+TCP+TLS"
