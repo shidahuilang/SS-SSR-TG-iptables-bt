@@ -679,3 +679,7 @@ vi cf-auto-passwall.sh
 ``` bash
 chmod +x cf-auto-passwall.sh && bash cf-auto-passwall.sh
 ```
+- 软路由设置计划任务（凌晨4点更新IP）
+``` bash
+0 04 * * * bash /root/cf-auto-passwall.sh > /dev/null
+```
