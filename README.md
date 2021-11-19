@@ -230,6 +230,11 @@ bash <(curl -s -L https://git.io/Jicox)
 
 ## 使用教程
 ## 下载安装
+- 方法1 一键全部安装
+``` bash
+https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/x-uiyijian.sh
+```
+- 方法2 分步奏安装
 ``` bash
 bash <(curl -s -L git.io/JPj4L)
 
