@@ -232,7 +232,7 @@ bash <(curl -s -L https://git.io/Jicox)
 ## 下载安装
 - 方法1 一键全部安装
 ``` bash
-https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/x-uiyijian.sh
+bash <(curl -s -L https://git.io/J1wy9)
 ```
 - 方法2 分步奏安装
 ``` bash
