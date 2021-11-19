@@ -100,9 +100,9 @@ install-frps(){
 DockerInstallation(){
        bash <(curl -sSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/DockerInstallation.sh)
 }
-#22X-ui面板一键安装
+#22X-ui面板，证书一键安装
 install(){
-       bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+       bash <(curl -Ls https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/x-uiyijian.sh)
 }
 #23闲蛋探针+中转一键搭建
 xiandan(){
@@ -153,7 +153,7 @@ echo && echo -e "
  ${Green_font_prefix}19.${Font_color_suffix} VPS一键3网测速脚本
  ${Green_font_prefix}20.${Font_color_suffix} frp一键内网穿刺
  ${Green_font_prefix}21.${Font_color_suffix} Docker-Compose安装
- ${Green_font_prefix}22.${Font_color_suffix} 支持多协议多用户的X-ui面板
+ ${Green_font_prefix}22.${Font_color_suffix} 支持多协议多用户的X-ui面板+证书一键安装
  ${Green_font_prefix}23.${Font_color_suffix} 闲蛋探针+中转一键搭建
  ${Green_font_prefix}24.${Font_color_suffix} 宝塔面板一键搭建
  ${Green_font_prefix}25.${Font_color_suffix} 流媒体检测
