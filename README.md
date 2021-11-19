@@ -52,6 +52,7 @@
   * [ssr_ip_check.一键安装](#ssr_ip_check一键安装)
   * [vps测速](#vps测速)
   * [流媒体检测](#流媒体检测)
+  * [CF自动优选IP](#CF自动优选IP)
 
 ---
 ## 多功能脚本集合你想要的都在这里
@@ -658,5 +659,23 @@ bash <(curl -s -L git.io/JPjzE)
 ``` bash
 bash <(curl -s -L git.io/JPjzo)
 ```
-
-
+## CF自动优选IP
+- 脚本说明：CF自动优选IP并自动在PassWall进行部署
+- 开启 CloudFlare 的 “小云朵”，开启我们的 CDN。
+- 查看 软路由 PassWall 的自定义节点字符串。
+``` bash
+vi /etc/config/passwall
+```
+- 在软路由里面下载 cf-auto-passwall 脚本
+``` bash
+wget https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/cf-auto-passwall.sh
+```
+- 编辑该脚本
+- 更改相关的参数（默认优选带宽大小、节点相对应的字符串），并保存
+``` bash
+vi cf-auto-passwall.sh
+```
+- 软路由运行
+``` bash
+chmod +x cf-auto-passwall.sh && bash cf-auto-passwall.sh
+```
