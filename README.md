@@ -91,19 +91,6 @@ wget https://code.aliyun.com/MvsCode/frps-onekey/raw/master/install-frps.sh -O .
 ``` bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/frps/install-frps.sh -O ./install-frps.sh && chmod 700 ./install-frps.sh && bash install-frps.sh install
 ```
-## nps内网穿刺
-- 一款轻量级、高性能、功能强大的内网穿透代理服务器
-- 支持tcp、udp、socks5、http等几乎所有流量转发，可用来访问内网网站
-- 本地支付接口调试、ssh访问、远程桌面，内网dns解析、内网socks5代理等等
-### 下载安装
-``` bash
-bash -c "$(curl -fsSL https://git.io/JMvXV)"
-```
-- 注册：sudo ./npc install 其他参数（例如-server=xx -vkey=xx或者-config=xxx）
-- 启动：sudo npc start
-- 停止：sudo npc stop
-- 卸载：./npc uninstall
-
 #### Uninstall（卸载）
 ``` bash
 ./install-frps.sh uninstall
@@ -116,6 +103,18 @@ bash -c "$(curl -fsSL https://git.io/JMvXV)"
 ``` bash
 Usage: /etc/init.d/frps {start|stop|restart|status|config|version}
 ```
+## nps内网穿刺
+- 一款轻量级、高性能、功能强大的内网穿透代理服务器
+- 支持tcp、udp、socks5、http等几乎所有流量转发，可用来访问内网网站
+- 本地支付接口调试、ssh访问、远程桌面，内网dns解析、内网socks5代理等等
+### 下载安装
+``` bash
+bash -c "$(curl -fsSL https://git.io/JMvXV)"
+```
+- 注册：sudo ./npc install 其他参数（例如-server=xx -vkey=xx或者-config=xxx）
+- 启动：sudo npc start
+- 停止：sudo npc stop
+- 卸载：./npc uninstall
 
 ## Docker-Compose一键安装
 
