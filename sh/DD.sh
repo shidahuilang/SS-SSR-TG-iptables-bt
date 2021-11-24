@@ -161,7 +161,7 @@ echo && echo -e "
  ${Green_font_prefix}23.${Font_color_suffix} 闲蛋探针+中转一键搭建
  ${Green_font_prefix}24.${Font_color_suffix} 宝塔面板一键搭建
  ${Green_font_prefix}25.${Font_color_suffix} 流媒体检测
-  ${Green_font_prefix}26.${Font_color_suffix} NPS穿透一键安装
+ ${Green_font_prefix}26.${Font_color_suffix} NPS穿透一键安装
   " && echo
   
 fi
@@ -247,7 +247,7 @@ case "$num" in
 	liumeiti
 	;;
 	26)
-	nps
+	install
 	;;
 	*)
 	echo "请输入正确数字 [0-26]"
