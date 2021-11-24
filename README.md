@@ -94,13 +94,9 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS
 #### Uninstall（卸载）
 ``` bash
 ./install-frps.sh uninstall
-```
 ## Update（更新）
-``` bash
 ./install-frps.sh update
-```
 ## Server management（服务管理器）
-``` bash
 Usage: /etc/init.d/frps {start|stop|restart|status|config|version}
 ```
 ## nps内网穿刺
