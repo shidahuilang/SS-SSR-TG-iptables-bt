@@ -115,6 +115,7 @@ bash -c "$(curl -fsSL https://git.io/JMvXV)"
 - 启动：sudo npc start
 - 停止：sudo npc stop
 - 卸载：./npc uninstall
+- 更新：sudo npc stop + sudo npc-update update
 
 ## Docker-Compose一键安装
 
