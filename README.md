@@ -91,13 +91,13 @@ wget https://code.aliyun.com/MvsCode/frps-onekey/raw/master/install-frps.sh -O .
 ``` bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/frps/install-frps.sh -O ./install-frps.sh && chmod 700 ./install-frps.sh && bash install-frps.sh install
 ```
-## Uninstall（卸载）
+## （卸载）
 ./install-frps.sh uninstall
-## Update（更新）
+## 更新）
 ./install-frps.sh update
-## Server management（服务管理器）
+## 服务管理器）
 Usage: /etc/init.d/frps {start|stop|restart|status|config|version}
-```
+
 ## nps内网穿刺
 - 一款轻量级、高性能、功能强大的内网穿透代理服务器
 - 支持tcp、udp、socks5、http等几乎所有流量转发，可用来访问内网网站
