@@ -116,6 +116,10 @@ install_panel(){
 liumeiti(){
        bash <(curl -L -s https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/liumeiti.sh)
 }
+#26NPS穿透一键安装
+liumeiti(){
+       wget -P /root -N --no-check-certificate "https://github.com/ehang-io/nps/releases/download/v0.26.10/linux_amd64_server.tar.gz" && tar -zxvf linux_amd64_server.tar.gz && ./nps install && nps start
+}       
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
@@ -157,11 +161,12 @@ echo && echo -e "
  ${Green_font_prefix}23.${Font_color_suffix} 闲蛋探针+中转一键搭建
  ${Green_font_prefix}24.${Font_color_suffix} 宝塔面板一键搭建
  ${Green_font_prefix}25.${Font_color_suffix} 流媒体检测
+  ${Green_font_prefix}26.${Font_color_suffix} NPS穿透一键安装
   " && echo
   
 fi
 echo
-read -e -p " 请输入数字 [0-25]:" num
+read -e -p " 请输入数字 [0-26]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -241,8 +246,11 @@ case "$num" in
         25)
 	liumeiti
 	;;
+	26)
+	nps
+	;;
 	*)
-	echo "请输入正确数字 [0-25]"
+	echo "请输入正确数字 [0-26]"
 	;;
 esac
   
