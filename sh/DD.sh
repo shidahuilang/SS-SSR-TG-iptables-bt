@@ -117,7 +117,7 @@ liumeiti(){
        bash <(curl -L -s https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/liumeiti.sh)
 }
 #26NPS穿透一键安装
-liumeiti(){
+liu(){
        wget -P /root -N --no-check-certificate "https://github.com/ehang-io/nps/releases/download/v0.26.10/linux_amd64_server.tar.gz" && tar -zxvf linux_amd64_server.tar.gz && ./nps install && nps start
 }       
 action=$1
@@ -247,7 +247,7 @@ case "$num" in
 	liumeiti
 	;;
 	26)
-	install
+	lun
 	;;
 	*)
 	echo "请输入正确数字 [0-26]"
