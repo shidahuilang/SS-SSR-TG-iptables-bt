@@ -4,11 +4,11 @@ export PATH
 #=======================================================================#
 #   System Supported:  CentOS 6+ / Debian 7+ / Ubuntu 12+               #
 #   Description: L2TP VPN Auto Installer                                #
-#             Linux 一键安装L2TP脚本 (汉化定制版)                         #
+#             Linux 一键安装L2TP脚本 (汉化定制版)                       #
 #                                                                       #
-#                                                                       #
-#                                                                       #
-#=======================================================================#
+#=======================================================================#                                             
+
+
 cur_dir=`pwd`
 
 libreswan_filename="libreswan-3.27"
@@ -656,13 +656,10 @@ finally(){
     echo "###############################################################"
     echo "# L2TP VPN Auto Installer                                     #"
     echo "# System Supported: CentOS 6+ / Debian 7+ / Ubuntu 12+        #"
-    echo "#          Linux 一键安装L2TP脚本 (汉化定制版)                  #"
-    echo "#                                                             #"
+    echo "#          Linux 一键安装L2TP脚本 (汉化定制版)                #"
     echo "###############################################################"
-    echo 
-    echo                                                   
-    echo 
     echo "###############################################################"
+                                         
     echo "如果上面没有[FAILED]，您可以连接到您的L2TP "
     echo "L2TP使用用户名/密码的VPN服务器如下:"
     echo
@@ -677,7 +674,6 @@ finally(){
     echo "l2tp -l (列出所有用户)"
     echo "l2tp -m (修改用户密码)"
     echo
-    echo "Welcome to visit our website: https://github.com/shidahuilang/SS-SSR-TG-iptables-bt"
     echo "Enjoy it!"
     echo
 }
@@ -689,9 +685,10 @@ l2tp(){
     echo "###############################################################"
     echo "# L2TP VPN Auto Installer                                     #"
     echo "# System Supported: CentOS 6+ / Debian 7+ / Ubuntu 12+        #"
-    echo "#          Linux 一键安装L2TP脚本 (汉化定制版)                  #"
+    echo "#          Linux 一键安装L2TP脚本 (定制版)                    #"
     echo "#                                                             #"
     echo "###############################################################"
+
     echo
     rootness
     tunavailable
