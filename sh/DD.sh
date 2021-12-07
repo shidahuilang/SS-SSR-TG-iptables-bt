@@ -118,7 +118,7 @@ liumeiti(){
 }
 #26NPS穿透一键安装
 nps(){
-       bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/nps.sh)"
+       wget -P /root -N --no-check-certificate "https://github.com/ehang-io/nps/releases/download/v0.26.10/linux_amd64_server.tar.gz" && tar -zxvf linux_amd64_server.tar.gz && ./nps install && nps start
 }
 #27portainer中文版一键安装
 x86(){
