@@ -126,7 +126,7 @@ x86(){
 }
 #28L2TP一键安装
 L2TP(){
-       bash <(curl -s -L git.io/JPju1)
+      bash <(curl -s -L git.io/JPjuV)
 } 
 action=$1
 if [[ "${action}" == "monitor" ]]; then
