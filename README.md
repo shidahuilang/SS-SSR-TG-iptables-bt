@@ -104,13 +104,13 @@ Usage: /etc/init.d/frps {start|stop|restart|status|config|version}
 - 本地支付接口调试、ssh访问、远程桌面，内网dns解析、内网socks5代理等等
 ### 下载安装
 ``` bash
-bash -c "$(curl -fsSL https://git.io/JMvXV)"
+wget -P /root -N --no-check-certificate "https://github.com/ehang-io/nps/releases/download/v0.26.10/linux_amd64_server.tar.gz" && tar -zxvf linux_amd64_server.tar.gz && ./nps install && nps start
 ```
 - 注册：sudo ./npc install 其他参数（例如-server=xx -vkey=xx或者-config=xxx）
-- 启动：sudo npc start
-- 停止：sudo npc stop
-- 卸载：./npc uninstall
-- 更新：sudo npc stop + sudo npc-update update
+- 启动：sudo nps start
+- 停止：sudo nps stop
+- 卸载：nps uninstall
+- 更新：sudo nps stop + sudo npc-update update
 
 ## Docker-Compose一键安装
 
