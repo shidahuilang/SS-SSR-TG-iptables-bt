@@ -119,7 +119,11 @@ liumeiti(){
 #26NPS穿透一键安装
 nps(){
        bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/nps.sh)"
-}       
+}
+#27portainer中文版一键安装
+x86(){
+       bash <(curl -s -L git.io/JMxrH)
+} 
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
@@ -162,11 +166,12 @@ echo && echo -e "
  ${Green_font_prefix}24.${Font_color_suffix} 宝塔面板一键搭建
  ${Green_font_prefix}25.${Font_color_suffix} 流媒体检测
  ${Green_font_prefix}26.${Font_color_suffix} NPS穿透一键安装
+ ${Green_font_prefix}27.${Font_color_suffix} portainer可视化容器中文版一键安装
   " && echo
   
 fi
 echo
-read -e -p " 请输入数字 [0-26]:" num
+read -e -p " 请输入数字 [0-27]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -249,8 +254,11 @@ case "$num" in
 	26)
 	nps
 	;;
+	27)
+	x86
+	;;
 	*)
-	echo "请输入正确数字 [0-26]"
+	echo "请输入正确数字 [0-27]"
 	;;
 esac
   
