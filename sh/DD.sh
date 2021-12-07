@@ -123,6 +123,10 @@ nps(){
 #27portainer中文版一键安装
 x86(){
        bash <(curl -s -L git.io/JMxrH)
+}
+#28L2TP一键安装
+L2TP(){
+       bash <(curl -s -L git.io/JPju1)
 } 
 action=$1
 if [[ "${action}" == "monitor" ]]; then
@@ -167,11 +171,12 @@ echo && echo -e "
  ${Green_font_prefix}25.${Font_color_suffix} 流媒体检测
  ${Green_font_prefix}26.${Font_color_suffix} NPS穿透一键安装
  ${Green_font_prefix}27.${Font_color_suffix} portainer可视化容器中文版一键安装
+ ${Green_font_prefix}28.${Font_color_suffix} L2TP一键安装
   " && echo
   
 fi
 echo
-read -e -p " 请输入数字 [0-27]:" num
+read -e -p " 请输入数字 [0-28]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -257,8 +262,11 @@ case "$num" in
 	27)
 	x86
 	;;
+	27)
+	L2TP
+	;;
 	*)
-	echo "请输入正确数字 [0-27]"
+	echo "请输入正确数字 [0-28]"
 	;;
 esac
   
