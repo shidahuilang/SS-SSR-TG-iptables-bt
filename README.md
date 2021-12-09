@@ -2,6 +2,7 @@
 
 ## 传送阵  点击传送到你需要的脚本
   * [28合1多功能脚本集合你想要的都在这里](#28合1多功能脚本集合你想要的都在这里)
+  * [京东服务器时间同步](#京东服务器时间同步)
 * [***内网穿刺***](#内网穿刺)
   * [frp内网穿刺](#frp内网穿刺)
   * [nps内网穿刺](#nps内网穿刺)
@@ -76,6 +77,10 @@
 #### 下载安装:
 ``` bash
 bash <(curl -s -L https://git.io/JPj82)
+```
+#### 京东服务器时间同步
+``` bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/JDtime.sh"
 ```
 ## FRP内网穿刺
 
