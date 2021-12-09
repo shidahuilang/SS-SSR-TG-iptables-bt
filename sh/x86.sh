@@ -7,15 +7,15 @@ ip=$(ifconfig | grep "inet addr" | awk '{ print $2}' | awk -F: '{print $2}' | aw
 if [[ ! -n "$ip" ]]; then
     ip="你的路由器IP"
 fi
-#默认安装目录/root
-name=/root
+#默认安装目录/opt
+name=/opt
 #默认安装端口
 nport=9999
 clear
 # check root
 [[ $EUID -ne 0 ]] && echo -e "${red}错误: ${plain} 必须使用root用户运行此脚本！\n" && exit 1
 
-echo -e "输入portainer汉化文件安装目录：${red} \n（必须是绝对路径如：/opt，不懂的直接回车，默认目录$name）\n"
+echo -e "输入portainer汉化文件安装目录：${red} \n（必须是绝对路径如：/root，不懂的直接回车，默认目录$name）\n"
 read -p "输入目录名（留空默认：$name）: " webdir
 echo -e "${plain}"
     if [[ ! -n "$webdir" ]]; then
@@ -61,7 +61,7 @@ if [ "docker inspect --format '{{.State.Running}}' portainer" != "true" ]
 baseip=$(curl -s ipip.ooo)  > /dev/null
 then {
 echo -e "portainer部署成功，${red}浏览器访问$ip:$port \c"
-echo -e "${green}安装完毕,面板访问地址：http://${baseip}:${portinfo}${plain}"
+echo -e "${green}安装完毕,面板访问地址：http://${baseip}:${portinfo}${plain}$ip:$port \c""
 echo -e "${plain}"
 }
 else
