@@ -4,8 +4,8 @@ red='\033[0;31m'
 plain='\033[0m'
 #内网ip地址获取
 ip=$(ifconfig | grep "inet addr" | awk '{ print $2}' | awk -F: '{print $2}' | awk 'NR==1')
-if [[ ! -n "$ip" ]]; then
-    ip="你的路由器IP"
+if [[ ! -n "${baseip}" ]]; then
+    ip="${baseip}"
 fi
 #默认安装目录/opt
 name=/opt
