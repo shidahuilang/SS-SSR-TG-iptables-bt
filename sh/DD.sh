@@ -122,7 +122,7 @@ nps(){
 }
 #27portainer中文版一键安装
 x86(){
-       bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/x86.sh)"
+       bash <(curl -L -s https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/x86.sh)
 }
 #28L2TP一键安装
 L2TP(){
