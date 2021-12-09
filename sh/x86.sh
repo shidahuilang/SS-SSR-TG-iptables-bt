@@ -37,13 +37,11 @@ rm -rf public
 
 mv public-public public
     
-docker stop portainer
-
-docker rm portainer
-
-docker rmi portainer/portainer
-
-docker rmi portainer/portainer-ce
+	docker=$(docker ps -a|grep portainer) && dockerid=$(awk '{print $(1)}' <<<${docker})
+	images=$(docker images|grep portainer) && imagesid=$(awk '{print $(3)}' <<<${images})
+	docker stop -t=5 "${dockerid}" > /dev/null 2>&1
+	docker rm "${dockerid}"
+	docker rmi "${imagesid}"
 
 read -p "是否重置portainer账户密码[Y/n]" user
 case $user in
