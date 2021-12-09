@@ -58,7 +58,7 @@ docker run -d --restart=always --name="portainer" -p $port:9000 -v /var/run/dock
 
 
 if [ "docker inspect --format '{{.State.Running}}' portainer" != "true" ]
-baseip=$(curl -s ipip.ooo)  > /dev/null
+
 then {
 echo -e "portainer部署成功，${red}浏览器访问http://${baseip}:${portinfo}${plain}$ip:$port \c"
 echo -e "${plain}"
