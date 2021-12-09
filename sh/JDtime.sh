@@ -1,46 +1,18 @@
-#!/bin/bash
-red='\033[0;31m'
-green='\033[0;32m'
-yellow='\033[0;33m'
-plain='\033[0m'
+#/usr/bin/env bash
+#将脚本上传到linux中的/root目录，在root账户下执行bash timesync.sh 
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE="\033[0;35m"
+CYAN='\033[0;36m'
+PLAIN='\033[0m'
 
-apt -y install unzip >> /dev/null 2>&1 || yum install  unzip -y >> /dev/null 2>&1
-rm besttrace*
-# install besttrace
-if [ ! -f "besttrace" ]; then
-    wget https://cdn.ipip.net/17mon/besttrace4linux.zip
-    unzip besttrace4linux.zip
-    rm besttrace4linux.zip
-fi
-arch=$(arch)
-
-if [[ $arch == "x86_64" || $arch == "x64" || $arch == "amd64" ]]; then
-  chmod +x besttrace
-elif [[ $arch == "aarch64" || $arch == "arm64" ]]; then
-  rm besttrace && mv besttracearm besttrace && chmod +x besttrace
-else
-  arch="amd64"
-  echo -e "${red}检测架构失败，使用默认架构: ${arch}${plain}"
-fi
-echo "架构: ${arch}"
-## start to use besttrace
-
-next() {
-    printf "%-70s\n" "-" | sed 's/\s/-/g'
-}
-
-clear
-next
-
-ip_list=(202.103.44.150 14.215.116.1 101.95.120.109 117.28.254.129 113.207.25.138 119.6.6.6 120.204.197.126 183.221.253.100 202.112.14.151)
-ip_addr=(武汉电信 广州电信 上海电信 厦门电信 重庆联通 成都联通 上海移动 成都移动 成都教育网)
-# ip_len=${#ip_list[@]}
-
-for i in {0..8}
-do
-	echo ${ip_addr[$i]}
-	./besttrace -q 1 ${ip_list[$i]}
-	next
-done
-#清理besttrace相关文件
-rm besttrace*
+echo -e "${BLUE}开始获取京东服务器时间${PLAIN}"
+Time=$(curl -s "https://api.m.jd.com/client.action?functionId=queryMaterialProducts&client=wh5" | grep '{"currentTime":'| sed 's/^.*"currentTime"://g' | sed 's/,"currentTime2":.*//g' | sed 's/\"//g' )
+date -s "$(curl -s "https://api.m.jd.com/client.action?functionId=queryMaterialProducts&client=wh5" | grep '{"currentTime":'| sed 's/^.*"currentTime"://g' | sed 's/,"currentTime2":.*//g' | sed 's/\"//g' )"
+echo -e "${BLUE}当前京东服务器时间为${PLAIN}${RED}${Time}${PLAIN}"
+echo -e "${BLUE}开始进行时间同步${PLAIN}"
+echo -e "${BLUE}与京东服务器时间同步完成，脚本将自动退出。${PLAIN}"
+exit
