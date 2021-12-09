@@ -80,7 +80,7 @@ bash <(curl -s -L https://git.io/JPj82)
 ```
 #### 京东服务器时间同步
 ``` bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/JDtime.sh"
+bash -c "$(curl -fsSL git.io/JDIXU)"
 ```
 ## FRP内网穿刺
 
