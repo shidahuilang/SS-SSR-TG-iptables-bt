@@ -60,7 +60,7 @@ baseip=$(curl -s ipip.ooo)  > /dev/null
 if [ "docker inspect --format '{{.State.Running}}' portainer" != "true" ]
 
 then {
-echo -e "portainer部署成功，${red}浏览器访问http://${baseip}$ip:$port \c"
+echo -e "portainer部署成功，${red}浏览器访问http://${baseip}$port \c"
 echo -e "${plain}"
 }
 else
