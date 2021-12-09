@@ -62,6 +62,7 @@ docker run -d --restart=always --name="portainer" -p $port:9000 -v /var/run/dock
 if [ "docker inspect --format '{{.State.Running}}' portainer" != "true" ]
 then {
 echo -e "portainer部署成功，${red}浏览器访问$ip:$port \c"
+echo -e "${green}安装完毕,面板访问地址：http://${baseip}:${portinfo}${plain}"
 echo -e "${plain}"
 }
 else
