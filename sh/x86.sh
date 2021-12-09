@@ -33,9 +33,9 @@ cd $webdir
 fi
 curl -sL https://github.com/shidahuilang/public/archive/refs/tags/public.tar.gz | tar xz
 
-rm -rf public
+rm -rf /opt/public
 
-mv public-public public
+mv /opt/public-public public
     
 	docker=$(docker ps -a|grep portainer) && dockerid=$(awk '{print $(1)}' <<<${docker})
 	images=$(docker images|grep portainer) && imagesid=$(awk '{print $(3)}' <<<${images})
