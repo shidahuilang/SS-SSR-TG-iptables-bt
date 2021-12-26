@@ -101,7 +101,7 @@ DockerInstallation(){
        bash <(curl -sSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/DockerInstallation.sh)
 }
 #22X-ui面板，证书一键安装
-install(){
+x-uiyijian(){
        bash <(curl -Ls https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/x-uiyijian.sh)
 }
 #23闲蛋探针+中转一键搭建
@@ -245,7 +245,7 @@ case "$num" in
 	DockerInstallation
 	;;
 	22)
-	install
+	x-uiyijian
 	;;
 	23)
 	xiandan
