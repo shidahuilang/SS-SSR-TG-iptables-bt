@@ -19,9 +19,9 @@ Update_Shell(){
 bbr_ruisu(){
 	bash <(curl -s -L https://raw.githubusercontent.com/veip007/Linux-NetSpeed/master/tcp.sh)
 }
-#2谷歌 BBR2 BBRV2
-Google_bbr2(){
-	bash <(curl -s -L https://raw.githubusercontent.com/yeyingorg/bbr2.sh/master/bbr2.sh)
+#2一键提升VPS速度
+tools(){
+	wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/tools.sh && chmod +x tools.sh && bash tools.sh
 }
 #3Cloudflare WARP 一键配置
 warp.sh(){
@@ -145,7 +145,7 @@ echo && echo -e "
 +-------------------------------------------------------------+
  ${Green_font_prefix}0.${Font_color_suffix}  升级脚本
  ${Green_font_prefix}1.${Font_color_suffix}  加速系列：Bbr系列、锐速
- ${Green_font_prefix}2.${Font_color_suffix}  安装谷歌 BBR2 BBRV2
+ ${Green_font_prefix}2.${Font_color_suffix}  一键提升VPS速度
  ${Green_font_prefix}3.${Font_color_suffix}  Cloudflare WARP 一键配置
  ${Green_font_prefix}4.${Font_color_suffix}  安装SSR多用户版
  ${Green_font_prefix}5.${Font_color_suffix}  安装ssrmu脚本(arm)
@@ -185,7 +185,7 @@ case "$num" in
 	bbr_ruisu
 	;;
 	2)
-	Google_bbr2
+	tools
 	;;
 	3)
 	warp.sh
