@@ -12,8 +12,7 @@ echo "\
 
 Linux网络优化脚本 (生产环境慎用)
 
-教程: http://relay.nekoneko.cloud/knowledge/Linux网络优化
-上次更新: 2021-10-27
+开启1 ，2 ，3，选项即可
 
 Powered by Neko Neko Cloud
 
