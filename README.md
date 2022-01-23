@@ -59,7 +59,7 @@
 ---
 ## 28合1多功能脚本集合你想要的都在这里
 
-![img2.png](img.png)
+![img2.png](img2.png)
 - 脚本说明: 多合一脚本，DD系统，BBR，xray,TG搭建等等·常用的各种脚本基本都有！
 - 系统支持: CentOS6+ / Debian6+ / Ubuntu14+
 - 支持安装BBR，搭建KCPtun，ssr多用户版
