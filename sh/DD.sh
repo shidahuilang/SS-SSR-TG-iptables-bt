@@ -84,9 +84,9 @@ install(){
 netflix(){
         bash <(curl -sSL "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/netflix.sh")	
 }
-#18xray
-xray(){
-bash <(curl -sSL "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/xray.sh")	
+#18CF自动优选
+cf(){
+bash <(curl -sSL "https://proxy.freecdn.workers.dev/?url=https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/cf.sh")	
 }
 #19VPS一键3网测速脚本
 superspeed(){
@@ -161,7 +161,7 @@ echo && echo -e "
  ${Green_font_prefix}15.${Font_color_suffix} 一键开启默认bbr  
  ${Green_font_prefix}16.${Font_color_suffix} 八合一共存脚本+伪装站点
  ${Green_font_prefix}17.${Font_color_suffix} Netflix解锁检测
- ${Green_font_prefix}18.${Font_color_suffix} xray安装
+ ${Green_font_prefix}18.${Font_color_suffix} CF自动优选
  ${Green_font_prefix}19.${Font_color_suffix} VPS一键3网测速脚本
  ${Green_font_prefix}20.${Font_color_suffix} frp一键内网穿刺
  ${Green_font_prefix}21.${Font_color_suffix} Docker-Compose安装
@@ -233,7 +233,7 @@ case "$num" in
 	netflix	
 	;;
 	18)
-	xray	
+	cf	
 	;;
 	19)
         superspeed	
