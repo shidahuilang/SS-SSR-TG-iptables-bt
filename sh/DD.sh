@@ -128,6 +128,10 @@ x86(){
 L2TP(){
       bash <(curl -s -L git.io/JPjuV)
 } 
+#29xray+证书+伪装
+xray_install(){
+      bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/xray/xray_install.sh)"
+} 
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
@@ -172,11 +176,12 @@ echo && echo -e "
  ${Green_font_prefix}26.${Font_color_suffix} NPS穿透一键安装
  ${Green_font_prefix}27.${Font_color_suffix} portainer可视化容器中文版一键安装
  ${Green_font_prefix}28.${Font_color_suffix} L2TP一键安装
+ ${Green_font_prefix}29.${Font_color_suffix} xray安装+一键证书+伪装
   " && echo
   
 fi
 echo
-read -e -p " 请输入数字 [0-28]:" num
+read -e -p " 请输入数字 [0-29]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -265,8 +270,11 @@ case "$num" in
 	28)
 	L2TP
 	;;
+	29)
+	xray
+	;;
 	*)
-	echo "请输入正确数字 [0-28]"
+	echo "请输入正确数字 [0-29]"
 	;;
 esac
   
