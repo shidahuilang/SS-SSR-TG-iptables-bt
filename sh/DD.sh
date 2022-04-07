@@ -129,7 +129,7 @@ L2TP(){
       bash <(curl -s -L git.io/JPjuV)
 } 
 #29xray+证书+伪装
-xray_install(){
+xray_install.sh(){
       bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/xray/xray_install.sh)"
 } 
 action=$1
@@ -176,7 +176,7 @@ echo && echo -e "
  ${Green_font_prefix}26.${Font_color_suffix} NPS穿透一键安装
  ${Green_font_prefix}27.${Font_color_suffix} portainer可视化容器中文版一键安装
  ${Green_font_prefix}28.${Font_color_suffix} L2TP一键安装
- ${Green_font_prefix}29.${Font_color_suffix} xray安装+一键证书+伪装
+ ${Green_font_prefix}29.${Font_color_suffix} xray安装+一键证书+伪装全集合
   " && echo
   
 fi
