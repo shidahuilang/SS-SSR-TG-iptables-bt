@@ -129,8 +129,8 @@ L2TP(){
       bash <(curl -s -L git.io/JPjuV)
 } 
 #29xray+证书+伪装
-xray_install.sh(){
-      bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/xray/xray_install.sh)"
+xray_install(){
+      bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/xray_install.sh)"
 } 
 action=$1
 if [[ "${action}" == "monitor" ]]; then
