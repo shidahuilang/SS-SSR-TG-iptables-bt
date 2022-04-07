@@ -128,10 +128,7 @@ x86(){
 L2TP(){
       bash <(curl -s -L git.io/JPjuV)
 } 
-#29xray+证书+伪装
-xray_install(){
-      bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/xray_install.sh)"
-} 
+
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
