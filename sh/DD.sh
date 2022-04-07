@@ -232,7 +232,7 @@ case "$num" in
 	open_bbr
 	;;
 	16)
-	install
+	xray_install
 	;;
 	17)
 	netflix	
