@@ -271,7 +271,7 @@ case "$num" in
 	L2TP
 	;;
 	29)
-	xray
+	xray_install
 	;;
 	*)
 	echo "请输入正确数字 [0-29]"
