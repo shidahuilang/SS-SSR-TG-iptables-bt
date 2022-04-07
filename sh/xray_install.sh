@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 #====================================================
-# Author：281677160
+# Author：dahuilang
 # Dscription：Xary onekey Management
-# github：https://github.com/281677160/danshui
+# github：https://github.com/shidahuilang
 #====================================================
 
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
