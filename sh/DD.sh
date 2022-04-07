@@ -76,9 +76,9 @@ DD_GD(){
 open_bbr(){
 	modprobe tcp_bbr && echo "tcp_bbr" | tee --append /etc/modules-load.d/modules.conf && echo "net.core.default_qdisc=fq" | tee --append /etc/sysctl.conf && echo "net.ipv4.tcp_congestion_control=bbr" | tee --append /etc/sysctl.conf && sysctl -p && sysctl net.ipv4.tcp_available_congestion_control && sysctl net.ipv4.tcp_congestion_control && lsmod | grep bbr
 }
-#16八合一共存脚本+伪装站点
-install(){
-	wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/install.sh" && chmod 700 /root/install.sh && /root/install.sh
+#16XRAY一键证书+伪装站点
+xray_install(){
+	bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/xray_install.sh)"
 }
 # 17Netflix解锁检测
 netflix(){
@@ -163,7 +163,7 @@ echo && echo -e "
  ${Green_font_prefix}13.${Font_color_suffix} 傻瓜式一键DD包（OD源）
  ${Green_font_prefix}14.${Font_color_suffix} 傻瓜式一键DD包（GD源）
  ${Green_font_prefix}15.${Font_color_suffix} 一键开启默认bbr  
- ${Green_font_prefix}16.${Font_color_suffix} 八合一共存脚本+伪装站点
+ ${Green_font_prefix}16.${Font_color_suffix} XRAY一键证书+伪装站点
  ${Green_font_prefix}17.${Font_color_suffix} Netflix解锁检测
  ${Green_font_prefix}18.${Font_color_suffix} CF自动优选
  ${Green_font_prefix}19.${Font_color_suffix} VPS一键3网测速脚本
