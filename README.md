@@ -58,6 +58,7 @@ Usage: /etc/init.d/frps {start|stop|restart|status|config|version}
 - 一款轻量级、高性能、功能强大的内网穿透代理服务器
 - 支持tcp、udp、socks5、http等几乎所有流量转发，可用来访问内网网站
 - 本地支付接口调试、ssh访问、远程桌面，内网dns解析、内网socks5代理等等
+- WEB:IP:8080  账号admin  密码123
 ### 下载安装
 ``` bash
 wget -P /root -N --no-check-certificate "https://github.com/ehang-io/nps/releases/download/v0.26.10/linux_amd64_server.tar.gz" && tar -zxvf linux_amd64_server.tar.gz && ./nps install && nps start
