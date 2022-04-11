@@ -1,4 +1,12 @@
+- 使用root用户登录ubuntu或者debian系统，后执行以下命令安装curl
+```sh
+apt -y update && apt -y install curl
+```
 
+- 使用root用户登录centos系统，后执行以下命令安装curl
+```sh
+yum install -y curl wget
+```
 ## 28合1多功能脚本集合你想要的都在这里
 
 ![img2.png](img2.png)
