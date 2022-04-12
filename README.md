@@ -63,7 +63,7 @@ Usage: /etc/init.d/frps {start|stop|restart|status|config|version}
 ``` bash
 wget -P /root -N --no-check-certificate "https://github.com/ehang-io/nps/releases/download/v0.26.10/linux_amd64_server.tar.gz" && tar -zxvf linux_amd64_server.tar.gz && ./nps install && nps start
 ```
-- 注册：sudo ./npc install 其他参数（例如-server=xx -vkey=xx或者-config=xxx）
+- 注册：sudo ./nps install 其他参数（例如-server=xx -vkey=xx或者-config=xxx）
 - 启动：sudo nps start
 - 停止：sudo nps stop
 - 卸载：nps uninstall
