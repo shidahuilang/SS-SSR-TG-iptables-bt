@@ -132,6 +132,10 @@ L2TP(){
 clash_install(){
       bash -c "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/281677160/agent/main/clash_install.sh)"
 }
+#30x-ui安装（支持的协议：vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http）
+x-ui(){
+      bash -c "$(curl -fsSL https://raw.githubusercontent.com/281677160/agent/main/x-ui.sh)"
+}
 
 action=$1
 if [[ "${action}" == "monitor" ]]; then
@@ -178,11 +182,12 @@ echo && echo -e "
  ${Green_font_prefix}27.${Font_color_suffix} portainer可视化容器中文版一键安装
  ${Green_font_prefix}28.${Font_color_suffix} L2TP一键安装
  ${Green_font_prefix}29.${Font_color_suffix} 一键搭建CLASH节点转换
-  " && echo
+ ${Green_font_prefix}30.${Font_color_suffix} x-ui安装（支持的协议：vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http）
+ " && echo
   
 fi
 echo
-read -e -p " 请输入数字 [0-29]:" num
+read -e -p " 请输入数字 [0-30]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -274,8 +279,11 @@ case "$num" in
 	29)
 	clash_install
 	;;
+	29)
+	x-ui
+	;;
 	*)
-	echo "请输入正确数字 [0-29]"
+	echo "请输入正确数字 [0-30]"
 	;;
 esac
 
