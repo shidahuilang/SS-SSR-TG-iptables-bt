@@ -285,7 +285,7 @@ case "$num" in
 	*)
 	echo "请输入正确数字 [0-30]"
 	;;
-esac
+ esac
 
   
   
