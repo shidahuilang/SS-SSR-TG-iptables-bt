@@ -271,7 +271,7 @@ case "$num" in
 	28)
 	L2TP
 	;;
-	28)
+	29)
 	clash_install
 	;;
 	*)
