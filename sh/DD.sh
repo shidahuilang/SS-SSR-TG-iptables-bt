@@ -279,7 +279,7 @@ case "$num" in
 	29)
 	clash_install
 	;;
-	29)
+	30)
 	x-ui
 	;;
 	*)
