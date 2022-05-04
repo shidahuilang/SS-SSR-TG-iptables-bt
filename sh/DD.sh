@@ -182,7 +182,7 @@ echo && echo -e "
  ${Green_font_prefix}27.${Font_color_suffix} portainer可视化容器中文版一键安装
  ${Green_font_prefix}28.${Font_color_suffix} L2TP一键安装
  ${Green_font_prefix}29.${Font_color_suffix} 一键搭建CLASH节点转换
- ${Green_font_prefix}30.${Font_color_suffix} x-ui安装（支持协议：arm、vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http）
+ ${Green_font_prefix}30.${Font_color_suffix} x-ui面板安装+clash转换证书一键安装（支持协议：arm、vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http）
  " && echo
   
 fi
