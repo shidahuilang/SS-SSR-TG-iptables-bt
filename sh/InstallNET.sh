@@ -36,6 +36,8 @@ export GRUBDIR=''
 export GRUBFILE=''
 export GRUBVER=''
 export VER=''
+export setCMD=''
+export setConsole=''
 
 while [[ $# -ge 1 ]]; do
   case $1 in
