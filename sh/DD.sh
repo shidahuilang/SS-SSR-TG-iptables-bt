@@ -133,7 +133,7 @@ clash_install(){
       bash -c "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/281677160/agent/main/clash_install.sh)"
 }
 #30x-ui安装（支持的协议：vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http）
-x-ui(){
+x-ui1(){
       bash -c "$(curl -fsSL https://raw.githubusercontent.com/281677160/agent/main/x-ui.sh)"
 }
 
@@ -280,7 +280,7 @@ case "$num" in
 	clash_install
 	;;
 	30)
-	x-ui
+	x-ui1
 	;;
 	*)
 	echo "请输入正确数字 [0-30]"
