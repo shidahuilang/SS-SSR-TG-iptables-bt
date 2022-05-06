@@ -316,9 +316,9 @@ function install_subweb() {
     if [[ $? -ne 0 ]]; then
       curl -fsSL https://cdn.jsdelivr.net/gh/281677160/agent@main/Subconverter.vue > "/root/sub-web/src/views/Subconverter.vue"
     fi
-    wget -q https://ghproxy.com/https://raw.githubusercontent.com/281677160/agent/main/xray/clsah.env -O /root/sub-web/.env
+    wget -q https://ghproxy.com/https://raw.githubusercontent.com/youshandefeiyang/sub-web-modify/master/.env -O /root/sub-web/.env
     if [[ $? -ne 0 ]]; then
-      curl -fsSL https://cdn.jsdelivr.net/gh/281677160/agent@main/xray/clsah.env > "/root/sub-web/.env"
+      curl -fsSL https://raw.githubusercontent.com/youshandefeiyang/sub-web-modify/master/.env > "/root/sub-web/.env"
     fi
     cd sub-web
     sed -i "s?${after_ip}?${current_ip}?g" "/root/sub-web/.env"
