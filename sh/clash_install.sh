@@ -307,7 +307,7 @@ function update_rc() {
 
 function install_subweb() {
   ECHOY "正在安装sub-web服务"
-  rm -fr sub-web && git clone https://ghproxy.com/https://github.com/CareyWang/sub-web.git sub-web
+  rm -fr sub-web && git clone https://github.com/youshandefeiyang/sub-web-modify.git sub-web
   if [[ $? -ne 0 ]];then
     echo -e "\033[31m sub-web下载失败,请再次执行安装命令试试! \033[0m"
     exit 1
