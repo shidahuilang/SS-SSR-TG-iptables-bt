@@ -49,8 +49,17 @@ judge() {
   fi
 }
 
+
 if [[ ! "$USER" == "root" ]]; then
   print_error "警告：请使用root用户操作!~~"
+  exit 1
+fi
+if [[ `dpkg --print-architecture |grep -c "amd64"` == '1' ]]; then
+  export ARCH_PRINT="linux64"
+elif [[ `dpkg --print-architecture |grep -c "arm64"` == '1' ]]; then
+  export ARCH_PRINT="aarch64"
+else
+  print_error "不支持此系统,只支持x86_64的ubuntu和arm64的ubuntu"
   exit 1
 fi
 
@@ -69,7 +78,7 @@ function system_check() {
   fi
   case $CUrrenty in
   Y)
-    export CUrrent_ip="$(echo "${CUrrent_ip}" |sed 's/http:\/\///g' |sed 's/https:\/\///g' |sed 's/www.//g' |sed 's/\///g')"
+    export CUrrent_ip="$(echo "${CUrrent_ip}" |sed 's/http:\/\///g' |sed 's/https:\/\///g' |sed 's/\///g')"
     export current_ip="http://${CUrrent_ip}"
     export after_ip="http://127.0.0.1"
     ECHOG "您当前服务器IP/域名为：${CUrrent_ip}"
@@ -148,22 +157,23 @@ function nginx_install() {
     ${INS} nginx
   else
     print_ok "Nginx 已存在"
+    rm -fr /etc/nginx/conf.d/clash_nginx.conf > /dev/null 2>&1
     ${INS} nginx >/dev/null 2>&1
   fi
   
   if [[ -d /etc/nginx/sites-available ]]; then
-    sub_path="/etc/nginx/sites-available/${CUrrent_ip}.conf"
+    sub_path="/etc/nginx/sites-available/clash_nginx.conf"
   elif [[ -d /etc/nginx/http.d ]]; then  
-    sub_path="/etc/nginx/http.d/${CUrrent_ip}.conf"
+    sub_path="/etc/nginx/http.d/clash_nginx.conf"
   else
     mkdir -p /etc/nginx/conf.d >/dev/null 2>&1
-    sub_path="/etc/nginx/conf.d/${CUrrent_ip}.conf"
+    sub_path="/etc/nginx/conf.d/clash_nginx.conf"
   fi
 cat >"${sub_path}" <<-EOF
 server {
     listen 80;
     server_name ${CUrrent_ip};
-    root /www/dist;
+    root /www/dist_web;
     index index.html index.htm;
     error_page 404 /index.html;
     gzip on; #开启gzip压缩
@@ -242,13 +252,13 @@ function install_subconverter() {
   fi
   latest_vers="$(wget -qO- -t1 -T2 "https://api.github.com/repos/tindy2013/subconverter/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')"
   [[ -z ${latest_vers} ]] && latest_vers="v0.7.2"
-  rm -rf "/root/subconverter_linux64.tar.gz" >/dev/null 2>&1
-  wget https://ghproxy.com/https://github.com/tindy2013/subconverter/releases/download/${latest_vers}/subconverter_linux64.tar.gz
+  rm -rf "/root/subconverter_${ARCH_PRINT}.tar.gz" >/dev/null 2>&1
+  wget https://ghproxy.com/https://github.com/tindy2013/subconverter/releases/download/${latest_vers}/subconverter_${ARCH_PRINT}.tar.gz
   if [[ $? -ne 0 ]];then
     echo -e "\033[31m subconverter下载失败! \033[0m"
     exit 1
   fi
-  tar -zxvf subconverter_linux64.tar.gz
+  tar -zxvf subconverter_${ARCH_PRINT}.tar.gz
   if [[ $? -ne 0 ]];then
     echo -e "\033[31m subconverter解压失败! \033[0m"
     exit 1
@@ -259,7 +269,7 @@ function install_subconverter() {
     sed -i "s?${after_ip}?${current_ip}?g" "/root/subconverter/pref.ini"
     sed -i "s?api_access_token=password?api_access_token=${HDPASS}?g" "/root/subconverter/pref.ini"
   fi
-  rm -rf "/root/subconverter_linux64.tar.gz"
+  rm -rf "/root/subconverter_${ARCH_PRINT}.tar.gz"
  }
 
 function update_rc() {
@@ -308,22 +318,23 @@ function install_subweb() {
     echo -e "\033[31m sub-web下载失败,请再次执行安装命令试试! \033[0m"
     exit 1
   else
+    rm -fr "subweb" && git clone https://ghproxy.com/https://github.com/281677160/agent "subweb"
+    judge "sub-web补丁下载"
+    cp -R subweb/subweb/* "sub-web/"
+    mv -f "subweb/subweb/.env" "sub-web/.env"
     wget -q https://ghproxy.com/https://raw.githubusercontent.com/281677160/agent/main/Subconverter.vue -O /root/sub-web/src/views/Subconverter.vue
     if [[ $? -ne 0 ]]; then
       curl -fsSL https://cdn.jsdelivr.net/gh/281677160/agent@main/Subconverter.vue > "/root/sub-web/src/views/Subconverter.vue"
     fi
-    wget -q https://ghproxy.com/https://raw.githubusercontent.com/281677160/agent/main/xray/clsah.env -O /root/sub-web/.env
-    if [[ $? -ne 0 ]]; then
-      curl -fsSL https://cdn.jsdelivr.net/gh/281677160/agent@main/xray/clsah.env > "/root/sub-web/.env"
-    fi
-    cd sub-web
+    rm -fr "subweb"
+    cd "sub-web"
     sed -i "s?${after_ip}?${current_ip}?g" "/root/sub-web/.env"
     sed -i "s?${after_ip}?${current_ip}?g" "/root/sub-web/src/views/Subconverter.vue"
     yarn install
     yarn build
     if [[ -d /root/sub-web/dist ]]; then
-      [[ ! -d /www/dist ]] && mkdir -p /www/dist || rm -rf /www/dist/*
-      cp -R /root/sub-web/dist/* /www/dist/
+      [[ ! -d /www/dist_web ]] && mkdir -p /www/dist_web || rm -rf /www/dist_web/*
+      cp -R /root/sub-web/dist/* /www/dist_web/
     else
       print_error "生成页面文件失败,请再次执行安装命令试试"
       exit 1
@@ -335,6 +346,37 @@ function install_subweb() {
   ECHOY "全部服务安装完毕,请登录 ${current_ip} 进行使用"
 }
 
+
+menu2() {
+  ECHOG "subconverter已存在，是否要御载subconverter[Y/n]?"
+  export DUuuid="请输入[Y/y]确认或[N/n]退出"
+  while :; do
+  read -p " ${DUuuid}：" IDPATg
+  case $IDPATg in
+  [Yy])
+    ECHOY "开始御载subconverter"
+    systemctl stop subconverter
+    systemctl disable subconverter
+    systemctl daemon-reload
+    rm -rf /root/subconverter
+    rm -rf /root/sub-web
+    rm -rf /www/dist_web
+    rm -rf /etc/systemd/system/subconverter.service
+    rm -rf /etc/nginx/sites-available/clash_nginx.conf
+    print_ok "subconverter御载完成"
+  break
+  ;;
+  [Nn])
+   exit 1
+  break
+  ;;
+  *)
+    export DUuuid="请正确输入[Y/y]确认或[N/n]退出"
+  ;;
+  esac
+  done
+}
+
 menu() {
   system_check
   nginx_install
@@ -344,4 +386,15 @@ menu() {
   update_rc
   install_subweb
 }
-menu "$@"
+
+if [[ -d /root/subconverter ]]; then
+  systemctl start subconverter > /dev/null 2>&1
+  sleep 2
+  if [[ `systemctl status nginx |grep -c "active (running) "` == '1' ]]; then
+    menu2 "$@"
+  else
+    menu "$@"
+  fi
+else
+  menu "$@"
+fi
