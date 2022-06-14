@@ -76,7 +76,7 @@ wget -P /root -N --no-check-certificate "https://github.com/ehang-io/nps/release
 - 脚本集成安装 Docker Engine Docker Compose
 #### 下载安装:
 ``` bash
-bash <(curl -sSL git.io/JPjlD)
+bash <(curl -sSL https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/DockerInstallation.sh)
 ```
 #### 一键切换国内源:
 ``` bash
