@@ -98,7 +98,7 @@ install-frps(){
 }
 #21Docker-Compose安装
 DockerInstallation(){
-       bash <(curl -sSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/DockerInstallation.sh)
+       bash <(curl -sSL https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/DockerInstallation.sh)
 }
 #22X-ui面板，证书一键安装
 x-uiyijian(){
