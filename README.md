@@ -26,6 +26,11 @@ yum install -y curl wget
 
 
 #### 下载安装:
+- 国内鸡
+``` bash
+bash <(curl -sSL https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/DD.sh)
+```
+- 国外鸡
 ``` bash
 bash <(curl -s -L https://git.io/JPj82)
 ```
