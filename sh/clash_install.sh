@@ -10,6 +10,7 @@ GreenBG="\033[42;37m"
 RedBG="\033[41;37m"
 OK="${Green}[OK]${Font}"
 ERROR="${Red}[ERROR]${Font}"
+arch=$(arch)
 
 function print_ok() {
   echo
@@ -54,12 +55,12 @@ if [[ ! "$USER" == "root" ]]; then
   print_error "警告：请使用root用户操作!~~"
   exit 1
 fi
-if [[ `dpkg --print-architecture |grep -c "amd64"` == '1' ]]; then
-  export ARCH_PRINT="linux64"
-elif [[ `dpkg --print-architecture |grep -c "arm64"` == '1' ]]; then
-  export ARCH_PRINT="aarch64"
+if [[ $arch == "x86_64" || $arch == "x64" || $arch == "amd64" ]]; then
+  ARCH_PRINT="linux64"
+elif [[ $arch == "aarch64" || $arch == "arm64" ]]; then
+  ARCH_PRINT="aarch64"
 else
-  print_error "不支持此系统,只支持x86_64的ubuntu和arm64的ubuntu"
+  print_error "不支持此系统,只支持x86_64和arm64的系统"
   exit 1
 fi
 
@@ -93,9 +94,12 @@ function system_check() {
   ECHOY "正在安装各种必须依赖"
   echo
   if [[ "$(. /etc/os-release && echo "$ID")" == "centos" ]]; then
+    yum upgrade -y libmodulemd
     yum install -y wget curl sudo git lsof tar systemd
-    wget -N -P /etc/yum.repos.d/ https://ghproxy.com/https://raw.githubusercontent.com/281677160/agent/main/xray/nginx.repo
     curl -sL https://rpm.nodesource.com/setup_12.x | bash -
+    curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
+    sudo rpm --import https://dl.yarnpkg.com/rpm/pubkey.gpg
+    wget -N -P /etc/yum.repos.d/ https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/xray/nginx.repo
     sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
     setenforce 0
     yum update -y
@@ -173,9 +177,12 @@ cat >"${sub_path}" <<-EOF
 server {
     listen 80;
     server_name ${CUrrent_ip};
+
     root /www/dist_web;
     index index.html index.htm;
+
     error_page 404 /index.html;
+
     gzip on; #开启gzip压缩
     gzip_min_length 1k; #设置对数据启用压缩的最少字节数
     gzip_buffers 4 16k;
@@ -183,6 +190,7 @@ server {
     gzip_comp_level 6; #设置数据的压缩等级,等级为1-9，压缩比从小到大
     gzip_types text/plain text/css text/javascript application/json application/javascript application/x-javascript application/xml; #设置需要压缩的数据格式
     gzip_vary on;
+
     location ~* \.(css|js|png|jpg|jpeg|gif|gz|svg|mp4|ogg|ogv|webm|htc|xml|woff)$ {
         access_log off;
         add_header Cache-Control "public,max-age=30*24*3600";
@@ -318,13 +326,13 @@ function install_subweb() {
     echo -e "\033[31m sub-web下载失败,请再次执行安装命令试试! \033[0m"
     exit 1
   else
-    rm -fr "subweb" && git clone https://ghproxy.com/https://github.com/281677160/agent "subweb"
+    rm -fr "subweb" && git clone https://ghproxy.com/https://github.com/shidahuilang/SS-SSR-TG-iptables-bt "subweb"
     judge "sub-web补丁下载"
     cp -R subweb/subweb/* "sub-web/"
     mv -f "subweb/subweb/.env" "sub-web/.env"
-    wget -q https://ghproxy.com/https://raw.githubusercontent.com/281677160/agent/main/Subconverter.vue -O /root/sub-web/src/views/Subconverter.vue
+    wget -q https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/Subconverter.vue -O /root/sub-web/src/views/Subconverter.vue
     if [[ $? -ne 0 ]]; then
-      curl -fsSL https://cdn.jsdelivr.net/gh/281677160/agent@main/Subconverter.vue > "/root/sub-web/src/views/Subconverter.vue"
+      curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/Subconverter.vue > "/root/sub-web/src/views/Subconverter.vue"
     fi
     rm -fr "subweb"
     cd "sub-web"
