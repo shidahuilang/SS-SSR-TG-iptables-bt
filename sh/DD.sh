@@ -130,7 +130,7 @@ L2TP(){
 }
 #29订阅转换一键安装
 clash_install(){
-      bash -c "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/281677160/agent/main/clash_install.sh)"
+      bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/clash_install.sh)"
 }
 #30x-ui安装（支持的协议：vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http）
 x-ui(){
