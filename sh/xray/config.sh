@@ -13,8 +13,7 @@ cat >/usr/local/etc/xray/config.json <<-EOF
                     {
                         "id": "${UUID}",
                         "flow": "xtls-rprx-direct",
-                        "level": 0,
-                        "email": "love@example.com"
+                        "level": 0
                     }
                 ],
                 "decryption": "none",
@@ -24,17 +23,17 @@ cat >/usr/local/etc/xray/config.json <<-EOF
                         "xver": 1
                     },
                     {
-                        "path": "/${WS_PATH}/",
+                        "path": "${VLESS_WS_PATH}",
                         "dest": 52001,
                         "xver": 1
                     },
                     {
-                        "path": "/${VMTCP}/",
+                        "path": "${VMESS_TCP_PATH}",
                         "dest": 52002,
                         "xver": 1
                     },
                     {
-                        "path": "/${VMWS}/",
+                        "path": "${VMESS_WS_PATH}",
                         "dest": 52003,
                         "xver": 1
                     }
@@ -64,8 +63,7 @@ cat >/usr/local/etc/xray/config.json <<-EOF
                 "clients": [
                     {
                         "password": "${QJPASS}",
-                        "level": 0,
-                        "email": "love@example.com"
+                        "level": 0
                     }
                 ],
                 "fallbacks": [
@@ -90,8 +88,7 @@ cat >/usr/local/etc/xray/config.json <<-EOF
                 "clients": [
                     {
                         "id": "${UUID}",
-                        "level": 0,
-                        "email": "love@example.com"
+                        "level": 0
                     }
                 ],
                 "decryption": "none"
@@ -101,7 +98,7 @@ cat >/usr/local/etc/xray/config.json <<-EOF
                 "security": "none",
                 "wsSettings": {
                     "acceptProxyProtocol": true,
-                    "path": "/${WS_PATH}/"
+                    "path": "${VLESS_WS_PATH}"
                 }
             }
         },
@@ -114,20 +111,19 @@ cat >/usr/local/etc/xray/config.json <<-EOF
                     {
                         "id": "${UUID}",
                         "level": 0,
-                        "email": "love@example.com"
+                        "alterId": 0
                     }
                 ]
             },
             "streamSettings": {
                 "network": "tcp",
-                "security": "none",
                 "tcpSettings": {
                     "acceptProxyProtocol": true,
                     "header": {
                         "type": "http",
                         "request": {
                             "path": [
-                                "/${VMTCP}/"
+                                "${VMESS_TCP_PATH}"
                             ]
                         }
                     }
@@ -143,16 +139,15 @@ cat >/usr/local/etc/xray/config.json <<-EOF
                     {
                         "id": "${UUID}",
                         "level": 0,
-                        "email": "love@example.com"
+                        "alterId": 0
                     }
                 ]
             },
             "streamSettings": {
                 "network": "ws",
-                "security": "none",
                 "wsSettings": {
                     "acceptProxyProtocol": true,
-                    "path": "/${VMWS}/"
+                    "path": "${VMESS_WS_PATH}"
                 }
             }
         }
