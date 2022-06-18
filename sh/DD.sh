@@ -137,7 +137,7 @@ x-ui(){
       bash -c "$(curl -fsSL https://raw.githubusercontent.com/281677160/agent/main/x-ui.sh)"
 }
 
-#31撸豆合集安装
+#31docker-青龙-elecv2p-emby-AdGuardHome-宝塔国际版-MaiARK
 ql(){
       bash <(curl -s -S -L https://maiark-1256973477.cos.ap-shanghai.myqcloud.com/kiss.sh)
 }
@@ -188,7 +188,7 @@ echo && echo -e "
  ${Green_font_prefix}28.${Font_color_suffix} L2TP一键安装
  ${Green_font_prefix}29.${Font_color_suffix} 一键搭建CLASH节点转换
  ${Green_font_prefix}30.${Font_color_suffix} x-ui安装+clash转换证书一键安装（支持协议：arm、vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http）
- ${Green_font_prefix}31.${Font_color_suffix} 撸豆合集安装
+ ${Green_font_prefix}31.${Font_color_suffix} docker-青龙-elecv2p-emby-AdGuardHome-宝塔国际版-MaiARK
  " && echo
   
 fi
