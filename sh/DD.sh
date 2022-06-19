@@ -142,6 +142,10 @@ ql(){
       bash <(curl -s -S -L https://maiark-1256973477.cos.ap-shanghai.myqcloud.com/kiss.sh)
 }
 
+#32Hysteria一键安装
+ql(){
+      bash <(curl -fsSL https://git.io/hysteria.sh)
+}
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
@@ -189,11 +193,12 @@ echo && echo -e "
  ${Green_font_prefix}29.${Font_color_suffix} 一键搭建CLASH节点转换
  ${Green_font_prefix}30.${Font_color_suffix} x-ui安装+clash转换证书一键安装（支持协议：arm、vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http）
  ${Green_font_prefix}31.${Font_color_suffix} docker-青龙-elecv2p-emby-AdGuardHome-宝塔国际版-MaiARK
+ ${Green_font_prefix}32.${Font_color_suffix} Hysteria(歇斯底里)一键安装
  " && echo
   
 fi
 echo
-read -e -p " 请输入数字 [0-31]:" num
+read -e -p " 请输入数字 [0-32]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -291,8 +296,11 @@ case "$num" in
 	31)
 	ql
 	;;
+	32)
+	Hysteria
+	;;
 	*)
-	echo "请输入正确数字 [0-31]"
+	echo "请输入正确数字 [0-32]"
 	;;
  esac
 
