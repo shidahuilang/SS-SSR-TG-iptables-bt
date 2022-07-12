@@ -138,7 +138,7 @@ x-ui(){
 }
 
 #31docker-青龙-elecv2p-emby-AdGuardHome-宝塔国际版-MaiARK
-ql(){
+kiss(){
       bash <(curl -s -S -L https://maiark-1256973477.cos.ap-shanghai.myqcloud.com/kiss.sh)
 }
 
@@ -295,7 +295,7 @@ case "$num" in
 	x-ui
 	;;
 	31)
-	ql
+	kiss
 	;;
 	32)
 	Hysteria
