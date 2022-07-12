@@ -143,7 +143,7 @@ ql(){
 }
 
 #32Hysteria一键安装
-hysteria(){
+Hysteria(){
       bash <(curl -fsSL https://git.io/hysteria.sh)
 }
 
