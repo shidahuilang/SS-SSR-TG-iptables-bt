@@ -143,9 +143,10 @@ ql(){
 }
 
 #32Hysteria一键安装
-ql(){
+hysteria(){
       bash <(curl -fsSL https://git.io/hysteria.sh)
 }
+
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
