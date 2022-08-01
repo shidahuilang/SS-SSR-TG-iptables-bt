@@ -147,6 +147,11 @@ Hysteria(){
       bash <(curl -fsSL https://git.io/hysteria.sh)
 }
 
+#33PVE开启直通+PVE温度硬盘显示+一键开启换源，去掉订阅
+pve(){
+      bash -c  "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/pve.sh)"
+}
+
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
@@ -195,11 +200,12 @@ echo && echo -e "
  ${Green_font_prefix}30.${Font_color_suffix} x-ui安装+clash转换证书一键安装（支持协议：arm、vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http）
  ${Green_font_prefix}31.${Font_color_suffix} docker-青龙-elecv2p-emby-AdGuardHome-宝塔国际版-MaiARK
  ${Green_font_prefix}32.${Font_color_suffix} Hysteria(歇斯底里)一键安装
+ ${Green_font_prefix}33.${Font_color_suffix} PVE一键开启直通+PVE温度硬盘显示+一键开启换源，去掉订阅
  " && echo
   
 fi
 echo
-read -e -p " 请输入数字 [0-32]:" num
+read -e -p " 请输入数字 [0-33]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -300,8 +306,11 @@ case "$num" in
 	32)
 	Hysteria
 	;;
+	33)
+	pve
+	;;
 	*)
-	echo "请输入正确数字 [0-32]"
+	echo "请输入正确数字 [0-33]"
 	;;
  esac
 
