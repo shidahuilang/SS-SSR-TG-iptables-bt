@@ -200,7 +200,7 @@ echo && echo -e "
  ${Green_font_prefix}30.${Font_color_suffix} x-ui安装+clash转换证书一键安装（支持协议：arm、vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http）
  ${Green_font_prefix}31.${Font_color_suffix} docker-青龙-elecv2p-emby-AdGuardHome-宝塔国际版-MaiARK
  ${Green_font_prefix}32.${Font_color_suffix} Hysteria(歇斯底里)一键安装
- ${Green_font_prefix}33.${Font_color_suffix} PVE一键开启直通+PVE温度硬盘显示+一键开启换源，去掉订阅
+ ${Green_font_prefix}33.${Font_color_suffix} PVE一键开启直通+PVE温度硬盘显示+一键开启换源，去订阅+CPU睿频模式
  " && echo
   
 fi
