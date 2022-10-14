@@ -41,7 +41,7 @@ Install_V2ray(){
 }
 #7安装Tg专用代理（Go版）
 Tg_socks(){
-	bash <(curl -Ls https://cpp.li/mtg)
+	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy_go.sh)
 }
 #8安装TG专用代理（中文版）
 mtproxy(){
