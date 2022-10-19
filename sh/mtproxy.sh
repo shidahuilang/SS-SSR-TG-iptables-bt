@@ -1,491 +1,516 @@
 #!/bin/bash
-WORKDIR=$(dirname $(readlink -f $0))
-cd $WORKDIR
-pid_file=$WORKDIR/pid/pid_mtproxy
 
-check_sys() {
-    local checkType=$1
-    local value=$2
+#====================================================
+# Author：dahuilang
+# Dscription：MTProto proxy onekey Management
+# github：https://github.com/shidahuilang
+#====================================================
+RED="\033[0;31m"
+GR="\033[0;32m"
+YE="\033[0;33m"
+NC="\033[0m"
+BL="\033[36m"
+Font="\033[0m"
 
-    local release=''
-    local systemPackage=''
+WORKDIR=`pwd`
+SRC_DIR=mtproto_proxy
+SELF="$0"
 
-    if [[ -f /etc/redhat-release ]]; then
-        release="centos"
-        systemPackage="yum"
-    elif grep -Eqi "debian|raspbian" /etc/issue; then
-        release="debian"
-        systemPackage="apt"
-    elif grep -Eqi "ubuntu" /etc/issue; then
-        release="ubuntu"
-        systemPackage="apt"
-    elif grep -Eqi "centos|red hat|redhat" /etc/issue; then
-        release="centos"
-        systemPackage="yum"
-    elif grep -Eqi "debian|raspbian" /proc/version; then
-        release="debian"
-        systemPackage="apt"
-    elif grep -Eqi "ubuntu" /proc/version; then
-        release="ubuntu"
-        systemPackage="apt"
-    elif grep -Eqi "centos|red hat|redhat" /proc/version; then
-        release="centos"
-        systemPackage="yum"
-    fi
-
-    if [[ "${checkType}" == "sysRelease" ]]; then
-        if [ "${value}" == "${release}" ]; then
-            return 0
-        else
-            return 1
-        fi
-    elif [[ "${checkType}" == "packageManager" ]]; then
-        if [ "${value}" == "${systemPackage}" ]; then
-            return 0
-        else
-            return 1
-        fi
-    fi
+info() {
+    echo -e "${GR}INFO${NC}: $1"
 }
 
-function get_ip_public() {
-    public_ip=$(curl -s https://api.ip.sb/ip -A Mozilla --ipv4)
-    [ -z "$public_ip" ] && public_ip=$(curl -s ipinfo.io/ip -A Mozilla --ipv4)
-    echo $public_ip
+warn() {
+    echo -e "${YE}WARNING${NC}: $1"
 }
 
-function get_ip_private() {
-    echo $(ip a | grep inet | grep -v 127.0.0.1 | grep -v inet6 | awk '{print $2}' | cut -d "/" -f1 | awk 'NR==1 {print $1}')
+error() {
+    echo -e "${RED}ERROR${NC}: $1" 1>&2
+    exit 1
 }
 
-function get_nat_ip_param() {
-    nat_ip=$(get_ip_private)
-    public_ip=$(get_ip_public)
-    nat_info=""
-    if [[ $nat_ip != $public_ip ]]; then
-        nat_info="--nat-info ${nat_ip}:${public_ip}"
-    fi
-    echo $nat_info
+usage() {
+    echo "MTProto proxy installer.
+Install proxy:
+${SELF} -p <port> -s <secret> -t <ad tag> -a dd -a tls -d <fake-tls domain>
+Upgrade code to the latest version and restart, keeping config unchanged:
+${SELF} upgrade
+Interactively generate new config and reload proxy settings:
+${SELF} reconfigure -p <port> -s <secret> -t <ad tag> -a dd -a tls -d <fake-tls domain>
+Reload proxy settings after manual changes in config/prod-sys.cnfig:
+${SELF} reload
+"
 }
 
-function get_cpu_core() {
-    echo $(cat /proc/cpuinfo | grep "processor" | wc -l)
+to_hex() {
+    od -A n -t x1 -w128 | sed 's/ //g'
 }
 
-function get_architecture(){
-    local architecture=""
-    case $(uname -m) in
-        i386)   architecture="386" ;;
-        i686)   architecture="386" ;;
-        x86_64) architecture="amd64" ;;
-        arm|aarch64|aarch)    dpkg --print-architecture | grep -q "arm64" && architecture="arm64" || architecture="armv6l" ;;
-        *)  echo "Unsupported system architecture "$(uname -m) && exit 1 ;;
+
+case "$1" in
+    reconfigure|reload|upgrade|install)
+        CMD="$1"
+        shift
+        ;;
+    *)
+        CMD="install"
+esac
+
+PORT=${MTP_PORT:-""}
+SECRET=${MTP_SECRET:-""}
+TAG=${MTP_TAG:-""}
+DD_ONLY=${MTP_DD_ONLY:-""}
+TLS_ONLY=${MTP_TLS_ONLY:-""}
+TLS_DOMAIN=${MTP_TLS_DOMAIN:-""}
+
+# check command line options
+while getopts "p:s:t:a:d:h" o; do
+    case "${o}" in
+        p)
+            PORT=${OPTARG}
+            ;;
+        s)
+            SECRET=${OPTARG}
+            ;;
+        t)
+            TAG=${OPTARG}
+            ;;
+        a)
+            case "${OPTARG}" in
+                "dd")
+                    DD_ONLY="y"
+                    ;;
+                "tls")
+                    TLS_ONLY="y"
+                    ;;
+                *)
+                    error "Invalid -a value: '${OPTARG}'"
+            esac
+            ;;
+        d)
+            TLS_DOMAIN=${OPTARG}
+            ;;
+        h)
+            usage
+            exit 0
     esac
-    echo $architecture
-}
+done
 
-function check_ps_not_install_to_install(){
-    if type ps >/dev/null 2>&1; then
-        return 1
-    else 
-        if check_sys packageManager yum; then
-            yum install -y procps-ng.x86_64
-        elif check_sys packageManager apt; then
-            apt-get -y update
-            apt install -y procps
-        fi
-        return 0
+
+echo "Interactive MTProto proxy installer."
+echo "You can make the process fully automated by calling this script as 'echo \"y\ny\ny\ny\ny\ny\" | $0'."
+echo "Try $0 -h for more options."
+
+set -e
+
+source /etc/os-release
+info "Detected OS is ${ID} ${VERSION_ID}"
+
+do_running_state() {
+    if [[ ! -d /opt/mtp_proxy/releases/0.1.0 ]] && [[ ! -d /var/log/mtproto-proxy ]]; then
+        export MTPROTO_ZT="${BL} mtproto-proxy状态${Font}：${RED}未安装${Font}"
+    elif [[ -d /opt/mtp_proxy/releases/0.1.0 ]] && [[ `systemctl status mtproto-proxy |grep -c "active (running) "` == '1' ]]; then
+        export MTPROTO_ZT="${BL} mtproto-proxy状态${Font}：${GR}运行中 ${Font}"
+    elif [[ -d /opt/mtp_proxy/releases/0.1.0 ]] && [[ -d /var/log/mtproto-proxy ]] && [[ `systemctl status mtproto-proxy |grep -c "active (running) "` == '0' ]]; then
+        export MTPROTO_ZT="${BL} mtproto-proxy状态${Font}：${GR}已安装${Font},${RED}未运行${Font}"
+    else
+        export MTPROTO_ZT="${BL} mtproto-proxy状态：${Font}未知"
     fi
 }
 
-function pid_exists() {
-    check_ps_not_install_to_install
-    local exists=$(ps aux | awk '{print $2}' | grep -w $1)
-    if [[ ! $exists ]]; then
-        return 0
-    else
-        return 1
+do_kaishi_install() {
+    sed -i '/^\*\ *soft\ *nofile\ *[[:digit:]]*/d' /etc/security/limits.conf
+    sed -i '/^\*\ *hard\ *nofile\ *[[:digit:]]*/d' /etc/security/limits.conf
+    echo '* soft nofile 65536' >>/etc/security/limits.conf
+    echo '* hard nofile 65536' >>/etc/security/limits.conf
+    echo
+    echo -e "\033[33m 请输入端口号 \033[0m"
+    echo -e "\033[32m 如果此服务器没其他占用443端口的，建议直接回车使用默认[443]端口 \033[0m"
+    export DUANKOU="请输入[1-65535]之间的值"
+    while :; do
+    read -p " ${DUANKOU}：" PORT
+    export PORT=${PORT:-"443"}
+    if [[ $PORT -ge 1 ]] && [[ $PORT -le 65535 ]]; then
+        export PORTY="y"
     fi
+    case $PORTY in
+        y)
+            export PORT="${PORT}"
+        break
+        ;;
+        *)
+            export DUANKOU="敬告：请输入[1-65535]之间的值"
+        ;;
+    esac
+    done
+    echo -e "\033[32m 您设置端口为：${PORT} \033[0m"
+    echo
+    echo -e "\033[33m 正在为您安装TG代理，请稍后... \033[0m"
+    sys_pro="/etc/systemd/system"
+    if [[ `systemctl status mtproto-proxy |grep -c "active (running) "` == '1' ]]; then
+        Uninstall_mtproto_proxy
+    fi
+    [[ ! -d ${sys_pro} ]] && mkdir -p ${sys_pro}
+    do_systemd_system
 }
 
-
-function build_mtproto() {
-    cd $WORKDIR
-    local platform=$(uname -m)
-
-    if [[ "$platform" == "x86_64" ]];then
-        if [ ! -d 'MTProxy' ]; then
-            git clone https://github.com/TelegramMessenger/MTProxy --depth=1
-        fi
-        cd MTProxy
-        sed -i 's/CFLAGS\s*=[^\r]\+/& -fcommon\r/' Makefile
-        make && cd objs/bin
-        cp -f $WORKDIR/MTProxy/objs/bin/mtproto-proxy $WORKDIR
-        cd $WORKDIR
-    else
-        if [[ -f "WORKDIR/mtg" ]];then
-            return
-        fi
-
-        # golang 
-        local arch=$(get_architecture)
-        rm -f golang.tar.gz
-        #  https://go.dev/dl/go1.18.4.linux-amd64.tar.gz
-        local golang_url="https://go.dev/dl/go1.18.4.linux-$arch.tar.gz"
-        wget $golang_url -O golang.tar.gz
-        rm -rf $WORKDIR/go && tar -C $WORKDIR -xzf golang.tar.gz
-        export PATH=$PATH:$WORKDIR/go/bin
-
-        go version
-        if [[ $? != 0 ]];then
-            local uname_m=$(uname -m)
-            local architecture_origin=$(dpkg --print-architecture)
-            echo -e "[\033[33mError\033[0m] golang download failed, please check!!! arch: $arch, platform: $platform,  uname: $uname_m, architecture_origin: $architecture_origin download url: $golang_url"
+do_configure_os() {
+    # We need at least 'make' 'sed' 'diff' 'od' 'install' 'tar' 'base64' 'awk'
+    source '/etc/os-release'
+    if [[ ${ID} == centos ]] && [[ ${VERSION} == 8 ]]; then
+       ID="centos8"
+    fi
+    case "${ID}" in
+        ubuntu)
+            info "Installing required APT packages"
+            sudo apt-get -y update
+            sudo apt-get -y install wget dbus make sed diffutils tar systemd ca-certificates git socat
+            sudo update-ca-certificates
+            if [[ `timeout -k 1s 3s erl |grep -c "Eshell V"` == '0' ]]; then
+                wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb
+                sudo dpkg -i erlang-solutions_2.0_all.deb
+                sudo apt-get -y update
+                sudo apt-get -y install erlang
+            fi
+            ;;
+        debian)
+            info "Installing extra repositories"
+            sudo apt -y update
+            sudo apt-get -y install wget dbus make sed diffutils tar systemd ca-certificates git socat
+            sudo update-ca-certificates
+            if [[ `timeout -k 1s 3s erl |grep -c "Eshell V"` == '0' ]]; then
+                wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb
+                sudo dpkg -i erlang-solutions_2.0_all.deb
+                sudo apt -y update
+                sudo apt-get -y install erlang
+            fi
+            ;;
+        centos)
+            info "Installing extra repositories"
+            sudo yum -y install wget make sed diffutils tar systemd dbus git socat ca-certificates
+            sudo update-ca-trust force-enable
+            if [[ `timeout -k 1s 3s erl |grep -c "Eshell V"` == '0' ]]; then
+                wget https://packages.erlang-solutions.com/erlang-solutions-2.0-1.noarch.rpm
+                rpm -Uvh erlang-solutions-2.0-1.noarch.rpm
+                sudo yum -y install erlang
+            fi
+            yum update -y
+            ;;
+        centos8)
+            info "Installing extra repositories"
+            sudo yum -y install wget make sed diffutils tar systemd dbus git socat ca-certificates
+            sudo update-ca-trust force-enable
+            if [[ `timeout -k 1s 3s erl |grep -c "Eshell V"` == '0' ]]; then
+                curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | sudo bash
+                sudo yum -y clean all
+                sudo yum -y makecache
+                sudo yum -y install erlang
+            fi
+            yum update -y
+            ;;
+        *)
+            echo -e "\033[31m 不支持您的系统进行安装 \033[0m"
             exit 1
-        fi
+    esac
 
-        rm -rf build-mtg
-        git clone https://github.com/9seconds/mtg.git -b v1 build-mtg --depth=1
-        cd build-mtg && make static
-        
-        if [[ ! -f "$WORKDIR/build-mtg/mtg" ]];then
-            echo -e "[\033[33mError\033[0m] Build fail for mtg, please check!!! $arch"
-            exit 1
-        fi
-
-        cp -f $WORKDIR/build-mtg/mtg $WORKDIR && chmod +x $WORKDIR/mtg
-
-        # clean
-        rm -rf $WORKDIR/build-mtg  $WORKDIR/golang.tar.gz  $WORKDIR/go
+    info "Making sure clock synchronization is enabled"
+    if [ `systemctl is-active ntp` = "active" ]; then
+        info "Replacing ntpd with systemd-timesyncd"
+        systemctl disable ntp
+        systemctl stop ntp
     fi
+    sudo timedatectl set-ntp on
+    info "Current time: `date`"
 }
 
-function get_mtg_provider(){
-    local arch=$(uname -m)
-    if [[ "$arch" == "x86_64" ]];then
-        echo "mtproto-proxy"
-    else
-        echo "mtg"
-    fi
-}
-
-install() {
-    cd $WORKDIR
-    if [ ! -d "./pid" ]; then
-        mkdir "./pid"
-    fi
-
-    xxd_status=1
-    echo a | xxd -ps &>/dev/null
-    if [ $? != "0" ]; then
-        xxd_status=0
-    fi
-
-    if [[ "$(uname -m)" != "x86_64" ]]; then
-        if check_sys packageManager yum; then
-            yum install -y openssl-devel zlib-devel iproute wget
-            yum groupinstall -y "Development Tools"
-            if [ $xxd_status == 0 ]; then
-                yum install -y vim-common
-            fi
-        elif check_sys packageManager apt; then
-            apt-get -y update
-            apt install -y git curl build-essential libssl-dev zlib1g-dev iproute2 wget
-            if [ $xxd_status == 0 ]; then
-                apt install -y vim-common
-            fi
-        fi
-    else
-        if check_sys packageManager yum && [ $xxd_status == 0 ]; then
-            yum install -y vim-common
-        elif check_sys packageManager apt && [ $xxd_status == 0 ]; then
-            apt-get -y update
-            apt install -y vim-common
-        fi
-    fi
-
-    if [[ "$(uname -m)" != "x86_64" ]]; then
-        build_mtproto
-    else
-        wget https://raw.githubusercontent.com/sunpma/mtp/master/mtproto-proxy -O mtproto-proxy -q
-        chmod +x mtproto-proxy
-    fi
-}
-
-print_line() {
-    echo -e "========================================="
-}
-
-config_mtp() {
-    cd $WORKDIR
-    echo -e "检测到您的配置文件不存在, 为您指引生成!" && print_line
-    while true; do
-        default_port=443
-        echo -e "请输入一个客户端连接端口 [1-65535]"
-        read -p "(默认端口: ${default_port}):" input_port
-        [ -z "${input_port}" ] && input_port=${default_port}
-        expr ${input_port} + 1 &>/dev/null
-        if [ $? -eq 0 ]; then
-            if [ ${input_port} -ge 1 ] && [ ${input_port} -le 65535 ] && [ ${input_port:0:1} != 0 ]; then
-                echo
-                echo "---------------------------"
-                echo "port = ${input_port}"
-                echo "---------------------------"
-                echo
-                break
-            fi
-        fi
-        echo -e "[\033[33m错误\033[0m] 请重新输入一个客户端连接端口 [1-65535]"
-    done
-
-    # 管理端口
-    while true; do
-        default_manage=8888
-        echo -e "请输入一个管理端口 [1-65535]"
-        read -p "(默认端口: ${default_manage}):" input_manage_port
-        [ -z "${input_manage_port}" ] && input_manage_port=${default_manage}
-        expr ${input_manage_port} + 1 &>/dev/null
-        if [ $? -eq 0 ] && [ $input_manage_port -ne $input_port ]; then
-            if [ ${input_manage_port} -ge 1 ] && [ ${input_manage_port} -le 65535 ] && [ ${input_manage_port:0:1} != 0 ]; then
-                echo
-                echo "---------------------------"
-                echo "manage port = ${input_manage_port}"
-                echo "---------------------------"
-                echo
-                break
-            fi
-        fi
-        echo -e "[\033[33m错误\033[0m] 请重新输入一个管理端口 [1-65535]"
-    done
-
-    # domain
-    while true; do
-        default_domain="azure.microsoft.com"
-        echo -e "请输入一个需要伪装的域名："
-        read -p "(默认域名: ${default_domain}):" input_domain
-        [ -z "${input_domain}" ] && input_domain=${default_domain}
-        http_code=$(curl -I -m 10 -o /dev/null -s -w %{http_code} $input_domain)
-        if [ $http_code -eq "200" ] || [ $http_code -eq "302" ] || [ $http_code -eq "301" ]; then
-            echo
-            echo "---------------------------"
-            echo "伪装域名 = ${input_domain}"
-            echo "---------------------------"
-            echo
-            break
-        fi
-        echo -e "[\033[33m状态码：${http_code}错误\033[0m] 域名无法访问,请重新输入或更换域名!"
-    done
-
-    # config info
-    public_ip=$(get_ip_public)
-    secret=$(head -c 16 /dev/urandom | xxd -ps)
-
-    # proxy tag
-    while true; do
-        default_tag=""
-        echo -e "请输入你需要推广的TAG："
-        echo -e "若没有,请联系 @MTProxybot 进一步创建你的TAG, 可能需要信息如下："
-        echo -e "IP: ${public_ip}"
-        echo -e "PORT: ${input_port}"
-        echo -e "SECRET(可以随便填): ${secret}"
-        read -p "(留空则跳过):" input_tag
-        [ -z "${input_tag}" ] && input_tag=${default_tag}
-        if [ -z "$input_tag" ] || [[ "$input_tag" =~ ^[A-Za-z0-9]{32}$ ]]; then
-            echo
-            echo "---------------------------"
-            echo "PROXY TAG = ${input_tag}"
-            echo "---------------------------"
-            echo
-            break
-        fi
-        echo -e "[\033[33m错误\033[0m] TAG格式不正确!"
-    done
-
-    curl -s https://core.telegram.org/getProxySecret -o proxy-secret
-    curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf
-    cat >./mtp_config <<EOF
-#!/bin/bash
-secret="${secret}"
-port=${input_port}
-web_port=${input_manage_port}
-domain="${input_domain}"
-proxy_tag="${input_tag}"
+do_systemd_system() {
+sys_proxy="/etc/systemd/system/mtproto-proxy.service"
+cat >$sys_proxy <<-EOF
+[Unit]
+SourcePath=/opt/mtp_proxy/bin/mtp_proxy
+Description=Starts the mtproto_proxy server
+After=local-fs.target
+After=remote-fs.target
+After=network-online.target
+After=systemd-journald-dev-log.socket
+After=nss-lookup.target
+Wants=network-online.target
+Requires=epmd.service
+[Service]
+Type=simple
+User=mtproto-proxy
+Group=mtproto-proxy
+Environment="RUNNER_LOG_DIR=/var/log/mtproto-proxy"
+Restart=on-failure
+TimeoutSec=1min
+IgnoreSIGPIPE=no
+KillMode=process
+GuessMainPID=no
+RemainAfterExit=no
+LimitNOFILE=40960
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+ExecStart=/opt/mtp_proxy/bin/mtp_proxy foreground
+ExecStop=/opt/mtp_proxy/bin/mtp_proxy stop
+ExecReload=/opt/mtp_proxy/bin/mtp_proxy rpcterms mtproto_proxy_app reload_config
+TimeoutStopSec=15s
+[Install]
+WantedBy=multi-user.target
 EOF
-    echo -e "配置已经生成完毕!"
+systemctl daemon-reload
 }
 
-status_mtp() {
-    if [ -f $pid_file ]; then
-        pid_exists $(cat $pid_file)
-        if [[ $? == 1 ]]; then
-            return 1
-        fi
-    fi
-    return 0
+do_get_source() {
+    info "Downloading proxy source code"
+    curl -L https://github.com/seriyps/mtproto_proxy/archive/master.tar.gz -o mtproto_proxy.tar.gz
+
+    info "Unpacking source code"
+    tar -xaf mtproto_proxy.tar.gz
+
+    mv -T --backup=t mtproto_proxy-master $SRC_DIR
 }
 
-info_mtp() {
-    status_mtp
-    if [ $? == 1 ]; then
-        source ./mtp_config
-        public_ip=$(get_ip_public)
-        domain_hex=$(xxd -pu <<<$domain | sed 's/0a//g')
-        client_secret="ee${secret}${domain_hex}"
-        echo -e "TMProxy+TLS代理: \033[32m运行中\033[0m"
-        echo -e "服务器IP：\033[31m$public_ip\033[0m"
-        echo -e "服务器端口：\033[31m$port\033[0m"
-        echo -e "MTProxy Secret:  \033[31m$client_secret\033[0m"
-        echo -e "TG一键链接: https://t.me/proxy?server=${public_ip}&port=${port}&secret=${client_secret}"
-        echo -e "TG一键链接: tg://proxy?server=${public_ip}&port=${port}&secret=${client_secret}"
+# cd mtproto_proxy/
+
+do_build_config() {
+    info "Interactively generating config-file"
+
+    # So, we ask for port/secret/ad_tag/protocols only if they are not specified via
+    # command-line or env vars
+
+    PORT="${PORT}"
+
+    if [ "${ID}" = "centos" -a "`sudo firewall-cmd --state 2>&1`" = "running" ]; then
+        info "Opening ${PORT} port"
+        sudo firewall-cmd --zone=public --add-port=${PORT}/tcp --permanent
+        sudo firewall-cmd --reload
     else
-        echo -e "TMProxy+TLS代理: \033[33m已停止\033[0m"
+        warn "Please make sure proxy port ${PORT} is open on firewall!
+        Use smth like:
+        firewall-cmd --zone=public --add-port=${PORT}/tcp --permanent
+        firewall-cmd --reload"
     fi
+
+    if [ -z "${SECRET}" ]; then
+        export SECRET=`head -c 16 /dev/urandom | to_hex`
+        info "Using random secret ${SECRET}"
+    fi
+
+    if [ -z "${TAG}" ]; then
+        export TAG="$(date +8b%d1%M5ec12abd%S6faeb2f%Mefbdcb)"
+        info "Using no AD TAG"
+    fi
+
+    if [ -z "${DD_ONLY}" ]; then
+        export DD_ONLY="y"
+        info "Using dd-only mode"
+    fi
+
+    if [ -z "${TLS_ONLY}" ]; then
+        export TLS_ONLY="y"
+        info "Using TLS-only mode"
+    fi
+
+    if [ -z "${TLS_DOMAIN}" -a \( -n "${TLS_ONLY}" -o -z "${DD_ONLY}" \) ]; then
+        # If tls_domain is not set and fake-tls is enabled, ask for domain
+        export TLS_DOMAIN="s3.amazonaws.com"
+        info "Using '${TLS_DOMAIN}' for fake-TLS SNI"
+    fi
+
+    PROTO_ARG=""
+    if [ -n "${DD_ONLY}" -a -n "${TLS_ONLY}" ]; then
+        export PROTO_ARG='{allowed_protocols, [mtp_fake_tls,mtp_secure]},'
+    elif [ -n "${DD_ONLY}" ]; then
+        export PROTO_ARG='{allowed_protocols, [mtp_secure]},'
+    elif [ -n "${TLS_ONLY}" ]; then
+        export PROTO_ARG='{allowed_protocols, [mtp_fake_tls]},'
+    fi
+
+    [ -z "${PORT}" -o -z "${SECRET}" -o -z "${TAG}" ] && \
+        error "Not enough options: port='${PORT}' secret='${SECRET}' ad_tag='${TAG}'"
+
+    [ ${PORT} -gt 0 -a ${PORT} -lt 65535 ] || \
+        error "Invalid port value: ${PORT}"
+
+    [ -n "`echo $SECRET | grep -x '[[:xdigit:]]\{32\}'`" ] || \
+        error "Invalid secret. Should be 32 chars of 0-9 a-f"
+
+    [ -n "`echo $TAG | grep -x '[[:xdigit:]]\{32\}'`" ] || \
+        error "Invalid tag. Should be 32 chars of 0-9 a-f"
+
+    [ -z "${TLS_DOMAIN}" -o -n "`echo $TLS_DOMAIN | grep -xE '^([0-9a-z_-]+\.)+[a-z]{2,6}$'`" ] || \
+        error "Invalid TLS domain '${TLS_DOMAIN}'. Should be valid domain name!"
+
+    echo '
+%% -*- mode: erlang -*-
+[
+ {mtproto_proxy,
+  %% see src/mtproto_proxy.app.src for examples.
+  [
+   '${PROTO_ARG}'
+   {ports,
+    [#{name => mtp_handler_1,
+       listen_ip => "0.0.0.0",
+       port => '${PORT}',
+       secret => <<"'${SECRET}'">>,
+       tag => <<"'${TAG}'">>}
+    ]}
+   ]},
+ %% Logging config
+ {lager,
+  [{log_root, "/var/log/mtproto-proxy"},
+   {crash_log, "crash.log"},
+   {handlers,
+    [
+     {lager_console_backend,
+      [{level, critical}]},
+     {lager_file_backend,
+      [{file, "application.log"},
+       {level, info},
+       %% Do fsync only on critical messages
+       {sync_on, critical},
+       %% If we logged more than X messages in a second, flush the rest
+       {high_water_mark, 300},
+       %% If we hit hwm and msg queue len is >X, flush the queue
+       {flush_queue, true},
+       {flush_threshold, 2000},
+       %% How often to check if log should be rotated
+       {check_interval, 5000},
+       %% Rotate when file size is 100MB+
+       {size, 104857600}
+      ]}
+    ]}]},
+ {sasl, [{errlog_type, error}]}
+].' >config/prod-sys.config
+
+
+    info "Config is generated with following properties:
+port=${PORT} secret=${SECRET} tag=${TAG} tls_only=${TLS_ONLY} dd_only=${DD_ONLY} domain=${TLS_DOMAIN}"
 }
 
-run_mtp() {
-    cd $WORKDIR
-    status_mtp
-    if [ $? == 1 ]; then
-        echo -e "提醒：\033[33mMTProxy已经运行，请勿重复运行!\033[0m"
-    else
-        mtg_provider=$(get_mtg_provider)
-        source ./mtp_config
-        if [[ "$mtg_provider" == "mtg" ]];then
-            domain_hex=$(xxd -pu <<<$domain | sed 's/0a//g')
-            client_secret="ee${secret}${domain_hex}"
-            # ./mtg simple-run -n 1.1.1.1 -t 30s -a 512kib 0.0.0.0:$port $client_secret >/dev/null 2>&1 &
-            ./mtg run $client_secret $proxy_tag -b 0.0.0.0:$port --multiplex-per-connection 500 >/dev/null 2>&1 &
-        else
-            curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf
-            nat_info=$(get_nat_ip_param)
-            workerman=$(get_cpu_core)
-            tag_arg=""
-            [[ -n "$proxy_tag" ]] && tag_arg="-P $proxy_tag"
-            ./mtproto-proxy -u nobody -p $web_port -H $port -S $secret --aes-pwd proxy-secret proxy-multi.conf -M $workerman $tag_arg --domain $domain $nat_info >/dev/null 2>&1 &    
-        fi
-
-        echo $! >$pid_file
-        sleep 2
-        info_mtp
-    fi
+do_backup_config() {
+    cp $SRC_DIR/config/prod-sys.config $WORKDIR/prod-sys.config.bak
 }
 
-debug_mtp() {
-    cd $WORKDIR
-    source ./mtp_config
-    nat_info=$(get_nat_ip_param)
-    workerman=$(get_cpu_core)
-    tag_arg=""
-    [[ -n "$proxy_tag" ]] && tag_arg="-P $proxy_tag"
-    echo "当前正在运行调试模式："
-    echo -e "\t你随时可以通过 Ctrl+C 进行取消操作"
-    if [[ "$mtg_provider" == "mtg" ]];then
-        domain_hex=$(xxd -pu <<<$domain | sed 's/0a//g')
-        client_secret="ee${secret}${domain_hex}"
-        #echo " ./mtg simple-run -n 1.1.1.1 -t 30s -a 512kib 0.0.0.0:$port $client_secret"
-        #./mtg simple-run -n 1.1.1.1 -t 30s -a 512kib 0.0.0.0:$port $client_secret
-        echo " ./mtg run $client_secret $proxy_tag -b 0.0.0.0:$port --multiplex-per-connection 500"
-        ./mtg run $client_secret $proxy_tag -b 0.0.0.0:$port --multiplex-per-connection 500
-    else
-        echo " ./mtproto-proxy -u nobody -p $web_port -H $port -S $secret --aes-pwd proxy-secret proxy-multi.conf -M $workerman $tag_arg --domain $domain $nat_info"
-        ./mtproto-proxy -u nobody -p $web_port -H $port -S $secret --aes-pwd proxy-secret proxy-multi.conf -M $workerman $tag_arg --domain $domain $nat_info
-    fi
+do_restore_config() {
+    cp $WORKDIR/prod-sys.config.bak config/prod-sys.config
+}
+
+do_reload_config() {
+    sudo make update-sysconfig
+    sudo systemctl reload mtproto-proxy
+}
+
+do_build() {
+    info "Generating Erlang interpreter options"
+    make config/prod-vm.args
+
+    info "Compiling"
+    make
+}
+
+do_install() {
+    # Try to stop proxy in case this script is run not for the first time
+    sudo systemctl stop mtproto-proxy || true
+
+    info "Installing"
+    sudo make install
+
+    info "Starting"
+    sudo systemctl enable mtproto-proxy
+    sudo systemctl start mtproto-proxy
+}
+
+do_print_links() {
+    info "Detecting IP address"
+    IP=`curl -s -4 -m 10 http://ipv4.seriyps.ru || curl -s -4 -m 10 https://digitalresistance.dog/myIp`
+    info "Detected external IP is ${IP}"
+
+    URL_PREFIX="https://t.me/proxy?server=${IP}&port=${PORT}&secret="
+
+    ESCAPED_SECRET=$(echo -n $SECRET | sed 's/../\\x&/g') # bytes
+    ESCAPED_TLS_SECRET="\xee${ESCAPED_SECRET}"${TLS_DOMAIN}
+    BASE64_TLS_SECRET=`echo -ne $ESCAPED_TLS_SECRET | base64 -w 0 | tr '+/' '-_'`
+    HEX_TLS_SECRET=`echo -ne $ESCAPED_TLS_SECRET | to_hex`
+
+    info "Logs: /var/log/mtproto-proxy/application.log"
+    info "Secret: ${SECRET}"
+    info "Proxy links:
+${YE}Normal链接:${Font}${URL_PREFIX}${SECRET}
+${YE}Secure链接:${Font}${URL_PREFIX}dd${SECRET}
+${YE}Fake-TLS hex链接:${Font}${URL_PREFIX}${HEX_TLS_SECRET}
+${YE}Fake-TLS base64链接:${Font}${URL_PREFIX}${BASE64_TLS_SECRET}
+"
+    rm -fr $WORKDIR/mtproto_proxy.tar.gz
     
+cat >$WORKDIR/mtproto_proxy/conck <<-EOF
+echo -e "\033[33mNormal链接:\033[0m${URL_PREFIX}${SECRET}"
+echo -e "\033[33mSecure链接:\033[0m${URL_PREFIX}dd${SECRET}"
+echo -e "\033[33mFake-TLS hex链接:\033[0m${URL_PREFIX}${HEX_TLS_SECRET}"
+echo -e "\033[33mFake-TLS base64链接:\033[0m${URL_PREFIX}${BASE64_TLS_SECRET}"
+EOF
 }
 
-stop_mtp() {
-    local pid=$(cat $pid_file)
-    kill -9 $pid
-    pid_exists $pid
-    if [[ $pid == 1 ]]; then
-        echo "停止任务失败"
-    fi
+# info "Executing $CMD"
+
+install_mtproto_proxy() {
+    do_kaishi_install
+    do_configure_os
+    do_get_source
+    cd $SRC_DIR/
+    do_build_config
+    do_build
+    do_install
+    do_print_links
+    info "MTProto proxy 安装完毕!"
 }
 
-fix_mtp() {
-    if [ $(id -u) != 0 ]; then
-        echo -e "> ※ (该功能仅限 root 用户执行)"
-        exit 1
-    fi
-
-    print_line
-    echo -e "> 开始清空防火墙规则/停止防火墙/卸载防火墙..."
-    print_line
-
-    if check_sys packageManager yum; then
-        systemctl stop firewalld.service
-        systemctl disable firewalld.service
-        systemctl stop iptables
-        systemctl disable iptables
-        service stop iptables
-        yum remove -y iptables
-        yum remove -y firewalld
-    elif check_sys packageManager apt; then
-        iptables -F
-        iptables -t nat -F
-        iptables -P ACCEPT
-        iptables -t nat -P ACCEPT
-        service stop iptables
-        apt-get remove -y iptables
-        ufw disable
-    fi
-
-    print_line
-    echo -e "> 开始安装/更新iproute2..."
-    print_line
-
-    if check_sys packageManager yum; then
-        yum install -y epel-release
-        yum update -y
-        yum install -y iproute
-    elif check_sys packageManager apt; then
-        apt-get install -y epel-release
-        apt-get update -y
-        apt-get install -y iproute2
-    fi
-
-    echo -e "< 处理完毕，如有报错忽略即可..."
-    echo -e "< 如遇到端口冲突，请自行关闭相关程序"
+Uninstall_mtproto_proxy() {
+    sudo systemctl stop mtproto-proxy
+    sudo systemctl disable mtproto-proxy
+    find / -iname 'mtproto_proxy' | xargs -i rm -rf {} > /dev/null 2>&1
+    find / -iname 'mtproto-proxy' | xargs -i rm -rf {} > /dev/null 2>&1
+    find / -iname 'mtp_proxy' | xargs -i rm -rf {} > /dev/null 2>&1
+    rm -rf /etc/systemd/system/mtproto-proxy.service > /dev/null 2>&1
 }
 
-param=$1
-if [[ "start" == $param ]]; then
-    echo "即将：启动脚本"
-    run_mtp
-elif [[ "stop" == $param ]]; then
-    echo "即将：停止脚本"
-    stop_mtp
-elif [[ "debug" == $param ]]; then
-    echo "即将：调试运行"
-    debug_mtp
-elif [[ "restart" == $param ]]; then
-    stop_mtp
-    run_mtp
-elif [[ "fix" == $param ]]; then
-    fix_mtp
-elif [[ "build" == $param ]]; then
-    build_mtproto
-else
-    if [ ! -f "$WORKDIR/mtp_config" ] && [ ! -f "$WORKDIR/mtproto-proxy" ]; then
-        echo "MTProxyTLS一键安装运行绿色脚本"
-        print_line
-        install
-        config_mtp
-        run_mtp
-    else
-        [ ! -f "$WORKDIR/mtp_config" ] && config_mtp
-        echo "MTProxyTLS一键安装运行绿色脚本"
-        print_line
-        info_mtp
-        print_line
-        echo -e "脚本源码：https://github.com/ellermister/mtproxy"
-        echo -e "配置文件: $WORKDIR/mtp_config"
-        echo -e "卸载方式：直接删除当前目录下文件即可"
-        echo "使用方式:"
-        echo -e "\t启动服务 bash $0 start"
-        echo -e "\t调试运行 bash $0 debug"
-        echo -e "\t停止服务 bash $0 stop"
-        echo -e "\t重启服务 bash $0 restart"
-        echo -e "\t修复常见问题 bash $0 fix"
-    fi
-fi
+mtpro() {
+    clear
+    echo
+    echo
+    do_running_state
+    echo -e "${MTPROTO_ZT}"
+    echo 
+    echo -e "\033[33m 1、安装 TG代理 \033[0m"
+    echo -e "\033[33m 2、打印 TG代理链接 \033[0m"
+    echo -e "\033[33m 3、御载 TG代理 \033[0m"
+    echo -e "\033[33m 4、退出 \033[0m"
+    echo
+    XUANZHE_mtpr="请输入数字"
+    while :; do
+    read -p " ${XUANZHE_mtpr}：" menu_mtpro
+    case $menu_mtpro in
+        1)
+          install_mtproto_proxy
+          break
+        ;;
+        2)
+          source $WORKDIR/mtproto_proxy/conck
+          break
+        ;;
+        3)
+          echo
+          echo -e "\033[32m 正在御载TG代理，请稍后... \033[0m"
+          Uninstall_mtproto_proxy
+          break
+        ;;
+        4)
+          exit 0
+          break
+        ;;
+        *)
+          XUANZHE_mtpr="请输入正确的选择"
+        ;;
+    esac
+    done
+}
+mtpro "$@"
