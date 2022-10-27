@@ -154,7 +154,7 @@ pve(){
 
 #34X-UI-v6版一键申请证书
 x-ui-v6(){
-      wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/frps/x-ui-v6.sh -O ./x-ui-v6.sh && chmod 700 ./x-ui-v6.sh && bash x-ui-v6.sh
+      bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/x-ui-v6.sh.sh)"
 }
 
 action=$1
