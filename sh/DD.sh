@@ -152,6 +152,11 @@ pve(){
       bash -c  "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/pve.sh)"
 }
 
+#34X-UI-v6版一键申请证书
+x-ui-v6(){
+      bash -c  "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/x-ui-v6.sh)"
+}
+
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
@@ -201,11 +206,12 @@ echo && echo -e "
  ${Green_font_prefix}31.${Font_color_suffix} docker-青龙-elecv2p-emby-AdGuardHome-宝塔国际版-MaiARK
  ${Green_font_prefix}32.${Font_color_suffix} Hysteria(歇斯底里)一键安装
  ${Green_font_prefix}33.${Font_color_suffix} PVE开启直通+CPU硬盘温度显示风扇转速+一键开启换源，去订阅+CPU睿频模式选择
+ ${Green_font_prefix}34.${Font_color_suffix} X-UI-IPV6+v4版一键申请证书
  " && echo
   
 fi
 echo
-read -e -p " 请输入数字 [0-33]:" num
+read -e -p " 请输入数字 [0-34]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -309,8 +315,11 @@ case "$num" in
 	33)
 	pve
 	;;
+	34)
+	x-ui-v6
+	;;
 	*)
-	echo "请输入正确数字 [0-33]"
+	echo "请输入正确数字 [0-34]"
 	;;
  esac
 
