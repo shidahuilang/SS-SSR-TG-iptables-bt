@@ -139,7 +139,7 @@ x-ui(){
 
 #31docker-青龙-elecv2p-emby-AdGuardHome-宝塔国际版-MaiARK
 kiss(){
-      bash <(curl -s -S -L https://maiark-1256973477.cos.ap-shanghai.myqcloud.com/kiss.sh)
+      bash <(curl -L -s https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ql.sh)
 }
 
 #32Hysteria一键安装
