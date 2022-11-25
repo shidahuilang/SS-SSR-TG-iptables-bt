@@ -27,9 +27,9 @@ tools(){
 warp.sh(){
 	bash <(curl -fsSL git.io/warp.sh) menu
 }
-#4安装SSR多用户版
-Install_ssr(){
-	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ssr.sh)
+#4安装SS
+ubuntu_install_ss.sh(){
+	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/ubuntu_install_ss.sh)
 }
 #5安装ssrmu（arm）
 ssrmu(){
@@ -176,7 +176,7 @@ echo && echo -e "
  ${Green_font_prefix}1.${Font_color_suffix}  加速系列：Bbr系列、锐速
  ${Green_font_prefix}2.${Font_color_suffix}  一键提升VPS速度
  ${Green_font_prefix}3.${Font_color_suffix}  Cloudflare WARP 一键配置
- ${Green_font_prefix}4.${Font_color_suffix}  安装SSR多用户版
+ ${Green_font_prefix}4.${Font_color_suffix}  安装SS
  ${Green_font_prefix}5.${Font_color_suffix}  安装ssrmu脚本(arm)
  ${Green_font_prefix}6.${Font_color_suffix}  安装V2ary_233一键
  ${Green_font_prefix}7.${Font_color_suffix}  TG专用代理（Go版）
@@ -226,7 +226,7 @@ case "$num" in
 	warp.sh
 	;;
 	4)
-	Install_ssr
+	ubuntu_install_ss.sh
 	;;
 	5)
 	ssrmu
