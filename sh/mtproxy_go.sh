@@ -11,3 +11,5 @@ wget -qO - https://api.github.com/repos/cutelua/mtg-dist/releases/latest \
 | grep browser_download_url | cut -d '"' -f 4 | wget -q -i - -O $BIN
 bash $BIN
 rm -rf $TMPDIR
+echo 卸载：rm -rf /usr/local/bin/mtg
+echo 卸载：rm -rf /etc/mtg.toml
