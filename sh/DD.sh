@@ -210,7 +210,7 @@ echo && echo -e "
  ${Green_font_prefix}32.${Font_color_suffix} Hysteria(歇斯底里)一键安装
  ${Green_font_prefix}33.${Font_color_suffix} PVE开启直通+CPU硬盘温度显示风扇转速+一键开启换源，去订阅+CPU睿频模式选择
  ${Green_font_prefix}34.${Font_color_suffix} X-UI-IPV6+v4版一键申请证书
- ${Green_font_prefix}35.${Font_color_suffix} 支持Xray/Trojan-Go/Hysteria/NaiveProxy的多用户Web管理面板
+ ${Green_font_prefix}35.${Font_color_suffix} Trojan Panel支持Xray/Trojan-Go/Hysteria/NaiveProxy的多用户Web管理面板
  " && echo
   
 fi
