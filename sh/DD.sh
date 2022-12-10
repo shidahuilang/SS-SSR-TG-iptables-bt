@@ -156,8 +156,8 @@ pve(){
 x-ui-v6(){
       bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/x-ui-v6.sh)"
 }
-#35Trojan Panel支持Xray/Trojan-Go/Hysteria/NaiveProxy的多用户Web管理面板
-install_script(){
+#35TrojanPanel支持Xray/Trojan-Go/Hysteria/NaiveProxy的多用户Web管理面板
+Trojan Panel(){
       source <(curl -L https://github.com/trojanpanel/install-script/raw/main/install_script.sh)
 }
 action=$1
@@ -323,7 +323,7 @@ case "$num" in
 	x-ui-v6
 	;;
 	35)
-	Trojan Panel
+	TrojanPanel
 	;;
 	*)
 	echo "请输入正确数字 [0-35]"
