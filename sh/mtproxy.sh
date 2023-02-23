@@ -175,8 +175,8 @@ do_configure_os() {
             ;;
         debian)
             info "Installing extra repositories"
-            sudo apt -y update
-            sudo apt-get -y install wget dbus make sed diffutils tar systemd ca-certificates git socat
+            apt -y update
+            apt-get -y install wget dbus make sed diffutils tar systemd ca-certificates git socat
             sudo update-ca-certificates
             if [[ `timeout -k 1s 3s erl |grep -c "Eshell V"` == '0' ]]; then
                 wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb
