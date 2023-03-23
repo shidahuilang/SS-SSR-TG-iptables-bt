@@ -329,7 +329,7 @@ tls_config() {
 	while :; do
 		echo
 		echo -e "请输入一个 ${magenta}正确的域名${none}，一定一定一定要正确，不！能！出！错！"
-		read -p "(例如：233blog.com): " domain
+		read -p "(例如：doubi.com): " domain
 		[ -z "$domain" ] && error && continue
 		echo
 		echo
