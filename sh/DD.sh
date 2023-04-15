@@ -160,6 +160,16 @@ x-ui-v6(){
 TrojanPanel(){
       source <(curl -L https://github.com/trojanpanel/install-script/raw/main/install_script.sh)
 }
+
+#36开启ssh+BBR+root登录+密码设置
+lang(){
+      bash -c  "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/pve/main/lang.sh)"
+}
+
+#37世界上最简单的Trojan部署脚本
+easytrojan(){
+      curl https://raw.githubusercontent.com/eastmaple/easytrojan/main/easytrojan.sh -o easytrojan.sh && chmod +x easytrojan.sh && bash easytrojan.sh lang
+}
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
@@ -211,6 +221,8 @@ echo && echo -e "
  ${Green_font_prefix}33.${Font_color_suffix} PVE开启直通+CPU硬盘温度显示风扇转速+一键开启换源，去订阅+CPU睿频模式选择
  ${Green_font_prefix}34.${Font_color_suffix} X-UI-IPV6+v4版一键申请证书
  ${Green_font_prefix}35.${Font_color_suffix} Trojan Panel支持Xray/Trojan-Go/Hysteria/NaiveProxy的多用户Web管理面板
+ ${Green_font_prefix}36.${Font_color_suffix} 开启ssh+BBR+root登录+密码设置(密码默认为：dahuilang)
+ ${Green_font_prefix}37.${Font_color_suffix} 世界上最简单的Trojan部署脚本(密码默认为：lang)
  " && echo
   
 fi
@@ -324,6 +336,12 @@ case "$num" in
 	;;
 	35)
 	TrojanPanel
+	;;
+	36)
+	lang
+	;;
+	37)
+	easytrojan
 	;;
 	*)
 	echo "请输入正确数字 [0-35]"
