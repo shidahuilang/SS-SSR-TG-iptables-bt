@@ -227,7 +227,7 @@ echo && echo -e "
   
 fi
 echo
-read -e -p " 请输入数字 [0-35]:" num
+read -e -p " 请输入数字 [0-37]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -344,7 +344,7 @@ case "$num" in
 	easytrojan
 	;;
 	*)
-	echo "请输入正确数字 [0-35]"
+	echo "请输入正确数字 [0-37]"
 	;;
  esac
 
