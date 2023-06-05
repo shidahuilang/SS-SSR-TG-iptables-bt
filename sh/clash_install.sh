@@ -96,7 +96,7 @@ function system_check() {
   if [[ "$(. /etc/os-release && echo "$ID")" == "centos" ]]; then
     yum upgrade -y libmodulemd
     yum install -y wget curl sudo git lsof tar systemd
-    curl -sL https://rpm.nodesource.com/setup_12.x | bash -
+    curl -sL https://rpm.nodesource.com/setup_16.x | bash -
     curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
     sudo rpm --import https://dl.yarnpkg.com/rpm/pubkey.gpg
     wget -N -P /etc/yum.repos.d/ https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/xray/nginx.repo
@@ -144,7 +144,7 @@ function nodejs_install() {
     ${UNINS} --purge nodejs
     ${UNINS} --purge nodejs-legacy
     apt autoremove -y
-    curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
+    curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
     ${UNINS} cmdtest
     ${UNINS} yarn
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -177,12 +177,9 @@ cat >"${sub_path}" <<-EOF
 server {
     listen 80;
     server_name ${CUrrent_ip};
-
     root /www/dist_web;
     index index.html index.htm;
-
     error_page 404 /index.html;
-
     gzip on; #开启gzip压缩
     gzip_min_length 1k; #设置对数据启用压缩的最少字节数
     gzip_buffers 4 16k;
@@ -190,7 +187,6 @@ server {
     gzip_comp_level 6; #设置数据的压缩等级,等级为1-9，压缩比从小到大
     gzip_types text/plain text/css text/javascript application/json application/javascript application/x-javascript application/xml; #设置需要压缩的数据格式
     gzip_vary on;
-
     location ~* \.(css|js|png|jpg|jpeg|gif|gz|svg|mp4|ogg|ogv|webm|htc|xml|woff)$ {
         access_log off;
         add_header Cache-Control "public,max-age=30*24*3600";
@@ -330,9 +326,9 @@ function install_subweb() {
     judge "sub-web补丁下载"
     cp -R subweb/subweb/* "sub-web/"
     mv -f "subweb/subweb/.env" "sub-web/.env"
-    wget -q https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/Subconverter.vue -O /root/sub-web/src/views/Subconverter.vue
+    wget -q https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/Subconverter.vue -O /root/sub-web/src/views/Subconverter.vue
     if [[ $? -ne 0 ]]; then
-      curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/Subconverter.vue > "/root/sub-web/src/views/Subconverter.vue"
+      curl -fsSL https://cdn.jsdelivr.net/gh/shidahuilang/SS-SSR-TG-iptables-bt@main/Subconverter.vue > "/root/sub-web/src/views/Subconverter.vue"
     fi
     rm -fr "subweb"
     cd "sub-web"
