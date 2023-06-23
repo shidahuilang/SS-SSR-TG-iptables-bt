@@ -128,9 +128,9 @@ x86(){
 L2TP(){
       bash <(curl -s -L git.io/JPjuV)
 }
-#29订阅转换一键安装
+#29clash订阅转换一键安装和docker2个版本
 clash_install(){
-      bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/clash_install.sh)"
+      bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/clashheji.sh)"
 }
 #30x-ui安装（支持的协议：vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http）
 x-ui(){
@@ -214,7 +214,7 @@ echo && echo -e "
  ${Green_font_prefix}26.${Font_color_suffix} NPS穿透一键安装
  ${Green_font_prefix}27.${Font_color_suffix} portainer可视化容器中文版一键安装
  ${Green_font_prefix}28.${Font_color_suffix} L2TP一键安装
- ${Green_font_prefix}29.${Font_color_suffix} 一键搭建CLASH节点转换
+ ${Green_font_prefix}29.${Font_color_suffix} 一键搭建CLASH节点转换和docker版本
  ${Green_font_prefix}30.${Font_color_suffix} x-ui安装+clash转换证书一键安装（支持协议：arm、vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http）
  ${Green_font_prefix}31.${Font_color_suffix} docker-青龙-elecv2p-emby-AdGuardHome-宝塔国际版-MaiARK
  ${Green_font_prefix}32.${Font_color_suffix} Hysteria(歇斯底里)一键安装
@@ -317,7 +317,7 @@ case "$num" in
 	L2TP
 	;;
 	29)
-	clash_install
+	clashheji
 	;;
 	30)
 	x-ui
