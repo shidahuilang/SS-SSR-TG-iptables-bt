@@ -47,13 +47,13 @@ Tg_socks(){
 mtproxy(){
         wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy.sh && chmod +x mtproxy.sh && bash mtproxy.sh
 }
-#9安装Goflyway
-Install_goflyway(){
-	bash <(curl -s -L https://git.io/goflyway.sh && chmod +x goflyway.sh)
+#9PVE开启直通
+pve(){
+	bash -c  "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/pve.sh)"
 }
-#10小鸡性能测试
-View_superbench(){
-	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/superbench.sh)
+#10黑群晖cpu正确识别
+ch_cpuinfo_cn(){
+	wget -qO ch_cpuinfo_cn.sh https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/ch_cpuinfo_cn.sh && sudo bash ch_cpuinfo_cn.sh
 }
 
 #11回程线路测试
@@ -72,9 +72,9 @@ DD_OD(){
 DD_GD(){
 	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/dd-gd.sh)
 }
-#15一键开启默认bbr
-open_bbr(){
-	modprobe tcp_bbr && echo "tcp_bbr" | tee --append /etc/modules-load.d/modules.conf && echo "net.core.default_qdisc=fq" | tee --append /etc/sysctl.conf && echo "net.ipv4.tcp_congestion_control=bbr" | tee --append /etc/sysctl.conf && sysctl -p && sysctl net.ipv4.tcp_available_congestion_control && sysctl net.ipv4.tcp_congestion_control && lsmod | grep bbr
+#15一键设置交换虚拟分区
+swap(){
+	bash -c  "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/swap.sh)"
 }
 #16XRAY一键证书+伪装站点
 xray_install(){
@@ -194,13 +194,13 @@ echo && echo -e "
  ${Green_font_prefix}6.${Font_color_suffix}  安装V2ary_233一键
  ${Green_font_prefix}7.${Font_color_suffix}  TG专用代理（Go版）
  ${Green_font_prefix}8.${Font_color_suffix}  TG专用代理（中文版）
- ${Green_font_prefix}9.${Font_color_suffix}  安装Goflyway
- ${Green_font_prefix}10.${Font_color_suffix} 小鸡性能测试
+ ${Green_font_prefix}9.${Font_color_suffix}  PVE开启直通+CPU硬盘温度显示,风扇转速+一键开启换源，去订阅+CPU睿频模式选择
+ ${Green_font_prefix}10.${Font_color_suffix} 黑群晖cpu正确识别
  ${Green_font_prefix}11.${Font_color_suffix} 回程线路测试:命令:./huicheng 您的IP
  ${Green_font_prefix}12.${Font_color_suffix} 哪吒监控探针
  ${Green_font_prefix}13.${Font_color_suffix} 傻瓜式一键DD包（OD源）
  ${Green_font_prefix}14.${Font_color_suffix} 傻瓜式一键DD包（GD源）
- ${Green_font_prefix}15.${Font_color_suffix} 一键开启默认bbr  
+ ${Green_font_prefix}15.${Font_color_suffix} 一键设置交换虚拟分区
  ${Green_font_prefix}16.${Font_color_suffix} XRAY一键证书+伪装站点
  ${Green_font_prefix}17.${Font_color_suffix} Netflix解锁检测
  ${Green_font_prefix}18.${Font_color_suffix} CF自动优选
@@ -257,10 +257,10 @@ case "$num" in
 	mtproxy
 	;;
 	9)
-	Install_goflyway
+	pve
 	;;
 	10)
-	View_superbench
+	ch_cpuinfo_cn
 	;;
 	11)
 	View_huicheng
@@ -274,7 +274,7 @@ case "$num" in
 	14)
 	DD_GD
 	;;
-	15)
+	swap)
 	open_bbr
 	;;
 	16)
