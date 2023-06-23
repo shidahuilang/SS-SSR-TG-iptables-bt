@@ -76,9 +76,9 @@ DD_GD(){
 swap(){
 	bash -c  "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/swap.sh)"
 }
-#16XRAY一键证书+伪装站点
-xray_install(){
-	bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/xray_install.sh)"
+#16pve和群辉相关脚本
+set(){
+	bash -c  "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/set.sh)"
 }
 # 17Netflix解锁检测
 netflix(){
@@ -201,7 +201,7 @@ echo && echo -e "
  ${Green_font_prefix}13.${Font_color_suffix} 傻瓜式一键DD包（OD源）
  ${Green_font_prefix}14.${Font_color_suffix} 傻瓜式一键DD包（GD源）
  ${Green_font_prefix}15.${Font_color_suffix} 一键设置交换虚拟分区
- ${Green_font_prefix}16.${Font_color_suffix} XRAY一键证书+伪装站点
+ ${Green_font_prefix}16.${Font_color_suffix} PVE和群辉相关一键脚本
  ${Green_font_prefix}17.${Font_color_suffix} Netflix解锁检测
  ${Green_font_prefix}18.${Font_color_suffix} CF自动优选
  ${Green_font_prefix}19.${Font_color_suffix} VPS一键3网测速脚本
@@ -278,7 +278,7 @@ case "$num" in
 	open_bbr
 	;;
 	16)
-	xray_install
+	set
 	;;
 	17)
 	netflix	
