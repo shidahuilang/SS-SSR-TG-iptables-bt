@@ -129,7 +129,7 @@ L2TP(){
       bash <(curl -s -L git.io/JPjuV)
 }
 #29clash订阅转换一键安装和docker2个版本
-clash_install(){
+clashheji(){
       bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/clashheji.sh)"
 }
 #30x-ui安装（支持的协议：vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http）
