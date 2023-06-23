@@ -12,7 +12,7 @@ case $choice in
         ;;
     2)
         echo "您选择了Docker版本"
-        bash -c "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/docker-clash.sh)"
+        bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/pve/main/docker-clash.sh)"
         ;;
     *)
         echo "输入无效，退出脚本"
