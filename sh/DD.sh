@@ -68,9 +68,9 @@ nezha(){
 DD_OD(){
 	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/dd-od.sh)
 }
-#14一键DD包（GD源）
+#14甲骨文一键DD到Debian 11
 DD_GD(){
-	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/dd-gd.sh)
+	bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/07031218/normal-shell/main/InstallNET.sh') -d 11 -v 64 -p password
 }
 #15一键设置交换虚拟分区
 swap(){
@@ -199,7 +199,7 @@ echo && echo -e "
  ${Green_font_prefix}11.${Font_color_suffix} 回程线路测试:命令:./huicheng 您的IP
  ${Green_font_prefix}12.${Font_color_suffix} 哪吒监控探针
  ${Green_font_prefix}13.${Font_color_suffix} 傻瓜式一键DD包（OD源）
- ${Green_font_prefix}14.${Font_color_suffix} 傻瓜式一键DD包（GD源）
+ ${Green_font_prefix}14.${Font_color_suffix} 甲骨文一键DD到Debian 11 脚本（兼容甲骨文AMD和ARM架构,DD完默认密码password，经测试同样适用腾讯云、Do、Azure）
  ${Green_font_prefix}15.${Font_color_suffix} 一键设置交换虚拟分区
  ${Green_font_prefix}16.${Font_color_suffix} PVE和群辉相关一键脚本
  ${Green_font_prefix}17.${Font_color_suffix} Netflix解锁检测
