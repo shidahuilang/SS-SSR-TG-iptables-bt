@@ -131,6 +131,7 @@ function system_check() {
     export PUBKEY="debian"
     export Subcon="/etc/init.d/subconverter"
     nodejs_install
+    yarn add @vue/cli-service
   else
     echo -e "\033[31m 不支持该系统 \033[0m"
     exit 1
