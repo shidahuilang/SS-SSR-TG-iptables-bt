@@ -254,10 +254,8 @@ function install_subconverter() {
       fi
     fi  
   fi
-  latest_vers="$(wget -qO- -t1 -T2 "https://api.github.com/repos/tindy2013/subconverter/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')"
-  [[ -z ${latest_vers} ]] && latest_vers="v0.7.2"
   rm -rf "/root/subconverter_${ARCH_PRINT}.tar.gz" >/dev/null 2>&1
-  wget https://ghproxy.com/https://github.com/tindy2013/subconverter/releases/download/${latest_vers}/subconverter_${ARCH_PRINT}.tar.gz
+  wget https://ghproxy.com/https://github.com/MetaCubeX/subconverter/releases/download/Alpha/subconverter_${ARCH_PRINT}.tar.gz
   if [[ $? -ne 0 ]];then
     echo -e "\033[31m subconverter下载失败! \033[0m"
     exit 1
