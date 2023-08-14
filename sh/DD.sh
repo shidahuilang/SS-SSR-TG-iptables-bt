@@ -94,7 +94,7 @@ superspeed(){
 }
 #20FRP内网穿刺
 install-frps(){
-        wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/frps/install-frps.sh -O ./install-frps.sh && chmod 700 ./install-frps.sh && bash install-frps.sh install
+        wget -N --no-check-certificate https://raw.githubusercontent.com/MvsCode/frps-onekey/master/install-frps.sh -O ./install-frps.sh && chmod 700 ./install-frps.sh && bash install-frps.sh install
 }
 #21Docker-Compose安装
 DockerInstallation(){
