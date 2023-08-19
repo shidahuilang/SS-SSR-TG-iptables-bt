@@ -652,7 +652,7 @@ export default {
         clientType: "",
         customBackend: "http://127.0.0.1:25500/sub?",
         shortType: "http://127.0.0.1:25500/short",
-        remoteConfig: "推荐",
+        remoteConfig: "https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
