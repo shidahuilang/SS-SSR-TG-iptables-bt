@@ -391,11 +391,11 @@ export default {
             options: [
               {
                 label: "推荐",
-                value: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini"
-              },
-               {
-                label: "常规规则",
                 value: "https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG.ini"
+              },
+              {
+                label: "常规规则",
+                value: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini"
               },
               {
                 label: "ACL4SSR",
