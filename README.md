@@ -7,7 +7,7 @@ apt -y update && apt -y install curl wget
 ```sh
 yum install -y curl wget
 ```
-## 32合1多功能脚本集合你想要的都在这里
+## 38合1多功能脚本集合你想要的都在这里
 
 ![img2.png](img2.png)
 - 脚本说明: 多合一脚本，DD系统，BBR，xray,TG搭建等等·常用的各种脚本基本都有！
