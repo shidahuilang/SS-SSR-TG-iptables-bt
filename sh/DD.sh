@@ -170,6 +170,10 @@ lang(){
 easytrojan(){
       curl https://raw.githubusercontent.com/eastmaple/easytrojan/main/easytrojan.sh -o easytrojan.sh && chmod +x easytrojan.sh && bash easytrojan.sh lang
 }
+#38nps-socks5服务一键搭建脚本
+Scoks5(){
+      wget -q -N --no-check-certificate https://raw.githubusercontent.com/wyx176/nps-socks5/master/install.sh && chmod 777 install.sh && bash install.sh
+}
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
@@ -223,11 +227,12 @@ echo && echo -e "
  ${Green_font_prefix}35.${Font_color_suffix} Trojan Panel支持Xray/Trojan-Go/Hysteria/NaiveProxy的多用户Web管理面板
  ${Green_font_prefix}36.${Font_color_suffix} 开启ssh+BBR+root登录+密码设置(密码默认为：dahuilang)-------丨谷歌 GCP专属
  ${Green_font_prefix}37.${Font_color_suffix} 世界上最简单的Trojan部署脚本(密码默认为：lang)--------------丨谷歌 GCP专属
+ ${Green_font_prefix}38.${Font_color_suffix} nps-socks5服务一键搭建脚本
  " && echo
   
 fi
 echo
-read -e -p " 请输入数字 [0-37]:" num
+read -e -p " 请输入数字 [0-38]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -343,8 +348,11 @@ case "$num" in
 	37)
 	easytrojan
 	;;
+ 	38)
+	Scoks5
+	;;
 	*)
-	echo "请输入正确数字 [0-37]"
+	echo "请输入正确数字 [0-38]"
 	;;
  esac
 
