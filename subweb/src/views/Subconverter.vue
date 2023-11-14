@@ -652,7 +652,7 @@ export default {
         clientType: "",
         customBackend: "http://127.0.0.1:25500/sub?",
         shortType: "http://127.0.0.1:25500/short",
-        remoteConfig: "https://raw.githubusercontent.com/shidahuilang/pve/main/ZHANG.ini",
+        remoteConfig: "https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/ZHANG.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
