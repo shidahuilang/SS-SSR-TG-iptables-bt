@@ -390,12 +390,12 @@ export default {
             label: "ACL4SSR规则",
             options: [
               {
-                label: "推荐",
-                value: "https://raw.githubusercontent.com/shidahuilang/pve/main/ZHANG.ini"
+                label: "推荐-ZHANG",
+                value: "https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/ZHANG.ini"
               },
               {
-                label: "常规规则",
-                value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini"
+                label: "常规规则_Online_Full",
+                value: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini"
               },
               {
                 label: "ACL4SSR",
@@ -454,8 +454,8 @@ export default {
                 value: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_AdblockPlus.ini"
               },
               {
-                label: "ACL4SSR_Online_Full",
-                value: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini"
+                label: "ZHANG",
+                value: "https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/ZHANG.ini"
               },
               {
                 label: "ACL4SSR_Online_Full_AdblockPlus",
