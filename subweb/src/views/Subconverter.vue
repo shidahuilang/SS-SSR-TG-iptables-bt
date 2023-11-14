@@ -391,7 +391,7 @@ export default {
             options: [
               {
                 label: "推荐",
-                value: "https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG.ini"
+                value: "https://raw.githubusercontent.com/shidahuilang/pve/main/ZHANG.ini"
               },
               {
                 label: "常规规则",
@@ -652,7 +652,7 @@ export default {
         clientType: "",
         customBackend: "http://127.0.0.1:25500/sub?",
         shortType: "http://127.0.0.1:25500/short",
-        remoteConfig: "https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG.ini",
+        remoteConfig: "https://raw.githubusercontent.com/shidahuilang/pve/main/ZHANG.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
