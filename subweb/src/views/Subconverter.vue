@@ -391,7 +391,7 @@ export default {
             options: [
               {
                 label: "推荐-ZHANG_Media_NoAuto",
-                value: "https://raw.githubusercontent.com/shidahuilang/luci-app-openclash/clash-ZHANG/Rule_config/ZHANG_Media_NoAuto.ini"
+                value: "https://ghproxy.com/https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG_CDN/ZHANG_Media_NoAuto.ini"
               },
               {
                 label: "常规规则_Online_Full",
@@ -455,7 +455,7 @@ export default {
               },
               {
                 label: "ZHANG_Media_NoAuto",
-                value: "https://raw.githubusercontent.com/shidahuilang/luci-app-openclash/clash-ZHANG/Rule_config/ZHANG_Media_NoAuto.ini"
+                value: "https://ghproxy.com/https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG_CDN/ZHANG_Media_NoAuto.ini"
               },
               {
                 label: "ACL4SSR_Online_Full_AdblockPlus",
@@ -652,7 +652,7 @@ export default {
         clientType: "",
         customBackend: "http://127.0.0.1:25500/sub?",
         shortType: "http://127.0.0.1:25500/short",
-        remoteConfig: "https://raw.githubusercontent.com/shidahuilang/luci-app-openclash/clash-ZHANG/Rule_config/ZHANG_Media_NoAuto.ini",
+        remoteConfig: "https://ghproxy.com/https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG_CDN/ZHANG_Media_NoAuto.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
