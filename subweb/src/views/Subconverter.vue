@@ -391,7 +391,7 @@ export default {
             options: [
               {
                 label: "推荐-ZHANG",
-                value: "https://github.com/flyhigherpi/merlinclash_clash_related/blob/master/Rule_config/ZHANG_CDN/ZHANG.ini"
+                value: "https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG_CDN/ZHANG.ini"
               },
               {
                 label: "常规规则_Online_Full",
@@ -455,7 +455,7 @@ export default {
               },
               {
                 label: "ZHANG",
-                value: "https://github.com/flyhigherpi/merlinclash_clash_related/blob/master/Rule_config/ZHANG_CDN/ZHANG.ini"
+                value: "https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG_CDN/ZHANG.ini"
               },
               {
                 label: "ACL4SSR_Online_Full_AdblockPlus",
@@ -644,7 +644,7 @@ export default {
                 value: "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/customized/flower.ini"
               }
             ]
-          },
+          }
         ]
       },
       form: {
@@ -652,7 +652,7 @@ export default {
         clientType: "",
         customBackend: "http://127.0.0.1:25500/sub?",
         shortType: "http://127.0.0.1:25500/short",
-        remoteConfig: "https://github.com/flyhigherpi/merlinclash_clash_related/blob/master/Rule_config/ZHANG_CDN/ZHANG.ini",
+        remoteConfig: "https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG_CDN/ZHANG.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
