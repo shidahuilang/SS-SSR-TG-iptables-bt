@@ -391,7 +391,7 @@ export default {
             options: [
               {
                 label: "推荐-ZHANG",
-                value: "https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/ZHANG.ini"
+                value: "https://github.com/flyhigherpi/merlinclash_clash_related/blob/master/Rule_config/ZHANG_CDN/ZHANG.ini"
               },
               {
                 label: "常规规则_Online_Full",
@@ -455,7 +455,7 @@ export default {
               },
               {
                 label: "ZHANG",
-                value: "https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/ZHANG.ini"
+                value: "https://github.com/flyhigherpi/merlinclash_clash_related/blob/master/Rule_config/ZHANG_CDN/ZHANG.ini"
               },
               {
                 label: "ACL4SSR_Online_Full_AdblockPlus",
@@ -652,7 +652,7 @@ export default {
         clientType: "",
         customBackend: "http://127.0.0.1:25500/sub?",
         shortType: "http://127.0.0.1:25500/short",
-        remoteConfig: "https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/ZHANG.ini",
+        remoteConfig: "https://github.com/flyhigherpi/merlinclash_clash_related/blob/master/Rule_config/ZHANG_CDN/ZHANG.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
