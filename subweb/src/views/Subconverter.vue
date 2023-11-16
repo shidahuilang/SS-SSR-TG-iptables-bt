@@ -391,10 +391,10 @@ export default {
             options: [
               {
                 label: "推荐-ZHANG_Media_NoAuto",
-                value: "https://ghproxy.com/https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG_CDN/ZHANG_Media_NoAuto.ini"
+                value: "https://cdn.jsdelivr.net/gh/shidahuilang/luci-app-openclash@clash-ZHANG/Rule_config/ZHANG_Media_NoAuto.ini"
               },
               {
-                label: "常规规则_Online_Full",
+                label: "常规规则-Online_Full",
                 value: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini"
               },
               {
@@ -454,8 +454,8 @@ export default {
                 value: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_AdblockPlus.ini"
               },
               {
-                label: "ZHANG_Media_NoAuto",
-                value: "https://ghproxy.com/https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG_CDN/ZHANG_Media_NoAuto.ini"
+                label: "ACL4SSR_Online_Full",
+                value: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini"
               },
               {
                 label: "ACL4SSR_Online_Full_AdblockPlus",
@@ -484,6 +484,10 @@ export default {
               {
                 label: "ACL4SSR_Online_Mini_AdblockPlus",
                 value: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_AdblockPlus.ini"
+              },
+             {
+                label: "ZHANG_Media_NoAuto",
+                value: "https://cdn.jsdelivr.net/gh/shidahuilang/luci-app-openclash@clash-ZHANG/Rule_config/ZHANG_Media_NoAuto.ini"
               },
               {
                 label: "ACL4SSR_Online_Mini_Fallback",
@@ -644,7 +648,7 @@ export default {
                 value: "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/customized/flower.ini"
               }
             ]
-          }
+          },
         ]
       },
       form: {
@@ -652,7 +656,7 @@ export default {
         clientType: "",
         customBackend: "http://127.0.0.1:25500/sub?",
         shortType: "http://127.0.0.1:25500/short",
-        remoteConfig: "https://ghproxy.com/https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG_CDN/ZHANG_Media_NoAuto.ini",
+        remoteConfig: "https://cdn.jsdelivr.net/gh/shidahuilang/luci-app-openclash@clash-ZHANG/Rule_config/ZHANG_Media_NoAuto.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
