@@ -390,8 +390,8 @@ export default {
             label: "ACL4SSR规则",
             options: [
               {
-                label: "推荐-ZHANG_Media_NoAuto",
-                value: "https://cdn.jsdelivr.net/gh/shidahuilang/luci-app-openclash@clash-ZHANG/Rule_config/ZHANG_Media_NoAuto.ini"
+                label: "推荐-ZHANG",
+                value: "https://cdn.jsdelivr.net/gh/shidahuilang/luci-app-openclash@clash-ZHANG/Rule_config/ZHANG.ini"
               },
               {
                 label: "常规规则-Online_Full",
@@ -486,8 +486,8 @@ export default {
                 value: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_AdblockPlus.ini"
               },
              {
-                label: "ZHANG_Media_NoAuto",
-                value: "https://cdn.jsdelivr.net/gh/shidahuilang/luci-app-openclash@clash-ZHANG/Rule_config/ZHANG_Media_NoAuto.ini"
+                label: "ZHANG",
+                value: "https://cdn.jsdelivr.net/gh/shidahuilang/luci-app-openclash@clash-ZHANG/Rule_config/ZHANG.ini"
               },
               {
                 label: "ACL4SSR_Online_Mini_Fallback",
@@ -656,7 +656,7 @@ export default {
         clientType: "",
         customBackend: "http://127.0.0.1:25500/sub?",
         shortType: "http://127.0.0.1:25500/short",
-        remoteConfig: "https://cdn.jsdelivr.net/gh/shidahuilang/luci-app-openclash@clash-ZHANG/Rule_config/ZHANG_Media_NoAuto.ini",
+        remoteConfig: "https://cdn.jsdelivr.net/gh/shidahuilang/luci-app-openclash@clash-ZHANG/Rule_config/ZHANG.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
