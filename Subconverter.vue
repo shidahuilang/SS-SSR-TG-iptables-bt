@@ -391,7 +391,7 @@ export default {
             options: [
               {
                 label: "推荐-ZHANG",
-                value: "https://cdn.jsdelivr.net/gh/shidahuilang/luci-app-openclash@clash-ZHANG/Rule_config/ZHANG.ini"
+                value: "https://raw.githubusercontent.com/shidahuilang/luci-app-openclash/clash-ZHANG/Rule_config/ZHANG_Media_NoAuto.ini"
               },
               {
                 label: "常规规则-Online_Full",
@@ -487,7 +487,7 @@ export default {
               },
              {
                 label: "ZHANG",
-                value: "https://cdn.jsdelivr.net/gh/shidahuilang/luci-app-openclash@clash-ZHANG/Rule_config/ZHANG.ini"
+                value: "https://raw.githubusercontent.com/shidahuilang/luci-app-openclash/clash-ZHANG/Rule_config/ZHANG_Media_NoAuto.ini"
               },
               {
                 label: "ACL4SSR_Online_Mini_Fallback",
@@ -656,7 +656,7 @@ export default {
         clientType: "",
         customBackend: "http://127.0.0.1:25500/sub?",
         shortType: "http://127.0.0.1:25500/short",
-        remoteConfig: "https://cdn.jsdelivr.net/gh/shidahuilang/luci-app-openclash@clash-ZHANG/Rule_config/ZHANG.ini",
+        remoteConfig: "https://raw.githubusercontent.com/shidahuilang/luci-app-openclash/clash-ZHANG/Rule_config/ZHANG_Media_NoAuto.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
