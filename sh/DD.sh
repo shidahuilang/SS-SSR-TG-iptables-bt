@@ -172,8 +172,7 @@ easytrojan(){
 }
 #38nps-socks5服务一键搭建脚本
 Scoks5(){
-      wget -q -N --no-check-certificate https://raw.githubusercontent.com/wyx176/nps-socks5/master/install.sh && chmod 777 install.sh && bash install.sh
-}
+      wget -q -N --no-check-certificate https://raw.githubusercontent.com/wyx176/nps-socks5/master/install.sh && chmod 777 install.sh && bash install.sh}
 }
 #39Sing-box 全家桶
 sing-box(){
