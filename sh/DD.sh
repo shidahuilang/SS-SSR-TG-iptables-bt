@@ -174,6 +174,11 @@ easytrojan(){
 Scoks5(){
       wget -q -N --no-check-certificate https://raw.githubusercontent.com/wyx176/nps-socks5/master/install.sh && chmod 777 install.sh && bash install.sh
 }
+}
+#39Sing-box 全家桶
+sing-box(){
+      bash <(wget -qO- https://raw.githubusercontent.com/fscarmen/sing-box/main/sing-box.sh)
+}
 action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor_goflyway
@@ -228,6 +233,7 @@ echo && echo -e "
  ${Green_font_prefix}36.${Font_color_suffix} 开启ssh+BBR+root登录+密码设置(密码默认为：dahuilang)-------丨谷歌 GCP专属
  ${Green_font_prefix}37.${Font_color_suffix} 世界上最简单的Trojan部署脚本(密码默认为：lang)--------------丨谷歌 GCP专属
  ${Green_font_prefix}38.${Font_color_suffix} nps-socks5服务一键搭建脚本
+ ${Green_font_prefix}39.${Font_color_suffix} Sing-box 全家桶
  " && echo
   
 fi
@@ -350,6 +356,9 @@ case "$num" in
 	;;
  	38)
 	Scoks5
+	;;
+  	38)
+	sing-box
 	;;
 	*)
 	echo "请输入正确数字 [0-38]"
