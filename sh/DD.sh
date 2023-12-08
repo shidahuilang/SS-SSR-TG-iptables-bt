@@ -170,6 +170,14 @@ lang(){
 easytrojan(){
       curl https://raw.githubusercontent.com/eastmaple/easytrojan/main/easytrojan.sh -o easytrojan.sh && chmod +x easytrojan.sh && bash easytrojan.sh lang
 }
+#38nps-socks5服务一键搭建脚本
+Scoks5(){
+      wget -q -N --no-check-certificate https://raw.githubusercontent.com/wyx176/nps-socks5/master/install.sh && chmod 777 install.sh && bash install.sh
+}
+#39Sing-box 全家桶
+Scoks5(){
+      bash <(wget -qO- https://raw.githubusercontent.com/fscarmen/sing-box/main/sing-box.sh)
+}
 
 action=$1
 if [[ "${action}" == "monitor" ]]; then
@@ -230,7 +238,7 @@ echo && echo -e "
   
 fi
 echo
-read -e -p " 请输入数字 [0-38]:" num
+read -e -p " 请输入数字 [0-39]:" num
 case "$num" in
 	0)
 	Update_Shell
@@ -349,24 +357,14 @@ case "$num" in
  	38)
 	Scoks5
 	;;
-  	38)
+  	39)
 	sing-box
 	;;
 	*)
-	echo "请输入正确数字 [0-38]"
+	echo "请输入正确数字 [0-39]"
 	;;
  esac
 
   
   
   
-  
-
-
-
-
-
-
-
-
-
