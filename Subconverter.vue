@@ -561,7 +561,7 @@ export default {
             label: "各大机场规则",
             options: [
               {
-                label: "ZHANG",
+                label: "ZHANG-m",
                 value:
                     "https://raw.githubusercontent.com/shidahuilang/luci-app-openclash/clash-ZHANG/Rule_config/ZHANG.ini"
               },
