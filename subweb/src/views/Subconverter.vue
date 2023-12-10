@@ -41,6 +41,17 @@
                   <el-option v-for="(v, k) in options.customBackend" :key="k" :label="k" :value="v"></el-option>
                 </el-select>
               </el-form-item>
+              <el-form-item label="短链选择:">
+                <el-select
+                    v-model="form.shortType"
+                    allow-create
+                    filterable
+                    placeholder="可输入其他可用短链API"
+                    style="width: 100%"
+                >
+                  <el-option v-for="(v, k) in options.shortTypes" :key="k" :label="k" :value="v"></el-option>
+                </el-select>
+              </el-form-item>
               <el-form-item label="选择规则:">
                 <el-select
                     v-model="form.remoteConfig"
@@ -184,9 +195,21 @@
                   </el-button>
                 </el-input>
               </el-form-item>
+              <el-form-item label="订阅短链:">
+                <el-input class="copy-content" disabled v-model="customShortSubUrl">
+                  <el-button
+                      slot="append"
+                      v-clipboard:copy="customShortSubUrl"
+                      v-clipboard:success="onCopy"
+                      ref="copy-btn"
+                      icon="el-icon-document-copy"
+                  >复制
+                  </el-button>
+                </el-input>
+              </el-form-item>
               <el-form-item label-width="0px" style="margin-top: 40px; text-align: center">
                 <el-button
-                    style="width: 250px"
+                    style="width: 120px"
                     type="danger"
                     @click="makeUrl"
                     :disabled="form.sourceSubUrl.length === 0 || btnBoolean"
@@ -198,6 +221,16 @@
                     @click="makeShortUrl"
                     :loading="loading"
                     :disabled="customSubUrl.length === 0"
+                >生成短链接
+                </el-button>
+              </el-form-item>
+              <el-form-item label-width="0px" style="text-align: center">
+                <el-button
+                    style="width: 120px"
+                    type="primary"
+                    @click="dialogUploadConfigVisible = true"
+                    icon="el-icon-upload"
+                    :loading="loading"
                 >进阶配置
                 </el-button>
                 <el-button
@@ -218,7 +251,7 @@
                 :close-on-press-escape="false"
                 width="80%"
           >
-      <el-tabs v-model="activeName" type="card">
+       <el-tabs v-model="activeName" type="card">
         <el-tab-pane label="远程配置上传" name="first">
           <el-link type="danger" :href="sampleConfig" style="margin-bottom: 15px" target="_blank" icon="el-icon-info">
             参考案例
@@ -377,10 +410,10 @@ export default {
           "自动判断客户端": "auto",
         },
         shortTypes: {
-          "短链后端(本地版无效)":"http://127.0.0.1:25500/short",
+          "默认短链转换后端": "http://127.0.0.1:25500/short",
         },
         customBackend: {
-          "自建本地订阅节点转换后端": "http://127.0.0.1:25500/sub?",
+          "默认订阅节点转换后端": "http://127.0.0.1:25500/sub?",
         },
         backendOptions: [
           {value: "http://127.0.0.1:25500/sub?"},
@@ -390,15 +423,11 @@ export default {
             label: "ACL4SSR规则",
             options: [
               {
-                label: "推荐-ZHANG",
+                label: "ZHANG-m",
                 value: "https://raw.githubusercontent.com/shidahuilang/luci-app-openclash/clash-ZHANG/Rule_config/ZHANG.ini"
               },
               {
-                label: "常规规则-Online_Full",
-                value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini"
-              },
-              {
-                label: "ACL4SSR",
+                label: "ACL4SSR-Online_Full",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR.ini"
               },
               {
@@ -485,10 +514,6 @@ export default {
                 label: "ACL4SSR_Online_Mini_AdblockPlus",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_AdblockPlus.ini"
               },
-             {
-                label: "ZHANG",
-                value: "https://raw.githubusercontent.com/shidahuilang/luci-app-openclash/clash-ZHANG/Rule_config/ZHANG.ini"
-              },
               {
                 label: "ACL4SSR_Online_Mini_Fallback",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_Fallback.ini"
@@ -536,9 +561,9 @@ export default {
             label: "各大机场规则",
             options: [
               {
-                label: "跑路云",
+                label: "ZHANG",
                 value:
-                    "https://gist.github.com/jklolixxs/9f6989137a2cfcc138c6da4bd4e4cbfc/raw/PaoLuCloud.ini"
+                    "https://raw.githubusercontent.com/shidahuilang/luci-app-openclash/clash-ZHANG/Rule_config/ZHANG.ini"
               },
               {
                 label: "EXFLUX",
@@ -1134,7 +1159,7 @@ export default {
             this.backendVersion = this.backendVersion.replace("subconverter", "SubConverter");
             let a = this.form.customBackend.indexOf("http://127.0.0.1:25500") !== -1;
             let b = this.form.customBackend.indexOf("1234") !== -1;
-            a ? this.$message.success(`${this.backendVersion}` + "自建本地订阅节点转换后端") : b ? this.$message.success(`${this.backendVersion}` + "") : this.$message.success;})
+            a ? this.$message.success(`${this.backendVersion}` + "默认订阅节点转换后端") : b ? this.$message.success(`${this.backendVersion}` + "") : this.$message.success;})
           .catch(() => {
             this.$message.error("请求SubConverter版本号返回数据失败，该后端不可用！");
           });
