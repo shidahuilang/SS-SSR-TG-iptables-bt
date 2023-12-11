@@ -1003,7 +1003,6 @@ export default {
       }
     },
 
-    },
     onCopy() {
       this.$message.success("已复制");
     },
