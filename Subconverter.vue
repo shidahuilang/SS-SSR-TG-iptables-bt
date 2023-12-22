@@ -593,8 +593,8 @@ export default {
                 value: "https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG.ini"
               },
               {
-                label: "酷酷自用",
-                value: "https://raw.githubusercontent.com/xiaoshenxian233/cool/rule/complex.ini"
+                label: "自用",
+                value: "https://raw.githubusercontent.com/shidahuilang/luci-app-openclash/clash-ZHANG/Rule_config/ZHANG.ini"
               },
               {
                 label: "PharosPro无测速",
