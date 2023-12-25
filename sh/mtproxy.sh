@@ -181,8 +181,8 @@ do_configure_os() {
             if [[ `timeout -k 1s 3s erl |grep -c "Eshell V"` == '0' ]]; then
                 wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb
                 sudo dpkg -i erlang-solutions_2.0_all.deb
-                apt -y update
-                apt-get -y install erlang
+                sudo apt -y update
+                sudo apt-get -y install erlang
             fi
             ;;
         centos)
