@@ -310,23 +310,37 @@ function port_exist_check() {
 }
 
 function xui_install() {
-  print_ok "安装 x-ui"
-  cd /root
-  latest_ver="$(wget -qO- -t1 -T2 "https://api.github.com/repos/vaxilu/x-ui/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')"
-  wget -q -P /root https://ghproxy.com/https://github.com/vaxilu/x-ui/releases/download/${latest_ver}/x-ui-linux-amd64.tar.gz -O /root/x-ui-linux-amd64.tar.gz
-  judge "x-ui 文件下载"
-  rm x-ui/ /usr/local/x-ui/ /usr/bin/x-ui -rf
-  tar zxvf x-ui-linux-amd64.tar.gz
-  judge "x-ui 文件解压"
-  chmod +x x-ui/x-ui x-ui/bin/xray-linux-* x-ui/x-ui.sh
-  cp x-ui/x-ui.sh /usr/bin/x-ui
-  cp -f x-ui/x-ui.service /etc/systemd/system/
-  mv x-ui/ /usr/local/
-  systemctl daemon-reload
-  systemctl enable x-ui
-  systemctl restart x-ui
-  rm -rf /root/x-ui-linux-amd64.tar.gz
-  judge "x-ui 安装"
+print_ok "安装 x-ui"
+cd /root
+arch=$(uname -m)
+
+if [ "$arch" == "x86_64" ]; then
+    latest_ver="$(wget -qO- -t1 -T2 "https://api.github.com/repos/vaxilu/x-ui/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')"
+    wget -q -P /root https://github.com/vaxilu/x-ui/releases/download/${latest_ver}/x-ui-linux-amd64.tar.gz -O /root/x-ui-linux-amd64.tar.gz
+else
+    latest_ver="$(wget -qO- -t1 -T2 "https://api.github.com/repos/vaxilu/x-ui/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')"
+    wget -q -P /root https://github.com/vaxilu/x-ui/releases/download/${latest_ver}/x-ui-linux-arm64.tar.gz -O /root/x-ui-linux-arm64.tar.gz
+fi
+
+judge "x-ui 文件下载"
+rm -rf x-ui/ /usr/local/x-ui/ /usr/bin/x-ui
+if [ "$arch" == "x86_64" ]; then
+    tar zxvf x-ui-linux-amd64.tar.gz
+else
+    tar zxvf x-ui-linux-arm64.tar.gz
+fi
+
+judge "x-ui 文件解压"
+chmod +x x-ui/x-ui x-ui/bin/xray-linux-* x-ui/x-ui.sh
+cp x-ui/x-ui.sh /usr/bin/x-ui
+cp -f x-ui/x-ui.service /etc/systemd/system/
+mv x-ui/ /usr/local/
+systemctl daemon-reload
+systemctl enable x-ui
+systemctl restart x-ui
+rm -rf /root/x-ui-linux-amd64.tar.gz /root/x-ui-linux-arm64.tar.gz
+judge "x-ui 安装"
+
 }
 
 function configure_nginx() {
