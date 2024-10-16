@@ -386,7 +386,7 @@ function configure_xray_ws() {
 
 function xray_install() {
   print_ok "安装 Xray"
-  curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh | bash -s -- install
+  curl -L https://raw.githubusercontent.com/XTLS/Xray-install/refs/heads/main/install-release.sh | bash -s -- install
   judge "Xray 安装"
 }
 
