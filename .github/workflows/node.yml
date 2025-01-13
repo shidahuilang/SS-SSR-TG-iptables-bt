@@ -22,7 +22,7 @@ jobs:
         pip install requests pyyaml
 
     - name: Fetch files from passcro
-      run: python node.py
+      run: python python/node.py
 
     - name: Commit and push changes
       run: |
