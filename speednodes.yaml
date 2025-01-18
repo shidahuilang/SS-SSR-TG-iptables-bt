@@ -18,431 +18,171 @@ external-controller: 127.0.0.1:9090
 mode: rule
 port: 7890
 proxies:
-- name: AU_speednode_0001
-  network: ws
-  port: 8080
-  server: 45.32.245.199
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 9e1457b1-113b-442d-d4dc-6b1f05d374e9
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: CH_speednode_0002
-  network: ws
-  port: 443
-  server: 138.124.53.161
-  servername: dd4.trackid.ir
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: bf2434c2-2200-4c3e-a5dc-6f9aadd4fcd4
-  ws-opts:
-    headers:
-      Host: dd4.trackid.ir
-    path: /
-- name: CN_speednode_0003
-  password: 0bc68743-cff8-4730-9818-9d8192ee335c
-  port: 47479
-  server: 120.232.217.96
-  skip-cert-verify: true
-  type: trojan
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0004
-  password: 7243745919d6de49a5db
-  plugin: obfs
-  plugin-opts:
-    host: 215996dd9f1c3db1e54b.microsoft.com
-    mode: http
-  port: 45578
-  server: console.02.aliyun.aq.kunlunaqs.com
-  type: ss
-- name: CN_speednode_0005
-  password: phXKwfrd
-  port: 36442
-  server: 223.113.54.145
-  skip-cert-verify: true
-  type: trojan
-- name: CN_speednode_0006
-  password: 0bc68743-cff8-4730-9818-9d8192ee335c
-  port: 16233
-  server: 120.232.217.96
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: CN_speednode_0007
-  password: 0bc68743-cff8-4730-9818-9d8192ee335c
-  port: 21146
-  server: 120.232.217.96
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: CN_speednode_0008
-  password: 0bc68743-cff8-4730-9818-9d8192ee335c
-  port: 21142
-  server: 120.232.217.96
-  skip-cert-verify: true
-  type: trojan
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0009
-  password: 9a745aad-7df7-480b-8f6b-068ca21f6954
-  port: 27628
-  server: jhdfzvnq.xn--fiqs8sjz2bull.com
+- cipher: aes-256-cfb
+  name: CN_speednode_0001
+  password: hGkQ6915tD
+  port: 16088
+  server: 120.232.81.50
   type: ss
   udp: true
 - alterId: 64
   cipher: auto
-  name: CN_speednode_0010
+  name: CN_speednode_0002
+  port: 48109
+  server: 183.236.51.23
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 64
+  cipher: auto
+  name: CN_speednode_0003
   port: 51037
   server: 183.236.51.23
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- cipher: aes-256-gcm
-  name: CN_speednode_0011
-  password: 9O695G99XQ9IB757
-  port: 16008
-  server: w72tapyb.slashdevslashnetslashtun.net
-  type: ss
-- name: CN_speednode_0012
-  password: 0bc68743-cff8-4730-9818-9d8192ee335c
-  port: 39431
-  server: 120.232.217.96
-  skip-cert-verify: true
-  type: trojan
   udp: true
-- name: CN_speednode_0013
-  password: lovemm.23
-  port: 22889
-  server: 42.192.52.227
-  type: socks5
-  username: zeaslity
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: CR_speednode_0014
-  network: ws
-  port: 443
-  server: 190.93.245.137
-  servername: WWW.pegAh-Esfahan.De.
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: bcaa20f4-589b-4c9a-9c6f-810f31ad6b30
-  ws-opts:
-    headers:
-      Host: WWW.pegAh-Esfahan.De.
-    path: /
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: CR_speednode_0015
-  network: ws
-  port: 443
-  server: ns4.esfahansiman.com
-  servername: WWW.moghavEmat.bLOg.
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: bcaa20f4-589b-4c9a-9c6f-810f31ad6b30
-  ws-opts:
-    headers:
-      Host: WWW.moghavEmat.bLOg.
-    path: /
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: CR_speednode_0016
-  network: ws
-  port: 443
-  server: 190.93.245.137
-  servername: WWW.EsfahAnsimaN.infO.
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: bcaa20f4-589b-4c9a-9c6f-810f31ad6b30
-  ws-opts:
-    headers:
-      Host: WWW.EsfahAnsimaN.infO.
-    path: /
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: CR_speednode_0017
-  network: ws
-  port: 443
-  server: ns4.esfahansiman.com
-  servername: WWW.pegAh-Esfahan.De.
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: bcaa20f4-589b-4c9a-9c6f-810f31ad6b30
-  ws-opts:
-    headers:
-      Host: WWW.pegAh-Esfahan.De.
-    path: /
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  http-opts:
-    headers:
-      Host:
-      - tunnel-pro.yoooka.lol
-    method: GET
-    path:
-    - /
-  name: DE_speednode_0018
-  network: http
-  port: 45908
-  server: 46.101.71.41
-  servername: tunnel-pro.yoooka.lol
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: b2705a86-7b78-4f59-9205-3a16062b8018
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  http-opts:
-    headers:
-      Host:
-      - m-net.speedtestcustom.com
-    method: GET
-    path:
-    - /
-  name: DE_speednode_0019
-  network: http
-  port: 45908
-  server: tunnel-pro.yoooka.lol
-  servername: tunnel-pro.yoooka.lol
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: b2705a86-7b78-4f59-9205-3a16062b8018
-- name: ES_speednode_0020
-  network: ws
-  port: 8080
-  server: 94.250.246.200
-  servername: a.mifeng.us.kg
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: a.mifeng.us.kg
-    path: /?ed=2560
-- name: FR_speednode_0021
-  network: ws
-  password: Aimer
-  port: 8443
-  server: 88.218.78.95
-  skip-cert-verify: false
-  sni: ameqo.esslh.filegear-sg.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: ameqo.esslh.filegear-sg.me
-    path: /
-- name: GB_speednode_0022
-  network: ws
-  port: 2053
-  server: 143.47.243.144
-  servername: dse.bgm2024.us.kg
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-  ws-opts:
-    headers:
-      Host: dse.bgm2024.us.kg
-    path: /?ed=2560
-- alterId: 0
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 2
   cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /
-  name: HK_speednode_0023
-  network: http
-  port: 16785
-  server: 103.30.76.250
+  name: CN_speednode_0004
+  network: ws
+  port: 22641
+  server: tk.hzlt.tkddns.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7
+  ws-opts:
+    headers:
+      Host: zxjp-a.tkong.cc
+    path: /
+- alterId: 2
+  cipher: auto
+  name: CN_speednode_0005
+  network: ws
+  port: 22642
+  server: tk.hzlt.tkddns.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7
+  ws-opts:
+    headers:
+      Host: zxjp-b.tkong.cc
+    path: /
+- alterId: 64
+  cipher: auto
+  name: CN_speednode_0006
+  port: 45402
+  server: 183.236.48.158
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 086ce045-924d-4538-82ef-debb4ae9ccb5
-- name: HK_speednode_0024
-  port: 4000
-  server: hk9.ftq.ink
-  tls: true
-  type: http
-- name: HK_speednode_0025
-  port: 4000
-  server: ftq.ink
-  tls: true
-  type: http
-- name: IN_speednode_0026
+  udp: true
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- http-opts:
+    headers:
+      Host:
+      - telewebion.com
+    method: GET
+    path:
+    - /
+  name: FR_speednode_0007
+  network: http
+  port: 22671
+  server: 91.134.66.127
+  servername: telewebion.com
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: ebc5660f-bb9b-415c-94ab-d3630189ceb9
+- name: IN_speednode_0008
   password: '3648425794742788096'
   port: 443
   server: 5.8.35.208
   skip-cert-verify: false
   sni: loving-boa.treefrog761.one
   type: trojan
-- cipher: aes-256-cfb
-  name: JP_speednode_0027
-  password: amazonskr05
+  udp: true
+- name: JP_speednode_0009
+  password: 243eab52-9ac1-405c-887c-eb112c0985b8
   port: 443
-  server: 54.199.222.156
-  type: ss
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: JP_speednode_0028
-  network: ws
-  port: 443
-  server: live.989bull.com
-  servername: live.989bull.com
+  server: tw02.trojanyyds.xyz
   skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 5f5a590a-1424-4297-902b-466d10535d49
-  ws-opts:
-    headers:
-      Host: Golestan_VPN.com
-    path: /CHANNEL---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN?ed=8080
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: JP_speednode_0029
-  network: ws
+  sni: tw02.trojanyyds.xyz
+  type: trojan
+  udp: true
+- name: JP_speednode_0010
+  password: 243eab52-9ac1-405c-887c-eb112c0985b8
   port: 443
-  server: zmaoz.faculty.ucdavis.edu
-  servername: zmaoz.faculty.ucdavis.edu.
+  server: tw01.trojanyyds.xyz
   skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: b51ca1a1-b1fb-4d60-84c7-aebbf3a66ea1
-  ws-opts:
-    headers:
-      Host: fonmelo.com
-    path: /olem/ws?ed=4096
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: JP_speednode_0030
-  network: ws
+  sni: tw01.trojanyyds.xyz
+  type: trojan
+  udp: true
+- name: JP_speednode_0011
+  password: 243eab52-9ac1-405c-887c-eb112c0985b8
   port: 443
-  server: cloud.xmsvx.com
-  servername: mio.splashthat.com
+  server: us01.trojanyyds.xyz
   skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: bcaa20f4-589b-4c9a-9c6f-810f31ad6b30
-  ws-opts:
-    headers:
-      Host: jetservices55.ir
-    path: /CANALTELEGRAM--@jet_config--CANALTELEGRAM--@jet_config
-- cipher: aes-256-cfb
-  name: KR_speednode_0031
-  password: qwerREWQ@@
-  port: 31066
-  server: 218.237.185.230
+  sni: us01.trojanyyds.xyz
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf
+  name: JP_speednode_0012
+  password: asd123456
+  port: 8388
+  server: 107.148.6.121
   type: ss
-- cipher: aes-256-cfb
-  name: KR_speednode_0032
-  password: qwerREWQ@@
-  port: 4563
-  server: 121.170.203.148
-  type: ss
-- cipher: aes-256-cfb
-  name: KR_speednode_0033
-  password: amazonskr05
+  udp: true
+- name: JP_speednode_0013
+  password: jehOWFQKcP
   port: 443
-  server: 13.125.197.254
-  type: ss
+  server: 3-112-210-66.nip.io
+  skip-cert-verify: false
+  sni: 3-112-210-66.nip.io
+  type: trojan
+  udp: true
 - cipher: aes-256-cfb
-  name: KR_speednode_0034
+  name: KR_speednode_0014
   password: qwerREWQ@@
-  port: 58989
-  server: 168.126.234.232
+  port: 59686
+  server: p232.panda004.net
   type: ss
+  udp: true
 - cipher: aes-256-cfb
-  name: KR_speednode_0035
+  name: KR_speednode_0015
+  password: qwerREWQ@@
+  port: 40915
+  server: 168.126.234.233
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: KR_speednode_0016
+  password: qwerREWQ@@
+  port: 43104
+  server: 125.141.31.103
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: KR_speednode_0017
   password: qwerREWQ@@
   port: 28290
   server: 125.141.31.74
   type: ss
-- cipher: aes-256-cfb
-  name: KR_speednode_0036
-  password: amazonskr05
-  port: 443
-  server: 3.38.105.152
-  type: ss
   udp: true
-- name: NL_speednode_0037
-  network: ws
-  password: Aimer
-  port: 8443
-  server: 185.204.109.190
-  skip-cert-verify: false
-  sni: ameqo.esslh.filegear-sg.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: ameqo.esslh.filegear-sg.me
-    path: /
-- name: NL_speednode_0038
-  network: ws
-  port: 443
-  server: 158.101.209.76
-  servername: dse.bgm2024.us.kg
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-  ws-opts:
-    headers:
-      Host: dse.bgm2024.us.kg
-    path: /?ed=2560
-- cipher: aes-256-cfb
-  name: PT_speednode_0039
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  server: 185.231.233.173
-  type: ss
-- name: RO_speednode_0040
-  network: ws
-  password: Aimer
-  port: 443
-  server: 45.136.199.132
-  skip-cert-verify: false
-  sni: ameqo.esslh.filegear-sg.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: ameqo.esslh.filegear-sg.me
-    path: /
 - alpn:
   - h3
   - h2
   - http/1.1
   client-fingerprint: ios
-  name: RU_speednode_0041
+  name: RU_speednode_0018
   network: ws
   port: 443
   server: 46.254.92.33
@@ -450,6 +190,7 @@ proxies:
   skip-cert-verify: false
   tls: true
   type: vless
+  udp: true
   uuid: 41abecd9-8096-4142-a75c-4e1d36d990bd
   ws-opts:
     headers:
@@ -457,16 +198,16 @@ proxies:
     path: /?ed=2048
 - alterId: 0
   cipher: auto
-  name: RU_speednode_0042
+  name: RU_speednode_0019
   network: ws
   port: 17926
   server: 195.58.49.50
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
-  uuid: 1ddb0b4d-9010-4e09-809f-86231c204e3f
-- name: SE_speednode_0043
+  uuid: 960c95a9-8502-4cbc-a527-d40c2d68d2b1
+- name: SE_speednode_0020
   network: ws
   port: 2501
   server: 95.164.51.24
@@ -474,569 +215,165 @@ proxies:
   skip-cert-verify: false
   tls: true
   type: vless
+  udp: true
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   ws-opts:
     headers:
       Host: a.mifeng.us.kg
     path: /?ed=2560
+- name: SG_speednode_0021
+  password: m3fdSqqtcr
+  port: 443
+  server: sg.235261.xyz
+  skip-cert-verify: false
+  sni: sg.235261.xyz
+  type: trojan
+  udp: true
 - alpn:
   - h3
   - h2
   - http/1.1
-  client-fingerprint: ios
-  name: SI_speednode_0044
+  client-fingerprint: chrome
+  http-opts:
+    headers:
+      Host:
+      - speedtest.net
+    method: GET
+    path:
+    - /@OpenSSTPVpn@OpenSSTPVpn@OpenSSTPVpn@OpenSSTPVpn@OpenSSTPVpn@OpenSSTPVpn
+  name: UA_speednode_0022
+  network: http
+  port: 16383
+  server: 46.202.194.73
+  servername: speedtest.net
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 225a19c0-2f15-4de7-9658-5ffcff656aac
+- name: US_speednode_0023
   network: ws
   port: 443
-  server: 92.60.74.100
+  server: 192.0.54.235
   servername: mmdserver.us.kg
   skip-cert-verify: false
   tls: true
   type: vless
+  udp: true
   uuid: 41abecd9-8096-4142-a75c-4e1d36d990bd
   ws-opts:
     headers:
       Host: mmdserver.us.kg
     path: /?ed=2048
-- name: TR_speednode_0045
+- name: US_speednode_0024
   network: ws
-  port: 2501
-  server: 95.164.116.22
-  servername: a.mifeng.us.kg
+  port: 443
+  server: 198.62.62.13
+  servername: dse.bgm2024.us.kg
   skip-cert-verify: false
   tls: true
   type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  udp: true
+  uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
   ws-opts:
     headers:
-      Host: a.mifeng.us.kg
+      Host: dse.bgm2024.us.kg
     path: /?ed=2560
-- name: US_speednode_0046
+- name: US_speednode_0025
   network: ws
-  port: 80
-  server: 167.82.1.102
-  servername: teleirani.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 253ef561-9e57-4336-befd-878ddd30df01
-  ws-opts:
-    headers:
-      Host: teleirani.ir
-    path: /?ed=2048
-- name: US_speednode_0047
-  network: ws
-  port: 80
-  server: 167.82.1.103
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /?ed=2560
-- name: US_speednode_0048
-  network: ws
-  port: 80
-  server: 167.82.0.47
-  servername: teleirani.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 253ef561-9e57-4336-befd-878ddd30df01
-  ws-opts:
-    headers:
-      Host: teleirani.ir
-    path: /vless-ws/@V2ray_Alpha/?ed=2560
-- name: US_speednode_0049
-  network: ws
-  port: 80
-  server: 167.82.0.147
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /
-- name: US_speednode_0050
-  network: ws
-  port: 80
-  server: 167.82.100.124
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws/@Azarbayjab1@Azarbayjab1@Azarbayjab1@Azarbayjab1@Azarbayja1/?ed=2560
-- name: US_speednode_0051
-  network: ws
-  port: 80
-  server: 167.82.101.100
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws/@Azarbayjab1@Azarbayjab1@Azarbayjab1@Azarbayjab1@Azarbayja1/?ed=2560
-- name: US_speednode_0052
-  network: ws
-  port: 80
-  server: 198.41.199.226
-  servername: a.mifeng.us.kg
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: a.mifeng.us.kg
-    path: /telegram-_-_-_-_-__-free_shekan-_-_-_-/?ed=2048
-- name: US_speednode_0053
-  network: ws
-  port: 80
-  server: 198.41.198.40
-  servername: a.mifeng.us.kg
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: a.mifeng.us.kg
-    path: /telegram-_-_-_-_-__-free_shekan-_-_-_-/?ed=2048
-- name: US_speednode_0054
-  network: ws
-  port: 80
-  server: 198.41.205.44
-  servername: a.mifeng.us.kg
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: a.mifeng.us.kg
-    path: /telegram-_-_-_-_-__-free_shekan-_-_-_-/?ed=2048
-- name: US_speednode_0055
-  network: ws
-  port: 80
-  server: 167.82.99.4
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws/@Azarbayjab1@Azarbayjab1@Azarbayjab1@Azarbayjab1@Azarbayja1/?ed=2560
-- name: US_speednode_0056
-  network: ws
-  port: 80
-  server: 167.82.101.10
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws/@Azarbayjab1@Azarbayjab1@Azarbayjab1@Azarbayjab1@Azarbayja1/?ed=2560
-- name: US_speednode_0057
-  network: ws
-  port: 80
-  server: 167.82.99.180
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws/@Azarbayjab1@Azarbayjab1@Azarbayjab1@Azarbayjab1@Azarbayja1/?ed=2560
-- name: US_speednode_0058
-  network: ws
-  port: 80
-  server: 198.41.209.27
-  servername: a.mifeng.us.kg
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: a.mifeng.us.kg
-    path: /telegram-_-_-_-_-__-free_shekan-_-_-_-/?ed=2048
-- name: US_speednode_0059
-  network: ws
-  port: 80
-  server: 167.82.101.76
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws/Telegram@V2ray_Alpha/?ed=2560
-- name: US_speednode_0060
-  network: ws
-  port: 80
-  server: 167.82.101.76
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws/@Azarbayjab1@Azarbayjab1@Azarbayjab1@Azarbayjab1@Azarbayja1/?ed=2560
-- name: US_speednode_0061
-  network: ws
-  port: 80
-  server: 167.82.102.107
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws/@Azarbayjab1@Azarbayjab1@Azarbayjab1@Azarbayjab1@Azarbayja1/?ed=2560
-- cipher: aes-256-cfb
-  name: US_speednode_0062
-  password: amazonskr05
   port: 443
-  server: 34.219.111.92
-  type: ss
-- name: US_speednode_0063
-  network: ws
-  port: 80
-  server: 141.101.122.107
-  servername: a.mifeng.us.kg
+  server: 160.79.104.231
+  servername: dse.bgm2024.us.kg
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  udp: true
+  uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
   ws-opts:
     headers:
-      Host: a.mifeng.us.kg
-    path: /telegram-_-_-_-_-__-free_shekan-_-_-_-/?ed=2048
-- name: US_speednode_0064
-  network: ws
-  port: 80
-  server: 141.101.121.87
-  servername: a.mifeng.us.kg
+      Host: dse.bgm2024.us.kg
+    path: /?ed=2560
+- name: US_speednode_0026
+  password: vZl3dFcxdE
+  port: 443
+  server: 18-189-26-136.nip.io
   skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: a.mifeng.us.kg
-    path: /telegram-_-_-_-_-__-free_shekan-_-_-_-/?ed=2048
-- name: US_speednode_0065
-  network: ws
-  password: Aimer
-  port: 2087
-  server: 209.94.90.87
-  skip-cert-verify: false
-  sni: ameqo.esslh.filegear-sg.me
+  sni: 18-189-26-136.nip.io
   type: trojan
-  ws-opts:
-    headers:
-      Host: ameqo.esslh.filegear-sg.me
-    path: /
-- name: US_speednode_0066
-  network: ws
+  udp: true
+- alpn:
+  - h2
+  - http/1.1
+  name: US_speednode_0027
   port: 443
-  server: 141.101.123.208
-  servername: usa.warpo.me
+  server: 147135004002.sec20org.com
   skip-cert-verify: false
   tls: true
   type: vless
-  uuid: 8e63cfe4-8855-4334-9619-a5d403bf2b8e
-  ws-opts:
-    headers:
-      Host: usa.warpo.me
-    path: /bing
-- cipher: aes-256-cfb
-  name: US_speednode_0067
-  password: amazonskr05
-  port: 443
-  server: 34.222.159.211
-  type: ss
-- cipher: aes-256-cfb
-  name: US_speednode_0068
-  password: amazonskr05
-  port: 443
-  server: 18.236.91.62
-  type: ss
-- name: US_speednode_0069
-  network: ws
-  port: 443
-  server: 69.84.182.165
-  servername: dse.bgm2024.us.kg
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-  ws-opts:
-    headers:
-      Host: dse.bgm2024.us.kg
-    path: /?ed=2560
-- name: US_speednode_0070
-  network: ws
-  port: 443
-  server: 172.82.16.99
-  servername: dse.bgm2024.us.kg
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-  ws-opts:
-    headers:
-      Host: dse.bgm2024.us.kg
-    path: /?ed=2560
-- name: US_speednode_0071
-  network: ws
-  port: 443
-  server: 198.62.62.198
-  servername: dse.bgm2024.us.kg
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-  ws-opts:
-    headers:
-      Host: dse.bgm2024.us.kg
-    path: /?ed=2560
-- name: US_speednode_0072
-  network: ws
-  port: 443
-  server: 69.84.182.106
-  servername: dse.bgm2024.us.kg
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-  ws-opts:
-    headers:
-      Host: dse.bgm2024.us.kg
-    path: /?ed=2560
-- name: US_speednode_0073
-  network: ws
-  port: 443
-  server: 135.84.76.131
-  servername: dse.bgm2024.us.kg
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-  ws-opts:
-    headers:
-      Host: dse.bgm2024.us.kg
-    path: /?ed=2560
-- alterId: 64
-  cipher: auto
-  name: US_speednode_0074
-  network: ws
-  port: 38005
-  server: 198.2.195.7
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.27306103.xyz
-    path: /path/1736415675034
-- name: ZA_speednode_0075
-  network: ws
-  port: 443
-  server: 160.123.255.159
-  servername: dse.bgm2024.us.kg
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-  ws-opts:
-    headers:
-      Host: dse.bgm2024.us.kg
-    path: /?ed=2560
+  udp: true
+  uuid: 54694a33-a8dc-47dd-bc38-acd3971e0055
 proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
   - "\u267B\uFE0F automatic"
-  - AU_speednode_0001
-  - CH_speednode_0002
+  - CN_speednode_0001
+  - CN_speednode_0002
   - CN_speednode_0003
   - CN_speednode_0004
   - CN_speednode_0005
   - CN_speednode_0006
-  - CN_speednode_0007
-  - CN_speednode_0008
-  - CN_speednode_0009
-  - CN_speednode_0010
-  - CN_speednode_0011
-  - CN_speednode_0012
-  - CN_speednode_0013
-  - CR_speednode_0014
-  - CR_speednode_0015
-  - CR_speednode_0016
-  - CR_speednode_0017
-  - DE_speednode_0018
-  - DE_speednode_0019
-  - ES_speednode_0020
-  - FR_speednode_0021
-  - GB_speednode_0022
-  - HK_speednode_0023
-  - HK_speednode_0024
-  - HK_speednode_0025
-  - IN_speednode_0026
-  - JP_speednode_0027
-  - JP_speednode_0028
-  - JP_speednode_0029
-  - JP_speednode_0030
-  - KR_speednode_0031
-  - KR_speednode_0032
-  - KR_speednode_0033
-  - KR_speednode_0034
-  - KR_speednode_0035
-  - KR_speednode_0036
-  - NL_speednode_0037
-  - NL_speednode_0038
-  - PT_speednode_0039
-  - RO_speednode_0040
-  - RU_speednode_0041
-  - RU_speednode_0042
-  - SE_speednode_0043
-  - SI_speednode_0044
-  - TR_speednode_0045
-  - US_speednode_0046
-  - US_speednode_0047
-  - US_speednode_0048
-  - US_speednode_0049
-  - US_speednode_0050
-  - US_speednode_0051
-  - US_speednode_0052
-  - US_speednode_0053
-  - US_speednode_0054
-  - US_speednode_0055
-  - US_speednode_0056
-  - US_speednode_0057
-  - US_speednode_0058
-  - US_speednode_0059
-  - US_speednode_0060
-  - US_speednode_0061
-  - US_speednode_0062
-  - US_speednode_0063
-  - US_speednode_0064
-  - US_speednode_0065
-  - US_speednode_0066
-  - US_speednode_0067
-  - US_speednode_0068
-  - US_speednode_0069
-  - US_speednode_0070
-  - US_speednode_0071
-  - US_speednode_0072
-  - US_speednode_0073
-  - US_speednode_0074
-  - ZA_speednode_0075
+  - FR_speednode_0007
+  - IN_speednode_0008
+  - JP_speednode_0009
+  - JP_speednode_0010
+  - JP_speednode_0011
+  - JP_speednode_0012
+  - JP_speednode_0013
+  - KR_speednode_0014
+  - KR_speednode_0015
+  - KR_speednode_0016
+  - KR_speednode_0017
+  - RU_speednode_0018
+  - RU_speednode_0019
+  - SE_speednode_0020
+  - SG_speednode_0021
+  - UA_speednode_0022
+  - US_speednode_0023
+  - US_speednode_0024
+  - US_speednode_0025
+  - US_speednode_0026
+  - US_speednode_0027
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
-  - AU_speednode_0001
-  - CH_speednode_0002
+  - CN_speednode_0001
+  - CN_speednode_0002
   - CN_speednode_0003
   - CN_speednode_0004
   - CN_speednode_0005
   - CN_speednode_0006
-  - CN_speednode_0007
-  - CN_speednode_0008
-  - CN_speednode_0009
-  - CN_speednode_0010
-  - CN_speednode_0011
-  - CN_speednode_0012
-  - CN_speednode_0013
-  - CR_speednode_0014
-  - CR_speednode_0015
-  - CR_speednode_0016
-  - CR_speednode_0017
-  - DE_speednode_0018
-  - DE_speednode_0019
-  - ES_speednode_0020
-  - FR_speednode_0021
-  - GB_speednode_0022
-  - HK_speednode_0023
-  - HK_speednode_0024
-  - HK_speednode_0025
-  - IN_speednode_0026
-  - JP_speednode_0027
-  - JP_speednode_0028
-  - JP_speednode_0029
-  - JP_speednode_0030
-  - KR_speednode_0031
-  - KR_speednode_0032
-  - KR_speednode_0033
-  - KR_speednode_0034
-  - KR_speednode_0035
-  - KR_speednode_0036
-  - NL_speednode_0037
-  - NL_speednode_0038
-  - PT_speednode_0039
-  - RO_speednode_0040
-  - RU_speednode_0041
-  - RU_speednode_0042
-  - SE_speednode_0043
-  - SI_speednode_0044
-  - TR_speednode_0045
-  - US_speednode_0046
-  - US_speednode_0047
-  - US_speednode_0048
-  - US_speednode_0049
-  - US_speednode_0050
-  - US_speednode_0051
-  - US_speednode_0052
-  - US_speednode_0053
-  - US_speednode_0054
-  - US_speednode_0055
-  - US_speednode_0056
-  - US_speednode_0057
-  - US_speednode_0058
-  - US_speednode_0059
-  - US_speednode_0060
-  - US_speednode_0061
-  - US_speednode_0062
-  - US_speednode_0063
-  - US_speednode_0064
-  - US_speednode_0065
-  - US_speednode_0066
-  - US_speednode_0067
-  - US_speednode_0068
-  - US_speednode_0069
-  - US_speednode_0070
-  - US_speednode_0071
-  - US_speednode_0072
-  - US_speednode_0073
-  - US_speednode_0074
-  - ZA_speednode_0075
+  - FR_speednode_0007
+  - IN_speednode_0008
+  - JP_speednode_0009
+  - JP_speednode_0010
+  - JP_speednode_0011
+  - JP_speednode_0012
+  - JP_speednode_0013
+  - KR_speednode_0014
+  - KR_speednode_0015
+  - KR_speednode_0016
+  - KR_speednode_0017
+  - RU_speednode_0018
+  - RU_speednode_0019
+  - SE_speednode_0020
+  - SG_speednode_0021
+  - UA_speednode_0022
+  - US_speednode_0023
+  - US_speednode_0024
+  - US_speednode_0025
+  - US_speednode_0026
+  - US_speednode_0027
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
