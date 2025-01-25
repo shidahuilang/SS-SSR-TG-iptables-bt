@@ -22,9 +22,8 @@ proxies:
   - h2
   name: AR_speednode_0001
   port: 8443
-  server: 103.50.33.138
-  servername: eze-1.fromblancwithlove.com
-  skip-cert-verify: true
+  server: eze-1.fromblancwithlove.com
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
@@ -33,8 +32,9 @@ proxies:
   - h2
   name: AR_speednode_0002
   port: 8443
-  server: eze-1.fromblancwithlove.com
-  skip-cert-verify: false
+  server: 103.50.33.138
+  servername: eze-1.fromblancwithlove.com
+  skip-cert-verify: true
   tls: true
   type: vless
   udp: true
@@ -52,17 +52,7 @@ proxies:
   uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
 - alpn:
   - h2
-  name: BE_speednode_0004
-  port: 8443
-  server: bru-be-01.fromblancwithlove.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
-- alpn:
-  - h2
-  name: BR_speednode_0005
+  name: BR_speednode_0004
   port: 8443
   server: 46.151.194.89
   servername: sao-br.fromblancwithlove.com
@@ -73,7 +63,7 @@ proxies:
   uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
 - alpn:
   - h2
-  name: BR_speednode_0006
+  name: BR_speednode_0005
   port: 8443
   server: sao-br.fromblancwithlove.com
   skip-cert-verify: false
@@ -81,7 +71,7 @@ proxies:
   type: vless
   udp: true
   uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
-- name: CH_speednode_0007
+- name: CH_speednode_0006
   obfs: salamander
   obfs-password: '@azadi_az_inja_migzare'
   password: '@azadi_az_inja_migzare'
@@ -93,17 +83,7 @@ proxies:
   udp: true
 - alterId: 64
   cipher: auto
-  name: CN_speednode_0008
-  port: 40565
-  server: 120.232.153.63
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- alterId: 64
-  cipher: auto
-  name: CN_speednode_0009
+  name: CN_speednode_0007
   port: 45402
   server: 120.232.153.123
   skip-cert-verify: false
@@ -111,35 +91,53 @@ proxies:
   type: vmess
   udp: true
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- alterId: 0
-  cipher: auto
-  name: CN_speednode_0010
-  port: 34006
-  server: new-zf2.netcar.live
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 42b77008-47cc-4808-8b4f-81185af7d423
-- alterId: 64
-  cipher: auto
-  name: CN_speednode_0011
-  port: 48109
-  server: 183.236.51.23
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - cipher: aes-256-cfb
-  name: CN_speednode_0012
+  name: CN_speednode_0008
   password: hGkQ6915tD
   port: 16088
   server: 120.232.81.50
   type: ss
   udp: true
-- cipher: rc4-md5
+- cipher: aes-256-gcm
+  name: CN_speednode_0009
+  password: 5KM1ZLFIVE4AVS2A
+  port: 15011
+  server: 183.232.239.172
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: CN_speednode_0010
+  password: EKL22E7LU1P3EPZC
+  port: 16015
+  server: qh62onjn.slashdevslashnetslashtun.net
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: CN_speednode_0011
+  password: HK94FBWD4KFIPD9F
+  port: 18015
+  server: qh62onjn.slashdevslashnetslashtun.net
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: CN_speednode_0012
+  password: 3FB23A19-9424-40C7-9139-3540228283FA
+  port: 40005
+  server: sgp.fastsoonlink.com
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
   name: CN_speednode_0013
+  port: 33436
+  server: cmeiguo4.mmods.site
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 87db8a11-c697-3c85-8369-84554fa9f83e
+- cipher: rc4-md5
+  name: CN_speednode_0014
   obfs: plain
   obfs-param: cd2b692902.6602b8463464108506.microsoft.com
   password: ENZ52K
@@ -149,36 +147,9 @@ proxies:
   server: 3.link-hub.click
   type: ssr
   udp: true
-- alterId: 0
-  cipher: auto
-  name: CN_speednode_0014
-  port: 33436
-  server: cmeiguo4.mmods.site
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 87db8a11-c697-3c85-8369-84554fa9f83e
-- cipher: aes-256-cfb
-  name: CN_speednode_0015
-  password: hGkQ6915tD
-  port: 15084
-  server: 120.232.81.50
-  type: ss
-  udp: true
-- alterId: 64
-  cipher: auto
-  name: CN_speednode_0016
-  port: 51037
-  server: 183.236.51.23
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - alterId: 2
   cipher: auto
-  name: CN_speednode_0017
+  name: CN_speednode_0015
   network: ws
   port: 22641
   server: tk.hzlt.tkddns.xyz
@@ -193,7 +164,7 @@ proxies:
     path: /
 - alpn:
   - h2
-  name: CO_speednode_0018
+  name: CO_speednode_0016
   port: 8443
   server: 169.150.228.24
   servername: bog-co-01.fromblancwithlove.com
@@ -204,7 +175,7 @@ proxies:
   uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
 - alpn:
   - h2
-  name: CO_speednode_0019
+  name: CO_speednode_0017
   port: 8443
   server: bog-co-01.fromblancwithlove.com
   skip-cert-verify: false
@@ -212,34 +183,21 @@ proxies:
   type: vless
   udp: true
   uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
-- name: DE_speednode_0020
-  password: mSIusSz2Ku3YUWxB85cQa
-  port: 18881
-  server: c.2513142.xyz
+- alterId: 0
+  cipher: auto
+  http-opts:
+    method: GET
+    path:
+    - /
+  name: DE_speednode_0018
+  network: http
+  port: 2082
+  server: 64.225.109.206
   skip-cert-verify: false
-  type: hysteria2
+  tls: false
+  type: vmess
   udp: true
-- name: DE_speednode_0021
-  password: mSIusSz2Ku3YUWxB85cQa
-  port: 18882
-  server: c.2513142.xyz
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: DE_speednode_0022
-  password: mSIusSz2Ku3YUWxB85cQa
-  port: 18884
-  server: c.2513142.xyz
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: DE_speednode_0023
-  password: mSIusSz2Ku3YUWxB85cQa
-  port: 18880
-  server: c.2513142.xyz
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
+  uuid: 48264b45-64b8-4e9f-8a88-cef41f20c736
 - alterId: 0
   cipher: auto
   http-opts:
@@ -249,7 +207,7 @@ proxies:
     method: GET
     path:
     - /
-  name: DE_speednode_0024
+  name: DE_speednode_0019
   network: http
   port: 2082
   server: 64.225.109.206
@@ -258,62 +216,64 @@ proxies:
   type: vmess
   udp: true
   uuid: 48264b45-64b8-4e9f-8a88-cef41f20c736
-- http-opts:
-    headers:
-      Host:
-      - speedtest.net
-    method: GET
-    path:
-    - /
-  name: DE_speednode_0025
-  network: http
-  port: 80
-  server: 2na9noed62ec.dopraxrocks.com
-  servername: speedtest.net
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: a52dd329-acad-413b-aa8f-713686ad690c
-- alterId: 0
-  cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /
-  name: DE_speednode_0026
-  network: http
-  port: 2082
-  server: 64.225.109.206
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 48264b45-64b8-4e9f-8a88-cef41f20c736
 - alpn:
   - h2
-  name: DE_speednode_0027
+  name: DE_speednode_0020
   port: 8443
   server: 195.181.175.176
   servername: de1.fromblancwithlove.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
-- alpn:
-  - h2
-  name: ES_speednode_0028
-  port: 8443
-  server: mad-es.fromblancwithlove.com
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
   uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
+- name: DE_speednode_0021
+  password: mSIusSz2Ku3YUWxB85cQa
+  port: 18881
+  server: c.2513142.xyz
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: DE_speednode_0022
+  password: mSIusSz2Ku3YUWxB85cQa
+  port: 18880
+  server: c.2513142.xyz
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: DE_speednode_0023
+  password: mSIusSz2Ku3YUWxB85cQa
+  port: 18882
+  server: c.2513142.xyz
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: DE_speednode_0024
+  password: mSIusSz2Ku3YUWxB85cQa
+  port: 18884
+  server: c.2513142.xyz
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: DE_speednode_0025
+  port: 443
+  reality-opts:
+    public-key: SDUAmbkyV3wQEEXwV9wpwTqS2qi7gOekiZNpS1jfcXc
+    short-id: d59cd3
+  server: 156.67.30.77
+  servername: spotify.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1051bfbb-90db-4261-b5e4-8b91f62b436f
 - alpn:
   - h2
-  name: ES_speednode_0029
+  name: ES_speednode_0026
   port: 8443
   server: 212.102.48.216
   servername: mad-es.fromblancwithlove.com
@@ -323,24 +283,11 @@ proxies:
   udp: true
   uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
 - alpn:
-  - h3
-  auth_str: dongtaiwang.com
-  down: 55 Mbps
-  name: FR_speednode_0030
-  port: 22787
-  server: 195.154.184.5
-  skip-cert-verify: true
-  sni: bing.com
-  type: hysteria
-  udp: true
-  up: 11 Mbps
-- alpn:
   - h2
-  name: FR_speednode_0031
+  name: ES_speednode_0027
   port: 8443
-  server: 138.199.27.206
-  servername: cdg-1.fromblancwithlove.com
-  skip-cert-verify: true
+  server: mad-es.fromblancwithlove.com
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
@@ -352,7 +299,7 @@ proxies:
     method: GET
     path:
     - /
-  name: FR_speednode_0032
+  name: FR_speednode_0028
   network: http
   port: 22671
   server: 91.134.102.128
@@ -363,18 +310,20 @@ proxies:
   udp: true
   uuid: 91989253-37d6-4d28-83fe-8ffd0c3de0f7
 - alpn:
-  - h2
-  name: FR_speednode_0033
-  port: 8443
-  server: cdg-1.fromblancwithlove.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
+  - h3
+  auth_str: dongtaiwang.com
+  down: 55 Mbps
+  name: FR_speednode_0029
+  port: 22787
+  server: 195.154.184.5
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria
   udp: true
-  uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
+  up: 11 Mbps
 - alpn:
   - h2
-  name: GB_speednode_0034
+  name: GB_speednode_0030
   port: 8443
   server: 95.173.205.70
   servername: osl-no-01.fromblancwithlove.com
@@ -383,16 +332,19 @@ proxies:
   type: vless
   udp: true
   uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
-- cipher: chacha20-ietf-poly1305
-  name: GI_speednode_0035
-  password: M2I0MzM2
-  port: 8388
-  server: 95.164.68.37
-  type: ss
-  udp: true
 - alpn:
   - h2
-  name: GR_speednode_0036
+  name: GR_speednode_0031
+  port: 8443
+  server: ath-gr-01.fromblancwithlove.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
+- alpn:
+  - h2
+  name: GR_speednode_0032
   port: 8443
   server: 79.127.218.204
   servername: ath-gr-01.fromblancwithlove.com
@@ -401,17 +353,7 @@ proxies:
   type: vless
   udp: true
   uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
-- alpn:
-  - h2
-  name: GR_speednode_0037
-  port: 8443
-  server: ath-gr-01.fromblancwithlove.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
-- name: HK_speednode_0038
+- name: HK_speednode_0033
   port: 4000
   server: hk9.ftq.ink
   tls: true
@@ -419,7 +361,7 @@ proxies:
   udp: true
 - alpn:
   - h2
-  name: IN_speednode_0039
+  name: IN_speednode_0034
   port: 8443
   server: 64.227.148.121
   servername: blr-in.fromblancwithlove.com
@@ -428,72 +370,25 @@ proxies:
   type: vless
   udp: true
   uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
-- name: IN_speednode_0040
-  password: bc5cf4d1-2efb-49f5-98c3-c350f08c1f51
-  port: 443
-  server: in1.p9999.space
-  skip-cert-verify: true
-  sni: bilibili.com
-  type: trojan
-  udp: true
-- http-opts:
+- alterId: 0
+  cipher: auto
+  http-opts:
     headers:
       Host:
-      - uptv.ir
+      - telewebion.com
     method: GET
     path:
     - /
-  name: IR_speednode_0041
+  name: IR_speednode_0035
   network: http
-  port: 2020
-  server: 89.47.197.231
-  servername: uptv.ir
+  port: 26763
+  server: 31.184.172.177
   skip-cert-verify: false
   tls: false
-  type: vless
+  type: vmess
   udp: true
-  uuid: 028e3bfe-bec5-44aa-ad20-0c37e4935f02
-- http-opts:
-    headers:
-      Host:
-      - www.speedtest.net
-    method: GET
-    path:
-    - /
-  name: IR_speednode_0042
-  network: http
-  port: 49894
-  server: 37.32.42.138
-  servername: www.speedtest.net
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 7e8cdde3-ebf5-47a2-b6fb-290ddec5ab88
-- name: JP_speednode_0043
-  password: 5fb2bc8c-e2d2-41bf-8478-aa16723c23f4
-  port: 30000
-  server: jp4.helloco.xyz
-  skip-cert-verify: false
-  sni: jp4.helloco.xyz
-  type: hysteria2
-  udp: true
-- name: KR_speednode_0044
-  password: 5fb2bc8c-e2d2-41bf-8478-aa16723c23f4
-  port: 30000
-  server: kr1.helloco.xyz
-  skip-cert-verify: false
-  sni: kr1.helloco.xyz
-  type: hysteria2
-  udp: true
-- cipher: aes-256-cfb
-  name: KR_speednode_0045
-  password: qwerREWQ@@
-  port: 22081
-  server: p110.panda001.net
-  type: ss
-  udp: true
-- name: KR_speednode_0046
+  uuid: 09ffa976-e1ed-45e3-8a6b-1475e3893fee
+- name: KR_speednode_0036
   password: 5fb2bc8c-e2d2-41bf-8478-aa16723c23f4
   port: 30000
   server: kr2.helloco.xyz
@@ -503,9 +398,9 @@ proxies:
   udp: true
 - alpn:
   - h2
-  name: MX_speednode_0047
+  name: KZ_speednode_0037
   port: 8443
-  server: qro-mx-01.fromblancwithlove.com
+  server: kz-2.fromblancwithlove.com
   skip-cert-verify: false
   tls: true
   type: vless
@@ -513,36 +408,17 @@ proxies:
   uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
 - alpn:
   - h2
-  name: MX_speednode_0048
+  name: PE_speednode_0038
   port: 8443
-  server: 79.127.229.40
-  servername: qro-mx-01.fromblancwithlove.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
-- cipher: chacha20-ietf-poly1305
-  name: NL_speednode_0049
-  password: 4a2rfixophdjffa8KVA4Aa
-  port: 8080
-  server: 193.29.139.179
-  type: ss
-  udp: true
-- alpn:
-  - h2
-  name: NL_speednode_0050
-  port: 8443
-  server: 79.127.239.84
-  servername: ams1.fromblancwithlove.com
-  skip-cert-verify: true
+  server: lim-pe-01.fromblancwithlove.com
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
   uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
 - alpn:
   - h2
-  name: PE_speednode_0051
+  name: PE_speednode_0039
   port: 8443
   server: 79.127.252.81
   servername: lim-pe-01.fromblancwithlove.com
@@ -551,39 +427,47 @@ proxies:
   type: vless
   udp: true
   uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
-- cipher: aes-256-cfb
-  name: PH_speednode_0052
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  server: 154.90.37.139
-  type: ss
+- alterId: 0
+  cipher: auto
+  name: RU_speednode_0040
+  network: ws
+  port: 23532
+  server: 195.58.49.50
+  skip-cert-verify: false
+  tls: false
+  type: vmess
   udp: true
-- alpn:
-  - h2
-  name: PL_speednode_0053
-  port: 8443
-  server: 84.17.55.151
-  servername: pl1.fromblancwithlove.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
+  uuid: d44df4da-3ee6-4a57-ac22-cd532da65f93
+- alterId: 0
+  cipher: auto
+  name: RU_speednode_0041
+  network: ws
+  port: 23532
+  server: 195.58.49.42
+  skip-cert-verify: false
+  tls: false
+  type: vmess
   udp: true
-  uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
-- alpn:
-  - h2
-  name: PL_speednode_0054
-  port: 8443
-  server: pl1.fromblancwithlove.com
+  uuid: 5057efc1-348d-41aa-a1a7-b35a65ed65fd
+- name: RU_speednode_0042
+  network: ws
+  port: 443
+  server: 46.254.92.33
+  servername: mmdserver.us.kg
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
+  uuid: 41abecd9-8096-4142-a75c-4e1d36d990bd
+  ws-opts:
+    headers:
+      Host: mmdserver.us.kg
+    path: /?ed=2048
 - alpn:
   - h3
   auth_str: dongtaiwang.com
   down: 55 Mbps
-  name: RU_speednode_0055
+  name: RU_speednode_0043
   obfs: dongtaiwang.com
   port: 15424
   server: 185.22.155.71
@@ -594,347 +478,41 @@ proxies:
   up: 11 Mbps
 - alpn:
   - h2
-  name: SE_speednode_0056
+  name: SG_speednode_0044
   port: 8443
-  server: 79.127.249.104
-  servername: se1.fromblancwithlove.com
+  server: 156.146.56.207
+  servername: sin-sg-01.fromblancwithlove.com
   skip-cert-verify: true
   tls: true
   type: vless
   udp: true
   uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
-- name: SG_speednode_0057
-  password: 5fb2bc8c-e2d2-41bf-8478-aa16723c23f4
-  port: 30000
-  server: sg4.helloco.xyz
+- alpn:
+  - h2
+  name: SG_speednode_0045
+  port: 8443
+  server: sin-sg-01.fromblancwithlove.com
   skip-cert-verify: false
-  sni: sg4.helloco.xyz
-  type: hysteria2
-  udp: true
-- name: SG_speednode_0058
-  password: '3760559353321758720'
-  port: 443
-  server: dear-sunbeam.treefrog761.one
-  skip-cert-verify: true
-  sni: dear-sunbeam.treefrog761.one
-  type: trojan
-  udp: true
-- cipher: aes-256-cfb
-  name: SG_speednode_0059
-  password: amazonskr05
-  port: 443
-  server: 13.215.173.202
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: SG_speednode_0060
-  password: amazonskr05
-  port: 443
-  server: 18.142.225.149
-  type: ss
-  udp: true
-- name: SG_speednode_0061
-  network: ws
-  port: 80
-  server: 103.253.145.213
-  servername: zoom.us
-  skip-cert-verify: false
-  tls: false
+  tls: true
   type: vless
   udp: true
-  uuid: f6880deb-1c08-4dae-9715-0a175a6519ae
-  ws-opts:
-    headers:
-      Host: zoom.us
-    path: /FREE By Tharuwa (0767597317)
-- name: US_speednode_0062
-  network: ws
-  port: 80
-  server: 167.82.0.141
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws/@Azarbayjab1@Azarbayjab1@Azarbayjab1@Azarbayjab1@Azarbayja1/?ed=2560
-- name: US_speednode_0063
-  network: ws
-  port: 80
-  server: 167.82.1.103
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /?ed=2560
-- name: US_speednode_0064
-  network: ws
-  port: 80
-  server: 167.82.0.37
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws
-- client-fingerprint: chrome
-  name: US_speednode_0065
-  network: ws
-  port: 80
-  server: 167.82.0.1
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /
-- name: US_speednode_0066
-  network: ws
-  port: 80
-  server: 167.82.0.0
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /
-- name: US_speednode_0067
-  network: ws
-  port: 80
-  server: 167.82.0.46
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws
+  uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
 - alterId: 64
   cipher: auto
-  name: US_speednode_0068
-  port: 41400
-  server: 38.33.19.71
+  name: US_speednode_0046
+  network: ws
+  port: 37004
+  server: 108.186.26.174
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vmess
   udp: true
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- name: US_speednode_0069
-  network: ws
-  port: 80
-  server: 167.82.65.8
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
   ws-opts:
     headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws
-- client-fingerprint: chrome
-  name: US_speednode_0070
-  network: ws
-  port: 80
-  server: 167.82.102.107
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /fp=chrome
-- name: US_speednode_0071
-  network: ws
-  port: 80
-  server: 167.82.102.107
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /
-- name: US_speednode_0072
-  network: ws
-  port: 80
-  server: 167.82.101.76
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws
-- client-fingerprint: chrome
-  name: US_speednode_0073
-  network: ws
-  port: 80
-  server: 167.82.101.100
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-wsfp=chrome
-- name: US_speednode_0074
-  password: bc5cf4d1-2efb-49f5-98c3-c350f08c1f51
-  port: 443
-  server: us3.p9999.space
-  skip-cert-verify: true
-  sni: bilibili.com
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: US_speednode_0075
-  network: ws
-  port: 80
-  server: 167.82.99.4
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-wsfp=chrome
-- name: US_speednode_0076
-  network: ws
-  port: 80
-  server: 167.82.99.180
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws
-- name: US_speednode_0077
-  network: ws
-  port: 80
-  server: 167.82.72.38
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /
-- client-fingerprint: chrome
-  name: US_speednode_0078
-  network: ws
-  port: 80
-  server: 167.82.101.10
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws
-- name: US_speednode_0079
-  network: ws
-  port: 80
-  server: 167.82.65.80
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws
-- name: US_speednode_0080
-  network: ws
-  port: 80
-  server: 167.82.65.119
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws
-- client-fingerprint: chrome
-  name: US_speednode_0081
-  network: ws
-  port: 80
-  server: 167.82.102.100
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws
-- alpn:
-  - h2
-  name: US_speednode_0082
-  port: 8443
-  server: 89.187.179.6
-  servername: ny1.fromblancwithlove.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
-- name: US_speednode_0083
+      Host: www.93976091.xyz
+    path: /path/1737626189510
+- name: US_speednode_0047
   network: ws
   port: 443
   server: 192.0.54.235
@@ -948,122 +526,11 @@ proxies:
     headers:
       Host: mmdserver.us.kg
     path: /?ed=2048
-- name: US_speednode_0084
-  network: ws
-  port: 80
-  server: 167.82.70.214
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws
-- name: US_speednode_0085
-  network: ws
-  port: 80
-  server: 151.101.3.8
-  servername: 49.org
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 69f948be-1482-42d8-84df-9fdfdf2d4262
-  ws-opts:
-    headers:
-      Host: 49.org
-    path: /telegram-v2safee,telegram-v2safee,telegram-v2safee,telegram-v2safee,telegram-v2safee,telegram-v2safee,telegram-v2safee,telegram-v2safee,telegram-v2safee,telegram-v2safee,telegram-v2safee,telegram-v2safee?ed=2095
-- client-fingerprint: chrome
-  name: US_speednode_0086
-  network: ws
-  port: 80
-  server: 167.82.101.100
-  servername: edge.validbv3528.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 42f36835-730c-4ecc-9daf-20121ae7ba47
-  ws-opts:
-    headers:
-      Host: edge.validbv3528.ir
-    path: /vless-ws
-- alpn:
-  - h2
-  name: US_speednode_0087
-  port: 8443
-  server: 84.17.45.176
-  servername: us3.fromblancwithlove.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
-- name: US_speednode_0088
-  network: ws
-  port: 80
-  server: ipcloudflaretamiz.fastly80-2.hosting-ip.com
-  servername: vipfast_7.com
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 58c457e9-fd8f-4350-bd82-c953710058c0
-  ws-opts:
-    headers:
-      Host: vipfast_7.com
-    path: /@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7?ed=1024
-- alpn:
-  - h2
-  name: US_speednode_0089
-  port: 8443
-  server: ny1.fromblancwithlove.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: US_speednode_0090
-  network: ws
-  port: 443
-  server: 151.101.194.133
-  servername: mio.splashthat.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 58c457e9-fd8f-4350-bd82-c953710058c0
-  ws-opts:
-    headers:
-      Host: vipfast_7.com
-    path: /@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7?ed=1024
-- client-fingerprint: randomized
-  name: US_speednode_0091
-  network: ws
-  port: 443
-  server: fishlab.ucdavis.edu
-  servername: fishlab.ucdavis.edu
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: a88a22cf-4602-4866-948b-a1c1dfe85937
-  ws-opts:
-    headers:
-      Host: JOIN.unlimiteddev.4.4.4.4.wWw.CloudFlare.cOm.wWw.SpeedTeSt.cOm.Home.iRan.0.0.0.0.Hide.my.IP.xXx.333.22.1.CDN.Free.unlimiteddev.DDNS1-IP.nEt
-    path: /@UnlimitedDev----@UnlimitedDev-----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev?ed=2480
 - alpn:
   - h3
   auth_str: dongtaiwang.com
   down: 55 Mbps
-  name: US_speednode_0092
+  name: US_speednode_0048
   port: 38670
   server: 208.87.243.151
   skip-cert-verify: true
@@ -1073,67 +540,21 @@ proxies:
   up: 11 Mbps
 - alpn:
   - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: US_speednode_0093
-  network: ws
-  port: 443
-  server: hbcugap.ucdavis.edu
-  servername: hbcugap.ucdavis.edu
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 79f8a33a-f03f-425a-a5fc-50c90b7ff944
-  ws-opts:
-    headers:
-      Host: speedtest.net.ftp.debian.org.1.2.3.a.b.c.netspeedtest.net.vahn.ir
-    path: /vless-ws/@MARAMBASHI_MARAMBASHI/?ed=2560
-- name: US_speednode_0094
-  network: ws
-  port: 8080
-  server: 104.21.69.44
-  servername: chanel.kolacghi.ir.
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 75c39c8d-4fb1-491d-bc1a-283cfc15d17a
-  ws-opts:
-    headers:
-      Host: chanel.kolacghi.ir.
-    path: /@NIM_VPN_ir,@NIM_VPN_ir,@NIM_VPN_ir,@NIM_VPN_ir,@NIM_VPN_ir,
-- name: US_speednode_0095
-  network: ws
-  port: 8080
-  server: zula.ir
-  servername: chanel.kolacghi.ir.
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 75c39c8d-4fb1-491d-bc1a-283cfc15d17a
-  ws-opts:
-    headers:
-      Host: chanel.kolacghi.ir.
-    path: /@NIM_VPN_ir,@NIM_VPN_ir,@NIM_VPN_ir,@NIM_VPN_ir,@NIM_VPN_ir,
-- alpn:
-  - h2
-  name: ZA_speednode_0096
+  name: ZA_speednode_0049
   port: 8443
-  server: 169.150.246.91
-  servername: jnb-sa.fromblancwithlove.com
-  skip-cert-verify: true
+  server: jnb-sa.fromblancwithlove.com
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
   uuid: 157448af-8ecf-4075-a9e9-b23a6a94899b
 - alpn:
   - h2
-  name: ZA_speednode_0097
+  name: ZA_speednode_0050
   port: 8443
-  server: jnb-sa.fromblancwithlove.com
-  skip-cert-verify: false
+  server: 169.150.246.91
+  servername: jnb-sa.fromblancwithlove.com
+  skip-cert-verify: true
   tls: true
   type: vless
   udp: true
@@ -1145,10 +566,10 @@ proxy-groups:
   - AR_speednode_0001
   - AR_speednode_0002
   - BE_speednode_0003
-  - BE_speednode_0004
+  - BR_speednode_0004
   - BR_speednode_0005
-  - BR_speednode_0006
-  - CH_speednode_0007
+  - CH_speednode_0006
+  - CN_speednode_0007
   - CN_speednode_0008
   - CN_speednode_0009
   - CN_speednode_0010
@@ -1157,88 +578,41 @@ proxy-groups:
   - CN_speednode_0013
   - CN_speednode_0014
   - CN_speednode_0015
-  - CN_speednode_0016
-  - CN_speednode_0017
-  - CO_speednode_0018
-  - CO_speednode_0019
+  - CO_speednode_0016
+  - CO_speednode_0017
+  - DE_speednode_0018
+  - DE_speednode_0019
   - DE_speednode_0020
   - DE_speednode_0021
   - DE_speednode_0022
   - DE_speednode_0023
   - DE_speednode_0024
   - DE_speednode_0025
-  - DE_speednode_0026
-  - DE_speednode_0027
-  - ES_speednode_0028
-  - ES_speednode_0029
-  - FR_speednode_0030
-  - FR_speednode_0031
-  - FR_speednode_0032
-  - FR_speednode_0033
-  - GB_speednode_0034
-  - GI_speednode_0035
-  - GR_speednode_0036
-  - GR_speednode_0037
-  - HK_speednode_0038
-  - IN_speednode_0039
-  - IN_speednode_0040
-  - IR_speednode_0041
-  - IR_speednode_0042
-  - JP_speednode_0043
-  - KR_speednode_0044
-  - KR_speednode_0045
-  - KR_speednode_0046
-  - MX_speednode_0047
-  - MX_speednode_0048
-  - NL_speednode_0049
-  - NL_speednode_0050
-  - PE_speednode_0051
-  - PH_speednode_0052
-  - PL_speednode_0053
-  - PL_speednode_0054
-  - RU_speednode_0055
-  - SE_speednode_0056
-  - SG_speednode_0057
-  - SG_speednode_0058
-  - SG_speednode_0059
-  - SG_speednode_0060
-  - SG_speednode_0061
-  - US_speednode_0062
-  - US_speednode_0063
-  - US_speednode_0064
-  - US_speednode_0065
-  - US_speednode_0066
-  - US_speednode_0067
-  - US_speednode_0068
-  - US_speednode_0069
-  - US_speednode_0070
-  - US_speednode_0071
-  - US_speednode_0072
-  - US_speednode_0073
-  - US_speednode_0074
-  - US_speednode_0075
-  - US_speednode_0076
-  - US_speednode_0077
-  - US_speednode_0078
-  - US_speednode_0079
-  - US_speednode_0080
-  - US_speednode_0081
-  - US_speednode_0082
-  - US_speednode_0083
-  - US_speednode_0084
-  - US_speednode_0085
-  - US_speednode_0086
-  - US_speednode_0087
-  - US_speednode_0088
-  - US_speednode_0089
-  - US_speednode_0090
-  - US_speednode_0091
-  - US_speednode_0092
-  - US_speednode_0093
-  - US_speednode_0094
-  - US_speednode_0095
-  - ZA_speednode_0096
-  - ZA_speednode_0097
+  - ES_speednode_0026
+  - ES_speednode_0027
+  - FR_speednode_0028
+  - FR_speednode_0029
+  - GB_speednode_0030
+  - GR_speednode_0031
+  - GR_speednode_0032
+  - HK_speednode_0033
+  - IN_speednode_0034
+  - IR_speednode_0035
+  - KR_speednode_0036
+  - KZ_speednode_0037
+  - PE_speednode_0038
+  - PE_speednode_0039
+  - RU_speednode_0040
+  - RU_speednode_0041
+  - RU_speednode_0042
+  - RU_speednode_0043
+  - SG_speednode_0044
+  - SG_speednode_0045
+  - US_speednode_0046
+  - US_speednode_0047
+  - US_speednode_0048
+  - ZA_speednode_0049
+  - ZA_speednode_0050
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
@@ -1246,10 +620,10 @@ proxy-groups:
   - AR_speednode_0001
   - AR_speednode_0002
   - BE_speednode_0003
-  - BE_speednode_0004
+  - BR_speednode_0004
   - BR_speednode_0005
-  - BR_speednode_0006
-  - CH_speednode_0007
+  - CH_speednode_0006
+  - CN_speednode_0007
   - CN_speednode_0008
   - CN_speednode_0009
   - CN_speednode_0010
@@ -1258,88 +632,41 @@ proxy-groups:
   - CN_speednode_0013
   - CN_speednode_0014
   - CN_speednode_0015
-  - CN_speednode_0016
-  - CN_speednode_0017
-  - CO_speednode_0018
-  - CO_speednode_0019
+  - CO_speednode_0016
+  - CO_speednode_0017
+  - DE_speednode_0018
+  - DE_speednode_0019
   - DE_speednode_0020
   - DE_speednode_0021
   - DE_speednode_0022
   - DE_speednode_0023
   - DE_speednode_0024
   - DE_speednode_0025
-  - DE_speednode_0026
-  - DE_speednode_0027
-  - ES_speednode_0028
-  - ES_speednode_0029
-  - FR_speednode_0030
-  - FR_speednode_0031
-  - FR_speednode_0032
-  - FR_speednode_0033
-  - GB_speednode_0034
-  - GI_speednode_0035
-  - GR_speednode_0036
-  - GR_speednode_0037
-  - HK_speednode_0038
-  - IN_speednode_0039
-  - IN_speednode_0040
-  - IR_speednode_0041
-  - IR_speednode_0042
-  - JP_speednode_0043
-  - KR_speednode_0044
-  - KR_speednode_0045
-  - KR_speednode_0046
-  - MX_speednode_0047
-  - MX_speednode_0048
-  - NL_speednode_0049
-  - NL_speednode_0050
-  - PE_speednode_0051
-  - PH_speednode_0052
-  - PL_speednode_0053
-  - PL_speednode_0054
-  - RU_speednode_0055
-  - SE_speednode_0056
-  - SG_speednode_0057
-  - SG_speednode_0058
-  - SG_speednode_0059
-  - SG_speednode_0060
-  - SG_speednode_0061
-  - US_speednode_0062
-  - US_speednode_0063
-  - US_speednode_0064
-  - US_speednode_0065
-  - US_speednode_0066
-  - US_speednode_0067
-  - US_speednode_0068
-  - US_speednode_0069
-  - US_speednode_0070
-  - US_speednode_0071
-  - US_speednode_0072
-  - US_speednode_0073
-  - US_speednode_0074
-  - US_speednode_0075
-  - US_speednode_0076
-  - US_speednode_0077
-  - US_speednode_0078
-  - US_speednode_0079
-  - US_speednode_0080
-  - US_speednode_0081
-  - US_speednode_0082
-  - US_speednode_0083
-  - US_speednode_0084
-  - US_speednode_0085
-  - US_speednode_0086
-  - US_speednode_0087
-  - US_speednode_0088
-  - US_speednode_0089
-  - US_speednode_0090
-  - US_speednode_0091
-  - US_speednode_0092
-  - US_speednode_0093
-  - US_speednode_0094
-  - US_speednode_0095
-  - ZA_speednode_0096
-  - ZA_speednode_0097
+  - ES_speednode_0026
+  - ES_speednode_0027
+  - FR_speednode_0028
+  - FR_speednode_0029
+  - GB_speednode_0030
+  - GR_speednode_0031
+  - GR_speednode_0032
+  - HK_speednode_0033
+  - IN_speednode_0034
+  - IR_speednode_0035
+  - KR_speednode_0036
+  - KZ_speednode_0037
+  - PE_speednode_0038
+  - PE_speednode_0039
+  - RU_speednode_0040
+  - RU_speednode_0041
+  - RU_speednode_0042
+  - RU_speednode_0043
+  - SG_speednode_0044
+  - SG_speednode_0045
+  - US_speednode_0046
+  - US_speednode_0047
+  - US_speednode_0048
+  - ZA_speednode_0049
+  - ZA_speednode_0050
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
