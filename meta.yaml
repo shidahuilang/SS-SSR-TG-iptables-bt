@@ -18,109 +18,8 @@ external-controller: 127.0.0.1:9090
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0001
-  password: 66061261-61d0-4243-a56f-393f38a6e99d
-  port: 12822
-  server: twn-02-zz.manatraffic.top
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0002
-  password: 72bb3072-7efd-4d67-9beb-2cd9c18e69f4
-  port: 40033
-  server: idn.fastsoonlink.com
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0003
-  password: 66061261-61d0-4243-a56f-393f38a6e99d
-  port: 11412
-  server: hkg-02-zz.manatraffic.top
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0004
-  password: 72bb3072-7efd-4d67-9beb-2cd9c18e69f4
-  port: 40005
-  server: sgp.fastsoonlink.com
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0005
-  password: 66061261-61d0-4243-a56f-393f38a6e99d
-  port: 11563
-  server: sgp-03-zz.manatraffic.top
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0006
-  password: 72bb3072-7efd-4d67-9beb-2cd9c18e69f4
-  port: 40006
-  server: ml.fastsoonlink.com
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0007
-  password: 66061261-61d0-4243-a56f-393f38a6e99d
-  port: 14202
-  server: jpn-02-zz.manatraffic.top
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0008
-  password: 66061261-61d0-4243-a56f-393f38a6e99d
-  port: 14201
-  server: jpn-01-zz.manatraffic.top
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0009
-  password: 66061261-61d0-4243-a56f-393f38a6e99d
-  port: 11561
-  server: sgp-01-zz.manatraffic.top
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0010
-  password: 66061261-61d0-4243-a56f-393f38a6e99d
-  port: 11411
-  server: hkg-01-zz.manatraffic.top
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0011
-  password: 66061261-61d0-4243-a56f-393f38a6e99d
-  port: 13501
-  server: usa-01-zz.manatraffic.top
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0012
-  password: 72bb3072-7efd-4d67-9beb-2cd9c18e69f4
-  port: 40032
-  server: kr.fastsoonlink.com
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0013
-  password: 72bb3072-7efd-4d67-9beb-2cd9c18e69f4
-  port: 40034
-  server: fr.fastsoonlink.com
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: CN_speednode_0014
-  port: 20014
-  server: qd.needss.top
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 026f6c4b-3890-411e-9cee-4c7b3ca5c382
 - cipher: rc4-md5
-  name: CN_speednode_0015
+  name: CN_speednode_0001
   obfs: plain
   obfs-param: cd2b692902.6602b8463464108506.microsoft.com
   password: ENZ52K
@@ -130,15 +29,8 @@ proxies:
   server: 2.hublink.pro
   type: ssr
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0016
-  password: 72bb3072-7efd-4d67-9beb-2cd9c18e69f4
-  port: 40019
-  server: tur.fastsoonlink.com
-  type: ss
-  udp: true
 - cipher: rc4-md5
-  name: CN_speednode_0017
+  name: CN_speednode_0002
   obfs: plain
   obfs-param: cd2b692902.6602b8463464108506.microsoft.com
   password: ENZ52K
@@ -148,45 +40,22 @@ proxies:
   server: 2.hublink.pro
   type: ssr
   udp: true
-- alterId: 0
-  cipher: auto
-  name: CN_speednode_0018
-  port: 54770
-  server: i.needss.top
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 026f6c4b-3890-411e-9cee-4c7b3ca5c382
-- name: DE_speednode_0019
-  network: ws
-  port: 2086
-  server: 185.135.9.138
-  servername: b4f0b859-super-smoke-7916.bouncy-vulture1054.workers.dev
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 31348b17-4ab2-40c0-b79e-c81032331d30
-  ws-opts:
-    headers:
-      Host: b4f0b859-super-smoke-7916.bouncy-vulture1054.workers.dev
-    path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1?ed=2560
-- client-fingerprint: chrome
-  name: DE_speednode_0020
-  port: 2088
-  reality-opts:
-    public-key: LnJ4SXxNsRigl5MVmGlQ5_I0G1fT3DYEYiL7KUEihxo
-    short-id: c7d80f2b01a1d1fe
-  server: howlearn.reactjsworld.com
-  servername: www.deepseek.com
-  skip-cert-verify: false
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: DE_speednode_0003
+  port: 443
+  server: 193.43.104.152
+  servername: fra5.vpntype.dev
+  skip-cert-verify: true
   tls: true
   type: vless
   udp: true
-  uuid: ef5f8625-a997-4e9c-a79c-7b95f565d675
+  uuid: 5d5adc8c-a34b-4c7f-bb67-429621e838d9
 - client-fingerprint: chrome
-  name: DE_speednode_0021
+  name: DE_speednode_0004
   port: 21313
   reality-opts:
     public-key: AlUKGYa7aLWaZ2AGBHmt9pcqT8uNYMmByNrIN_bwfwI
@@ -198,20 +67,6 @@ proxies:
   type: vless
   udp: true
   uuid: 59275d0a-c803-4d85-ce13-ba14edc710e8
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: DE_speednode_0022
-  port: 443
-  server: 193.43.104.152
-  servername: fra5.vpntype.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5d5adc8c-a34b-4c7f-bb67-429621e838d9
 - http-opts:
     headers:
       Host:
@@ -219,7 +74,7 @@ proxies:
     method: GET
     path:
     - /
-  name: FI_speednode_0023
+  name: FI_speednode_0005
   network: http
   port: 6587
   server: flv4-vip.digitalldns.com
@@ -229,33 +84,7 @@ proxies:
   type: vless
   udp: true
   uuid: ce961aa3-9ffb-4fed-904e-0cfba9f5aaba
-- client-fingerprint: chrome
-  name: FR_speednode_0024
-  network: ws
-  port: 2053
-  server: 185.16.110.222
-  servername: istap.resources-digikala.com.
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: ef5f8625-a997-4e9c-a79c-7b95f565d675
-  ws-opts:
-    headers:
-      Host: istap.resources-digikala.com.
-    path: /@amir?ed=2048
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: GB_speednode_0025
-  port: 443
-  server: 143.47.237.215
-  servername: dj-download-gb.xn--4gq62f52gopi49k.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d09ca4de-431d-4e43-bdfb-ce3d0586d7ba
-- name: HK_speednode_0026
+- name: HK_speednode_0006
   password: 1e63e585ab2fef3adcc9ea75a62abc23
   port: 443
   server: 104.251.227.182
@@ -263,42 +92,7 @@ proxies:
   sni: hezijiasuqi.com
   type: trojan
   udp: true
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: IN_speednode_0027
-  port: 443
-  server: 141.148.196.208
-  servername: dj-downloadin.xn--4gq62f52gopi49k.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d09ca4de-431d-4e43-bdfb-ce3d0586d7ba
-- name: LU_speednode_0028
-  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
-  port: 20104
-  ports: 20101-20199
-  server: pianyi-lu.jiumaojiu.org
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: LU_speednode_0029
-  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
-  port: 20169
-  ports: 20101-20199
-  server: pianyi-lu.jiumaojiu.org
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: LU_speednode_0030
-  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
-  port: 20189
-  ports: 20101-20199
-  server: pianyi-lu.jiumaojiu.org
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: LU_speednode_0031
+- name: LU_speednode_0007
   password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
   port: 20191
   ports: 20101-20199
@@ -306,63 +100,7 @@ proxies:
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: LU_speednode_0032
-  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
-  port: 20146
-  ports: 20101-20199
-  server: pianyi-lu.jiumaojiu.org
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: LU_speednode_0033
-  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
-  port: 20133
-  ports: 20101-20199
-  server: pianyi-lu.jiumaojiu.org
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: LU_speednode_0034
-  password: a4ec3c5d-aa6b-45f1-ab0d-36cab6e9db26
-  port: 20106
-  ports: 20101-20199
-  server: pianyi-lu.jiumaojiu.org
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: LU_speednode_0035
-  password: a4ec3c5d-aa6b-45f1-ab0d-36cab6e9db26
-  port: 20154
-  ports: 20101-20199
-  server: pianyi-lu.jiumaojiu.org
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: LU_speednode_0036
-  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
-  port: 20136
-  ports: 20101-20199
-  server: pianyi-lu.jiumaojiu.org
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: LU_speednode_0037
-  password: a4ec3c5d-aa6b-45f1-ab0d-36cab6e9db26
-  port: 20187
-  ports: 20101-20199
-  server: pianyi-lu.jiumaojiu.org
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: LU_speednode_0038
-  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
-  port: 20152
-  ports: 20101-20199
-  server: pianyi-lu.jiumaojiu.org
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: LU_speednode_0039
+- name: LU_speednode_0008
   password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
   port: 20147
   ports: 20101-20199
@@ -370,15 +108,15 @@ proxies:
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: LU_speednode_0040
+- name: LU_speednode_0009
   password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
-  port: 20186
+  port: 20104
   ports: 20101-20199
   server: pianyi-lu.jiumaojiu.org
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: LU_speednode_0041
+- name: LU_speednode_0010
   password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
   port: 20121
   ports: 20101-20199
@@ -386,7 +124,23 @@ proxies:
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: LU_speednode_0042
+- name: LU_speednode_0011
+  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
+  port: 20146
+  ports: 20101-20199
+  server: pianyi-lu.jiumaojiu.org
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: LU_speednode_0012
+  password: a4ec3c5d-aa6b-45f1-ab0d-36cab6e9db26
+  port: 20187
+  ports: 20101-20199
+  server: pianyi-lu.jiumaojiu.org
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: LU_speednode_0013
   password: a4ec3c5d-aa6b-45f1-ab0d-36cab6e9db26
   port: 20175
   ports: 20101-20199
@@ -394,15 +148,71 @@ proxies:
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: NL_speednode_0043
-  password: 7bd5d5a0-d6ac-4ce0-8953-7d4408fcdd7f
-  port: 14745
-  ports: 14001-14999
-  server: xiaofeiji-nl.sanguayun.com
+- name: LU_speednode_0014
+  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
+  port: 20136
+  ports: 20101-20199
+  server: pianyi-lu.jiumaojiu.org
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: NL_speednode_0044
+- name: LU_speednode_0015
+  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
+  port: 20186
+  ports: 20101-20199
+  server: pianyi-lu.jiumaojiu.org
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: LU_speednode_0016
+  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
+  port: 20169
+  ports: 20101-20199
+  server: pianyi-lu.jiumaojiu.org
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: LU_speednode_0017
+  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
+  port: 20133
+  ports: 20101-20199
+  server: pianyi-lu.jiumaojiu.org
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: LU_speednode_0018
+  password: a4ec3c5d-aa6b-45f1-ab0d-36cab6e9db26
+  port: 20154
+  ports: 20101-20199
+  server: pianyi-lu.jiumaojiu.org
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: LU_speednode_0019
+  password: a4ec3c5d-aa6b-45f1-ab0d-36cab6e9db26
+  port: 20106
+  ports: 20101-20199
+  server: pianyi-lu.jiumaojiu.org
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: LU_speednode_0020
+  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
+  port: 20189
+  ports: 20101-20199
+  server: pianyi-lu.jiumaojiu.org
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: LU_speednode_0021
+  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
+  port: 20152
+  ports: 20101-20199
+  server: pianyi-lu.jiumaojiu.org
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: NL_speednode_0022
   network: ws
   port: 80
   server: 45.149.12.128
@@ -416,63 +226,7 @@ proxies:
     headers:
       Host: pormang.webhost99.workers.dev
     path: /?ed=2560
-- name: NL_speednode_0045
-  password: 83e9ec8a-d711-4756-9476-023053334497
-  port: 11383
-  ports: 11001-11999
-  server: saibo-nl.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: NL_speednode_0046
-  password: f654e082-c610-4d16-9599-bfb572c8c86a
-  port: 14231
-  ports: 14001-14999
-  server: xiaofeiji-nl.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: NL_speednode_0047
-  password: 87745083-6b2a-4d06-bb31-95308f07febe
-  port: 14882
-  ports: 14001-14999
-  server: xiaofeiji-nl.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: NL_speednode_0048
-  password: 83e9ec8a-d711-4756-9476-023053334497
-  port: 11934
-  ports: 11001-11999
-  server: saibo-nl.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: NL_speednode_0049
-  password: 83e9ec8a-d711-4756-9476-023053334497
-  port: 11229
-  ports: 11001-11999
-  server: saibo-nl.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: NL_speednode_0050
-  password: 7bd5d5a0-d6ac-4ce0-8953-7d4408fcdd7f
-  port: 14384
-  ports: 14001-14999
-  server: xiaofeiji-nl.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: NL_speednode_0051
-  password: 83e9ec8a-d711-4756-9476-023053334497
-  port: 11708
-  ports: 11001-11999
-  server: saibo-nl.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: NL_speednode_0052
+- name: NL_speednode_0023
   password: 7bd5d5a0-d6ac-4ce0-8953-7d4408fcdd7f
   port: 14673
   ports: 14001-14999
@@ -480,7 +234,7 @@ proxies:
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: NL_speednode_0053
+- name: NL_speednode_0024
   password: 87745083-6b2a-4d06-bb31-95308f07febe
   port: 14008
   ports: 14001-14999
@@ -488,7 +242,23 @@ proxies:
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: NL_speednode_0054
+- name: NL_speednode_0025
+  password: 87745083-6b2a-4d06-bb31-95308f07febe
+  port: 14882
+  ports: 14001-14999
+  server: xiaofeiji-nl.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: NL_speednode_0026
+  password: 7bd5d5a0-d6ac-4ce0-8953-7d4408fcdd7f
+  port: 14384
+  ports: 14001-14999
+  server: xiaofeiji-nl.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: NL_speednode_0027
   password: 87745083-6b2a-4d06-bb31-95308f07febe
   port: 14669
   ports: 14001-14999
@@ -496,15 +266,23 @@ proxies:
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: NL_speednode_0055
-  password: 7bd5d5a0-d6ac-4ce0-8953-7d4408fcdd7f
-  port: 14989
+- name: NL_speednode_0028
+  password: 83e9ec8a-d711-4756-9476-023053334497
+  port: 11383
+  ports: 11001-11999
+  server: saibo-nl.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: NL_speednode_0029
+  password: f654e082-c610-4d16-9599-bfb572c8c86a
+  port: 14231
   ports: 14001-14999
   server: xiaofeiji-nl.sanguayun.com
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: NL_speednode_0056
+- name: NL_speednode_0030
   password: 87745083-6b2a-4d06-bb31-95308f07febe
   port: 14208
   ports: 14001-14999
@@ -512,15 +290,7 @@ proxies:
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: NL_speednode_0057
-  password: f654e082-c610-4d16-9599-bfb572c8c86a
-  port: 14890
-  ports: 14001-14999
-  server: xiaofeiji-nl.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: NL_speednode_0058
+- name: NL_speednode_0031
   password: f654e082-c610-4d16-9599-bfb572c8c86a
   port: 14950
   ports: 14001-14999
@@ -528,7 +298,7 @@ proxies:
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: NL_speednode_0059
+- name: NL_speednode_0032
   password: f654e082-c610-4d16-9599-bfb572c8c86a
   port: 14663
   ports: 14001-14999
@@ -536,7 +306,31 @@ proxies:
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: NL_speednode_0060
+- name: NL_speednode_0033
+  password: 83e9ec8a-d711-4756-9476-023053334497
+  port: 11708
+  ports: 11001-11999
+  server: saibo-nl.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: NL_speednode_0034
+  password: 83e9ec8a-d711-4756-9476-023053334497
+  port: 11229
+  ports: 11001-11999
+  server: saibo-nl.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: NL_speednode_0035
+  password: 83e9ec8a-d711-4756-9476-023053334497
+  port: 11934
+  ports: 11001-11999
+  server: saibo-nl.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: NL_speednode_0036
   network: ws
   port: 80
   server: 45.149.12.128
@@ -550,7 +344,66 @@ proxies:
     headers:
       Host: pormang.webhost99.workers.dev
     path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
-- name: NL_speednode_0061
+- name: NL_speednode_0037
+  password: f654e082-c610-4d16-9599-bfb572c8c86a
+  port: 14890
+  ports: 14001-14999
+  server: xiaofeiji-nl.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: NL_speednode_0038
+  password: 7bd5d5a0-d6ac-4ce0-8953-7d4408fcdd7f
+  port: 14989
+  ports: 14001-14999
+  server: xiaofeiji-nl.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- client-fingerprint: chrome
+  name: NL_speednode_0039
+  network: ws
+  port: 80
+  server: 45.149.12.128
+  servername: pormang.webhost99.workers.dev
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
+  ws-opts:
+    headers:
+      Host: pormang.webhost99.workers.dev
+    path: /
+- name: NL_speednode_0040
+  network: ws
+  port: 80
+  server: 45.149.12.232
+  servername: pormang.webhost99.workers.dev
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
+  ws-opts:
+    headers:
+      Host: pormang.webhost99.workers.dev
+    path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
+- name: NL_speednode_0041
+  network: ws
+  port: 80
+  server: 45.149.12.206
+  servername: pormang.webhost99.workers.dev
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
+  ws-opts:
+    headers:
+      Host: pormang.webhost99.workers.dev
+    path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
+- name: NL_speednode_0042
   network: ws
   port: 80
   server: 45.149.12.232
@@ -565,50 +418,7 @@ proxies:
       Host: pormang.webhost99.workers.dev
     path: /
 - client-fingerprint: chrome
-  name: NL_speednode_0062
-  network: ws
-  port: 80
-  server: 45.149.12.128
-  servername: pormang.webhost99.workers.dev
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
-  ws-opts:
-    headers:
-      Host: pormang.webhost99.workers.dev
-    path: /
-- name: NL_speednode_0063
-  network: ws
-  port: 80
-  server: 45.149.12.232
-  servername: pormang.webhost99.workers.dev
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
-  ws-opts:
-    headers:
-      Host: pormang.webhost99.workers.dev
-    path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
-- name: NL_speednode_0064
-  network: ws
-  port: 80
-  server: 45.149.12.206
-  servername: pormang.webhost99.workers.dev
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
-  ws-opts:
-    headers:
-      Host: pormang.webhost99.workers.dev
-    path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
-- client-fingerprint: chrome
-  name: NL_speednode_0065
+  name: NL_speednode_0043
   network: ws
   port: 80
   server: 45.149.12.206
@@ -622,140 +432,7 @@ proxies:
     headers:
       Host: pormang.webhost99.workers.dev
     path: /
-- client-fingerprint: chrome
-  name: NL_speednode_0066
-  port: 47221
-  reality-opts:
-    public-key: iwsj4xiBztuBQ3I1YsrBBUhnlu7mhhPFozP7bkgaal0
-    short-id: 47ff9b6c
-  server: 95.179.153.250
-  servername: yahoo.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3373fe14-47b8-42e5-8a18-7ab3e0dd02b3
-- name: PH_speednode_0067
-  password: 4c3dbf8d-1429-4077-ac4c-5e42d13bdbb4
-  port: 13637
-  ports: 13001-13999
-  server: weilai-hk.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: PH_speednode_0068
-  password: 4c3dbf8d-1429-4077-ac4c-5e42d13bdbb4
-  port: 13375
-  ports: 13001-13999
-  server: weilai-hk.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: PH_speednode_0069
-  password: 0e57e0a8-939e-478d-8513-63b70e961e21
-  port: 13888
-  ports: 13001-13999
-  server: weilai-hk.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: PH_speednode_0070
-  password: f654e082-c610-4d16-9599-bfb572c8c86a
-  port: 14742
-  ports: 14001-14999
-  server: xiaofeiji-hk.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: PH_speednode_0071
-  password: f654e082-c610-4d16-9599-bfb572c8c86a
-  port: 14187
-  ports: 14001-14999
-  server: xiaofeiji-hk.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: PH_speednode_0072
-  password: 83e9ec8a-d711-4756-9476-023053334497
-  port: 11752
-  ports: 11001-11999
-  server: saibo-hk.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: PH_speednode_0073
-  password: 83e9ec8a-d711-4756-9476-023053334497
-  port: 11166
-  ports: 11001-11999
-  server: saibo-hk.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: PH_speednode_0074
-  password: f654e082-c610-4d16-9599-bfb572c8c86a
-  port: 14165
-  ports: 14001-14999
-  server: xiaofeiji-hk.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: PH_speednode_0075
-  password: 7bd5d5a0-d6ac-4ce0-8953-7d4408fcdd7f
-  port: 14244
-  ports: 14001-14999
-  server: xiaofeiji-hk.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: PH_speednode_0076
-  password: 7bd5d5a0-d6ac-4ce0-8953-7d4408fcdd7f
-  port: 14020
-  ports: 14001-14999
-  server: xiaofeiji-hk.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: PH_speednode_0077
-  password: 87745083-6b2a-4d06-bb31-95308f07febe
-  port: 14154
-  ports: 14001-14999
-  server: xiaofeiji-hk.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: PH_speednode_0078
-  password: 87745083-6b2a-4d06-bb31-95308f07febe
-  port: 14018
-  ports: 14001-14999
-  server: xiaofeiji-hk.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: PH_speednode_0079
-  password: 83e9ec8a-d711-4756-9476-023053334497
-  port: 11669
-  ports: 11001-11999
-  server: saibo-hk.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: PH_speednode_0080
-  password: 87745083-6b2a-4d06-bb31-95308f07febe
-  port: 14705
-  ports: 14001-14999
-  server: xiaofeiji-hk.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: PH_speednode_0081
-  password: 87745083-6b2a-4d06-bb31-95308f07febe
-  port: 14750
-  ports: 14001-14999
-  server: xiaofeiji-hk.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: PH_speednode_0082
+- name: PH_speednode_0044
   password: 7bd5d5a0-d6ac-4ce0-8953-7d4408fcdd7f
   port: 14925
   ports: 14001-14999
@@ -763,15 +440,87 @@ proxies:
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: PH_speednode_0083
-  password: f654e082-c610-4d16-9599-bfb572c8c86a
-  port: 14278
+- name: PH_speednode_0045
+  password: 83e9ec8a-d711-4756-9476-023053334497
+  port: 11752
+  ports: 11001-11999
+  server: saibo-hk.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: PH_speednode_0046
+  password: 7bd5d5a0-d6ac-4ce0-8953-7d4408fcdd7f
+  port: 14244
   ports: 14001-14999
   server: xiaofeiji-hk.sanguayun.com
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: RU_speednode_0084
+- name: PH_speednode_0047
+  password: f654e082-c610-4d16-9599-bfb572c8c86a
+  port: 14187
+  ports: 14001-14999
+  server: xiaofeiji-hk.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: PH_speednode_0048
+  password: 83e9ec8a-d711-4756-9476-023053334497
+  port: 11166
+  ports: 11001-11999
+  server: saibo-hk.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: PH_speednode_0049
+  password: 87745083-6b2a-4d06-bb31-95308f07febe
+  port: 14705
+  ports: 14001-14999
+  server: xiaofeiji-hk.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: PH_speednode_0050
+  password: 87745083-6b2a-4d06-bb31-95308f07febe
+  port: 14750
+  ports: 14001-14999
+  server: xiaofeiji-hk.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: PH_speednode_0051
+  password: 87745083-6b2a-4d06-bb31-95308f07febe
+  port: 14154
+  ports: 14001-14999
+  server: xiaofeiji-hk.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: PH_speednode_0052
+  password: 87745083-6b2a-4d06-bb31-95308f07febe
+  port: 14018
+  ports: 14001-14999
+  server: xiaofeiji-hk.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: PH_speednode_0053
+  password: f654e082-c610-4d16-9599-bfb572c8c86a
+  port: 14742
+  ports: 14001-14999
+  server: xiaofeiji-hk.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: PH_speednode_0054
+  password: 7bd5d5a0-d6ac-4ce0-8953-7d4408fcdd7f
+  port: 14020
+  ports: 14001-14999
+  server: xiaofeiji-hk.sanguayun.com
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: RU_speednode_0055
   network: ws
   port: 80
   server: 185.174.138.194
@@ -785,21 +534,7 @@ proxies:
     headers:
       Host: pormang.webhost99.workers.dev
     path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
-- name: RU_speednode_0085
-  network: ws
-  port: 80
-  server: 185.174.138.194
-  servername: pormang.webhost99.workers.dev
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
-  ws-opts:
-    headers:
-      Host: pormang.webhost99.workers.dev
-    path: /
-- name: RU_speednode_0086
+- name: RU_speednode_0056
   network: ws
   port: 8080
   server: 185.174.138.197
@@ -813,7 +548,21 @@ proxies:
     headers:
       Host: a.xn--i-sx6a60i.us.kg.
     path: /
-- name: SG_speednode_0087
+- name: RU_speednode_0057
+  network: ws
+  port: 80
+  server: 185.174.138.194
+  servername: pormang.webhost99.workers.dev
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
+  ws-opts:
+    headers:
+      Host: pormang.webhost99.workers.dev
+    path: /
+- name: SG_speednode_0058
   network: ws
   port: 3333
   server: free.tharuwa.cfd
@@ -827,66 +576,7 @@ proxies:
     headers:
       Host: m.zoom.us
     path: /Free By Tharuwa (0767597317)
-- alpn:
-  - h2
-  - http/1.1
-  name: UA_speednode_0088
-  port: 443
-  server: 005188006073.sec1org.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7582e721-8c32-4fb1-8669-b3fae590f3eb
-- name: US_speednode_0089
-  password: 4c3dbf8d-1429-4077-ac4c-5e42d13bdbb4
-  port: 13314
-  ports: 13001-13999
-  server: weilai-us.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0090
-  password: 0e57e0a8-939e-478d-8513-63b70e961e21
-  port: 13651
-  ports: 13001-13999
-  server: weilai-us.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0091
-  password: 83e9ec8a-d711-4756-9476-023053334497
-  port: 11029
-  ports: 11001-11999
-  server: saibo-jp.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0092
-  password: 4c3dbf8d-1429-4077-ac4c-5e42d13bdbb4
-  port: 13155
-  ports: 13001-13999
-  server: weilai-jp.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0093
-  password: 4c3dbf8d-1429-4077-ac4c-5e42d13bdbb4
-  port: 13302
-  ports: 13001-13999
-  server: weilai-us.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0094
-  password: 4c3dbf8d-1429-4077-ac4c-5e42d13bdbb4
-  port: 13737
-  ports: 13001-13999
-  server: weilai-jp.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0095
+- name: US_speednode_0059
   password: 83e9ec8a-d711-4756-9476-023053334497
   port: 11568
   ports: 11001-11999
@@ -894,79 +584,7 @@ proxies:
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: US_speednode_0096
-  password: 4c3dbf8d-1429-4077-ac4c-5e42d13bdbb4
-  port: 13802
-  ports: 13001-13999
-  server: weilai-jp.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0097
-  password: 0e57e0a8-939e-478d-8513-63b70e961e21
-  port: 13496
-  ports: 13001-13999
-  server: weilai-jp.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0098
-  password: 0e57e0a8-939e-478d-8513-63b70e961e21
-  port: 13048
-  ports: 13001-13999
-  server: weilai-jp.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0099
-  password: 0e57e0a8-939e-478d-8513-63b70e961e21
-  port: 13204
-  ports: 13001-13999
-  server: weilai-jp.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0100
-  password: 83e9ec8a-d711-4756-9476-023053334497
-  port: 11278
-  ports: 11001-11999
-  server: saibo-jp.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0101
-  password: 83e9ec8a-d711-4756-9476-023053334497
-  port: 11796
-  ports: 11001-11999
-  server: saibo-jp.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0102
-  password: a4ec3c5d-aa6b-45f1-ab0d-36cab6e9db26
-  port: 20115
-  ports: 20101-20199
-  server: pianyi-us.jiumaojiu.org
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0103
-  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
-  port: 20184
-  ports: 20101-20199
-  server: pianyi-us.jiumaojiu.org
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0104
-  password: 7bd5d5a0-d6ac-4ce0-8953-7d4408fcdd7f
-  port: 14537
-  ports: 14001-14999
-  server: xiaofeiji-us.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0105
+- name: US_speednode_0060
   password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
   port: 20170
   ports: 20101-20199
@@ -974,15 +592,15 @@ proxies:
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: US_speednode_0106
+- name: US_speednode_0061
   password: 7bd5d5a0-d6ac-4ce0-8953-7d4408fcdd7f
-  port: 14665
+  port: 14537
   ports: 14001-14999
-  server: xiaofeiji-jp.sanguayun.com
+  server: xiaofeiji-us.sanguayun.com
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: US_speednode_0107
+- name: US_speednode_0062
   password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
   port: 20113
   ports: 20101-20199
@@ -990,39 +608,7 @@ proxies:
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: US_speednode_0108
-  password: 87745083-6b2a-4d06-bb31-95308f07febe
-  port: 14895
-  ports: 14001-14999
-  server: xiaofeiji-jp.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0109
-  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
-  port: 20110
-  ports: 20101-20199
-  server: pianyi-us.jiumaojiu.org
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0110
-  password: 4c3dbf8d-1429-4077-ac4c-5e42d13bdbb4
-  port: 13184
-  ports: 13001-13999
-  server: weilai-jp.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0111
-  password: a4ec3c5d-aa6b-45f1-ab0d-36cab6e9db26
-  port: 20117
-  ports: 20101-20199
-  server: pianyi-us.jiumaojiu.org
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0112
+- name: US_speednode_0063
   password: f654e082-c610-4d16-9599-bfb572c8c86a
   port: 14448
   ports: 14001-14999
@@ -1030,7 +616,23 @@ proxies:
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: US_speednode_0113
+- name: US_speednode_0064
+  password: a4ec3c5d-aa6b-45f1-ab0d-36cab6e9db26
+  port: 20117
+  ports: 20101-20199
+  server: pianyi-us.jiumaojiu.org
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: US_speednode_0065
+  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
+  port: 20184
+  ports: 20101-20199
+  server: pianyi-us.jiumaojiu.org
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: US_speednode_0066
   password: f654e082-c610-4d16-9599-bfb572c8c86a
   port: 14523
   ports: 14001-14999
@@ -1038,7 +640,23 @@ proxies:
   skip-cert-verify: false
   type: hysteria2
   udp: true
-- name: US_speednode_0114
+- name: US_speednode_0067
+  password: 92937960-796d-4f99-af4d-1e6d0a2d93b7
+  port: 20110
+  ports: 20101-20199
+  server: pianyi-us.jiumaojiu.org
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: US_speednode_0068
+  password: a4ec3c5d-aa6b-45f1-ab0d-36cab6e9db26
+  port: 20115
+  ports: 20101-20199
+  server: pianyi-us.jiumaojiu.org
+  skip-cert-verify: false
+  type: hysteria2
+  udp: true
+- name: US_speednode_0069
   network: ws
   port: 80
   server: 66.235.200.5
@@ -1052,45 +670,7 @@ proxies:
     headers:
       Host: pormang.webhost99.workers.dev
     path: /
-- name: US_speednode_0115
-  password: f654e082-c610-4d16-9599-bfb572c8c86a
-  port: 14286
-  ports: 14001-14999
-  server: xiaofeiji-jp.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0116
-  password: f654e082-c610-4d16-9599-bfb572c8c86a
-  port: 14627
-  ports: 14001-14999
-  server: xiaofeiji-jp.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0117
-  password: 87745083-6b2a-4d06-bb31-95308f07febe
-  port: 14632
-  ports: 14001-14999
-  server: xiaofeiji-jp.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: US_speednode_0118
-  port: 7733
-  reality-opts:
-    public-key: bdVahzcZN694ebmTLvPE0nymHucaFWw6_h6cV5hvTlI
-    short-id: 335bfdfb
-  server: ort.gecs.top
-  servername: addons.mozilla.org
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0a3cd062-241a-43fc-9c50-eccacbbd5aae
-- name: US_speednode_0119
+- name: US_speednode_0070
   network: ws
   port: 80
   server: 66.235.200.191
@@ -1104,285 +684,154 @@ proxies:
     headers:
       Host: pormang.webhost99.workers.dev
     path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: US_speednode_0120
-  port: 443
-  server: 129.153.90.9
-  servername: dj-download-us.xn--4gq62f52gopi49k.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d09ca4de-431d-4e43-bdfb-ce3d0586d7ba
-- name: US_speednode_0121
-  password: 87745083-6b2a-4d06-bb31-95308f07febe
-  port: 14263
-  ports: 14001-14999
-  server: xiaofeiji-jp.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
-- name: US_speednode_0122
-  password: 7bd5d5a0-d6ac-4ce0-8953-7d4408fcdd7f
-  port: 14279
-  ports: 14001-14999
-  server: xiaofeiji-jp.sanguayun.com
-  skip-cert-verify: false
-  type: hysteria2
-  udp: true
 proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
   - "\u267B\uFE0F automatic"
   - CN_speednode_0001
   - CN_speednode_0002
-  - CN_speednode_0003
-  - CN_speednode_0004
-  - CN_speednode_0005
-  - CN_speednode_0006
-  - CN_speednode_0007
-  - CN_speednode_0008
-  - CN_speednode_0009
-  - CN_speednode_0010
-  - CN_speednode_0011
-  - CN_speednode_0012
-  - CN_speednode_0013
-  - CN_speednode_0014
-  - CN_speednode_0015
-  - CN_speednode_0016
-  - CN_speednode_0017
-  - CN_speednode_0018
-  - DE_speednode_0019
-  - DE_speednode_0020
-  - DE_speednode_0021
-  - DE_speednode_0022
-  - FI_speednode_0023
-  - FR_speednode_0024
-  - GB_speednode_0025
-  - HK_speednode_0026
-  - IN_speednode_0027
-  - LU_speednode_0028
-  - LU_speednode_0029
-  - LU_speednode_0030
-  - LU_speednode_0031
-  - LU_speednode_0032
-  - LU_speednode_0033
-  - LU_speednode_0034
-  - LU_speednode_0035
-  - LU_speednode_0036
-  - LU_speednode_0037
-  - LU_speednode_0038
-  - LU_speednode_0039
-  - LU_speednode_0040
-  - LU_speednode_0041
-  - LU_speednode_0042
+  - DE_speednode_0003
+  - DE_speednode_0004
+  - FI_speednode_0005
+  - HK_speednode_0006
+  - LU_speednode_0007
+  - LU_speednode_0008
+  - LU_speednode_0009
+  - LU_speednode_0010
+  - LU_speednode_0011
+  - LU_speednode_0012
+  - LU_speednode_0013
+  - LU_speednode_0014
+  - LU_speednode_0015
+  - LU_speednode_0016
+  - LU_speednode_0017
+  - LU_speednode_0018
+  - LU_speednode_0019
+  - LU_speednode_0020
+  - LU_speednode_0021
+  - NL_speednode_0022
+  - NL_speednode_0023
+  - NL_speednode_0024
+  - NL_speednode_0025
+  - NL_speednode_0026
+  - NL_speednode_0027
+  - NL_speednode_0028
+  - NL_speednode_0029
+  - NL_speednode_0030
+  - NL_speednode_0031
+  - NL_speednode_0032
+  - NL_speednode_0033
+  - NL_speednode_0034
+  - NL_speednode_0035
+  - NL_speednode_0036
+  - NL_speednode_0037
+  - NL_speednode_0038
+  - NL_speednode_0039
+  - NL_speednode_0040
+  - NL_speednode_0041
+  - NL_speednode_0042
   - NL_speednode_0043
-  - NL_speednode_0044
-  - NL_speednode_0045
-  - NL_speednode_0046
-  - NL_speednode_0047
-  - NL_speednode_0048
-  - NL_speednode_0049
-  - NL_speednode_0050
-  - NL_speednode_0051
-  - NL_speednode_0052
-  - NL_speednode_0053
-  - NL_speednode_0054
-  - NL_speednode_0055
-  - NL_speednode_0056
-  - NL_speednode_0057
-  - NL_speednode_0058
-  - NL_speednode_0059
-  - NL_speednode_0060
-  - NL_speednode_0061
-  - NL_speednode_0062
-  - NL_speednode_0063
-  - NL_speednode_0064
-  - NL_speednode_0065
-  - NL_speednode_0066
-  - PH_speednode_0067
-  - PH_speednode_0068
-  - PH_speednode_0069
-  - PH_speednode_0070
-  - PH_speednode_0071
-  - PH_speednode_0072
-  - PH_speednode_0073
-  - PH_speednode_0074
-  - PH_speednode_0075
-  - PH_speednode_0076
-  - PH_speednode_0077
-  - PH_speednode_0078
-  - PH_speednode_0079
-  - PH_speednode_0080
-  - PH_speednode_0081
-  - PH_speednode_0082
-  - PH_speednode_0083
-  - RU_speednode_0084
-  - RU_speednode_0085
-  - RU_speednode_0086
-  - SG_speednode_0087
-  - UA_speednode_0088
-  - US_speednode_0089
-  - US_speednode_0090
-  - US_speednode_0091
-  - US_speednode_0092
-  - US_speednode_0093
-  - US_speednode_0094
-  - US_speednode_0095
-  - US_speednode_0096
-  - US_speednode_0097
-  - US_speednode_0098
-  - US_speednode_0099
-  - US_speednode_0100
-  - US_speednode_0101
-  - US_speednode_0102
-  - US_speednode_0103
-  - US_speednode_0104
-  - US_speednode_0105
-  - US_speednode_0106
-  - US_speednode_0107
-  - US_speednode_0108
-  - US_speednode_0109
-  - US_speednode_0110
-  - US_speednode_0111
-  - US_speednode_0112
-  - US_speednode_0113
-  - US_speednode_0114
-  - US_speednode_0115
-  - US_speednode_0116
-  - US_speednode_0117
-  - US_speednode_0118
-  - US_speednode_0119
-  - US_speednode_0120
-  - US_speednode_0121
-  - US_speednode_0122
+  - PH_speednode_0044
+  - PH_speednode_0045
+  - PH_speednode_0046
+  - PH_speednode_0047
+  - PH_speednode_0048
+  - PH_speednode_0049
+  - PH_speednode_0050
+  - PH_speednode_0051
+  - PH_speednode_0052
+  - PH_speednode_0053
+  - PH_speednode_0054
+  - RU_speednode_0055
+  - RU_speednode_0056
+  - RU_speednode_0057
+  - SG_speednode_0058
+  - US_speednode_0059
+  - US_speednode_0060
+  - US_speednode_0061
+  - US_speednode_0062
+  - US_speednode_0063
+  - US_speednode_0064
+  - US_speednode_0065
+  - US_speednode_0066
+  - US_speednode_0067
+  - US_speednode_0068
+  - US_speednode_0069
+  - US_speednode_0070
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
   - CN_speednode_0001
   - CN_speednode_0002
-  - CN_speednode_0003
-  - CN_speednode_0004
-  - CN_speednode_0005
-  - CN_speednode_0006
-  - CN_speednode_0007
-  - CN_speednode_0008
-  - CN_speednode_0009
-  - CN_speednode_0010
-  - CN_speednode_0011
-  - CN_speednode_0012
-  - CN_speednode_0013
-  - CN_speednode_0014
-  - CN_speednode_0015
-  - CN_speednode_0016
-  - CN_speednode_0017
-  - CN_speednode_0018
-  - DE_speednode_0019
-  - DE_speednode_0020
-  - DE_speednode_0021
-  - DE_speednode_0022
-  - FI_speednode_0023
-  - FR_speednode_0024
-  - GB_speednode_0025
-  - HK_speednode_0026
-  - IN_speednode_0027
-  - LU_speednode_0028
-  - LU_speednode_0029
-  - LU_speednode_0030
-  - LU_speednode_0031
-  - LU_speednode_0032
-  - LU_speednode_0033
-  - LU_speednode_0034
-  - LU_speednode_0035
-  - LU_speednode_0036
-  - LU_speednode_0037
-  - LU_speednode_0038
-  - LU_speednode_0039
-  - LU_speednode_0040
-  - LU_speednode_0041
-  - LU_speednode_0042
+  - DE_speednode_0003
+  - DE_speednode_0004
+  - FI_speednode_0005
+  - HK_speednode_0006
+  - LU_speednode_0007
+  - LU_speednode_0008
+  - LU_speednode_0009
+  - LU_speednode_0010
+  - LU_speednode_0011
+  - LU_speednode_0012
+  - LU_speednode_0013
+  - LU_speednode_0014
+  - LU_speednode_0015
+  - LU_speednode_0016
+  - LU_speednode_0017
+  - LU_speednode_0018
+  - LU_speednode_0019
+  - LU_speednode_0020
+  - LU_speednode_0021
+  - NL_speednode_0022
+  - NL_speednode_0023
+  - NL_speednode_0024
+  - NL_speednode_0025
+  - NL_speednode_0026
+  - NL_speednode_0027
+  - NL_speednode_0028
+  - NL_speednode_0029
+  - NL_speednode_0030
+  - NL_speednode_0031
+  - NL_speednode_0032
+  - NL_speednode_0033
+  - NL_speednode_0034
+  - NL_speednode_0035
+  - NL_speednode_0036
+  - NL_speednode_0037
+  - NL_speednode_0038
+  - NL_speednode_0039
+  - NL_speednode_0040
+  - NL_speednode_0041
+  - NL_speednode_0042
   - NL_speednode_0043
-  - NL_speednode_0044
-  - NL_speednode_0045
-  - NL_speednode_0046
-  - NL_speednode_0047
-  - NL_speednode_0048
-  - NL_speednode_0049
-  - NL_speednode_0050
-  - NL_speednode_0051
-  - NL_speednode_0052
-  - NL_speednode_0053
-  - NL_speednode_0054
-  - NL_speednode_0055
-  - NL_speednode_0056
-  - NL_speednode_0057
-  - NL_speednode_0058
-  - NL_speednode_0059
-  - NL_speednode_0060
-  - NL_speednode_0061
-  - NL_speednode_0062
-  - NL_speednode_0063
-  - NL_speednode_0064
-  - NL_speednode_0065
-  - NL_speednode_0066
-  - PH_speednode_0067
-  - PH_speednode_0068
-  - PH_speednode_0069
-  - PH_speednode_0070
-  - PH_speednode_0071
-  - PH_speednode_0072
-  - PH_speednode_0073
-  - PH_speednode_0074
-  - PH_speednode_0075
-  - PH_speednode_0076
-  - PH_speednode_0077
-  - PH_speednode_0078
-  - PH_speednode_0079
-  - PH_speednode_0080
-  - PH_speednode_0081
-  - PH_speednode_0082
-  - PH_speednode_0083
-  - RU_speednode_0084
-  - RU_speednode_0085
-  - RU_speednode_0086
-  - SG_speednode_0087
-  - UA_speednode_0088
-  - US_speednode_0089
-  - US_speednode_0090
-  - US_speednode_0091
-  - US_speednode_0092
-  - US_speednode_0093
-  - US_speednode_0094
-  - US_speednode_0095
-  - US_speednode_0096
-  - US_speednode_0097
-  - US_speednode_0098
-  - US_speednode_0099
-  - US_speednode_0100
-  - US_speednode_0101
-  - US_speednode_0102
-  - US_speednode_0103
-  - US_speednode_0104
-  - US_speednode_0105
-  - US_speednode_0106
-  - US_speednode_0107
-  - US_speednode_0108
-  - US_speednode_0109
-  - US_speednode_0110
-  - US_speednode_0111
-  - US_speednode_0112
-  - US_speednode_0113
-  - US_speednode_0114
-  - US_speednode_0115
-  - US_speednode_0116
-  - US_speednode_0117
-  - US_speednode_0118
-  - US_speednode_0119
-  - US_speednode_0120
-  - US_speednode_0121
-  - US_speednode_0122
+  - PH_speednode_0044
+  - PH_speednode_0045
+  - PH_speednode_0046
+  - PH_speednode_0047
+  - PH_speednode_0048
+  - PH_speednode_0049
+  - PH_speednode_0050
+  - PH_speednode_0051
+  - PH_speednode_0052
+  - PH_speednode_0053
+  - PH_speednode_0054
+  - RU_speednode_0055
+  - RU_speednode_0056
+  - RU_speednode_0057
+  - SG_speednode_0058
+  - US_speednode_0059
+  - US_speednode_0060
+  - US_speednode_0061
+  - US_speednode_0062
+  - US_speednode_0063
+  - US_speednode_0064
+  - US_speednode_0065
+  - US_speednode_0066
+  - US_speednode_0067
+  - US_speednode_0068
+  - US_speednode_0069
+  - US_speednode_0070
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
