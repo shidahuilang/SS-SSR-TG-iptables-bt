@@ -32,54 +32,7 @@ proxies:
     headers:
       Host: dd8.transitkala.com
     path: /
-- alterId: 2
-  cipher: auto
-  name: CN_speednode_0003
-  network: ws
-  port: 22642
-  server: tk.hzlt.tkddns.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7
-  ws-opts:
-    headers:
-      Host: zxjp-b.tkong.cc
-    path: /
-- alterId: 2
-  cipher: auto
-  name: CN_speednode_0004
-  network: ws
-  port: 22643
-  server: tk.hzlt.tkddns.xyz
-  servername: zxjp-c.tkong.cc
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7
-  ws-opts:
-    headers:
-      Host: tk.hzlt.tkddns.xyz
-    path: /
-- alterId: 2
-  cipher: auto
-  name: CN_speednode_0005
-  network: ws
-  port: 22643
-  server: tk.hzlt.tkddns.xyz
-  servername: zxjp-c.tkong.cc
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7
-  ws-opts:
-    headers:
-      Host: zxjp-c.tkong.cc
-    path: /
-- name: GB_speednode_0012
+- name: GB_speednode_0009
   network: ws
   port: 443
   server: 31.22.116.38
@@ -93,21 +46,7 @@ proxies:
     headers:
       Host: usd.kobtty.me
     path: /bing
-- name: JP_speednode_0022
-  network: ws
-  port: 443
-  server: 47.74.33.96
-  servername: jpc.kddhs.asia
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 29fffc40-85fa-46fc-ac13-4d846fd9f696
-  ws-opts:
-    headers:
-      Host: jpc.kddhs.asia
-    path: /bing
-- name: NL_speednode_0032
+- name: NL_speednode_0028
   network: ws
   port: 80
   server: 45.149.12.128
@@ -121,7 +60,7 @@ proxies:
     headers:
       Host: pormang.webhost99.workers.dev
     path: /?ed=2560
-- name: NL_speednode_0033
+- name: NL_speednode_0029
   network: ws
   port: 2052
   server: 45.149.12.183
@@ -135,52 +74,52 @@ proxies:
     headers:
       Host: redw.pooriam.ir
     path: /TABRIZ.NET@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1?ed=2560
+- name: NL_speednode_0034
+  network: ws
+  port: 80
+  server: 45.149.12.232
+  servername: pormang.webhost99.workers.dev
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
+  ws-opts:
+    headers:
+      Host: pormang.webhost99.workers.dev
+    path: /
+- name: NL_speednode_0036
+  network: ws
+  port: 80
+  server: 45.149.12.128
+  servername: pormang.webhost99.workers.dev
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
+  ws-opts:
+    headers:
+      Host: pormang.webhost99.workers.dev
+    path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
+- client-fingerprint: chrome
+  name: NL_speednode_0037
+  network: ws
+  port: 80
+  server: 45.149.12.128
+  servername: pormang.webhost99.workers.dev
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
+  ws-opts:
+    headers:
+      Host: pormang.webhost99.workers.dev
+    path: /
 - name: NL_speednode_0038
   network: ws
   port: 80
-  server: 45.149.12.232
-  servername: pormang.webhost99.workers.dev
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
-  ws-opts:
-    headers:
-      Host: pormang.webhost99.workers.dev
-    path: /
-- name: NL_speednode_0040
-  network: ws
-  port: 80
-  server: 45.149.12.128
-  servername: pormang.webhost99.workers.dev
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
-  ws-opts:
-    headers:
-      Host: pormang.webhost99.workers.dev
-    path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
-- client-fingerprint: chrome
-  name: NL_speednode_0041
-  network: ws
-  port: 80
-  server: 45.149.12.128
-  servername: pormang.webhost99.workers.dev
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
-  ws-opts:
-    headers:
-      Host: pormang.webhost99.workers.dev
-    path: /
-- name: NL_speednode_0042
-  network: ws
-  port: 80
   server: 45.149.12.206
   servername: pormang.webhost99.workers.dev
   skip-cert-verify: false
@@ -193,7 +132,7 @@ proxies:
       Host: pormang.webhost99.workers.dev
     path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
 - client-fingerprint: chrome
-  name: NL_speednode_0043
+  name: NL_speednode_0039
   network: ws
   port: 80
   server: 45.149.12.206
@@ -207,7 +146,7 @@ proxies:
     headers:
       Host: pormang.webhost99.workers.dev
     path: /
-- name: NL_speednode_0045
+- name: NL_speednode_0041
   network: ws
   port: 80
   server: 45.149.12.232
@@ -221,7 +160,7 @@ proxies:
     headers:
       Host: pormang.webhost99.workers.dev
     path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
-- name: RU_speednode_0050
+- name: RU_speednode_0046
   network: ws
   port: 80
   server: 185.174.138.194
@@ -235,7 +174,7 @@ proxies:
     headers:
       Host: pormang.webhost99.workers.dev
     path: /
-- name: RU_speednode_0051
+- name: RU_speednode_0047
   network: ws
   port: 8080
   server: 185.174.138.197
@@ -249,7 +188,7 @@ proxies:
     headers:
       Host: a.xn--i-sx6a60i.us.kg.
     path: /
-- name: RU_speednode_0052
+- name: RU_speednode_0048
   network: ws
   port: 80
   server: 185.174.138.194
@@ -263,7 +202,7 @@ proxies:
     headers:
       Host: pormang.webhost99.workers.dev
     path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
-- name: SC_speednode_0053
+- name: SC_speednode_0049
   network: ws
   port: 8880
   server: 154.83.2.156
@@ -277,7 +216,7 @@ proxies:
     headers:
       Host: redw.pooriam.ir
     path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1?ed=2560
-- name: SC_speednode_0054
+- name: SC_speednode_0050
   network: ws
   port: 8880
   server: 154.83.2.230
@@ -291,7 +230,7 @@ proxies:
     headers:
       Host: redw.pooriam.ir
     path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1?ed=2560
-- name: SC_speednode_0055
+- name: SC_speednode_0051
   network: ws
   port: 8880
   server: 154.83.2.228
@@ -306,13 +245,13 @@ proxies:
       Host: redw.pooriam.ir
     path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1?ed=2560
 - cipher: aes-256-cfb
-  name: TW_speednode_0059
+  name: TW_speednode_0055
   password: f8f7aCzcPKbsF8p3
   port: 989
   server: 154.223.20.79
   type: ss
   udp: true
-- name: US_speednode_0060
+- name: US_speednode_0056
   network: ws
   port: 80
   server: join.e-l-i-v-2-r-a-y.fastly80-3.hosting-ip.com
@@ -326,7 +265,7 @@ proxies:
     headers:
       Host: Join--E-L-i-V-2-R-A-Y.net
     path: /channel,ELiV2RAY-channel,ELiV2RAY-channel,ELiV2RAY?ed=2560
-- name: US_speednode_0068
+- name: US_speednode_0064
   network: ws
   port: 80
   server: 104.26.14.85
@@ -340,7 +279,7 @@ proxies:
     headers:
       Host: a.xn--i-sx6a60i.us.kg.
     path: /?ed=2560
-- name: US_speednode_0069
+- name: US_speednode_0065
   network: ws
   port: 80
   server: 104.26.14.85
@@ -354,7 +293,7 @@ proxies:
     headers:
       Host: a.xn--i-sx6a60i.us.kg.
     path: /@V2ray_Alpha/?ed=2560
-- name: US_speednode_0073
+- name: US_speednode_0069
   network: ws
   port: 80
   server: 172.67.73.163
@@ -368,7 +307,7 @@ proxies:
     headers:
       Host: a.xn--i-sx6a60i.us.kg.
     path: /?ed=2560
-- name: US_speednode_0075
+- name: US_speednode_0071
   network: ws
   port: 80
   server: 172.67.73.163
@@ -382,7 +321,7 @@ proxies:
     headers:
       Host: a.xn--i-sx6a60i.us.kg.
     path: /MTMVPN?ed=2560
-- name: US_speednode_0076
+- name: US_speednode_0072
   network: ws
   port: 80
   server: 104.26.14.85
@@ -396,7 +335,7 @@ proxies:
     headers:
       Host: a.xn--i-sx6a60i.us.kg.
     path: /MTMVPN-MTMVPN-MTMVPN-MTMVPN?ed=2560
-- name: US_speednode_0081
+- name: US_speednode_0077
   network: ws
   port: 80
   server: 104.26.14.85
@@ -410,7 +349,7 @@ proxies:
     headers:
       Host: a.xn--i-sx6a60i.us.kg.
     path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1?ed=2560
-- name: US_speednode_0088
+- name: US_speednode_0084
   network: ws
   port: 80
   server: 66.235.200.58
@@ -424,7 +363,7 @@ proxies:
     headers:
       Host: pormang.webhost99.workers.dev
     path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
-- name: US_speednode_0089
+- name: US_speednode_0085
   network: ws
   port: 80
   server: 172.67.73.163
@@ -438,7 +377,7 @@ proxies:
     headers:
       Host: a.xn--i-sx6a60i.us.kg.
     path: /Telegram-icV2ray-Telegram-icV2ray-Telegram-icV2ray-Telegram-icV2ray-Telegram-icV2ray-Telegram-icV2ray-Telegram-icV2ray-Telegram-icV2ray?ed=2560
-- name: US_speednode_0090
+- name: US_speednode_0086
   network: ws
   port: 80
   server: 66.235.200.5
@@ -452,6 +391,48 @@ proxies:
     headers:
       Host: pormang.webhost99.workers.dev
     path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
+- name: US_speednode_0088
+  network: ws
+  port: 80
+  server: 66.235.200.149
+  servername: pormang.webhost99.workers.dev
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
+  ws-opts:
+    headers:
+      Host: pormang.webhost99.workers.dev
+    path: /
+- name: US_speednode_0089
+  network: ws
+  port: 80
+  server: 66.235.200.30
+  servername: pormang.webhost99.workers.dev
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
+  ws-opts:
+    headers:
+      Host: pormang.webhost99.workers.dev
+    path: /
+- name: US_speednode_0091
+  network: ws
+  port: 80
+  server: 66.235.200.5
+  servername: pormang.webhost99.workers.dev
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
+  ws-opts:
+    headers:
+      Host: pormang.webhost99.workers.dev
+    path: /
 - name: US_speednode_0092
   network: ws
   port: 80
@@ -465,50 +446,8 @@ proxies:
   ws-opts:
     headers:
       Host: pormang.webhost99.workers.dev
-    path: /
-- name: US_speednode_0093
-  network: ws
-  port: 80
-  server: 66.235.200.30
-  servername: pormang.webhost99.workers.dev
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
-  ws-opts:
-    headers:
-      Host: pormang.webhost99.workers.dev
-    path: /
-- name: US_speednode_0095
-  network: ws
-  port: 80
-  server: 66.235.200.5
-  servername: pormang.webhost99.workers.dev
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
-  ws-opts:
-    headers:
-      Host: pormang.webhost99.workers.dev
-    path: /
-- name: US_speednode_0096
-  network: ws
-  port: 80
-  server: 66.235.200.149
-  servername: pormang.webhost99.workers.dev
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: e497da22-d020-40fb-a1fa-bc294066a2d2
-  ws-opts:
-    headers:
-      Host: pormang.webhost99.workers.dev
     path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
-- name: US_speednode_0097
+- name: US_speednode_0093
   network: ws
   port: 80
   server: 66.235.200.222
@@ -522,7 +461,7 @@ proxies:
     headers:
       Host: pormang.webhost99.workers.dev
     path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
-- name: US_speednode_0098
+- name: US_speednode_0094
   network: ws
   port: 80
   server: 66.235.200.30
@@ -536,7 +475,7 @@ proxies:
     headers:
       Host: pormang.webhost99.workers.dev
     path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
-- name: US_speednode_0100
+- name: US_speednode_0096
   network: ws
   port: 80
   server: 66.235.200.191
@@ -550,7 +489,7 @@ proxies:
     headers:
       Host: pormang.webhost99.workers.dev
     path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1
-- name: US_speednode_0101
+- name: US_speednode_0097
   network: ws
   port: 80
   server: 172.67.73.163
@@ -564,7 +503,7 @@ proxies:
     headers:
       Host: a.xn--i-sx6a60i.us.kg.
     path: /
-- name: US_speednode_0103
+- name: US_speednode_0099
   network: ws
   port: 2052
   server: www.speedtest.net
@@ -578,7 +517,7 @@ proxies:
     headers:
       Host: Yak-Khanda-kUn-eY-gUL.biNG.com.xn--cR8HaaaAaAAAaAaaAaAaAAaAAaaaAAAAAaAaaAaaaAaaaaAAaaAAAaaaaAa.xN--Cr8hAaAaaAaaAAAAAAaaaAAAaAAaaAaAaAAAAAA.TREPAspeEdTEsT.NEtrag.cOm.PX.Com.sh017.IR.XN--Cr8hAaaAaaAaaAaaaAAAaaaAaaAaaaAaAAAaaaA.yek.dDnS-ip.nEt
     path: /?ed=1080
-- name: US_speednode_0104
+- name: US_speednode_0100
   network: ws
   port: 443
   server: 45.62.114.221
@@ -597,91 +536,83 @@ proxy-groups:
   proxies:
   - "\u267B\uFE0F automatic"
   - CH_speednode_0002
-  - CN_speednode_0003
-  - CN_speednode_0004
-  - CN_speednode_0005
-  - GB_speednode_0012
-  - JP_speednode_0022
-  - NL_speednode_0032
-  - NL_speednode_0033
+  - GB_speednode_0009
+  - NL_speednode_0028
+  - NL_speednode_0029
+  - NL_speednode_0034
+  - NL_speednode_0036
+  - NL_speednode_0037
   - NL_speednode_0038
-  - NL_speednode_0040
+  - NL_speednode_0039
   - NL_speednode_0041
-  - NL_speednode_0042
-  - NL_speednode_0043
-  - NL_speednode_0045
-  - RU_speednode_0050
-  - RU_speednode_0051
-  - RU_speednode_0052
-  - SC_speednode_0053
-  - SC_speednode_0054
-  - SC_speednode_0055
-  - TW_speednode_0059
-  - US_speednode_0060
-  - US_speednode_0068
+  - RU_speednode_0046
+  - RU_speednode_0047
+  - RU_speednode_0048
+  - SC_speednode_0049
+  - SC_speednode_0050
+  - SC_speednode_0051
+  - TW_speednode_0055
+  - US_speednode_0056
+  - US_speednode_0064
+  - US_speednode_0065
   - US_speednode_0069
-  - US_speednode_0073
-  - US_speednode_0075
-  - US_speednode_0076
-  - US_speednode_0081
+  - US_speednode_0071
+  - US_speednode_0072
+  - US_speednode_0077
+  - US_speednode_0084
+  - US_speednode_0085
+  - US_speednode_0086
   - US_speednode_0088
   - US_speednode_0089
-  - US_speednode_0090
+  - US_speednode_0091
   - US_speednode_0092
   - US_speednode_0093
-  - US_speednode_0095
+  - US_speednode_0094
   - US_speednode_0096
   - US_speednode_0097
-  - US_speednode_0098
+  - US_speednode_0099
   - US_speednode_0100
-  - US_speednode_0101
-  - US_speednode_0103
-  - US_speednode_0104
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
   - CH_speednode_0002
-  - CN_speednode_0003
-  - CN_speednode_0004
-  - CN_speednode_0005
-  - GB_speednode_0012
-  - JP_speednode_0022
-  - NL_speednode_0032
-  - NL_speednode_0033
+  - GB_speednode_0009
+  - NL_speednode_0028
+  - NL_speednode_0029
+  - NL_speednode_0034
+  - NL_speednode_0036
+  - NL_speednode_0037
   - NL_speednode_0038
-  - NL_speednode_0040
+  - NL_speednode_0039
   - NL_speednode_0041
-  - NL_speednode_0042
-  - NL_speednode_0043
-  - NL_speednode_0045
-  - RU_speednode_0050
-  - RU_speednode_0051
-  - RU_speednode_0052
-  - SC_speednode_0053
-  - SC_speednode_0054
-  - SC_speednode_0055
-  - TW_speednode_0059
-  - US_speednode_0060
-  - US_speednode_0068
+  - RU_speednode_0046
+  - RU_speednode_0047
+  - RU_speednode_0048
+  - SC_speednode_0049
+  - SC_speednode_0050
+  - SC_speednode_0051
+  - TW_speednode_0055
+  - US_speednode_0056
+  - US_speednode_0064
+  - US_speednode_0065
   - US_speednode_0069
-  - US_speednode_0073
-  - US_speednode_0075
-  - US_speednode_0076
-  - US_speednode_0081
+  - US_speednode_0071
+  - US_speednode_0072
+  - US_speednode_0077
+  - US_speednode_0084
+  - US_speednode_0085
+  - US_speednode_0086
   - US_speednode_0088
   - US_speednode_0089
-  - US_speednode_0090
+  - US_speednode_0091
   - US_speednode_0092
   - US_speednode_0093
-  - US_speednode_0095
+  - US_speednode_0094
   - US_speednode_0096
   - US_speednode_0097
-  - US_speednode_0098
+  - US_speednode_0099
   - US_speednode_0100
-  - US_speednode_0101
-  - US_speednode_0103
-  - US_speednode_0104
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
