@@ -26,14 +26,44 @@ proxies:
   type: http
   udp: true
   username: mrwdfNTD8M79LCukCieldrqZWqs=
+- name: CA_speednode_0002
+  network: ws
+  port: 443
+  server: 140.238.158.238
+  servername: vv.vs2025.cfd
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 55520747-311e-4015-83ce-be46e2060ce3
+  ws-opts:
+    headers:
+      Host: vv.vs2025.cfd
+    path: /?ed=2560
+- name: CN_speednode_0003
+  password: b13c1e89-60af-4462-8932-4acf1d604a19
+  port: 10465
+  server: aafrtpfxr.hkl03i9zjfegelp.5xfsur8v62.gosdk.xyz
+  skip-cert-verify: false
+  sni: q08m.vgraxiw73s.hasyaf.cn
+  type: trojan
+  udp: true
+- name: CN_speednode_0004
+  password: b13c1e89-60af-4462-8932-4acf1d604a19
+  port: 27101
+  server: aafrtpfxr.hkl01i9zjfegelp.5xfsur8v62.gosdk.xyz
+  skip-cert-verify: false
+  sni: q08m.vgraxiw73s.hasyaf.cn
+  type: trojan
+  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: CN_speednode_0002
-  port: 37809
+  name: CN_speednode_0005
+  port: 27631
   reality-opts:
     public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: shenzhou05.mysynology.net
-  servername: www.yahoo.com
+  server: bsuqian01.dynu.net
+  servername: www.nvidia.com
   skip-cert-verify: false
   tls: true
   type: vless
@@ -41,65 +71,24 @@ proxies:
   uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: CN_speednode_0003
-  port: 31800
+  name: CN_speednode_0006
+  port: 10860
   reality-opts:
     public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: agaungzhou01.bumbleshrimp.com
+  server: test123.zlqhdns.top
   servername: www.nvidia.com
   skip-cert-verify: true
   tls: true
   type: vless
   udp: true
   uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: CN_speednode_0004
-  port: 35853
-  reality-opts:
-    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: zhee01.dynu.net
-  servername: www.nvidia.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
-- name: CN_speednode_0005
-  network: ws
-  port: 443
-  server: 103.44.255.81
-  servername: il.ylkszy.eu.org
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-  ws-opts:
-    headers:
-      Host: il.ylkszy.eu.org
-    path: /?ed=2560
-- name: CN_speednode_0006
-  network: ws
-  port: 443
-  server: 103.44.255.81
-  servername: in.youlingkais.filegear-sg.me
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-  ws-opts:
-    headers:
-      Host: in.youlingkais.filegear-sg.me
-    path: /?ed=2560
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: CN_speednode_0007
-  port: 48121
+  port: 61178
   reality-opts:
     public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: beiyong.dynuddns.net
+  server: test123.zlqhdns.top
   servername: www.nvidia.com
   skip-cert-verify: true
   tls: true
@@ -109,12 +98,12 @@ proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: CN_speednode_0008
-  port: 47531
+  port: 33782
   reality-opts:
     public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: bsuqian01.dynu.net
-  servername: gateway.icloud.com
-  skip-cert-verify: false
+  server: shenzhou05.mysynology.net
+  servername: www.nvidia.com
+  skip-cert-verify: true
   tls: true
   type: vless
   udp: true
@@ -122,12 +111,12 @@ proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: CN_speednode_0009
-  port: 13989
+  port: 47531
   reality-opts:
     public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: csuzhou01.1cooldns.com
+  server: bsuqian01.dynu.net
   servername: gateway.icloud.com
-  skip-cert-verify: false
+  skip-cert-verify: true
   tls: true
   type: vless
   udp: true
@@ -145,16 +134,220 @@ proxies:
   type: vless
   udp: true
   uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
-- cipher: chacha20-ietf-poly1305
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
   name: CN_speednode_0011
-  password: ee19fceb-cedc-4832-b460-fccf24fdc8be
-  port: 12362
-  server: 183.240.255.75
-  type: ss
+  port: 37809
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: shenzhou05.mysynology.net
+  servername: www.yahoo.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
   udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: CN_speednode_0012
+  port: 11555
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: test123.zlqhdns.top
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0013
+  port: 41279
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: csuzhou01.1cooldns.com
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- name: CN_speednode_0014
+  password: b13c1e89-60af-4462-8932-4acf1d604a19
+  port: 27201
+  server: aafrtpfxr.twl01i9zjfegelp.5xfsur8v62.gosdk.xyz
+  skip-cert-verify: false
+  sni: q08m.vgraxiw73s.hasyaf.cn
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: CN_speednode_0015
+  password: 483DD6BF-E02D-48A9-83D7-09B9313B49AD
+  port: 31100
+  server: free-relay.themars.top
+  type: ss
+  udp: true
+- name: CN_speednode_0016
+  password: b13c1e89-60af-4462-8932-4acf1d604a19
+  port: 22271
+  server: aafrtpfxr.jpl03i9zjfegelp.5xfsur8v62.gosdk.xyz
+  skip-cert-verify: false
+  sni: q08m.vgraxiw73s.hasyaf.cn
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: CN_speednode_0017
+  password: BFD35F45-24F6-4C80-BED0-81A6FB018DC6
+  port: 31100
+  server: free-relay.themars.top
+  type: ss
+  udp: true
+- name: CN_speednode_0018
+  password: 13c3cf97-5a4a-434f-880a-aecbd70c15bc
+  port: 20016
+  server: 6.elk3b3nwfy.xyz
+  skip-cert-verify: true
+  sni: 6.elk3b3nwfy.xyz
+  type: trojan
+  udp: true
+- cipher: aes-256-cfb
+  name: CN_speednode_0019
+  obfs: tls1.2_ticket_auth
+  obfs-param: sg2-cdn-route.couldflare-cdn.com
+  password: uiACqrIr
+  port: 56138
+  protocol: origin
+  protocol-param: ''
+  server: cm2.xcone.xyz
+  type: ssr
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0020
+  port: 31735
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: bsuqian01.dynu.net
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0021
+  port: 15700
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: zhee01.dynu.net
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0022
+  port: 12477
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: gysz0000.dynu.net
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0023
+  port: 15823
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: gy01.hunheiydd.xyz
+  servername: www.yahoo.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- name: CN_speednode_0024
+  password: b13c1e89-60af-4462-8932-4acf1d604a19
+  port: 43396
+  server: aafrtpfxr.vnl01i9zjfegelp.5xfsur8v62.gosdk.xyz
+  skip-cert-verify: false
+  sni: q08m.vgraxiw73s.hasyaf.cn
+  type: trojan
+  udp: true
+- name: CN_speednode_0025
+  password: VMhGp5wEIyCDf90T
+  port: 38340
+  server: gysz0000.dynu.net
+  skip-cert-verify: true
+  sni: hk39.work.gd
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0026
+  port: 45883
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: gysz0000.dynu.net
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0027
+  port: 12477
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: gy01.hunheiydd.xyz
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0028
+  port: 16704
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: zhee01.dynu.net
+  servername: www.yahoo.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- name: CN_speednode_0029
+  password: b13c1e89-60af-4462-8932-4acf1d604a19
+  port: 46668
+  server: aafrtpfxr.krl01i9zjfegelp.5xfsur8v62.gosdk.xyz
+  skip-cert-verify: false
+  sni: q08m.vgraxiw73s.hasyaf.cn
+  type: trojan
+  udp: true
+- name: CN_speednode_0030
+  password: 13c3cf97-5a4a-434f-880a-aecbd70c15bc
+  port: 20019
+  server: 9.elk3b3nwfy.xyz
+  skip-cert-verify: true
+  sni: 9.elk3b3nwfy.xyz
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0031
   port: 44003
   reality-opts:
     public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
@@ -167,11 +360,11 @@ proxies:
   uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: CN_speednode_0013
-  port: 14548
+  name: CN_speednode_0032
+  port: 10635
   reality-opts:
     public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: csuzhou01.1cooldns.com
+  server: gysz0000.dynu.net
   servername: www.nvidia.com
   skip-cert-verify: true
   tls: true
@@ -179,132 +372,22 @@ proxies:
   udp: true
   uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
 - cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0014
-  password: ee19fceb-cedc-4832-b460-fccf24fdc8be
-  port: 11006
-  server: 183.232.229.164
+  name: CN_speednode_0033
+  password: BFD35F45-24F6-4C80-BED0-81A6FB018DC6
+  port: 31104
+  server: free-relay.themars.top
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: CN_speednode_0034
+  password: BFD35F45-24F6-4C80-BED0-81A6FB018DC6
+  port: 31103
+  server: free-relay.themars.top
   type: ss
   udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: CN_speednode_0015
-  port: 54220
-  reality-opts:
-    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: zhee01.dynu.net
-  servername: www.nvidia.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: CN_speednode_0016
-  port: 25768
-  reality-opts:
-    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: bsuqian01.dynu.net
-  servername: www.nvidia.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: CN_speednode_0017
-  port: 12791
-  reality-opts:
-    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: agaungzhou01.bumbleshrimp.com
-  servername: www.yahoo.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: CN_speednode_0018
-  port: 16955
-  reality-opts:
-    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: bsuqian01.dynu.net
-  servername: www.yahoo.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: CN_speednode_0019
-  port: 64654
-  reality-opts:
-    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: zhee01.dynu.net
-  servername: gateway.icloud.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: CN_speednode_0020
-  port: 65053
-  reality-opts:
-    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: beiyong.dynuddns.net
-  servername: www.amazon.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: CN_speednode_0021
-  port: 22216
-  reality-opts:
-    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: bsuqian01.dynu.net
-  servername: www.nvidia.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: CN_speednode_0022
-  port: 38302
-  reality-opts:
-    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: agaungzhou01.bumbleshrimp.com
-  servername: www.amazon.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: CN_speednode_0023
-  port: 42426
-  reality-opts:
-    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: bsuqian01.dynu.net
-  servername: gateway.icloud.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: CN_speednode_0024
+  name: CN_speednode_0035
   port: 24318
   reality-opts:
     public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
@@ -315,37 +398,92 @@ proxies:
   type: vless
   udp: true
   uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
-- cipher: aes-256-cfb
-  name: CN_speednode_0025
-  obfs: tls1.2_ticket_auth
-  obfs-param: sg2-cdn-route.couldflare-cdn.com
-  password: uiACqrIr
-  port: 56138
-  protocol: origin
-  protocol-param: ''
-  server: cm2.xcone.xyz
-  type: ssr
-  udp: true
-- alterId: 2
-  cipher: auto
-  name: CN_speednode_0026
-  network: ws
-  port: 22643
-  server: tk.hzlt.tkddns.xyz
-  servername: zxjp-c.tkong.cc
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7
-  ws-opts:
-    headers:
-      Host: zxjp-c.tkong.cc
-    path: /
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: CN_speednode_0027
-  port: 10860
+  name: CN_speednode_0036
+  port: 10635
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: shenzhou05.mysynology.net
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0037
+  port: 48121
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: beiyong.dynuddns.net
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- alterId: 0
+  cipher: auto
+  name: CN_speednode_0038
+  port: 56901
+  server: 183.236.51.38
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0039
+  port: 13989
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: csuzhou01.1cooldns.com
+  servername: gateway.icloud.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0040
+  port: 31800
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: agaungzhou01.bumbleshrimp.com
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- cipher: chacha20-ietf-poly1305
+  name: CN_speednode_0041
+  password: 483DD6BF-E02D-48A9-83D7-09B9313B49AD
+  port: 31103
+  server: free-relay.themars.top
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0042
+  port: 54220
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: zhee01.dynu.net
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0043
+  port: 10778
   reality-opts:
     public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
   server: test123.zlqhdns.top
@@ -357,11 +495,24 @@ proxies:
   uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: CN_speednode_0028
-  port: 12831
+  name: CN_speednode_0044
+  port: 13263
   reality-opts:
     public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: agaungzhou01.bumbleshrimp.com
+  server: zhee01.dynu.net
+  servername: gateway.icloud.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0045
+  port: 35853
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: zhee01.dynu.net
   servername: www.nvidia.com
   skip-cert-verify: true
   tls: true
@@ -370,33 +521,69 @@ proxies:
   uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: CN_speednode_0029
-  port: 29316
+  name: CN_speednode_0046
+  port: 11839
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: gysz0000.dynu.net
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0047
+  port: 56127
   reality-opts:
     public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
   server: agaungzhou01.bumbleshrimp.com
-  servername: www.amazon.com
+  servername: www.yahoo.com
   skip-cert-verify: true
   tls: true
   type: vless
   udp: true
   uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- cipher: chacha20-ietf-poly1305
+  name: CN_speednode_0048
+  password: 483DD6BF-E02D-48A9-83D7-09B9313B49AD
+  port: 31104
+  server: free-relay.themars.top
+  type: ss
+  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: CN_speednode_0030
-  port: 46372
+  name: CN_speednode_0049
+  port: 25768
   reality-opts:
     public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: zhee01.dynu.net
-  servername: www.amazon.com
+  server: bsuqian01.dynu.net
+  servername: www.nvidia.com
   skip-cert-verify: true
   tls: true
   type: vless
   udp: true
   uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- name: CN_speednode_0050
+  password: 13c3cf97-5a4a-434f-880a-aecbd70c15bc
+  port: 20047
+  server: 17.9n3pqn1406.xyz
+  skip-cert-verify: true
+  sni: 17.9n3pqn1406.xyz
+  type: trojan
+  udp: true
+- name: CN_speednode_0051
+  password: b13c1e89-60af-4462-8932-4acf1d604a19
+  port: 33506
+  server: aafrtpfxr.usl03i9zjfegelp.5xfsur8v62.gosdk.xyz
+  skip-cert-verify: false
+  sni: q08m.vgraxiw73s.hasyaf.cn
+  type: trojan
+  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: CN_speednode_0031
+  name: CN_speednode_0052
   port: 23301
   reality-opts:
     public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
@@ -409,58 +596,229 @@ proxies:
   uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: CN_speednode_0032
-  port: 14659
+  name: CN_speednode_0053
+  port: 17278
   reality-opts:
     public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: csuzhou01.1cooldns.com
-  servername: www.nvidia.com
-  skip-cert-verify: false
+  server: shenzhou05.mysynology.net
+  servername: www.yahoo.com
+  skip-cert-verify: true
   tls: true
   type: vless
   udp: true
   uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: CN_speednode_0033
-  port: 50452
+  name: CN_speednode_0054
+  port: 16955
   reality-opts:
     public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
-  server: shenzhou05.mysynology.net
+  server: bsuqian01.dynu.net
+  servername: www.yahoo.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- cipher: chacha20-ietf-poly1305
+  name: CN_speednode_0055
+  password: 2be0c954-4291-45ea-b47d-ca713180550b
+  port: 52612
+  server: 58.19.16.228
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: CN_speednode_0056
+  password: 2be0c954-4291-45ea-b47d-ca713180550b
+  port: 52612
+  server: 111.29.57.125
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: CN_speednode_0057
+  password: 2be0c954-4291-45ea-b47d-ca713180550b
+  port: 52612
+  server: 119.36.154.74
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: CN_speednode_0058
+  password: 2be0c954-4291-45ea-b47d-ca713180550b
+  port: 52612
+  server: hk02.x.quickcht3.club
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0059
+  port: 27011
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: csuzhou01.1cooldns.com
   servername: www.amazon.com
-  skip-cert-verify: false
+  skip-cert-verify: true
   tls: true
   type: vless
   udp: true
   uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
 - client-fingerprint: chrome
-  name: GB_speednode_0034
-  port: 80
+  flow: xtls-rprx-vision
+  name: CN_speednode_0060
+  port: 38302
   reality-opts:
-    public-key: DZzAtolzThTEwEjUnyLN5lzhvzMtKPOAvPA8K8luAhE
-    short-id: 7d2e829be0
-  server: 84.234.28.63
-  servername: refersion.com
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: agaungzhou01.bumbleshrimp.com
+  servername: www.amazon.com
   skip-cert-verify: true
   tls: true
   type: vless
   udp: true
-  uuid: 98d8274c-3159-7718-4042-19544c9d2ff6
-- name: HK_speednode_0035
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0061
+  port: 64654
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: zhee01.dynu.net
+  servername: gateway.icloud.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0062
+  port: 11839
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: gy01.hunheiydd.xyz
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0063
+  port: 57926
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: beiyong.dynuddns.net
+  servername: gateway.icloud.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0064
+  port: 40072
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: agaungzhou01.bumbleshrimp.com
+  servername: www.yahoo.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0065
+  port: 12791
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: agaungzhou01.bumbleshrimp.com
+  servername: www.yahoo.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0066
+  port: 17930
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: bsuqian01.dynu.net
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0067
+  port: 14659
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: csuzhou01.1cooldns.com
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0068
+  port: 32055
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: csuzhou01.1cooldns.com
+  servername: www.amazon.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0069
+  port: 29316
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: agaungzhou01.bumbleshrimp.com
+  servername: www.amazon.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CN_speednode_0070
+  port: 15464
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+  server: csuzhou01.1cooldns.com
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
+- name: GB_speednode_0071
   network: ws
-  port: 443
-  server: 43.129.171.137
-  servername: edfgv.aimercc.filegear-sg.me
+  port: 80
+  server: 94.247.142.1
+  servername: APPinfo.EiNETWORK.NEWS
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vless
   udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
+  uuid: bcad1dbf-6ab3-4516-b51c-37213737c2e4
   ws-opts:
     headers:
-      Host: edfgv.aimercc.filegear-sg.me
-    path: /?ed=2560
-- name: HK_speednode_0036
+      Host: APPinfo.EiNETWORK.NEWS
+    path: /Telegram-EiV2Ray-Telegram-EiV2Ray-Telegram-EiV2Ray-Telegram-EiV2Ray-Telegram-EiV2Ray-Telegram
+- name: HK_speednode_0072
   password: 6557bf4a-852b-4a69-ad35-d53293386a13
   port: 443
   server: ru.mjt000.com
@@ -468,21 +826,65 @@ proxies:
   sni: ru.mjt000.com
   type: trojan
   udp: true
-- name: JP_speednode_0037
+- name: IL_speednode_0073
   network: ws
-  port: 443
-  server: 103.116.7.189
-  servername: edfgv.aimercc.filegear-sg.me
+  port: 8443
+  server: 129.159.143.171
+  servername: vv.vs2025.cfd
   skip-cert-verify: true
   tls: true
   type: vless
   udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
+  uuid: 55520747-311e-4015-83ce-be46e2060ce3
   ws-opts:
     headers:
-      Host: edfgv.aimercc.filegear-sg.me
+      Host: vv.vs2025.cfd
     path: /?ed=2560
-- name: JP_speednode_0038
+- name: IL_speednode_0074
+  network: ws
+  port: 2053
+  server: 129.159.129.107
+  servername: vv.vs2025.cfd
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 55520747-311e-4015-83ce-be46e2060ce3
+  ws-opts:
+    headers:
+      Host: vv.vs2025.cfd
+    path: /?ed=2560
+- alterId: 0
+  cipher: auto
+  name: JP_speednode_0075
+  network: ws
+  port: 3231
+  server: v3.emovpn.buzz
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6db95bbc-c7a1-4b3f-9346-df71f4d95350
+  ws-opts:
+    headers:
+      Host: v3.emovpn.buzz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP_speednode_0076
+  network: ws
+  port: 3774
+  server: v9.emovpn.buzz
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6db95bbc-c7a1-4b3f-9346-df71f4d95350
+  ws-opts:
+    headers:
+      Host: v9.emovpn.buzz
+    path: /
+- name: JP_speednode_0077
   password: exaxgqkKkd0TAMrCxeonWg==
   port: 443
   server: jp104-cdn-route.couldflare-cdn.com
@@ -490,193 +892,245 @@ proxies:
   type: http
   udp: true
   username: mrwdfNTD8M79LCukCieldrqZWqs=
-- name: JP_speednode_0039
+- name: KR_speednode_0078
   network: ws
-  port: 443
-  server: 217.142.236.93
-  servername: edfgv.aimercc.filegear-sg.me
+  port: 56271
+  server: 146.56.106.51
+  servername: vv.vs2025.cfd
   skip-cert-verify: true
   tls: true
   type: vless
   udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
+  uuid: 55520747-311e-4015-83ce-be46e2060ce3
   ws-opts:
     headers:
-      Host: edfgv.aimercc.filegear-sg.me
+      Host: vv.vs2025.cfd
     path: /?ed=2560
-- name: KR_speednode_0040
-  network: ws
-  port: 17774
-  server: 220.116.147.73
-  servername: edfgv.aimercc.filegear-sg.me
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edfgv.aimercc.filegear-sg.me
-    path: /?ed=2560
-- name: KR_speednode_0041
-  network: ws
-  port: 17084
-  server: 14.52.132.4
-  servername: edfgv.aimercc.filegear-sg.me
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edfgv.aimercc.filegear-sg.me
-    path: /?ed=2560
-- name: KR_speednode_0042
-  network: ws
-  port: 12361
-  server: 222.119.17.97
-  servername: edfgv.aimercc.filegear-sg.me
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edfgv.aimercc.filegear-sg.me
-    path: /?ed=2560
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: KR_speednode_0043
-  port: 23333
-  reality-opts:
-    public-key: LGcYLmLcvwtfKuk_Qa_dy0N6YNz4szWReWug5fxAwh0
-    short-id: 15f7
-  server: 193.123.248.228
-  servername: www.yahoo.co.jp
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 30f85233-d41e-4297-97c1-cfac047a948b
-- name: KR_speednode_0044
-  network: ws
-  port: 21291
-  server: 211.185.2.191
-  servername: edfgv.aimercc.filegear-sg.me
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edfgv.aimercc.filegear-sg.me
-    path: /?ed=2560
-- name: LT_speednode_0045
+- name: NL_speednode_0079
   network: ws
   port: 8080
-  server: 86.38.214.30
+  server: 45.131.4.33
+  servername: gozargah.validbv7996.ir
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  udp: true
+  uuid: c5293efa-28f8-4a0f-8f34-541078970cee
+  ws-opts:
+    headers:
+      Host: gozargah.validbv7996.ir
+    path: /@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY
+- name: NL_speednode_0080
+  network: ws
+  port: 80
+  server: 45.131.4.33
+  servername: gozargah.validbv7996.ir
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  udp: true
+  uuid: c5293efa-28f8-4a0f-8f34-541078970cee
+  ws-opts:
+    headers:
+      Host: gozargah.validbv7996.ir
+    path: /@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY
+- name: NL_speednode_0081
+  network: ws
+  port: 5004
+  server: 45.154.98.211
+  servername: vv.vs2025.cfd
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 55520747-311e-4015-83ce-be46e2060ce3
+  ws-opts:
+    headers:
+      Host: vv.vs2025.cfd
+    path: /?ed=2560
+- name: NL_speednode_0082
+  network: ws
+  port: 443
+  server: 152.70.57.182
+  servername: vv.vs2025.cfd
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 55520747-311e-4015-83ce-be46e2060ce3
+  ws-opts:
+    headers:
+      Host: vv.vs2025.cfd
+    path: /?ed=2560
+- name: RU_speednode_0083
+  network: ws
+  port: 8080
+  server: 46.254.93.124
   servername: sNaPp.MaStErSrV.ir.
   skip-cert-verify: true
   tls: false
   type: vless
   udp: true
-  uuid: 09ba60aa-6d83-486d-8de3-70a1f1c3c7a9
+  uuid: a6ebd65f-2ab3-46f0-bf6b-3605f747434f
   ws-opts:
     headers:
       Host: sNaPp.MaStErSrV.ir.
     path: /
-- name: NL_speednode_0046
+- alterId: 0
+  cipher: auto
+  name: SC_speednode_0084
   network: ws
-  port: 80
-  server: 45.131.4.109
-  servername: gozargah.validbv7996.ir
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  udp: true
-  uuid: c5293efa-28f8-4a0f-8f34-541078970cee
-  ws-opts:
-    headers:
-      Host: gozargah.validbv7996.ir
-    path: /Telegram@WangCai2/?ed=2560
-- name: NL_speednode_0047
-  network: ws
-  port: 80
-  server: 45.131.4.162
-  servername: gozargah.validbv7996.ir
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  udp: true
-  uuid: c5293efa-28f8-4a0f-8f34-541078970cee
-  ws-opts:
-    headers:
-      Host: gozargah.validbv7996.ir
-    path: /Telegram@WangCai2
-- name: NL_speednode_0048
-  network: ws
-  port: 80
-  server: 45.131.4.33
-  servername: gozargah.validbv7996.ir
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  udp: true
-  uuid: c5293efa-28f8-4a0f-8f34-541078970cee
-  ws-opts:
-    headers:
-      Host: gozargah.validbv7996.ir
-    path: /@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY
-- name: NL_speednode_0049
-  network: ws
-  port: 8080
-  server: 45.131.4.33
-  servername: gozargah.validbv7996.ir
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  udp: true
-  uuid: c5293efa-28f8-4a0f-8f34-541078970cee
-  ws-opts:
-    headers:
-      Host: gozargah.validbv7996.ir
-    path: /@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY----@ELiV2RAY
-- name: NL_speednode_0050
-  network: ws
-  port: 80
-  server: 45.131.4.254
-  servername: gozargah.validbv7996.ir
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  udp: true
-  uuid: c5293efa-28f8-4a0f-8f34-541078970cee
-  ws-opts:
-    headers:
-      Host: gozargah.validbv7996.ir
-    path: /Telegram@WangCai2
-- name: SG_speednode_0051
-  network: ws
-  port: 8443
-  server: 92.243.74.2
-  servername: edfgv.aimercc.filegear-sg.me
+  port: 8306
+  server: v44.emovpn.buzz
   skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6db95bbc-c7a1-4b3f-9346-df71f4d95350
+  ws-opts:
+    headers:
+      Host: v44.emovpn.buzz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: SC_speednode_0085
+  network: ws
+  port: 48701
+  server: 1008668.xyz
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 766b7b58-112c-4cd7-ed6e-fe93c5b7a448
+  ws-opts:
+    headers:
+      Host: 1008668.xyz
+    path: /
+- name: SC_speednode_0086
+  password: 6db95bbc-c7a1-4b3f-9346-df71f4d95350
+  port: 6103
+  server: t29.emovpn.buzz
+  skip-cert-verify: true
+  sni: www.baidu.com
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: SC_speednode_0087
+  network: ws
+  port: 4624
+  server: v54.emovpn.buzz
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6db95bbc-c7a1-4b3f-9346-df71f4d95350
+  ws-opts:
+    headers:
+      Host: v54.emovpn.buzz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: SC_speednode_0088
+  network: ws
+  port: 8299
+  server: v55.emovpn.buzz
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6db95bbc-c7a1-4b3f-9346-df71f4d95350
+  ws-opts:
+    headers:
+      Host: v55.emovpn.buzz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: SC_speednode_0089
+  network: ws
+  port: 6201
+  server: v79.emovpn.buzz
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6db95bbc-c7a1-4b3f-9346-df71f4d95350
+  ws-opts:
+    headers:
+      Host: v79.emovpn.buzz
+    path: /
+- name: SE_speednode_0090
+  network: ws
+  port: 443
+  server: 129.151.204.91
+  servername: vv.vs2025.cfd
+  skip-cert-verify: true
   tls: true
   type: vless
   udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
+  uuid: 55520747-311e-4015-83ce-be46e2060ce3
   ws-opts:
     headers:
-      Host: edfgv.aimercc.filegear-sg.me
+      Host: vv.vs2025.cfd
     path: /?ed=2560
-- name: SG_speednode_0052
+- name: SG_speednode_0091
+  password: 6db95bbc-c7a1-4b3f-9346-df71f4d95350
+  port: 1292
+  server: t8.emovpn.buzz
+  skip-cert-verify: true
+  sni: www.baidu.com
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: SG_speednode_0092
   network: ws
-  port: 8443
-  server: 27.50.49.230
-  servername: edfgv.aimercc.filegear-sg.me
+  port: 4398
+  server: v39.emovpn.buzz
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6db95bbc-c7a1-4b3f-9346-df71f4d95350
+  ws-opts:
+    headers:
+      Host: v39.emovpn.buzz
+    path: /
+- name: SG_speednode_0093
+  password: 6db95bbc-c7a1-4b3f-9346-df71f4d95350
+  port: 1759
+  server: t13.emovpn.buzz
+  skip-cert-verify: true
+  sni: www.baidu.com
+  type: trojan
+  udp: true
+- name: SG_speednode_0094
+  password: 6db95bbc-c7a1-4b3f-9346-df71f4d95350
+  port: 2339
+  server: t9.emovpn.buzz
+  skip-cert-verify: true
+  sni: www.baidu.com
+  type: trojan
+  udp: true
+- name: TW_speednode_0095
+  network: ws
+  port: 81
+  server: 210.61.97.241
+  servername: vv.vs2025.cfd
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 55520747-311e-4015-83ce-be46e2060ce3
+  ws-opts:
+    headers:
+      Host: vv.vs2025.cfd
+    path: /?ed=2560
+- name: US_speednode_0096
+  network: ws
+  port: 443
+  server: 49.51.179.33
+  servername: agedgv.ambercc.filegear-sg.me
   skip-cert-verify: true
   tls: true
   type: vless
@@ -684,51 +1138,63 @@ proxies:
   uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
   ws-opts:
     headers:
-      Host: edfgv.aimercc.filegear-sg.me
+      Host: agedgv.ambercc.filegear-sg.me
     path: /?ed=2560
-- name: SG_speednode_0053
+- alterId: 0
+  cipher: auto
+  name: US_speednode_0097
   network: ws
-  port: 8443
-  server: 27.50.49.177
-  servername: edfgv.aimercc.filegear-sg.me
-  skip-cert-verify: true
-  tls: true
-  type: vless
+  port: 3903
+  server: v53.emovpn.buzz
+  skip-cert-verify: false
+  tls: false
+  type: vmess
   udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
+  uuid: 6db95bbc-c7a1-4b3f-9346-df71f4d95350
   ws-opts:
     headers:
-      Host: edfgv.aimercc.filegear-sg.me
-    path: /?ed=2560
-- name: US_speednode_0054
-  network: ws
-  port: 8443
-  server: 135.84.74.27
-  servername: edfgv.aimercc.filegear-sg.me
+      Host: v53.emovpn.buzz
+    path: /
+- name: US_speednode_0098
+  password: 6db95bbc-c7a1-4b3f-9346-df71f4d95350
+  port: 1627
+  server: t16.emovpn.buzz
   skip-cert-verify: true
-  tls: true
-  type: vless
+  sni: www.baidu.com
+  type: trojan
   udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
+- alterId: 0
+  cipher: auto
+  name: US_speednode_0099
+  network: ws
+  port: 4588
+  server: v48.emovpn.buzz
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6db95bbc-c7a1-4b3f-9346-df71f4d95350
   ws-opts:
     headers:
-      Host: edfgv.aimercc.filegear-sg.me
-    path: /?ed=2560
-- name: US_speednode_0055
-  network: ws
-  port: 2096
-  server: 108.165.152.76
-  servername: edfgv.aimercc.filegear-sg.me
+      Host: v48.emovpn.buzz
+    path: /
+- name: US_speednode_0100
+  password: 6db95bbc-c7a1-4b3f-9346-df71f4d95350
+  port: 12502
+  server: t11.emovpn.buzz
   skip-cert-verify: true
-  tls: true
-  type: vless
+  sni: www.baidu.com
+  type: trojan
   udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edfgv.aimercc.filegear-sg.me
-    path: /?ed=2560
-- name: US_speednode_0056
+- name: US_speednode_0101
+  password: 6db95bbc-c7a1-4b3f-9346-df71f4d95350
+  port: 1378
+  server: t10.emovpn.buzz
+  skip-cert-verify: true
+  sni: www.baidu.com
+  type: trojan
+  udp: true
+- name: US_speednode_0102
   password: exaxgqkKkd0TAMrCxeonWg==
   port: 443
   server: ustx004-cdn-route.couldflare-cdn.com
@@ -736,49 +1202,7 @@ proxies:
   type: http
   udp: true
   username: mrwdfNTD8M79LCukCieldrqZWqs=
-- name: US_speednode_0057
-  network: ws
-  port: 443
-  server: arvind.ns.cloudflare.com
-  servername: edfgv.aimercc.filegear-sg.me
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edfgv.aimercc.filegear-sg.me
-    path: /?ed=2560
-- name: US_speednode_0058
-  network: ws
-  port: 443
-  server: thaddeus.ns.cloudflare.com
-  servername: edfgv.aimercc.filegear-sg.me
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edfgv.aimercc.filegear-sg.me
-    path: /?ed=2560
-- name: US_speednode_0059
-  network: ws
-  port: 443
-  server: pranab.ns.cloudflare.com
-  servername: edfgv.aimercc.filegear-sg.me
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edfgv.aimercc.filegear-sg.me
-    path: /?ed=2560
-- name: US_speednode_0060
+- name: US_speednode_0103
   network: ws
   port: 80
   server: support.zoom.us
@@ -792,26 +1216,12 @@ proxies:
     headers:
       Host: free.pranithsandaruwan.shop
     path: /
-- name: US_speednode_0061
-  network: ws
-  port: 443
-  server: theo.ns.cloudflare.com
-  servername: edfgv.aimercc.filegear-sg.me
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edfgv.aimercc.filegear-sg.me
-    path: /?ed=2560
 proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
   - "\u267B\uFE0F automatic"
   - BD_speednode_0001
-  - CN_speednode_0002
+  - CA_speednode_0002
   - CN_speednode_0003
   - CN_speednode_0004
   - CN_speednode_0005
@@ -843,40 +1253,82 @@ proxy-groups:
   - CN_speednode_0031
   - CN_speednode_0032
   - CN_speednode_0033
-  - GB_speednode_0034
-  - HK_speednode_0035
-  - HK_speednode_0036
-  - JP_speednode_0037
-  - JP_speednode_0038
-  - JP_speednode_0039
-  - KR_speednode_0040
-  - KR_speednode_0041
-  - KR_speednode_0042
-  - KR_speednode_0043
-  - KR_speednode_0044
-  - LT_speednode_0045
-  - NL_speednode_0046
-  - NL_speednode_0047
-  - NL_speednode_0048
-  - NL_speednode_0049
-  - NL_speednode_0050
-  - SG_speednode_0051
-  - SG_speednode_0052
-  - SG_speednode_0053
-  - US_speednode_0054
-  - US_speednode_0055
-  - US_speednode_0056
-  - US_speednode_0057
-  - US_speednode_0058
-  - US_speednode_0059
-  - US_speednode_0060
-  - US_speednode_0061
+  - CN_speednode_0034
+  - CN_speednode_0035
+  - CN_speednode_0036
+  - CN_speednode_0037
+  - CN_speednode_0038
+  - CN_speednode_0039
+  - CN_speednode_0040
+  - CN_speednode_0041
+  - CN_speednode_0042
+  - CN_speednode_0043
+  - CN_speednode_0044
+  - CN_speednode_0045
+  - CN_speednode_0046
+  - CN_speednode_0047
+  - CN_speednode_0048
+  - CN_speednode_0049
+  - CN_speednode_0050
+  - CN_speednode_0051
+  - CN_speednode_0052
+  - CN_speednode_0053
+  - CN_speednode_0054
+  - CN_speednode_0055
+  - CN_speednode_0056
+  - CN_speednode_0057
+  - CN_speednode_0058
+  - CN_speednode_0059
+  - CN_speednode_0060
+  - CN_speednode_0061
+  - CN_speednode_0062
+  - CN_speednode_0063
+  - CN_speednode_0064
+  - CN_speednode_0065
+  - CN_speednode_0066
+  - CN_speednode_0067
+  - CN_speednode_0068
+  - CN_speednode_0069
+  - CN_speednode_0070
+  - GB_speednode_0071
+  - HK_speednode_0072
+  - IL_speednode_0073
+  - IL_speednode_0074
+  - JP_speednode_0075
+  - JP_speednode_0076
+  - JP_speednode_0077
+  - KR_speednode_0078
+  - NL_speednode_0079
+  - NL_speednode_0080
+  - NL_speednode_0081
+  - NL_speednode_0082
+  - RU_speednode_0083
+  - SC_speednode_0084
+  - SC_speednode_0085
+  - SC_speednode_0086
+  - SC_speednode_0087
+  - SC_speednode_0088
+  - SC_speednode_0089
+  - SE_speednode_0090
+  - SG_speednode_0091
+  - SG_speednode_0092
+  - SG_speednode_0093
+  - SG_speednode_0094
+  - TW_speednode_0095
+  - US_speednode_0096
+  - US_speednode_0097
+  - US_speednode_0098
+  - US_speednode_0099
+  - US_speednode_0100
+  - US_speednode_0101
+  - US_speednode_0102
+  - US_speednode_0103
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
   - BD_speednode_0001
-  - CN_speednode_0002
+  - CA_speednode_0002
   - CN_speednode_0003
   - CN_speednode_0004
   - CN_speednode_0005
@@ -908,34 +1360,76 @@ proxy-groups:
   - CN_speednode_0031
   - CN_speednode_0032
   - CN_speednode_0033
-  - GB_speednode_0034
-  - HK_speednode_0035
-  - HK_speednode_0036
-  - JP_speednode_0037
-  - JP_speednode_0038
-  - JP_speednode_0039
-  - KR_speednode_0040
-  - KR_speednode_0041
-  - KR_speednode_0042
-  - KR_speednode_0043
-  - KR_speednode_0044
-  - LT_speednode_0045
-  - NL_speednode_0046
-  - NL_speednode_0047
-  - NL_speednode_0048
-  - NL_speednode_0049
-  - NL_speednode_0050
-  - SG_speednode_0051
-  - SG_speednode_0052
-  - SG_speednode_0053
-  - US_speednode_0054
-  - US_speednode_0055
-  - US_speednode_0056
-  - US_speednode_0057
-  - US_speednode_0058
-  - US_speednode_0059
-  - US_speednode_0060
-  - US_speednode_0061
+  - CN_speednode_0034
+  - CN_speednode_0035
+  - CN_speednode_0036
+  - CN_speednode_0037
+  - CN_speednode_0038
+  - CN_speednode_0039
+  - CN_speednode_0040
+  - CN_speednode_0041
+  - CN_speednode_0042
+  - CN_speednode_0043
+  - CN_speednode_0044
+  - CN_speednode_0045
+  - CN_speednode_0046
+  - CN_speednode_0047
+  - CN_speednode_0048
+  - CN_speednode_0049
+  - CN_speednode_0050
+  - CN_speednode_0051
+  - CN_speednode_0052
+  - CN_speednode_0053
+  - CN_speednode_0054
+  - CN_speednode_0055
+  - CN_speednode_0056
+  - CN_speednode_0057
+  - CN_speednode_0058
+  - CN_speednode_0059
+  - CN_speednode_0060
+  - CN_speednode_0061
+  - CN_speednode_0062
+  - CN_speednode_0063
+  - CN_speednode_0064
+  - CN_speednode_0065
+  - CN_speednode_0066
+  - CN_speednode_0067
+  - CN_speednode_0068
+  - CN_speednode_0069
+  - CN_speednode_0070
+  - GB_speednode_0071
+  - HK_speednode_0072
+  - IL_speednode_0073
+  - IL_speednode_0074
+  - JP_speednode_0075
+  - JP_speednode_0076
+  - JP_speednode_0077
+  - KR_speednode_0078
+  - NL_speednode_0079
+  - NL_speednode_0080
+  - NL_speednode_0081
+  - NL_speednode_0082
+  - RU_speednode_0083
+  - SC_speednode_0084
+  - SC_speednode_0085
+  - SC_speednode_0086
+  - SC_speednode_0087
+  - SC_speednode_0088
+  - SC_speednode_0089
+  - SE_speednode_0090
+  - SG_speednode_0091
+  - SG_speednode_0092
+  - SG_speednode_0093
+  - SG_speednode_0094
+  - TW_speednode_0095
+  - US_speednode_0096
+  - US_speednode_0097
+  - US_speednode_0098
+  - US_speednode_0099
+  - US_speednode_0100
+  - US_speednode_0101
+  - US_speednode_0102
+  - US_speednode_0103
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
