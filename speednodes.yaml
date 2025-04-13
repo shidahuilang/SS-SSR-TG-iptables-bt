@@ -636,76 +636,7 @@ proxies:
   type: vless
   udp: true
   uuid: 459b4a80-bd61-4ecd-a26b-e9c1809d9e45
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: JP_speednode_0049
-  port: 19085
-  reality-opts:
-    public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
-  server: 156.231.140.34
-  servername: www.lovelive-anime.jp
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3c5640c5-0e1b-4081-f174-0361c3c94d14
-- name: JP_speednode_0050
-  network: ws
-  port: 2083
-  server: 103.116.7.103
-  servername: edccr.aimercc.filegear-sg.me
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edccr.aimercc.filegear-sg.me
-    path: /?ed=2560
-- name: KR_speednode_0051
-  network: ws
-  port: 12527
-  server: 221.144.200.91
-  servername: edccy.ambercc.filegear-sg.me
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edccy.ambercc.filegear-sg.me
-    path: /?ed=2560
-- name: SG_speednode_0052
-  network: ws
-  port: 8443
-  server: 27.50.49.230
-  servername: edccy.ambercc.filegear-sg.me
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edccy.ambercc.filegear-sg.me
-    path: /?ed=2560
-- name: SG_speednode_0053
-  network: ws
-  port: 8443
-  server: 92.243.74.239
-  servername: edccr.aimercc.filegear-sg.me
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edccr.aimercc.filegear-sg.me
-    path: /
-- name: SG_speednode_0054
+- name: SG_speednode_0049
   network: ws
   port: 443
   server: 152.42.218.33
@@ -719,51 +650,9 @@ proxies:
     headers:
       Host: fonts.googleapis.com
     path: /
-- name: US_speednode_0069
-  network: ws
-  port: 8443
-  server: 104.129.166.131
-  servername: edccr.aimercc.filegear-sg.me
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edccr.aimercc.filegear-sg.me
-    path: /?ed=2560
-- name: US_speednode_0072
-  network: ws
-  port: 10511
-  server: 65.75.194.43
-  servername: edccr.aimercc.filegear-sg.me
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edccr.aimercc.filegear-sg.me
-    path: /?ed=2560
-- name: US_speednode_0073
-  network: ws
-  port: 443
-  server: 108.165.152.207
-  servername: edccy.ambercc.filegear-sg.me
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edccy.ambercc.filegear-sg.me
-    path: /?ed=2560
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: US_speednode_0074
+  name: US_speednode_0066
   port: 30158
   reality-opts:
     public-key: n7Ptb-3f4pw0D-hG-UP8Dp5Gf8J8Uxn029JMwdTyEFc
@@ -776,7 +665,7 @@ proxies:
   udp: true
   uuid: b72ba5d5-2d5e-45b7-93b5-236d343baa7c
 - client-fingerprint: chrome
-  name: US_speednode_0075
+  name: US_speednode_0067
   network: ws
   port: 80
   server: 170.114.45.6
@@ -842,17 +731,9 @@ proxy-groups:
   - CN_speednode_0046
   - CN_speednode_0047
   - CN_speednode_0048
-  - JP_speednode_0049
-  - JP_speednode_0050
-  - KR_speednode_0051
-  - SG_speednode_0052
-  - SG_speednode_0053
-  - SG_speednode_0054
-  - US_speednode_0069
-  - US_speednode_0072
-  - US_speednode_0073
-  - US_speednode_0074
-  - US_speednode_0075
+  - SG_speednode_0049
+  - US_speednode_0066
+  - US_speednode_0067
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
@@ -905,17 +786,9 @@ proxy-groups:
   - CN_speednode_0046
   - CN_speednode_0047
   - CN_speednode_0048
-  - JP_speednode_0049
-  - JP_speednode_0050
-  - KR_speednode_0051
-  - SG_speednode_0052
-  - SG_speednode_0053
-  - SG_speednode_0054
-  - US_speednode_0069
-  - US_speednode_0072
-  - US_speednode_0073
-  - US_speednode_0074
-  - US_speednode_0075
+  - SG_speednode_0049
+  - US_speednode_0066
+  - US_speednode_0067
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
