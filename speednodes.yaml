@@ -18,11 +18,11 @@ external-controller: 127.0.0.1:9090
 mode: rule
 port: 7890
 proxies:
-- name: AM_speednode_0001
+- name: AE_speednode_0001
   network: ws
   port: 8880
-  server: 185.162.229.168
-  servername: kjgx.laoyoutiao.link
+  server: 94.140.0.156
+  servername: Telegram-channel-WangCai2
   skip-cert-verify: false
   tls: false
   type: vless
@@ -31,8 +31,46 @@ proxies:
   ws-opts:
     headers:
       Host: kjgx.laoyoutiao.link
-    path: /Telegram@WangCai2/?ed=2560
-- name: AT_speednode_0002
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: AE_speednode_0002
+  network: ws
+  port: 8880
+  server: 103.245.229.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: AM_speednode_0003
+  network: ws
+  port: 80
+  server: 185.162.231.252
+  servername: reedfree8mahsang2.redorg.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: reedfree8mahsang2.redorg.ir
+    path: "/Telegram\U0001F1EE\U0001F1F7Channel id: @Config_Rayegan /?ed=2560"
+- alterId: 0
+  cipher: auto
+  name: AT_speednode_0004
+  port: 33203
+  server: customers.tele-shop-too.studio
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: d522ec3b-24e4-4313-9abd-6719604b7761
+- name: AT_speednode_0005
   network: ws
   port: 8880
   server: 212.183.88.156
@@ -47,11 +85,11 @@ proxies:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
 - client-fingerprint: chrome
-  name: AT_speednode_0003
+  name: AT_speednode_0006
   network: ws
-  port: 2083
+  port: 2096
   server: 212.183.88.29
-  servername: POstwARE-2jm.PagES.DEv
+  servername: pOStWArE-2Jm.PAgEs.dEv
   skip-cert-verify: false
   tls: true
   type: vless
@@ -59,9 +97,39 @@ proxies:
   uuid: 65ee27b8-88b6-45f5-a2f8-8392c4afd82d
   ws-opts:
     headers:
-      Host: POstwARE-2jm.PagES.DEv
-    path: /Telegram@server_free2/?ed=2560
-- name: AU_speednode_0004
+      Host: pOStWArE-2Jm.PAgEs.dEv
+    path: /ssqKt5JYIXEwDOMJ?ed=2560
+- client-fingerprint: chrome
+  name: AT_speednode_0007
+  network: ws
+  port: 2083
+  server: 212.183.88.29
+  servername: PoStwarE-2jM.PaGeS.DEv
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 65ee27b8-88b6-45f5-a2f8-8392c4afd82d
+  ws-opts:
+    headers:
+      Host: PoStwarE-2jM.PaGeS.DEv
+    path: /PB8ZxcORP4BTVbIC?ed=2560
+- client-fingerprint: chrome
+  name: AT_speednode_0008
+  network: ws
+  port: 2087
+  server: 212.183.88.29
+  servername: PosTWARE-2jm.pagEs.DeV
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 65ee27b8-88b6-45f5-a2f8-8392c4afd82d
+  ws-opts:
+    headers:
+      Host: PosTWARE-2jm.pagEs.DeV
+    path: /sA7GzJhCYXmpVes8?ed=2560
+- name: AU_speednode_0009
   network: ws
   port: 8880
   server: 185.207.196.156
@@ -75,23 +143,52 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: AU_speednode_0005
+- name: AU_speednode_0010
   network: ws
   port: 8880
-  server: 185.207.198.254
+  server: 185.207.198.63
+  servername: jp.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: jp.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3"
+- client-fingerprint: chrome
+  name: AU_speednode_0011
+  network: ws
+  port: 8880
+  server: 185.207.199.63
+  servername: jp.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: jp.laoyoutiao.link
+    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+- name: BA_speednode_0012
+  network: ws
+  port: 8880
+  server: 77.74.228.156
   servername: Telegram-channel-WangCai2
   skip-cert-verify: false
   tls: false
   type: vless
   udp: true
-  uuid: 34c01e61-f4f3-4afb-a83b-406caf8caa33
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
   ws-opts:
     headers:
-      Host: yg.bantony199.top
-    path: "/Telegram\U0001F1E8\U0001F1F3"
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: BG_speednode_0006
+  name: BG_speednode_0013
   port: 443
   reality-opts:
     public-key: 6vqqlSsqIQLQ-pmkPfTQ0tJ2kh3U74YqTUcn06nYagY
@@ -103,11 +200,11 @@ proxies:
   type: vless
   udp: true
   uuid: 10f3650d-32f6-470a-b100-e29471cf3380
-- name: BR_speednode_0007
+- name: BR_speednode_0014
   network: ws
   port: 8880
-  server: 185.133.35.156
-  servername: Telegram-channel-WangCai2
+  server: 185.133.35.20
+  servername: us.laoyoutiao.link
   skip-cert-verify: false
   tls: false
   type: vless
@@ -115,23 +212,9 @@ proxies:
   uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
   ws-opts:
     headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: CA_speednode_0008
-  network: ws
-  port: 8880
-  server: 23.227.60.247
-  servername: ex.sue.x10.mx
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: d60fc3c5-9f07-4cdb-b81f-70af27936bdc
-  ws-opts:
-    headers:
-      Host: ex.sue.x10.mx
-    path: "/Telegram\U0001F1E8\U0001F1F3"
-- name: CR_speednode_0009
+      Host: us.laoyoutiao.link
+    path: /TelegramU0001F1E8U0001F1F3 @MxlShare @WangCai2 /?ed=2560
+- name: CR_speednode_0015
   network: ws
   port: 8880
   server: 190.93.244.156
@@ -145,7 +228,21 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: CR_speednode_0010
+- name: CR_speednode_0016
+  network: ws
+  port: 8880
+  server: 190.93.245.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: CR_speednode_0017
   network: ws
   port: 8880
   server: 190.93.247.156
@@ -159,7 +256,7 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: CR_speednode_0011
+- name: CR_speednode_0018
   network: ws
   port: 8880
   server: 190.93.246.20
@@ -173,22 +270,23 @@ proxies:
     headers:
       Host: reedfree8mahsang2.redorg.ir
     path: /?ed=2560
-- name: CR_speednode_0012
+- client-fingerprint: chrome
+  name: CR_speednode_0019
   network: ws
-  port: 8880
-  server: 190.93.246.156
-  servername: Telegram-channel-WangCai2
+  port: 8443
+  server: 190.93.246.246
+  servername: bitget1.asdasd.click
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vless
   udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
   ws-opts:
     headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+      Host: bitget1.asdasd.click
+    path: /?ed=2560
 - client-fingerprint: random
-  name: CR_speednode_0013
+  name: CR_speednode_0020
   network: ws
   port: 8443
   server: 190.93.245.232
@@ -202,38 +300,69 @@ proxies:
     headers:
       Host: bitget1.asdasd.click
     path: /?ed=2560
-- name: DE_speednode_0014
+- client-fingerprint: chrome
+  name: CR_speednode_0021
   network: ws
-  port: 8880
-  server: 5.182.34.156
-  servername: Telegram-channel-WangCai2
+  port: 8443
+  server: 190.93.246.246
+  servername: bitget1.asdasd.click
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vless
   udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
   ws-opts:
     headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: DE_speednode_0015
-  network: ws
-  port: 80
-  server: 45.80.111.147
-  servername: reedfree8mahsang2.redorg.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-  ws-opts:
-    headers:
-      Host: reedfree8mahsang2.redorg.ir
+      Host: bitget1.asdasd.click
     path: /Telegram@V2ray_Alpha/?ed=2560
-- name: DE_speednode_0016
+- name: CR_speednode_0022
+  network: ws
+  port: 8443
+  server: 190.93.246.246
+  servername: bitget1.asdasd.click
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
+  ws-opts:
+    headers:
+      Host: bitget1.asdasd.click
+    path: /
+- client-fingerprint: chrome
+  name: CR_speednode_0023
+  network: ws
+  port: 8443
+  server: 190.93.246.246
+  servername: bitget1.asdasd.click
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
+  ws-opts:
+    headers:
+      Host: bitget1.asdasd.click
+    path: /Telegram@V2rayN5/?ed=2560
+- client-fingerprint: chrome
+  name: CR_speednode_0024
+  network: ws
+  port: 443
+  server: 190.93.244.103
+  servername: mylearn-8zx.pages.dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d4661d12-d6f7-4ff2-bd1e-fc9cdc2c9cc1
+  ws-opts:
+    headers:
+      Host: mylearn-8zx.pages.dev
+    path: /
+- name: CY_speednode_0025
   network: ws
   port: 8880
-  server: 185.135.9.156
+  server: 195.85.59.156
   servername: Telegram-channel-WangCai2
   skip-cert-verify: false
   tls: false
@@ -244,7 +373,35 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: DE_speednode_0017
+- name: CY_speednode_0026
+  network: ws
+  port: 8880
+  server: 45.67.214.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: CY_speednode_0027
+  network: ws
+  port: 8880
+  server: 45.150.115.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: DE_speednode_0028
   network: ws
   port: 8880
   server: 5.10.214.138
@@ -258,10 +415,96 @@ proxies:
     headers:
       Host: reedfree8mahsang2.redorg.ir
     path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-- name: DE_speednode_0018
+- name: DE_speednode_0029
   network: ws
   port: 8880
-  server: 5.10.214.50
+  server: 5.10.214.138
+  servername: reedfree8mahsang2.redorg.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: reedfree8mahsang2.redorg.ir
+    path: "/Telegram\U0001F1E8\U0001F1F3+@WangCai2+/?ed=2560"
+- name: DE_speednode_0031
+  network: ws
+  port: 80
+  server: 45.80.111.147
+  servername: reedfree8mahsang2.redorg.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: reedfree8mahsang2.redorg.ir
+    path: '/telegram: @Eternal_Connect - telegram: @Eternal_Connect - telegram: @Eternal_Connect
+      - telegram: @Eternal_Connect /?ed=2560'
+- name: DE_speednode_0032
+  network: ws
+  port: 80
+  server: 45.80.111.147
+  servername: reedfree8mahsang2.redorg.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: reedfree8mahsang2.redorg.ir
+    path: /Telegram@AZADIIIVPN/?ed=2560
+- client-fingerprint: chrome
+  name: DE_speednode_0033
+  network: ws
+  port: 8880
+  server: 5.175.141.63
+  servername: jp.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: jp.laoyoutiao.link
+    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+- name: DE_speednode_0034
+  network: ws
+  port: 80
+  server: 45.80.111.147
+  servername: reedfree8mahsang2.redorg.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: reedfree8mahsang2.redorg.ir
+    path: /Telegram@PRUOXYI/?ed=2560
+- name: DE_speednode_0035
+  network: ws
+  port: 8880
+  server: 5.10.214.180
+  servername: reedfree8mahsang2.redorg.ir
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: reedfree8mahsang2.redorg.ir
+    path: /TelegramU0001F1E8U0001F1F3
+- name: DE_speednode_0036
+  network: ws
+  port: 8880
+  server: 5.10.214.81
   servername: reedfree8mahsang2.redorg.ir
   skip-cert-verify: false
   tls: false
@@ -272,11 +515,25 @@ proxies:
     headers:
       Host: reedfree8mahsang2.redorg.ir
     path: /TelegramU0001F1E8U0001F1F3
-- name: DE_speednode_0019
+- name: DE_speednode_0037
   network: ws
   port: 8880
-  server: 5.10.214.156
-  servername: Telegram-channel-WangCai2
+  server: 5.10.214.81
+  servername: reedfree8mahsang2.redorg.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: reedfree8mahsang2.redorg.ir
+    path: /Telegram@V2ray_Alpha
+- name: DE_speednode_0038
+  network: ws
+  port: 8880
+  server: 5.10.214.213
+  servername: jp.laoyoutiao.link
   skip-cert-verify: false
   tls: false
   type: vless
@@ -284,9 +541,9 @@ proxies:
   uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
   ws-opts:
     headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: DE_speednode_0020
+      Host: jp.laoyoutiao.link
+    path: /
+- name: DE_speednode_0039
   network: ws
   port: 8880
   server: 5.10.215.208
@@ -299,11 +556,11 @@ proxies:
   ws-opts:
     headers:
       Host: reedfree8mahsang2.redorg.ir
-    path: /
-- name: DE_speednode_0021
+    path: /TelegramMARAMBASHI_MARAMBASHI_MARAMBASHI
+- name: DE_speednode_0040
   network: ws
-  port: 8880
-  server: 5.10.214.68
+  port: 2095
+  server: 45.80.111.119
   servername: reedfree8mahsang2.redorg.ir
   skip-cert-verify: false
   tls: false
@@ -313,11 +570,12 @@ proxies:
   ws-opts:
     headers:
       Host: reedfree8mahsang2.redorg.ir
-    path: "/Telegram\U0001F1E8\U0001F1F3"
-- name: ES_speednode_0022
+    path: /Telegram:TM-@AZARBAYJAB1 TM-@AZARBAYJAB1 TM-@AZARBAYJAB1 TM-@AZARBAYJAB1
+      TM-@AZARBAYJAB1
+- name: ES_speednode_0041
   network: ws
   port: 8880
-  server: 185.251.80.156
+  server: 185.251.83.156
   servername: Telegram-channel-WangCai2
   skip-cert-verify: false
   tls: false
@@ -328,7 +586,7 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: ES_speednode_0023
+- name: ES_speednode_0042
   network: ws
   port: 8880
   server: 185.251.80.213
@@ -342,66 +600,21 @@ proxies:
     headers:
       Host: jp.laoyoutiao.link
     path: /
-- name: FR_speednode_0025
-  network: ws
-  port: 8880
-  server: 185.16.110.63
-  servername: sg.laoyoutiao.link
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: sg.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3"
 - client-fingerprint: chrome
-  name: GB_speednode_0026
-  network: ws
-  port: 8880
-  server: 109.176.239.177
-  servername: Telegram-channel-WangCai2
+  flow: xtls-rprx-vision
+  name: FI_speednode_0043
+  port: 443
+  reality-opts:
+    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
+    short-id: e499f276e7bd6420
+  server: fin01-vlr01.tcp-reset-club.net
+  servername: hls-svod.itunes.apple.com
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vless
   udp: true
-  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-  ws-opts:
-    headers:
-      Host: ip.langmanshanxi.top
-    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-- client-fingerprint: chrome
-  name: GB_speednode_0027
-  network: ws
-  port: 8880
-  server: 91.193.58.242
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-- client-fingerprint: chrome
-  name: GB_speednode_0028
-  network: ws
-  port: 8880
-  server: 25.129.196.63
-  servername: jp.laoyoutiao.link
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: jp.laoyoutiao.link
-    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-- name: GB_speednode_0029
+  uuid: 8a9d20f7-21b5-4f31-a6bb-c93894388514
+- name: GB_speednode_0044
   network: ws
   port: 8880
   server: 109.176.239.156
@@ -415,51 +628,7 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- client-fingerprint: chrome
-  name: GB_speednode_0030
-  network: ws
-  port: 8880
-  server: 91.193.58.105
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: GB_speednode_0031
-  network: ws
-  port: 8880
-  server: 25.129.199.156
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- client-fingerprint: chrome
-  name: GB_speednode_0032
-  network: ws
-  port: 8880
-  server: 91.193.58.195
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: GB_speednode_0033
+- name: GB_speednode_0045
   network: ws
   port: 8880
   server: 80.93.202.156
@@ -473,10 +642,68 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: GB_speednode_0034
+- name: GB_speednode_0046
   network: ws
   port: 8880
-  server: 25.129.196.156
+  server: 91.193.58.248
+  servername: sk.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: sk.laoyoutiao.link
+    path: /TelegramU0001F1E8U0001F1F3?ed=2048
+- client-fingerprint: chrome
+  name: GB_speednode_0047
+  network: ws
+  port: 8880
+  server: 25.129.196.63
+  servername: jp.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: jp.laoyoutiao.link
+    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+- client-fingerprint: chrome
+  name: GB_speednode_0048
+  network: ws
+  port: 8880
+  server: 109.176.239.177
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+  ws-opts:
+    headers:
+      Host: ip.langmanshanxi.top
+    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+- name: GB_speednode_0049
+  network: ws
+  port: 8880
+  server: 91.193.58.149
+  servername: us.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: us.laoyoutiao.link
+    path: /
+- name: GB_speednode_0050
+  network: ws
+  port: 8880
+  server: 91.193.58.174
   servername: Telegram-channel-WangCai2
   skip-cert-verify: false
   tls: false
@@ -486,8 +713,37 @@ proxies:
   ws-opts:
     headers:
       Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: GB_speednode_0035
+    path: /TelegramU0001F1E8U0001F1F3 @WangCai2
+- client-fingerprint: chrome
+  name: GB_speednode_0051
+  network: ws
+  port: 8880
+  server: 91.193.58.7
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+- name: GB_speednode_0052
+  network: ws
+  port: 8880
+  server: 91.193.58.134
+  servername: us.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: us.laoyoutiao.link
+    path: /
+- name: GB_speednode_0053
   network: ws
   port: 8880
   server: 91.193.58.68
@@ -501,38 +757,10 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: /Telegram@WangCai2
-- name: GB_speednode_0036
+- name: GB_speednode_0054
   network: ws
   port: 8880
-  server: 194.36.55.156
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: GB_speednode_0037
-  network: ws
-  port: 8880
-  server: 91.193.58.162
-  servername: sk.laoyoutiao.link
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: sk.laoyoutiao.link
-    path: "/Telegram\u0440\u042F\u0417\xAE\u0440\u042F\u0417\u2265"
-- name: GB_speednode_0038
-  network: ws
-  port: 8880
-  server: 91.193.58.172
+  server: 91.193.58.200
   servername: us.laoyoutiao.link
   skip-cert-verify: false
   tls: false
@@ -543,11 +771,66 @@ proxies:
     headers:
       Host: us.laoyoutiao.link
     path: /
-- client-fingerprint: chrome
-  name: GB_speednode_0039
+- name: GB_speednode_0055
   network: ws
   port: 8880
-  server: 91.193.58.238
+  server: 25.26.27.63
+  servername: jp.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: jp.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3"
+- name: GB_speednode_0056
+  network: ws
+  port: 8880
+  server: 91.193.58.65
+  servername: us.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: us.laoyoutiao.link
+    path: /
+- name: GB_speednode_0057
+  network: ws
+  port: 8880
+  server: 91.193.58.28
+  servername: sk.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: sk.laoyoutiao.link
+    path: /TelegramU0001F1E8U0001F1F3
+- name: HK_speednode_0058
+  network: ws
+  port: 443
+  server: 47.76.218.163
+  servername: steep.skyfigure.top
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 63601f9f-7c67-4952-919a-1ef802b5a7ec
+  ws-opts:
+    headers:
+      Host: steep.skyfigure.top
+    path: /Telegram @SRCVPN/?ed=2560
+- name: HK_speednode_0059
+  network: ws
+  port: 8880
+  server: 45.192.223.156
   servername: Telegram-channel-WangCai2
   skip-cert-verify: false
   tls: false
@@ -558,35 +841,7 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: GB_speednode_0040
-  network: ws
-  port: 8880
-  server: 25.25.25.177
-  servername: ip.langmanshanxi.top
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-  ws-opts:
-    headers:
-      Host: ip.langmanshanxi.top
-    path: /Telegram @WangCai2
-- name: HK_speednode_0041
-  network: ws
-  port: 8880
-  server: 45.192.224.156
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: HK_speednode_0042
+- name: HK_speednode_0060
   network: ws
   port: 8880
   server: 45.192.222.156
@@ -600,7 +855,21 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: JO_speednode_0043
+- cipher: aes-256-gcm
+  name: HK_speednode_0061
+  password: 1ad90a422096
+  plugin: v2ray-plugin
+  plugin-opts:
+    host: kr6v1.dashengjs.net
+    mode: websocket
+    mux: true
+    path: /jwuctcuhriiw
+    tls: true
+  port: 636
+  server: 43.226.17.8
+  type: ss
+  udp: true
+- name: JO_speednode_0062
   network: ws
   port: 8880
   server: 62.72.166.156
@@ -614,24 +883,96 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: JP_speednode_0044
-  network: ws
-  port: 10443
-  server: 20.243.85.49
-  servername: edmx.aimercc.filegear-sg.me
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: ee6774c0-9b19-4ff1-8b30-2da4b71977e2
-  ws-opts:
-    headers:
-      Host: edmx.aimercc.filegear-sg.me
-    path: /
-- name: JP_speednode_0045
+- client-fingerprint: chrome
+  name: KZ_speednode_0063
   network: ws
   port: 8880
-  server: 103.116.7.177
+  server: 31.43.179.63
+  servername: jp.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: jp.laoyoutiao.link
+    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+- name: KZ_speednode_0064
+  network: ws
+  port: 8880
+  server: 194.76.18.213
+  servername: jp.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: jp.laoyoutiao.link
+    path: /?ed=2560
+- name: KZ_speednode_0065
+  network: ws
+  port: 8880
+  server: 31.43.179.168
+  servername: kjgx.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: /Telegram@WangCai2/?ed=2560
+- name: LT_speednode_0066
+  network: ws
+  port: 8880
+  server: 88.216.69.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- client-fingerprint: chrome
+  name: LT_speednode_0067
+  network: ws
+  port: 8880
+  server: 89.116.161.63
+  servername: jp.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: jp.laoyoutiao.link
+    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+- name: LT_speednode_0068
+  network: ws
+  port: 8880
+  server: 89.116.180.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: LT_speednode_0069
+  network: ws
+  port: 8880
+  server: 88.216.69.177
   servername: ip.langmanshanxi.top
   skip-cert-verify: false
   tls: false
@@ -641,11 +982,11 @@ proxies:
   ws-opts:
     headers:
       Host: ip.langmanshanxi.top
-    path: /Telegram@WangCai2
-- name: KZ_speednode_0046
+    path: /Telegram@WangCai2/?ed=2560
+- name: LT_speednode_0070
   network: ws
   port: 8880
-  server: 194.59.5.156
+  server: 89.116.161.156
   servername: Telegram-channel-WangCai2
   skip-cert-verify: false
   tls: false
@@ -656,10 +997,24 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: LT_speednode_0047
+- name: LT_speednode_0071
   network: ws
   port: 8880
-  server: 86.38.214.156
+  server: 88.216.67.63
+  servername: jp.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: jp.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3"
+- name: LU_speednode_0072
+  network: ws
+  port: 8880
+  server: 188.42.89.156
   servername: Telegram-channel-WangCai2
   skip-cert-verify: false
   tls: false
@@ -670,35 +1025,7 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: LT_speednode_0048
-  network: ws
-  port: 8880
-  server: 88.216.67.156
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: LU_speednode_0049
-  network: ws
-  port: 8880
-  server: 188.42.88.156
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: MU_speednode_0050
+- name: MU_speednode_0073
   network: ws
   port: 8880
   server: 45.205.0.156
@@ -712,21 +1039,7 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: NL_speednode_0051
-  network: ws
-  port: 8880
-  server: 160.153.138.156
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: NL_speednode_0052
+- name: NL_speednode_0074
   network: ws
   port: 8880
   server: 160.153.1.156
@@ -740,7 +1053,7 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: NL_speednode_0053
+- name: NL_speednode_0075
   network: ws
   port: 8880
   server: 160.153.137.156
@@ -754,10 +1067,10 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: NL_speednode_0054
+- name: NL_speednode_0076
   network: ws
   port: 8880
-  server: 45.131.209.79
+  server: 45.131.208.20
   servername: reedfree8mahsang2.redorg.ir
   skip-cert-verify: false
   tls: false
@@ -767,8 +1080,36 @@ proxies:
   ws-opts:
     headers:
       Host: reedfree8mahsang2.redorg.ir
-    path: /
-- name: NL_speednode_0055
+    path: /?ed=2560
+- name: NL_speednode_0077
+  network: ws
+  port: 8880
+  server: 160.153.138.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: NL_speednode_0078
+  network: ws
+  port: 80
+  server: 45.131.4.147
+  servername: redfree8.pooriashop.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: redfree8.pooriashop.ir
+    path: "/Telegram\U0001F1E8\U0001F1F3@v/?ed=2560"
+- name: NL_speednode_0079
   network: ws
   port: 8880
   server: 185.18.184.156
@@ -782,7 +1123,187 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: RU_speednode_0056
+- name: NL_speednode_0080
+  network: ws
+  port: 8880
+  server: 45.131.209.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: NL_speednode_0081
+  network: ws
+  port: 8880
+  server: 188.164.248.168
+  servername: kjgx.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: /Telegram@WangCai2/?ed=2560
+- name: NL_speednode_0082
+  network: ws
+  port: 80
+  server: 45.131.6.231
+  servername: redfree8.pooriashop.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: redfree8.pooriashop.ir
+    path: /Telegram@WangCai2
+- client-fingerprint: chrome
+  name: NN_speednode_0083
+  port: 34045
+  reality-opts:
+    public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
+    short-id: e8ab71d0
+  server: 160.250.65.124
+  servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
+- client-fingerprint: firefox
+  name: NN_speednode_0084
+  port: 34045
+  reality-opts:
+    public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
+    short-id: e8ab71d0
+  server: 160.250.65.148
+  servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
+- name: RO_speednode_0085
+  network: ws
+  port: 8880
+  server: 45.12.30.145
+  servername: reedfree8mahsang2.redorg.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: reedfree8mahsang2.redorg.ir
+    path: "/Telegram@azadi\xECivpn/?ed=2560"
+- name: RO_speednode_0086
+  network: ws
+  port: 80
+  server: 45.12.30.234
+  servername: reedfree8mahsang2.redorg.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: reedfree8mahsang2.redorg.ir
+    path: /
+- name: RU_speednode_0087
+  network: ws
+  port: 8880
+  server: 185.221.160.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: RU_speednode_0088
+  network: ws
+  port: 8880
+  server: 45.142.120.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: RU_speednode_0089
+  network: ws
+  port: 80
+  server: 45.8.211.229
+  servername: reedfree8mahsang2.redorg.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: reedfree8mahsang2.redorg.ir
+    path: '/Channel id: @ShadowProxy66/?ed=2560'
+- name: RU_speednode_0090
+  network: ws
+  port: 8880
+  server: 176.124.223.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: RU_speednode_0091
+  network: ws
+  port: 8880
+  server: 45.142.120.145
+  servername: reedfree8mahsang2.redorg.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: reedfree8mahsang2.redorg.ir
+    path: /@ShadowProxy66?ed=2560
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: RU_speednode_0092
+  port: 443
+  reality-opts:
+    public-key: cGzNRbN_zruI3CVTDukB2nOqWWEj7kgkay24f2fdLmQ
+    short-id: 0f917152a871e9c0
+  server: a.ru.maviks.ru
+  servername: maviks.ru
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e5c31f13-b10a-4e9c-bfa6-09454bc5e65c
+- name: RU_speednode_0093
   network: ws
   port: 8880
   server: 31.12.75.156
@@ -796,107 +1317,7 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: RU_speednode_0057
-  network: ws
-  port: 80
-  server: 185.174.138.6
-  servername: reedfree8mahsang2.redorg.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-  ws-opts:
-    headers:
-      Host: reedfree8mahsang2.redorg.ir
-    path: '/Channel id: @ShadowProxy66/?ed=2560'
-- name: RU_speednode_0058
-  network: ws
-  port: 8880
-  server: 45.142.255.156
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- client-fingerprint: chrome
-  name: RU_speednode_0059
-  network: ws
-  port: 8880
-  server: 45.135.235.63
-  servername: jp.laoyoutiao.link
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: jp.laoyoutiao.link
-    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-- name: RU_speednode_0060
-  network: ws
-  port: 8880
-  server: 194.53.53.156
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- client-fingerprint: chrome
-  name: RU_speednode_0061
-  network: ws
-  port: 8880
-  server: 185.148.107.177
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-  ws-opts:
-    headers:
-      Host: ip.langmanshanxi.top
-    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-- client-fingerprint: chrome
-  name: RU_speednode_0062
-  network: ws
-  port: 8880
-  server: 45.8.211.63
-  servername: jp.laoyoutiao.link
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: jp.laoyoutiao.link
-    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-- client-fingerprint: chrome
-  name: RU_speednode_0063
-  port: 13796
-  reality-opts:
-    public-key: AIUUKeq08usIla0uv-NTp5wVe4TMb3VkXWDLoutlFnM
-    short-id: a3ac
-  server: Russiatest-Tap.servers807.ir
-  servername: tgju.org
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: b646e0d6-137b-49e1-90bc-3b9ad8a6484a
-- name: RU_speednode_0064
+- name: RU_speednode_0094
   network: ws
   port: 8880
   server: 185.176.24.238
@@ -910,24 +1331,75 @@ proxies:
     headers:
       Host: reedfree8mahsang2.redorg.ir
     path: /
-- name: SA_speednode_0065
+- client-fingerprint: chrome
+  name: RU_speednode_0095
   network: ws
   port: 8880
-  server: 91.209.253.177
-  servername: ip.langmanshanxi.top
+  server: 45.8.211.63
+  servername: jp.laoyoutiao.link
   skip-cert-verify: false
   tls: false
   type: vless
   udp: true
-  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
   ws-opts:
     headers:
-      Host: ip.langmanshanxi.top
-    path: "/telegram\U0001F1E8\U0001F1F3 @wangcai2 /?ed=2560"
-- name: SC_speednode_0066
+      Host: jp.laoyoutiao.link
+    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: RU_speednode_0096
+  network: ws
+  port: 443
+  server: 185.176.24.159
+  servername: FREEDOm.ZiStarvInbioTeCh.ir
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0a506a60-ae3e-499d-9cbd-ab003f9f3f3b
+  ws-opts:
+    headers:
+      Host: FREEDOm.ZiStarvInbioTeCh.ir
+    path: /Telegram@ShadowProxy66/?ed=2560
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: RU_speednode_0097
+  network: ws
+  port: 443
+  server: 185.176.24.159
+  servername: FREEDOm.ZiStarvInbioTeCh.ir
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0a506a60-ae3e-499d-9cbd-ab003f9f3f3b
+  ws-opts:
+    headers:
+      Host: freedom.zistarvinbiotech.ir
+    path: /Telegram/?ed=2560
+- alpn:
+  - http/1.1
+  name: RU_speednode_0098
+  network: ws
+  port: 443
+  server: 45.142.120.185
+  servername: FREEDOm.ZiStarvInbioTeCh.ir
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0a506a60-ae3e-499d-9cbd-ab003f9f3f3b
+  ws-opts:
+    headers:
+      Host: freedom.zistarvinbiotech.ir
+    path: /MTbeT87uR90Qfn6U?ed=2560
+- name: SA_speednode_0099
   network: ws
   port: 8880
-  server: 154.197.75.156
+  server: 91.209.253.156
   servername: Telegram-channel-WangCai2
   skip-cert-verify: false
   tls: false
@@ -938,7 +1410,7 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: SC_speednode_0067
+- name: SC_speednode_0100
   network: ws
   port: 8880
   server: 154.194.0.156
@@ -952,24 +1424,24 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: SG_speednode_0068
-  network: ws
-  port: 443
-  server: 3.0.39.179
-  servername: jd.chenchuanjin.sbs
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: f4522b1a-7cc2-4d4b-84c5-357242e052bb
-  ws-opts:
-    headers:
-      Host: jd.chenchuanjin.sbs
-    path: /
-- name: SG_speednode_0069
+- name: SC_speednode_0101
   network: ws
   port: 8880
-  server: 92.243.74.156
+  server: 154.197.80.251
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
+  ws-opts:
+    headers:
+      Host: cf.d3z.net
+    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+- name: SG_speednode_0102
+  network: ws
+  port: 8880
+  server: 27.50.49.156
   servername: Telegram-channel-WangCai2
   skip-cert-verify: false
   tls: false
@@ -980,48 +1452,7 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: SG_speednode_0070
-  network: ws
-  port: 28983
-  server: 146.235.19.79
-  servername: steep.skyfigure.top
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 63601f9f-7c67-4952-919a-1ef802b5a7ec
-  ws-opts:
-    headers:
-      Host: steep.skyfigure.top
-    path: "/Telegram\U0001F1E8\U0001F1F3 @pgkj666 /?ed=2560"
-- name: SG_speednode_0071
-  network: ws
-  port: 443
-  server: 160.22.79.155
-  servername: steep.skyfigure.top
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 63601f9f-7c67-4952-919a-1ef802b5a7ec
-  ws-opts:
-    headers:
-      Host: steep.skyfigure.top
-    path: "/Telegram\U0001F1E8\U0001F1F3 @pgkj666 /?ed=2560"
-- name: SG_speednode_0072
-  network: ws
-  password: ttfang
-  port: 1111
-  server: 138.2.95.61
-  skip-cert-verify: false
-  sni: ttfang.fange.me
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: ttfang.fange.me
-    path: /
-- name: SG_speednode_0073
+- name: SG_speednode_0103
   network: ws
   port: 443
   server: 164.52.2.100
@@ -1035,10 +1466,10 @@ proxies:
     headers:
       Host: steep.skyfigure.top
     path: /TelegramU0001F1E8U0001F1F3 @pgkj666 /?ed=2560
-- name: TR_speednode_0074
+- name: SI_speednode_0104
   network: ws
   port: 8880
-  server: 156.243.246.156
+  server: 92.53.189.156
   servername: Telegram-channel-WangCai2
   skip-cert-verify: false
   tls: false
@@ -1049,8 +1480,64 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: SI_speednode_0105
+  network: ws
+  port: 8880
+  server: 92.53.188.177
+  servername: ip.langmanshanxi.top
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+  ws-opts:
+    headers:
+      Host: ip.langmanshanxi.top
+    path: /Telegram@WangCai2/?ed=2560
+- name: SI_speednode_0106
+  network: ws
+  port: 8880
+  server: 92.60.74.20
+  servername: reedfree8mahsang2.redorg.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: reedfree8mahsang2.redorg.ir
+    path: /?ed=2560
+- name: SI_speednode_0107
+  network: ws
+  port: 8880
+  server: 92.60.74.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: TH_speednode_0108
+  network: ws
+  port: 19816
+  server: 45.144.167.46
+  servername: rs-hk.lzjnb.shop
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6337837a-2b47-4e0d-a695-75c5a4a8ad51
+  ws-opts:
+    headers:
+      Host: rs-hk.lzjnb.shop
+    path: /lzjjjj666
 - client-fingerprint: chrome
-  name: US_speednode_0075
+  name: US_speednode_0109
   network: ws
   port: 8880
   server: 141.193.27.63
@@ -1064,7 +1551,7 @@ proxies:
     headers:
       Host: jp.laoyoutiao.link
     path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-- name: US_speednode_0076
+- name: US_speednode_0110
   network: ws
   port: 8880
   server: 167.68.11.29
@@ -1078,25 +1565,11 @@ proxies:
     headers:
       Host: hk.laoyoutiao.link
     path: /TelegramU0001F1E8U0001F1F3 @MxlShare @WangCai2 /?ed=2560
-- name: US_speednode_0077
+- name: US_speednode_0111
   network: ws
   port: 8880
-  server: 135.84.79.177
-  servername: ip.langmanshanxi.top
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-  ws-opts:
-    headers:
-      Host: ip.langmanshanxi.top
-    path: /TELEGRAM-v2ray_configs_pools_v2ray_configs_pools_v2ray_configs_pools?ed=512
-- name: US_speednode_0078
-  network: ws
-  port: 8880
-  server: 147.185.161.156
-  servername: Telegram-channel-WangCai2
+  server: 156.238.18.83
+  servername: yd.laoyoutiao.link
   skip-cert-verify: false
   tls: false
   type: vless
@@ -1104,191 +1577,9 @@ proxies:
   uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
   ws-opts:
     headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: US_speednode_0079
-  network: ws
-  port: 80
-  server: 185.148.106.141
-  servername: reedfree8mahsang2.redorg.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-  ws-opts:
-    headers:
-      Host: reedfree8mahsang2.redorg.ir
-    path: '/Channel id: @ShadowProxy66/?ed=2560'
-- name: US_speednode_0080
-  network: ws
-  port: 8880
-  server: 104.129.164.156
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: US_speednode_0081
-  network: ws
-  port: 80
-  server: 185.148.106.214
-  servername: reedfree8mahsang2.redorg.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-  ws-opts:
-    headers:
-      Host: reedfree8mahsang2.redorg.ir
-    path: /Telegram:+@vpnAndroid2/?ed=2560
-- name: US_speednode_0082
-  network: ws
-  port: 8880
-  server: 168.100.6.156
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: US_speednode_0083
-  network: ws
-  port: 8880
-  server: 195.13.44.156
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: US_speednode_0084
-  network: ws
-  port: 80
-  server: 66.81.247.192
-  servername: reedfree8mahsang2.redorg.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-  ws-opts:
-    headers:
-      Host: reedfree8mahsang2.redorg.ir
-    path: /Channel+id:+@ShadowProxy66/?ed=2560
-- name: US_speednode_0085
-  network: ws
-  port: 8880
-  server: 160.153.0.156
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: US_speednode_0086
-  network: ws
-  port: 8880
-  server: 192.0.54.156
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: US_speednode_0087
-  network: ws
-  port: 8880
-  server: 66.81.247.79
-  servername: reedfree8mahsang2.redorg.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-  ws-opts:
-    headers:
-      Host: reedfree8mahsang2.redorg.ir
-    path: /Telegram@ShadowProxy66/?ed=2560
-- name: US_speednode_0088
-  network: ws
-  port: 8880
-  server: 160.79.104.251
-  servername: cf.d3z.net
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
-  ws-opts:
-    headers:
-      Host: cf.d3z.net
-    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-- name: US_speednode_0089
-  network: ws
-  port: 8880
-  server: 216.205.52.156
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: US_speednode_0090
-  network: ws
-  port: 8880
-  server: 45.159.218.20
-  servername: reedfree8mahsang2.redorg.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-  ws-opts:
-    headers:
-      Host: reedfree8mahsang2.redorg.ir
-    path: /?ed=2560
-- name: US_speednode_0091
-  network: ws
-  port: 8880
-  server: 161.145.150.156
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: US_speednode_0092
+      Host: yd.laoyoutiao.link
+    path: /TelegramU0001F1E8U0001F1F3 @MxlShare @WangCai2 /?ed=2560
+- name: US_speednode_0112
   network: ws
   port: 8880
   server: 160.79.104.156
@@ -1302,21 +1593,21 @@ proxies:
     headers:
       Host: kjgx.laoyoutiao.link
     path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: US_speednode_0093
+- name: US_speednode_0113
   network: ws
   port: 8880
-  server: 170.114.46.128
-  servername: reedfree8mahsang2.redorg.ir
+  server: 160.79.104.251
+  servername: cf.d3z.net
   skip-cert-verify: false
   tls: false
   type: vless
   udp: true
-  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
   ws-opts:
     headers:
-      Host: reedfree8mahsang2.redorg.ir
-    path: '/Channel id: @ShadowProxy66?ed=2560'
-- name: US_speednode_0094
+      Host: cf.d3z.net
+    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+- name: US_speednode_0114
   network: ws
   port: 8880
   server: 141.193.27.29
@@ -1330,112 +1621,10 @@ proxies:
     headers:
       Host: hk.laoyoutiao.link
     path: /
-- client-fingerprint: chrome
-  name: US_speednode_0095
-  network: ws
-  port: 8880
-  server: 155.46.213.177
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-  ws-opts:
-    headers:
-      Host: ip.langmanshanxi.top
-    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-- name: US_speednode_0096
-  network: ws
-  port: 8880
-  server: 135.84.75.3
-  servername: bitget1.asdasd.click
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
-  ws-opts:
-    headers:
-      Host: bitget1.asdasd.click
-    path: "/Telegram\U0001F1E8\U0001F1F3"
-- name: US_speednode_0097
-  network: ws
-  port: 8880
-  server: 216.24.57.20
-  servername: us.laoyoutiao.link
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: us.laoyoutiao.link
-    path: /Telegram@WangCai2
-- client-fingerprint: chrome
-  name: US_speednode_0098
-  network: ws
-  port: 8880
-  server: 167.68.42.63
-  servername: jp.laoyoutiao.link
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: jp.laoyoutiao.link
-    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-- name: US_speednode_0099
-  network: ws
-  port: 8880
-  server: 195.13.55.156
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: kjgx.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- client-fingerprint: chrome
-  name: US_speednode_0100
-  network: ws
-  port: 8880
-  server: 162.120.94.177
-  servername: Telegram-channel-WangCai2
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
-  ws-opts:
-    headers:
-      Host: ip.langmanshanxi.top
-    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-- client-fingerprint: random
-  name: US_speednode_0101
-  network: ws
-  port: 443
-  server: 104.19.242.104
-  servername: kawaiifreevpn-7ds.pages.dev
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9dd24d01-2b7a-4bd8-8c76-129d6ca89b8c
-  ws-opts:
-    headers:
-      Host: kawaiifreevpn-7ds.pages.dev
-    path: /?ed=2560
 - alpn:
   - h3
   client-fingerprint: random
-  name: US_speednode_0102
+  name: US_speednode_0115
   network: ws
   port: 443
   server: 104.18.86.131
@@ -1449,11 +1638,25 @@ proxies:
     headers:
       Host: vless5-edu.pages.dev
     path: /?ed=2560
+- name: US_speednode_0116
+  network: ws
+  port: 8880
+  server: 160.153.0.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
 - client-fingerprint: random
-  name: US_speednode_0103
+  name: US_speednode_0117
   network: ws
   port: 443
-  server: 104.16.213.195
+  server: 104.19.242.104
   servername: kawaiifreevpn-7ds.pages.dev
   skip-cert-verify: false
   tls: true
@@ -1464,11 +1667,11 @@ proxies:
     headers:
       Host: kawaiifreevpn-7ds.pages.dev
     path: /?ed=2560
-- name: US_speednode_0104
+- name: US_speednode_0118
   network: ws
   port: 8880
-  server: 198.62.62.63
-  servername: jp.laoyoutiao.link
+  server: 156.243.83.156
+  servername: Telegram-channel-WangCai2
   skip-cert-verify: false
   tls: false
   type: vless
@@ -1476,12 +1679,226 @@ proxies:
   uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
   ws-opts:
     headers:
-      Host: jp.laoyoutiao.link
-    path: "/Telegram\U0001F1E8\U0001F1F3"
-- name: US_speednode_0105
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: US_speednode_0119
   network: ws
   port: 8880
-  server: 45.159.218.20
+  server: 161.145.150.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: US_speednode_0120
+  network: ws
+  port: 8880
+  server: 192.200.160.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: US_speednode_0121
+  network: ws
+  port: 8880
+  server: 168.100.6.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: US_speednode_0122
+  network: ws
+  port: 8880
+  server: 135.84.73.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: US_speednode_0123
+  network: ws
+  port: 8880
+  server: 141.193.27.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: US_speednode_0124
+  network: ws
+  port: 8880
+  server: 155.46.213.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: US_speednode_0125
+  network: ws
+  port: 8880
+  server: 192.0.63.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: US_speednode_0126
+  network: ws
+  port: 8880
+  server: 162.251.82.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: US_speednode_0127
+  port: 60589
+  reality-opts:
+    public-key: g_56k7ui9UrIxf6FL4bc5JJ4tYQ0wwENzddsybcRNHo
+    short-id: 11aa857ce52a1392
+  server: 38.246.249.90
+  servername: www.cisco.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 461558c5-425f-49de-9dad-5a9184e092f9
+- name: US_speednode_0128
+  network: ws
+  port: 8880
+  server: 162.120.94.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: US_speednode_0129
+  network: ws
+  port: 8880
+  server: 159.112.235.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: US_speednode_0130
+  network: ws
+  port: 8880
+  server: 170.114.46.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: US_speednode_0131
+  network: ws
+  port: 8880
+  server: 184.174.80.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: US_speednode_0132
+  network: ws
+  port: 443
+  server: www.speedtest.net
+  servername: FREEDOm.ZiStarvInbioTeCh.ir
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0a506a60-ae3e-499d-9cbd-ab003f9f3f3b
+  ws-opts:
+    headers:
+      Host: freedom.zistarvinbiotech.ir
+    path: /Tel-@AZADIIIVPN/?ed=2560
+- client-fingerprint: chrome
+  name: US_speednode_0133
+  network: ws
+  port: 2053
+  server: 104.16.34.128
+  servername: EnSHoLP-91s.paGES.dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 267613d7-f53f-4005-b642-d6f1f687b7cf
+  ws-opts:
+    headers:
+      Host: EnSHoLP-91s.paGES.dev
+    path: /Ye3vH0FBXeZWh4zV?ed=2560
+- name: US_speednode_0134
+  network: ws
+  port: 80
+  server: 185.148.106.242
   servername: reedfree8mahsang2.redorg.ir
   skip-cert-verify: false
   tls: false
@@ -1491,45 +1908,159 @@ proxies:
   ws-opts:
     headers:
       Host: reedfree8mahsang2.redorg.ir
-    path: /
+    path: "/Telegram\U0001F1EE\U0001F1F7Channel id: @AZADIIIVPN /?ed=2560"
+- name: US_speednode_0135
+  network: ws
+  port: 80
+  server: 104.17.147.22
+  servername: redfree8.pooriashop.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: redfree8.pooriashop.ir
+    path: /Telegram@V2ray_Alpha/?ed=2560
+- name: US_speednode_0136
+  network: ws
+  port: 80
+  server: 185.148.106.214
+  servername: reedfree8mahsang2.redorg.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: reedfree8mahsang2.redorg.ir
+    path: /Telegram:+@v2ray_configs_pools/?ed=2560
+- name: US_speednode_0137
+  network: ws
+  port: 8880
+  server: 159.242.242.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
 - alpn:
   - http/1.1
-  client-fingerprint: randomized
-  name: US_speednode_0106
+  client-fingerprint: chrome
+  name: US_speednode_0138
   network: ws
   port: 443
-  server: 104.17.182.58
-  servername: frieren.albedo.ddns-ip.net
+  server: www.speedtest.net
+  servername: FREEDOm.ZiStarvInbioTeCh.ir
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: c1601a96-febd-4baa-8fe3-17ca8f4121bd
+  uuid: 0a506a60-ae3e-499d-9cbd-ab003f9f3f3b
   ws-opts:
     headers:
-      Host: frieren.albedo.ddns-ip.net
-    path: /proxyip=ayaka.shorekeeper.ir
-- alpn:
-  - http/1.1
-  client-fingerprint: randomized
-  name: US_speednode_0107
+      Host: freedom.zistarvinbiotech.ir
+    path: /Telegram@server_free2/?ed=2560
+- name: US_speednode_0139
+  network: ws
+  port: 80
+  server: 185.148.106.242
+  servername: reedfree8mahsang2.redorg.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: reedfree8mahsang2.redorg.ir
+    path: "/Telegram\U0001F1EE\U0001F1F7Channel id: @Config_Rayegan /?ed=2560"
+- name: US_speednode_0140
+  network: ws
+  port: 8880
+  server: 167.68.11.156
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: kjgx.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- client-fingerprint: chrome
+  name: US_speednode_0141
   network: ws
   port: 443
-  server: 104.17.183.58
-  servername: frieren.albedo.ddns-ip.net
+  server: 104.16.34.128
+  servername: ensHOLP-91s.pageS.DEv
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: c1601a96-febd-4baa-8fe3-17ca8f4121bd
+  uuid: 267613d7-f53f-4005-b642-d6f1f687b7cf
   ws-opts:
     headers:
-      Host: frieren.albedo.ddns-ip.net
-    path: /proxyip=ayaka.shorekeeper.ir
+      Host: ensHOLP-91s.pageS.DEv
+    path: /dQMN2VQLkaE52qWD?ed=2560
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: US_speednode_0142
+  network: ws
+  port: 8443
+  server: 188.114.96.3
+  servername: w325.pAges.Dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 88d05a33-ff36-415d-9d2c-7e1e8468e7e8
+  ws-opts:
+    headers:
+      Host: w325.pages.dev
+    path: /6WKNgcKo7LMqOzhb?ed=2560
+- name: US_speednode_0143
+  network: ws
+  port: 80
+  server: 185.148.106.242
+  servername: reedfree8mahsang2.redorg.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+  ws-opts:
+    headers:
+      Host: reedfree8mahsang2.redorg.ir
+    path: /Telegram-@FREEV2RNG /?ed=2560
+- client-fingerprint: chrome
+  name: US_speednode_0144
+  network: ws
+  port: 443
+  server: digitalocean.com
+  servername: rayan-olala.parvaneh.dpdns.org
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 60882caa-4e74-42a2-be70-220755fc1551
+  ws-opts:
+    headers:
+      Host: rayan-olala.parvaneh.dpdns.org
+    path: /?ed=2560
 - alpn:
   - http/1.1
   client-fingerprint: randomized
-  name: US_speednode_0108
+  name: US_speednode_0145
   network: ws
   port: 443
   server: 104.17.184.58
@@ -1543,34 +2074,473 @@ proxies:
     headers:
       Host: frieren.albedo.ddns-ip.net
     path: /proxyip=ayaka.shorekeeper.ir
-- client-fingerprint: firefox
-  name: VN_speednode_0109
-  port: 34045
-  reality-opts:
-    public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
-    short-id: e8ab71d0
-  server: 59.153.217.57
-  servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
+- name: US_speednode_0146
+  network: ws
+  port: 8880
+  server: 160.79.104.251
+  servername: cf.d3z.net
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
+  ws-opts:
+    headers:
+      Host: cf.d3z.net
+    path: "/Telegram\U0001F1E8\U0001F1F3\u062A\u0639\u062F\u0627\u062F"
+- alpn:
+  - http/1.1
+  client-fingerprint: randomized
+  name: US_speednode_0147
+  network: ws
+  port: 443
+  server: 104.17.183.58
+  servername: frieren.albedo.ddns-ip.net
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
-- client-fingerprint: firefox
-  name: VN_speednode_0110
-  port: 34045
-  reality-opts:
-    public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
-    short-id: e8ab71d0
-  server: 103.81.86.172
-  servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
+  uuid: c1601a96-febd-4baa-8fe3-17ca8f4121bd
+  ws-opts:
+    headers:
+      Host: frieren.albedo.ddns-ip.net
+    path: /proxyip=ayaka.shorekeeper.ir
+- name: US_speednode_0148
+  network: ws
+  port: 443
+  server: 104.19.253.84
+  servername: kawaiifreevpn.pages.dev
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
+  uuid: 90d7db9b-972b-4073-8738-12cf42124260
+  ws-opts:
+    headers:
+      Host: kawaiifreevpn.pages.dev
+    path: /?ed=2560
+- client-fingerprint: chrome
+  name: US_speednode_0149
+  network: ws
+  port: 443
+  server: jquery.com
+  servername: rayan-karma.parvaneh.dpdns.org
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 60882caa-4e74-42a2-be70-220755fc1551
+  ws-opts:
+    headers:
+      Host: rayan-karma.parvaneh.dpdns.org
+    path: /?ed=2560
+- alpn:
+  - h3
+  name: US_speednode_0150
+  network: ws
+  port: 443
+  server: 104.16.243.59
+  servername: NGINX.NSCl.IR
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 75fde681-ec64-4654-86fa-30732e8e179c
+  ws-opts:
+    headers:
+      Host: nginx.nscl.ir
+    path: /config-proxy-free--Telegram--config-proxy-free--Telegram--config-proxy-free--Telegram--config-proxy-free--Telegram--config-proxy-free--Telegram--config-proxy-free?ed=2560
+- client-fingerprint: chrome
+  name: US_speednode_0151
+  network: ws
+  port: 2083
+  server: 104.21.18.37
+  servername: vl.bujidao.cc
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1ccc1dd8-d8ed-4b69-b0c2-27f6282f9755
+  ws-opts:
+    headers:
+      Host: vl.bujidao.cc
+    path: /?ed=2048
+- client-fingerprint: chrome
+  name: US_speednode_0152
+  network: ws
+  port: 8880
+  server: 170.114.45.177
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+  ws-opts:
+    headers:
+      Host: ip.langmanshanxi.top
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- alpn:
+  - http/1.1
+  client-fingerprint: randomized
+  name: US_speednode_0153
+  network: ws
+  port: 443
+  server: 104.17.182.58
+  servername: frieren.albedo.ddns-ip.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: c1601a96-febd-4baa-8fe3-17ca8f4121bd
+  ws-opts:
+    headers:
+      Host: frieren.albedo.ddns-ip.net
+    path: /proxyip=ayaka.shorekeeper.ir
+- name: US_speednode_0154
+  network: ws
+  port: 8880
+  server: 199.34.229.177
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+  ws-opts:
+    headers:
+      Host: ip.langmanshanxi.top
+    path: "/Telegram\U0001F1E8\U0001F1F3"
+- name: US_speednode_0155
+  network: ws
+  port: 8880
+  server: 130.250.137.177
+  servername: ip.langmanshanxi.top
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+  ws-opts:
+    headers:
+      Host: ip.langmanshanxi.top
+    path: "/Telegram\U0001F1E8\U0001F1F3 @xixv2ray /?ed=2560"
+- client-fingerprint: chrome
+  name: US_speednode_0156
+  network: ws
+  port: 443
+  server: 104.19.245.206
+  servername: kawaiifreevpn-7ds.pages.dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9dd24d01-2b7a-4bd8-8c76-129d6ca89b8c
+  ws-opts:
+    headers:
+      Host: kawaiifreevpn-7ds.pages.dev
+    path: /?ed=2560
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: US_speednode_0157
+  network: ws
+  port: 2053
+  server: 188.114.97.183
+  servername: nOCTYq.pAGES.DEV
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: eb568786-bb3f-4f02-a25c-7183e800a0ba
+  ws-opts:
+    headers:
+      Host: nOCTYq.pAGES.DEV
+    path: /bPJ4mgkJbA7CnY7q?ed=2560
+- name: US_speednode_0158
+  network: ws
+  port: 443
+  server: 104.16.122.80
+  servername: kawaiifreevpn.pages.dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 90d7db9b-972b-4073-8738-12cf42124260
+  ws-opts:
+    headers:
+      Host: kawaiifreevpn.pages.dev
+    path: /?ed=2560
+- client-fingerprint: chrome
+  name: US_speednode_0159
+  network: ws
+  port: 8880
+  server: 199.181.197.63
+  servername: jp.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: jp.laoyoutiao.link
+    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+- client-fingerprint: chrome
+  name: US_speednode_0160
+  network: ws
+  port: 443
+  server: 104.22.24.195
+  servername: kawaiifreevpn-7ds.pages.dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9dd24d01-2b7a-4bd8-8c76-129d6ca89b8c
+  ws-opts:
+    headers:
+      Host: kawaiifreevpn-7ds.pages.dev
+    path: /?ed=2560
+- client-fingerprint: chrome
+  name: US_speednode_0161
+  network: ws
+  port: 443
+  server: 104.26.8.156
+  servername: yx.yushan.dpdns.org
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: c4587bda-09fc-4b3b-8221-4450fccc33d1
+  ws-opts:
+    headers:
+      Host: yx.yushan.dpdns.org
+    path: /?ed=2560
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: US_speednode_0163
+  network: ws
+  port: 443
+  server: 188.114.96.3
+  servername: GrOUPyoUnEs.PAGEs.DEv
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e2d6455c-9846-4502-8394-16b8c1c07b68
+  ws-opts:
+    headers:
+      Host: GrOUPyoUnEs.PAGEs.DEv
+    path: /Orib1TRRDQo8XqMa?ed=2560
+- name: US_speednode_0164
+  network: ws
+  port: 8880
+  server: 141.193.27.247
+  servername: ex.sue.x10.mx
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: d60fc3c5-9f07-4cdb-b81f-70af27936bdc
+  ws-opts:
+    headers:
+      Host: ex.sue.x10.mx
+    path: "/Telegram\U0001F1E8\U0001F1F3"
+- name: US_speednode_0165
+  network: ws
+  port: 443
+  server: 69.84.182.2
+  servername: pages.dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5879d109-8c92-448a-801b-3f3989019934
+  ws-opts:
+    headers:
+      Host: free-palestine.pages.dev
+    path: /Telegram-XV2ray---Telegram-XV2ray---Telegram-XV2ray---Telegram-XV2ray---Telegram-XV2ray---Telegram-XV2ray---Telegram-XV2ray---Telegram-XV2ray---Telegram-XV2ray---Telegram-XV2ray---Telegram-XV2ray---Telegram-XV2ray---Telegram-XV2ray?ed=2048
+- alpn:
+  - h3
+  name: US_speednode_0166
+  network: ws
+  port: 443
+  server: 104.16.243.59
+  servername: NGINX.NSCl.IR
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 75fde681-ec64-4654-86fa-30732e8e179c
+  ws-opts:
+    headers:
+      Host: nginx.nscl.ir
+    path: /config-proxy-free--Telegram--config-proxy-free--Telegram--config-proxy-free--Telegram--config-proxy-free--Telegram--config-proxy-free--Telegram--config-proxy-free
+- name: US_speednode_0167
+  network: ws
+  port: 8880
+  server: 14.102.229.213
+  servername: jp.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: jp.laoyoutiao.link
+    path: /?ed=2560
+- name: US_speednode_0168
+  network: ws
+  port: 8880
+  server: 135.84.79.177
+  servername: ip.langmanshanxi.top
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+  ws-opts:
+    headers:
+      Host: ip.langmanshanxi.top
+    path: /TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: US_speednode_0169
+  network: ws
+  port: 443
+  server: 104.16.14.1
+  servername: 5nrvx1irwfiyq8nqbaiztizua8t8xg0d.pages.dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 711627d2-1662-4e98-a3d6-086fd4fd4d31
+  ws-opts:
+    headers:
+      Host: 5nrvx1irwfiyq8nqbaiztizua8t8xg0d.pages.dev
+    path: /iqySBCJZh3v7AmTx?ed=2560
+- client-fingerprint: chrome
+  name: US_speednode_0170
+  network: ws
+  port: 8443
+  server: 162.159.129.67
+  servername: vle.amclubsdns.dpdns.org
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d6b8011a-c725-435a-9fec-bf6d3530392c
+  ws-opts:
+    headers:
+      Host: vle.amclubsdns.dpdns.org
+    path: /?ed=2560
+- name: US_speednode_0171
+  network: ws
+  port: 443
+  server: 104.19.144.212
+  servername: 111-aw3.pages.dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: c98a16e4-0dc5-42f0-b3db-30f04525c123
+  ws-opts:
+    headers:
+      Host: 111-aw3.pages.dev
+    path: /
+- name: US_speednode_0172
+  network: ws
+  port: 8880
+  server: 170.114.46.177
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+  ws-opts:
+    headers:
+      Host: ip.langmanshanxi.top
+    path: "/Telegram\U0001F1E8\U0001F1F3"
+- name: US_speednode_0174
+  network: ws
+  port: 8880
+  server: 135.84.75.3
+  servername: Telegram-channel-v2ray_configs_pools
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
+  ws-opts:
+    headers:
+      Host: bitget1.asdasd.click
+    path: "/Telegram\U0001F1E8\U0001F1F3"
+- name: US_speednode_0175
+  network: ws
+  port: 8880
+  server: 209.94.90.63
+  servername: jp.laoyoutiao.link
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  ws-opts:
+    headers:
+      Host: jp.laoyoutiao.link
+    path: "/Telegram\U0001F1E8\U0001F1F3"
+- alpn:
+  - h3
+  name: US_speednode_0176
+  network: ws
+  port: 443
+  server: 104.17.210.171
+  servername: vless10-9sc.pages.dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: c98a16e4-0dc5-42f0-b3db-30f04525c123
+  ws-opts:
+    headers:
+      Host: vless10-9sc.pages.dev
+    path: /
+- client-fingerprint: chrome
+  name: US_speednode_0177
+  network: ws
+  port: 2096
+  server: 104.16.161.143
+  servername: baomei.pages.dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: f690c2da-bdc3-4538-999e-d2bb8a541188
+  ws-opts:
+    headers:
+      Host: baomei.pages.dev
+    path: /
+- name: US_speednode_0178
+  network: ws
+  port: 8880
+  server: 147.185.161.251
+  servername: Telegram-channel-WangCai2
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 0132166f-e702-48ed-a9e7-b07af768faf8
+  ws-opts:
+    headers:
+      Host: cf.d3z.net
+    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
 - client-fingerprint: firefox
-  name: VN_speednode_0111
+  name: VN_speednode_0179
   port: 34045
   reality-opts:
     public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
@@ -1583,20 +2553,7 @@ proxies:
   udp: true
   uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
 - client-fingerprint: firefox
-  name: VN_speednode_0112
-  port: 34045
-  reality-opts:
-    public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
-    short-id: e8ab71d0
-  server: 103.12.77.191
-  servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
-- client-fingerprint: firefox
-  name: VN_speednode_0113
+  name: VN_speednode_0180
   port: 34045
   reality-opts:
     public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
@@ -1609,7 +2566,33 @@ proxies:
   udp: true
   uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
 - client-fingerprint: firefox
-  name: VN_speednode_0114
+  name: VN_speednode_0181
+  port: 34045
+  reality-opts:
+    public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
+    short-id: e8ab71d0
+  server: 103.81.86.172
+  servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
+- client-fingerprint: firefox
+  name: VN_speednode_0182
+  port: 34045
+  reality-opts:
+    public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
+    short-id: e8ab71d0
+  server: 103.12.77.191
+  servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
+- client-fingerprint: firefox
+  name: VN_speednode_0183
   port: 34045
   reality-opts:
     public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
@@ -1621,256 +2604,419 @@ proxies:
   type: vless
   udp: true
   uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
-- name: ZA_speednode_0115
-  network: ws
-  port: 8880
-  server: 102.177.189.29
-  servername: hk.laoyoutiao.link
+- client-fingerprint: firefox
+  name: VN_speednode_0184
+  port: 34045
+  reality-opts:
+    public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
+    short-id: e8ab71d0
+  server: 59.153.217.57
+  servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vless
   udp: true
-  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-  ws-opts:
-    headers:
-      Host: hk.laoyoutiao.link
-    path: /TelegramU0001F1E8U0001F1F3
+  uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
+- client-fingerprint: chrome
+  name: VN_speednode_0185
+  port: 34045
+  reality-opts:
+    public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
+    short-id: e8ab71d0
+  server: 103.12.77.78
+  servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
+- client-fingerprint: firefox
+  name: VN_speednode_0186
+  port: 34045
+  reality-opts:
+    public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
+    short-id: e8ab71d0
+  server: 103.81.84.57
+  servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
 proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
   - "\u267B\uFE0F automatic"
-  - AM_speednode_0001
-  - AT_speednode_0002
-  - AT_speednode_0003
-  - AU_speednode_0004
-  - AU_speednode_0005
-  - BG_speednode_0006
-  - BR_speednode_0007
-  - CA_speednode_0008
-  - CR_speednode_0009
-  - CR_speednode_0010
-  - CR_speednode_0011
-  - CR_speednode_0012
-  - CR_speednode_0013
-  - DE_speednode_0014
-  - DE_speednode_0015
-  - DE_speednode_0016
-  - DE_speednode_0017
-  - DE_speednode_0018
-  - DE_speednode_0019
-  - DE_speednode_0020
-  - DE_speednode_0021
-  - ES_speednode_0022
-  - ES_speednode_0023
-  - FR_speednode_0025
-  - GB_speednode_0026
-  - GB_speednode_0027
-  - GB_speednode_0028
-  - GB_speednode_0029
-  - GB_speednode_0030
-  - GB_speednode_0031
-  - GB_speednode_0032
-  - GB_speednode_0033
-  - GB_speednode_0034
-  - GB_speednode_0035
-  - GB_speednode_0036
-  - GB_speednode_0037
-  - GB_speednode_0038
-  - GB_speednode_0039
-  - GB_speednode_0040
-  - HK_speednode_0041
-  - HK_speednode_0042
-  - JO_speednode_0043
-  - JP_speednode_0044
-  - JP_speednode_0045
-  - KZ_speednode_0046
-  - LT_speednode_0047
-  - LT_speednode_0048
-  - LU_speednode_0049
-  - MU_speednode_0050
-  - NL_speednode_0051
-  - NL_speednode_0052
-  - NL_speednode_0053
-  - NL_speednode_0054
-  - NL_speednode_0055
-  - RU_speednode_0056
-  - RU_speednode_0057
-  - RU_speednode_0058
-  - RU_speednode_0059
-  - RU_speednode_0060
-  - RU_speednode_0061
-  - RU_speednode_0062
-  - RU_speednode_0063
-  - RU_speednode_0064
-  - SA_speednode_0065
-  - SC_speednode_0066
-  - SC_speednode_0067
-  - SG_speednode_0068
-  - SG_speednode_0069
-  - SG_speednode_0070
-  - SG_speednode_0071
-  - SG_speednode_0072
-  - SG_speednode_0073
-  - TR_speednode_0074
-  - US_speednode_0075
-  - US_speednode_0076
-  - US_speednode_0077
-  - US_speednode_0078
-  - US_speednode_0079
-  - US_speednode_0080
-  - US_speednode_0081
-  - US_speednode_0082
-  - US_speednode_0083
-  - US_speednode_0084
-  - US_speednode_0085
-  - US_speednode_0086
-  - US_speednode_0087
-  - US_speednode_0088
-  - US_speednode_0089
-  - US_speednode_0090
-  - US_speednode_0091
-  - US_speednode_0092
-  - US_speednode_0093
-  - US_speednode_0094
-  - US_speednode_0095
-  - US_speednode_0096
-  - US_speednode_0097
-  - US_speednode_0098
-  - US_speednode_0099
-  - US_speednode_0100
-  - US_speednode_0101
-  - US_speednode_0102
-  - US_speednode_0103
-  - US_speednode_0104
-  - US_speednode_0105
-  - US_speednode_0106
-  - US_speednode_0107
-  - US_speednode_0108
-  - VN_speednode_0109
-  - VN_speednode_0110
-  - VN_speednode_0111
-  - VN_speednode_0112
-  - VN_speednode_0113
-  - VN_speednode_0114
-  - ZA_speednode_0115
+  - AE_speednode_0001
+  - AE_speednode_0002
+  - AM_speednode_0003
+  - AT_speednode_0004
+  - AT_speednode_0005
+  - AT_speednode_0006
+  - AT_speednode_0007
+  - AT_speednode_0008
+  - AU_speednode_0009
+  - AU_speednode_0010
+  - AU_speednode_0011
+  - BA_speednode_0012
+  - BG_speednode_0013
+  - BR_speednode_0014
+  - CR_speednode_0015
+  - CR_speednode_0016
+  - CR_speednode_0017
+  - CR_speednode_0018
+  - CR_speednode_0019
+  - CR_speednode_0020
+  - CR_speednode_0021
+  - CR_speednode_0022
+  - CR_speednode_0023
+  - CR_speednode_0024
+  - CY_speednode_0025
+  - CY_speednode_0026
+  - CY_speednode_0027
+  - DE_speednode_0028
+  - DE_speednode_0029
+  - DE_speednode_0031
+  - DE_speednode_0032
+  - DE_speednode_0033
+  - DE_speednode_0034
+  - DE_speednode_0035
+  - DE_speednode_0036
+  - DE_speednode_0037
+  - DE_speednode_0038
+  - DE_speednode_0039
+  - DE_speednode_0040
+  - ES_speednode_0041
+  - ES_speednode_0042
+  - FI_speednode_0043
+  - GB_speednode_0044
+  - GB_speednode_0045
+  - GB_speednode_0046
+  - GB_speednode_0047
+  - GB_speednode_0048
+  - GB_speednode_0049
+  - GB_speednode_0050
+  - GB_speednode_0051
+  - GB_speednode_0052
+  - GB_speednode_0053
+  - GB_speednode_0054
+  - GB_speednode_0055
+  - GB_speednode_0056
+  - GB_speednode_0057
+  - HK_speednode_0058
+  - HK_speednode_0059
+  - HK_speednode_0060
+  - HK_speednode_0061
+  - JO_speednode_0062
+  - KZ_speednode_0063
+  - KZ_speednode_0064
+  - KZ_speednode_0065
+  - LT_speednode_0066
+  - LT_speednode_0067
+  - LT_speednode_0068
+  - LT_speednode_0069
+  - LT_speednode_0070
+  - LT_speednode_0071
+  - LU_speednode_0072
+  - MU_speednode_0073
+  - NL_speednode_0074
+  - NL_speednode_0075
+  - NL_speednode_0076
+  - NL_speednode_0077
+  - NL_speednode_0078
+  - NL_speednode_0079
+  - NL_speednode_0080
+  - NL_speednode_0081
+  - NL_speednode_0082
+  - NN_speednode_0083
+  - NN_speednode_0084
+  - RO_speednode_0085
+  - RO_speednode_0086
+  - RU_speednode_0087
+  - RU_speednode_0088
+  - RU_speednode_0089
+  - RU_speednode_0090
+  - RU_speednode_0091
+  - RU_speednode_0092
+  - RU_speednode_0093
+  - RU_speednode_0094
+  - RU_speednode_0095
+  - RU_speednode_0096
+  - RU_speednode_0097
+  - RU_speednode_0098
+  - SA_speednode_0099
+  - SC_speednode_0100
+  - SC_speednode_0101
+  - SG_speednode_0102
+  - SG_speednode_0103
+  - SI_speednode_0104
+  - SI_speednode_0105
+  - SI_speednode_0106
+  - SI_speednode_0107
+  - TH_speednode_0108
+  - US_speednode_0109
+  - US_speednode_0110
+  - US_speednode_0111
+  - US_speednode_0112
+  - US_speednode_0113
+  - US_speednode_0114
+  - US_speednode_0115
+  - US_speednode_0116
+  - US_speednode_0117
+  - US_speednode_0118
+  - US_speednode_0119
+  - US_speednode_0120
+  - US_speednode_0121
+  - US_speednode_0122
+  - US_speednode_0123
+  - US_speednode_0124
+  - US_speednode_0125
+  - US_speednode_0126
+  - US_speednode_0127
+  - US_speednode_0128
+  - US_speednode_0129
+  - US_speednode_0130
+  - US_speednode_0131
+  - US_speednode_0132
+  - US_speednode_0133
+  - US_speednode_0134
+  - US_speednode_0135
+  - US_speednode_0136
+  - US_speednode_0137
+  - US_speednode_0138
+  - US_speednode_0139
+  - US_speednode_0140
+  - US_speednode_0141
+  - US_speednode_0142
+  - US_speednode_0143
+  - US_speednode_0144
+  - US_speednode_0145
+  - US_speednode_0146
+  - US_speednode_0147
+  - US_speednode_0148
+  - US_speednode_0149
+  - US_speednode_0150
+  - US_speednode_0151
+  - US_speednode_0152
+  - US_speednode_0153
+  - US_speednode_0154
+  - US_speednode_0155
+  - US_speednode_0156
+  - US_speednode_0157
+  - US_speednode_0158
+  - US_speednode_0159
+  - US_speednode_0160
+  - US_speednode_0161
+  - US_speednode_0163
+  - US_speednode_0164
+  - US_speednode_0165
+  - US_speednode_0166
+  - US_speednode_0167
+  - US_speednode_0168
+  - US_speednode_0169
+  - US_speednode_0170
+  - US_speednode_0171
+  - US_speednode_0172
+  - US_speednode_0174
+  - US_speednode_0175
+  - US_speednode_0176
+  - US_speednode_0177
+  - US_speednode_0178
+  - VN_speednode_0179
+  - VN_speednode_0180
+  - VN_speednode_0181
+  - VN_speednode_0182
+  - VN_speednode_0183
+  - VN_speednode_0184
+  - VN_speednode_0185
+  - VN_speednode_0186
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
-  - AM_speednode_0001
-  - AT_speednode_0002
-  - AT_speednode_0003
-  - AU_speednode_0004
-  - AU_speednode_0005
-  - BG_speednode_0006
-  - BR_speednode_0007
-  - CA_speednode_0008
-  - CR_speednode_0009
-  - CR_speednode_0010
-  - CR_speednode_0011
-  - CR_speednode_0012
-  - CR_speednode_0013
-  - DE_speednode_0014
-  - DE_speednode_0015
-  - DE_speednode_0016
-  - DE_speednode_0017
-  - DE_speednode_0018
-  - DE_speednode_0019
-  - DE_speednode_0020
-  - DE_speednode_0021
-  - ES_speednode_0022
-  - ES_speednode_0023
-  - FR_speednode_0025
-  - GB_speednode_0026
-  - GB_speednode_0027
-  - GB_speednode_0028
-  - GB_speednode_0029
-  - GB_speednode_0030
-  - GB_speednode_0031
-  - GB_speednode_0032
-  - GB_speednode_0033
-  - GB_speednode_0034
-  - GB_speednode_0035
-  - GB_speednode_0036
-  - GB_speednode_0037
-  - GB_speednode_0038
-  - GB_speednode_0039
-  - GB_speednode_0040
-  - HK_speednode_0041
-  - HK_speednode_0042
-  - JO_speednode_0043
-  - JP_speednode_0044
-  - JP_speednode_0045
-  - KZ_speednode_0046
-  - LT_speednode_0047
-  - LT_speednode_0048
-  - LU_speednode_0049
-  - MU_speednode_0050
-  - NL_speednode_0051
-  - NL_speednode_0052
-  - NL_speednode_0053
-  - NL_speednode_0054
-  - NL_speednode_0055
-  - RU_speednode_0056
-  - RU_speednode_0057
-  - RU_speednode_0058
-  - RU_speednode_0059
-  - RU_speednode_0060
-  - RU_speednode_0061
-  - RU_speednode_0062
-  - RU_speednode_0063
-  - RU_speednode_0064
-  - SA_speednode_0065
-  - SC_speednode_0066
-  - SC_speednode_0067
-  - SG_speednode_0068
-  - SG_speednode_0069
-  - SG_speednode_0070
-  - SG_speednode_0071
-  - SG_speednode_0072
-  - SG_speednode_0073
-  - TR_speednode_0074
-  - US_speednode_0075
-  - US_speednode_0076
-  - US_speednode_0077
-  - US_speednode_0078
-  - US_speednode_0079
-  - US_speednode_0080
-  - US_speednode_0081
-  - US_speednode_0082
-  - US_speednode_0083
-  - US_speednode_0084
-  - US_speednode_0085
-  - US_speednode_0086
-  - US_speednode_0087
-  - US_speednode_0088
-  - US_speednode_0089
-  - US_speednode_0090
-  - US_speednode_0091
-  - US_speednode_0092
-  - US_speednode_0093
-  - US_speednode_0094
-  - US_speednode_0095
-  - US_speednode_0096
-  - US_speednode_0097
-  - US_speednode_0098
-  - US_speednode_0099
-  - US_speednode_0100
-  - US_speednode_0101
-  - US_speednode_0102
-  - US_speednode_0103
-  - US_speednode_0104
-  - US_speednode_0105
-  - US_speednode_0106
-  - US_speednode_0107
-  - US_speednode_0108
-  - VN_speednode_0109
-  - VN_speednode_0110
-  - VN_speednode_0111
-  - VN_speednode_0112
-  - VN_speednode_0113
-  - VN_speednode_0114
-  - ZA_speednode_0115
+  - AE_speednode_0001
+  - AE_speednode_0002
+  - AM_speednode_0003
+  - AT_speednode_0004
+  - AT_speednode_0005
+  - AT_speednode_0006
+  - AT_speednode_0007
+  - AT_speednode_0008
+  - AU_speednode_0009
+  - AU_speednode_0010
+  - AU_speednode_0011
+  - BA_speednode_0012
+  - BG_speednode_0013
+  - BR_speednode_0014
+  - CR_speednode_0015
+  - CR_speednode_0016
+  - CR_speednode_0017
+  - CR_speednode_0018
+  - CR_speednode_0019
+  - CR_speednode_0020
+  - CR_speednode_0021
+  - CR_speednode_0022
+  - CR_speednode_0023
+  - CR_speednode_0024
+  - CY_speednode_0025
+  - CY_speednode_0026
+  - CY_speednode_0027
+  - DE_speednode_0028
+  - DE_speednode_0029
+  - DE_speednode_0031
+  - DE_speednode_0032
+  - DE_speednode_0033
+  - DE_speednode_0034
+  - DE_speednode_0035
+  - DE_speednode_0036
+  - DE_speednode_0037
+  - DE_speednode_0038
+  - DE_speednode_0039
+  - DE_speednode_0040
+  - ES_speednode_0041
+  - ES_speednode_0042
+  - FI_speednode_0043
+  - GB_speednode_0044
+  - GB_speednode_0045
+  - GB_speednode_0046
+  - GB_speednode_0047
+  - GB_speednode_0048
+  - GB_speednode_0049
+  - GB_speednode_0050
+  - GB_speednode_0051
+  - GB_speednode_0052
+  - GB_speednode_0053
+  - GB_speednode_0054
+  - GB_speednode_0055
+  - GB_speednode_0056
+  - GB_speednode_0057
+  - HK_speednode_0058
+  - HK_speednode_0059
+  - HK_speednode_0060
+  - HK_speednode_0061
+  - JO_speednode_0062
+  - KZ_speednode_0063
+  - KZ_speednode_0064
+  - KZ_speednode_0065
+  - LT_speednode_0066
+  - LT_speednode_0067
+  - LT_speednode_0068
+  - LT_speednode_0069
+  - LT_speednode_0070
+  - LT_speednode_0071
+  - LU_speednode_0072
+  - MU_speednode_0073
+  - NL_speednode_0074
+  - NL_speednode_0075
+  - NL_speednode_0076
+  - NL_speednode_0077
+  - NL_speednode_0078
+  - NL_speednode_0079
+  - NL_speednode_0080
+  - NL_speednode_0081
+  - NL_speednode_0082
+  - NN_speednode_0083
+  - NN_speednode_0084
+  - RO_speednode_0085
+  - RO_speednode_0086
+  - RU_speednode_0087
+  - RU_speednode_0088
+  - RU_speednode_0089
+  - RU_speednode_0090
+  - RU_speednode_0091
+  - RU_speednode_0092
+  - RU_speednode_0093
+  - RU_speednode_0094
+  - RU_speednode_0095
+  - RU_speednode_0096
+  - RU_speednode_0097
+  - RU_speednode_0098
+  - SA_speednode_0099
+  - SC_speednode_0100
+  - SC_speednode_0101
+  - SG_speednode_0102
+  - SG_speednode_0103
+  - SI_speednode_0104
+  - SI_speednode_0105
+  - SI_speednode_0106
+  - SI_speednode_0107
+  - TH_speednode_0108
+  - US_speednode_0109
+  - US_speednode_0110
+  - US_speednode_0111
+  - US_speednode_0112
+  - US_speednode_0113
+  - US_speednode_0114
+  - US_speednode_0115
+  - US_speednode_0116
+  - US_speednode_0117
+  - US_speednode_0118
+  - US_speednode_0119
+  - US_speednode_0120
+  - US_speednode_0121
+  - US_speednode_0122
+  - US_speednode_0123
+  - US_speednode_0124
+  - US_speednode_0125
+  - US_speednode_0126
+  - US_speednode_0127
+  - US_speednode_0128
+  - US_speednode_0129
+  - US_speednode_0130
+  - US_speednode_0131
+  - US_speednode_0132
+  - US_speednode_0133
+  - US_speednode_0134
+  - US_speednode_0135
+  - US_speednode_0136
+  - US_speednode_0137
+  - US_speednode_0138
+  - US_speednode_0139
+  - US_speednode_0140
+  - US_speednode_0141
+  - US_speednode_0142
+  - US_speednode_0143
+  - US_speednode_0144
+  - US_speednode_0145
+  - US_speednode_0146
+  - US_speednode_0147
+  - US_speednode_0148
+  - US_speednode_0149
+  - US_speednode_0150
+  - US_speednode_0151
+  - US_speednode_0152
+  - US_speednode_0153
+  - US_speednode_0154
+  - US_speednode_0155
+  - US_speednode_0156
+  - US_speednode_0157
+  - US_speednode_0158
+  - US_speednode_0159
+  - US_speednode_0160
+  - US_speednode_0161
+  - US_speednode_0163
+  - US_speednode_0164
+  - US_speednode_0165
+  - US_speednode_0166
+  - US_speednode_0167
+  - US_speednode_0168
+  - US_speednode_0169
+  - US_speednode_0170
+  - US_speednode_0171
+  - US_speednode_0172
+  - US_speednode_0174
+  - US_speednode_0175
+  - US_speednode_0176
+  - US_speednode_0177
+  - US_speednode_0178
+  - VN_speednode_0179
+  - VN_speednode_0180
+  - VN_speednode_0181
+  - VN_speednode_0182
+  - VN_speednode_0183
+  - VN_speednode_0184
+  - VN_speednode_0185
+  - VN_speednode_0186
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
