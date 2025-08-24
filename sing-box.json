@@ -86,74 +86,54 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "CN_speednode_0001",
-                "CN_speednode_0002",
-                "CN_speednode_0003",
-                "CN_speednode_0004",
+                "GB_speednode_0001",
+                "GB_speednode_0002",
+                "GB_speednode_0003",
+                "GB_speednode_0004",
                 "GB_speednode_0005",
                 "GB_speednode_0006",
                 "GB_speednode_0007",
                 "GB_speednode_0008",
                 "GB_speednode_0009",
                 "GB_speednode_0010",
-                "GB_speednode_0011",
-                "GB_speednode_0012",
-                "GB_speednode_0013",
-                "GB_speednode_0014",
-                "GB_speednode_0015",
-                "GB_speednode_0016",
-                "GB_speednode_0017",
-                "GB_speednode_0018",
-                "GB_speednode_0019",
-                "HK_speednode_0020",
-                "RU_speednode_0021",
-                "RU_speednode_0022",
-                "RU_speednode_0023",
-                "US_speednode_0024",
-                "US_speednode_0025",
-                "US_speednode_0026",
-                "US_speednode_0027",
-                "US_speednode_0028",
-                "US_speednode_0029",
-                "US_speednode_0030",
-                "US_speednode_0031"
+                "RU_speednode_0011",
+                "RU_speednode_0012",
+                "RU_speednode_0013",
+                "US_speednode_0014",
+                "US_speednode_0015",
+                "US_speednode_0016",
+                "US_speednode_0017",
+                "US_speednode_0018",
+                "US_speednode_0019",
+                "US_speednode_0020",
+                "US_speednode_0021"
             ]
         },
         {
             "tag": "auto",
             "type": "urltest",
             "outbounds": [
-                "CN_speednode_0001",
-                "CN_speednode_0002",
-                "CN_speednode_0003",
-                "CN_speednode_0004",
+                "GB_speednode_0001",
+                "GB_speednode_0002",
+                "GB_speednode_0003",
+                "GB_speednode_0004",
                 "GB_speednode_0005",
                 "GB_speednode_0006",
                 "GB_speednode_0007",
                 "GB_speednode_0008",
                 "GB_speednode_0009",
                 "GB_speednode_0010",
-                "GB_speednode_0011",
-                "GB_speednode_0012",
-                "GB_speednode_0013",
-                "GB_speednode_0014",
-                "GB_speednode_0015",
-                "GB_speednode_0016",
-                "GB_speednode_0017",
-                "GB_speednode_0018",
-                "GB_speednode_0019",
-                "HK_speednode_0020",
-                "RU_speednode_0021",
-                "RU_speednode_0022",
-                "RU_speednode_0023",
-                "US_speednode_0024",
-                "US_speednode_0025",
-                "US_speednode_0026",
-                "US_speednode_0027",
-                "US_speednode_0028",
-                "US_speednode_0029",
-                "US_speednode_0030",
-                "US_speednode_0031"
+                "RU_speednode_0011",
+                "RU_speednode_0012",
+                "RU_speednode_0013",
+                "US_speednode_0014",
+                "US_speednode_0015",
+                "US_speednode_0016",
+                "US_speednode_0017",
+                "US_speednode_0018",
+                "US_speednode_0019",
+                "US_speednode_0020",
+                "US_speednode_0021"
             ],
             "url": "http://www.gstatic.com/generate_204",
             "interval": "10m",
@@ -172,212 +152,7 @@
             "tag": "block"
         },
         {
-            "tag": "CN_speednode_0001",
-            "server": "awes35lesl.blhao0o.dpdns.org",
-            "server_port": 12031,
-            "type": "shadowsocks",
-            "method": "aes-128-gcm",
-            "password": "01721e43-5389-4f97-b21c-900abb2bda9e"
-        },
-        {
-            "tag": "CN_speednode_0002",
-            "server": "awes35lesl.blhao0o.dpdns.org",
-            "server_port": 12034,
-            "type": "shadowsocks",
-            "method": "aes-128-gcm",
-            "password": "01721e43-5389-4f97-b21c-900abb2bda9e"
-        },
-        {
-            "tag": "CN_speednode_0003",
-            "server": "awes35lesl.blhao0o.dpdns.org",
-            "server_port": 12014,
-            "type": "shadowsocks",
-            "method": "aes-128-gcm",
-            "password": "01721e43-5389-4f97-b21c-900abb2bda9e"
-        },
-        {
-            "tag": "CN_speednode_0004",
-            "server": "awes35lesl.blhao0o.dpdns.org",
-            "server_port": 12012,
-            "type": "shadowsocks",
-            "method": "aes-128-gcm",
-            "password": "01721e43-5389-4f97-b21c-900abb2bda9e"
-        },
-        {
-            "tag": "GB_speednode_0005",
-            "server": "25.129.196.168",
-            "server_port": 8880,
-            "type": "vless",
-            "uuid": "fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf",
-            "transport": {
-                "type": "ws",
-                "path": "/Telegram@WangCai2/",
-                "headers": {
-                    "Host": "kjgx.laoyoutiao.link"
-                },
-                "max_early_data": 2560,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "GB_speednode_0006",
-            "server": "25.25.25.177",
-            "server_port": 8880,
-            "type": "vless",
-            "uuid": "583ceab3-4022-4553-9158-9bedc625ad4e",
-            "transport": {
-                "type": "ws",
-                "path": "/TelegramU0001F1E8U0001F1F3 @WangCai2 /",
-                "headers": {
-                    "Host": "ip.langmanshanxi.top"
-                },
-                "max_early_data": 2560,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "GB_speednode_0007",
-            "server": "25.129.196.213",
-            "server_port": 8880,
-            "type": "vless",
-            "uuid": "fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf",
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "jp.laoyoutiao.link"
-                },
-                "max_early_data": 2560,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "GB_speednode_0008",
-            "server": "25.129.198.186",
-            "server_port": 8880,
-            "type": "vless",
-            "uuid": "583ceab3-4022-4553-9158-9bedc625ad4e",
-            "transport": {
-                "type": "ws",
-                "path": "/TelegramU0001F1E8U0001F1F3 @WangCai2 /",
-                "headers": {
-                    "Host": "ip.langmanshanxi.top"
-                },
-                "max_early_data": 2560,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "GB_speednode_0009",
-            "server": "25.129.197.113",
-            "server_port": 8880,
-            "type": "vless",
-            "uuid": "d60fc3c5-9f07-4cdb-b81f-70af27936bdc",
-            "transport": {
-                "type": "ws",
-                "path": "/---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY--- /",
-                "headers": {
-                    "Host": "ex.sue.x10.mx"
-                },
-                "max_early_data": 2560,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "GB_speednode_0010",
-            "server": "25.129.196.177",
-            "server_port": 8880,
-            "type": "vless",
-            "uuid": "583ceab3-4022-4553-9158-9bedc625ad4e",
-            "transport": {
-                "type": "ws",
-                "path": "/TelegramU0001F1E8U0001F1F3 @WangCai2 /",
-                "headers": {
-                    "Host": "ip.langmanshanxi.top"
-                },
-                "max_early_data": 2560,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "GB_speednode_0011",
-            "server": "25.26.27.177",
-            "server_port": 8880,
-            "type": "vless",
-            "uuid": "583ceab3-4022-4553-9158-9bedc625ad4e",
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "ip.langmanshanxi.top"
-                }
-            }
-        },
-        {
-            "tag": "GB_speednode_0012",
-            "server": "25.25.25.177",
-            "server_port": 8880,
-            "type": "vless",
-            "uuid": "583ceab3-4022-4553-9158-9bedc625ad4e",
-            "transport": {
-                "type": "ws",
-                "path": "/TelegramU0001F1E8U0001F1F3 @WangCai2",
-                "headers": {
-                    "Host": "ip.langmanshanxi.top"
-                }
-            }
-        },
-        {
-            "tag": "GB_speednode_0013",
-            "server": "25.26.27.29",
-            "server_port": 8880,
-            "type": "vless",
-            "uuid": "fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf",
-            "transport": {
-                "type": "ws",
-                "path": "/TelegramU0001F1E8U0001F1F3",
-                "headers": {
-                    "Host": "hk.laoyoutiao.link"
-                }
-            }
-        },
-        {
-            "tag": "GB_speednode_0014",
-            "server": "25.129.198.186",
-            "server_port": 8880,
-            "type": "vless",
-            "uuid": "583ceab3-4022-4553-9158-9bedc625ad4e",
-            "transport": {
-                "type": "ws",
-                "path": "/TelegramU0001F1E8U0001F1F3 @WangCai2",
-                "headers": {
-                    "Host": "ip.langmanshanxi.top"
-                }
-            }
-        },
-        {
-            "tag": "GB_speednode_0015",
-            "server": "161.35.45.125",
-            "server_port": 34045,
-            "type": "vless",
-            "uuid": "d8dd94fd-540e-461d-b5d4-acebef02c22a",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA",
-                    "short_id": "e8ab71d0"
-                }
-            }
-        },
-        {
-            "tag": "GB_speednode_0016",
+            "tag": "GB_speednode_0001",
             "server": "109.176.239.188",
             "server_port": 8880,
             "type": "vless",
@@ -393,28 +168,87 @@
             }
         },
         {
-            "tag": "GB_speednode_0017",
-            "server": "159.223.245.168",
-            "server_port": 34045,
+            "tag": "GB_speednode_0002",
+            "server": "25.129.196.213",
+            "server_port": 8880,
             "type": "vless",
-            "uuid": "d8dd94fd-540e-461d-b5d4-acebef02c22a",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
+            "uuid": "fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf",
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "jp.laoyoutiao.link"
                 },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA",
-                    "short_id": "e8ab71d0"
-                }
+                "max_early_data": 2560,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "GB_speednode_0018",
+            "tag": "GB_speednode_0003",
+            "server": "25.129.198.186",
+            "server_port": 8880,
+            "type": "vless",
+            "uuid": "583ceab3-4022-4553-9158-9bedc625ad4e",
+            "transport": {
+                "type": "ws",
+                "path": "/TelegramU0001F1E8U0001F1F3 @WangCai2 /",
+                "headers": {
+                    "Host": "ip.langmanshanxi.top"
+                },
+                "max_early_data": 2560,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GB_speednode_0004",
+            "server": "25.129.197.113",
+            "server_port": 8880,
+            "type": "vless",
+            "uuid": "d60fc3c5-9f07-4cdb-b81f-70af27936bdc",
+            "transport": {
+                "type": "ws",
+                "path": "/---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY---VITUREY--- /",
+                "headers": {
+                    "Host": "ex.sue.x10.mx"
+                },
+                "max_early_data": 2560,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GB_speednode_0005",
+            "server": "25.25.25.177",
+            "server_port": 8880,
+            "type": "vless",
+            "uuid": "583ceab3-4022-4553-9158-9bedc625ad4e",
+            "transport": {
+                "type": "ws",
+                "path": "/TelegramU0001F1E8U0001F1F3 @WangCai2 /",
+                "headers": {
+                    "Host": "ip.langmanshanxi.top"
+                },
+                "max_early_data": 2560,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GB_speednode_0006",
+            "server": "25.129.196.168",
+            "server_port": 8880,
+            "type": "vless",
+            "uuid": "fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf",
+            "transport": {
+                "type": "ws",
+                "path": "/Telegram@WangCai2/",
+                "headers": {
+                    "Host": "kjgx.laoyoutiao.link"
+                },
+                "max_early_data": 2560,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "GB_speednode_0007",
             "server": "109.176.239.3",
             "server_port": 8880,
             "type": "vless",
@@ -428,41 +262,49 @@
             }
         },
         {
-            "tag": "GB_speednode_0019",
-            "server": "51.89.2.113",
-            "server_port": 8081,
+            "tag": "GB_speednode_0008",
+            "server": "25.129.198.186",
+            "server_port": 8880,
             "type": "vless",
-            "uuid": "f924939e-2d9a-46b7-a3c2-67a225b7c027",
-            "flow": "xtls-rprx-vision",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "yahoo.com",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "nT4JZTeUVOw-XZ-htdqbFi1je4ZHeg-ALICrDk2usFE",
-                    "short_id": "d19d7a2d3da8595a"
+            "uuid": "583ceab3-4022-4553-9158-9bedc625ad4e",
+            "transport": {
+                "type": "ws",
+                "path": "/TelegramU0001F1E8U0001F1F3 @WangCai2",
+                "headers": {
+                    "Host": "ip.langmanshanxi.top"
                 }
             }
         },
         {
-            "tag": "HK_speednode_0020",
-            "server": "dd902adc-sxc9s0-t1bnjq-1krtb.hkt.cdnhuawei.com",
-            "server_port": 8443,
-            "type": "http",
-            "username": "60f6b4c4-9d70-11ed-a4d2-f23c9164ca5d",
-            "password": "<password>",
-            "tls": {
-                "enabled": true,
-                "insecure": false
+            "tag": "GB_speednode_0009",
+            "server": "25.25.25.177",
+            "server_port": 8880,
+            "type": "vless",
+            "uuid": "583ceab3-4022-4553-9158-9bedc625ad4e",
+            "transport": {
+                "type": "ws",
+                "path": "/TelegramU0001F1E8U0001F1F3 @WangCai2",
+                "headers": {
+                    "Host": "ip.langmanshanxi.top"
+                }
             }
         },
         {
-            "tag": "RU_speednode_0021",
+            "tag": "GB_speednode_0010",
+            "server": "25.26.27.29",
+            "server_port": 8880,
+            "type": "vless",
+            "uuid": "fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf",
+            "transport": {
+                "type": "ws",
+                "path": "/TelegramU0001F1E8U0001F1F3",
+                "headers": {
+                    "Host": "hk.laoyoutiao.link"
+                }
+            }
+        },
+        {
+            "tag": "RU_speednode_0011",
             "server": "185.174.138.213",
             "server_port": 8880,
             "type": "vless",
@@ -478,7 +320,7 @@
             }
         },
         {
-            "tag": "RU_speednode_0022",
+            "tag": "RU_speednode_0012",
             "server": "46.254.92.8",
             "server_port": 8880,
             "type": "vless",
@@ -494,7 +336,7 @@
             }
         },
         {
-            "tag": "RU_speednode_0023",
+            "tag": "RU_speednode_0013",
             "server": "46.254.92.63",
             "server_port": 8880,
             "type": "vless",
@@ -510,7 +352,7 @@
             }
         },
         {
-            "tag": "US_speednode_0024",
+            "tag": "US_speednode_0014",
             "server": "156.238.18.197",
             "server_port": 8880,
             "type": "vless",
@@ -526,39 +368,7 @@
             }
         },
         {
-            "tag": "US_speednode_0025",
-            "server": "162.251.82.177",
-            "server_port": 8880,
-            "type": "vless",
-            "uuid": "583ceab3-4022-4553-9158-9bedc625ad4e",
-            "transport": {
-                "type": "ws",
-                "path": "/TelegramU0001F1E8U0001F1F3 @WangCai2 /",
-                "headers": {
-                    "Host": "ip.langmanshanxi.top"
-                },
-                "max_early_data": 2560,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "US_speednode_0026",
-            "server": "156.238.19.177",
-            "server_port": 8880,
-            "type": "vless",
-            "uuid": "583ceab3-4022-4553-9158-9bedc625ad4e",
-            "transport": {
-                "type": "ws",
-                "path": "/TelegramU0001F1E8U0001F1F3 @WangCai2 /",
-                "headers": {
-                    "Host": "ip.langmanshanxi.top"
-                },
-                "max_early_data": 2560,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "US_speednode_0027",
+            "tag": "US_speednode_0015",
             "server": "156.238.18.106",
             "server_port": 8880,
             "type": "vless",
@@ -574,35 +384,53 @@
             }
         },
         {
-            "tag": "US_speednode_0028",
-            "server": "156.238.18.160",
+            "tag": "US_speednode_0016",
+            "server": "156.238.19.177",
+            "server_port": 8880,
+            "type": "vless",
+            "uuid": "583ceab3-4022-4553-9158-9bedc625ad4e",
+            "transport": {
+                "type": "ws",
+                "path": "/TelegramU0001F1E8U0001F1F3 @WangCai2 /",
+                "headers": {
+                    "Host": "ip.langmanshanxi.top"
+                },
+                "max_early_data": 2560,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "US_speednode_0017",
+            "server": "162.251.82.177",
+            "server_port": 8880,
+            "type": "vless",
+            "uuid": "583ceab3-4022-4553-9158-9bedc625ad4e",
+            "transport": {
+                "type": "ws",
+                "path": "/TelegramU0001F1E8U0001F1F3 @WangCai2 /",
+                "headers": {
+                    "Host": "ip.langmanshanxi.top"
+                },
+                "max_early_data": 2560,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "US_speednode_0018",
+            "server": "141.193.27.29",
             "server_port": 8880,
             "type": "vless",
             "uuid": "fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf",
             "transport": {
                 "type": "ws",
-                "path": "/TelegramU0001F1E8U0001F1F3",
+                "path": "/",
                 "headers": {
-                    "Host": "yd.laoyoutiao.link"
+                    "Host": "hk.laoyoutiao.link"
                 }
             }
         },
         {
-            "tag": "US_speednode_0029",
-            "server": "156.238.18.143",
-            "server_port": 8880,
-            "type": "vless",
-            "uuid": "fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf",
-            "transport": {
-                "type": "ws",
-                "path": "/TelegramU0001F1E8U0001F1F3",
-                "headers": {
-                    "Host": "yd.laoyoutiao.link"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0030",
+            "tag": "US_speednode_0019",
             "server": "156.238.18.139",
             "server_port": 8880,
             "type": "vless",
@@ -616,16 +444,30 @@
             }
         },
         {
-            "tag": "US_speednode_0031",
-            "server": "141.193.27.29",
+            "tag": "US_speednode_0020",
+            "server": "156.238.18.160",
             "server_port": 8880,
             "type": "vless",
             "uuid": "fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf",
             "transport": {
                 "type": "ws",
-                "path": "/",
+                "path": "/TelegramU0001F1E8U0001F1F3",
                 "headers": {
-                    "Host": "hk.laoyoutiao.link"
+                    "Host": "yd.laoyoutiao.link"
+                }
+            }
+        },
+        {
+            "tag": "US_speednode_0021",
+            "server": "156.238.18.143",
+            "server_port": 8880,
+            "type": "vless",
+            "uuid": "fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf",
+            "transport": {
+                "type": "ws",
+                "path": "/TelegramU0001F1E8U0001F1F3",
+                "headers": {
+                    "Host": "yd.laoyoutiao.link"
                 }
             }
         }
