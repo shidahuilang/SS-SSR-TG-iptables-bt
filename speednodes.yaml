@@ -18,140 +18,76 @@ external-controller: 127.0.0.1:9090
 mode: rule
 port: 7890
 proxies:
-- alterId: 2
-  cipher: auto
-  name: CN_speednode_0001
-  network: ws
-  port: 30806
-  server: v6.heduian.link
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  ws-opts:
-    headers:
-      Host: ocbc.com
-    path: /oooo
 - cipher: aes-128-gcm
-  name: CN_speednode_0002
+  name: CN_speednode_0001
   password: 01721e43-5389-4f97-b21c-900abb2bda9e
-  port: 12006
+  port: 12030
   server: awes35lesl.blhao0o.dpdns.org
   type: ss
   udp: true
-- alterId: 2
-  cipher: auto
-  name: CN_speednode_0003
-  network: ws
-  port: 30824
-  server: v24.heduian.link
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  ws-opts:
-    headers:
-      Host: v24.heduian.link
-    path: /oooo
-- alterId: 2
-  cipher: auto
-  name: CN_speednode_0004
-  network: ws
-  port: 30808
-  server: v8.heduian.link
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  ws-opts:
-    headers:
-      Host: baidu.com
-    path: /oooo
-- alterId: 2
-  cipher: auto
-  name: CN_speednode_0005
-  network: ws
-  port: 30830
-  server: v30.heduian.link
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  ws-opts:
-    headers:
-      Host: ocbc.com
-    path: /oooo
-- alterId: 2
-  cipher: auto
-  name: CN_speednode_0006
-  network: ws
-  port: 30824
-  server: v24.heduian.link
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  ws-opts:
-    headers:
-      Host: baidu.com
-    path: /oooo
-- client-fingerprint: chrome
-  name: CY_speednode_0007
-  port: 8443
-  reality-opts:
-    public-key: EJKcPSl0dv7mtU26gg6tUmKPw_aDvO2AHraRgNn6B14
-    short-id: 425ba80cd1a821a8
-  server: vpnhub.shop
-  servername: www.apple.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 714d0dcd-17f8-4495-ba35-5f04d2d92c0f
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: DE_speednode_0008
+- cipher: chacha20-ietf-poly1305
+  name: CN_speednode_0002
+  password: Sur5Ny74npD3
   port: 443
+  server: 185.242.247.249
+  type: ss
+  udp: true
+- cipher: 2022-blake3-aes-256-gcm
+  name: CN_speednode_0003
+  password: mtMkp+1FttkSLmDOF9blnNMLigcCRacprQS3ry0nf3o=:JB1ueTCKNIGMbhzWNjs+0FnZjZXO3UyXcZhIJ28vifA=
+  port: 4059
+  server: pop.ultra.6341.0tk8a3a1q4t94dler.com
+  type: ss
+  udp: true
+- cipher: 2022-blake3-aes-256-gcm
+  name: CN_speednode_0004
+  password: mtMkp+1FttkSLmDOF9blnNMLigcCRacprQS3ry0nf3o=:JB1ueTCKNIGMbhzWNjs+0FnZjZXO3UyXcZhIJ28vifA=
+  port: 7059
+  server: pop.plus.3123.0tk8a3a1q4t94dler.com
+  type: ss
+  udp: true
+- name: CR_speednode_0005
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 190.93.247.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: "/Telegram\U0001F1E8\U0001F1F3"
+- alterId: 0
+  cipher: auto
+  name: GB_speednode_0006
+  port: 47535
+  server: 31.56.204.125
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: bd31942b-9b80-4f70-893a-c75604228b84
+- client-fingerprint: chrome
+  name: GB_speednode_0007
+  port: 34045
   reality-opts:
-    public-key: BhTJ3phnq-Z-10aFKSsj1lzhA8mULR4L6leE4-0WTAs
-  server: deu246.bypassall.org
-  servername: www.bing.com
+    public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
+    short-id: e8ab71d0
+  server: 158.41.110.94
+  servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: b4b8aa1f-77d2-4851-a5a4-f78886f3e997
-- alterId: 0
+  uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a
+- alterId: 2
   cipher: auto
-  name: HK_speednode_0009
-  port: 24229
-  server: 203.184.246.7
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 50b9297e-c728-46c0-de4b-36ddf8948007
-- alterId: 0
-  cipher: auto
-  name: HK_speednode_0010
-  port: 51043
-  server: 203.184.246.211
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: c05b241c-0de2-4959-b3a0-ec3df5bfda99
-- alterId: 0
-  cipher: auto
-  name: HK_speednode_0011
+  name: HK_speednode_0008
   network: ws
   port: 80
-  server: c004e6fe-t1i9s0-tm53cm-1ol97.hkt.tcpbbr.net
+  server: 1e426046-t0fds0-t12cnj-1ol97.hk.p5pv.com
   skip-cert-verify: false
   tls: false
   type: vmess
@@ -159,36 +95,11 @@ proxies:
   uuid: 93fb69fc-77cf-11ee-85ee-f23c91369f2d
   ws-opts:
     headers:
-      Host: c004e6fe-t1i9s0-tm53cm-1ol97.hkt.tcpbbr.net
+      Host: broadcastlv.chat.bilibili.com
     path: /
-- http-opts:
-    headers:
-      Host:
-      - speedtest.net
-    method: GET
-    path:
-    - /
-  name: IR_speednode_0012
-  network: http
-  port: 8444
-  server: fina.iranbuildings.com
-  servername: speedtest.net
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: ac083fa9-df9a-4722-b70d-24c17bef0516
-- name: IR_speednode_0013
-  port: 8443
-  server: cdn28.saloonak.ir
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 789d4f30-c31b-4762-8116-ed42574d5e85
 - alterId: 0
   cipher: auto
-  name: JP_speednode_0014
+  name: JP_speednode_0009
   port: 50414
   server: 103.13.19.254
   skip-cert-verify: false
@@ -196,67 +107,283 @@ proxies:
   type: vmess
   udp: true
   uuid: aacec49a-c6eb-43a0-b14a-e3b4302e5f1a
+- cipher: aes-256-gcm
+  name: JP_speednode_0010
+  password: McRu2JvKif
+  port: 38001
+  server: jphj-hk-500m-100g.ifuck.gay
+  type: ss
+  udp: true
+- name: RU_speednode_0011
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 194.53.53.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: "/Telegram\U0001F1E8\U0001F1F3"
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: RU_speednode_0012
+  port: 443
+  reality-opts:
+    public-key: J_jQq9-SWQZjiMhuPaFV7V2MaJ4pkKgVRaz7x6tmvy8
+    short-id: 16895459a2c7768d
+  server: wa.sfasti.ru
+  servername: wa.sfasti.ru
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d4e4c02a-d969-47a6-ba0f-3d433fdac206
+- cipher: chacha20-ietf
+  name: SC_speednode_0013
+  password: asd123456
+  port: 8388
+  server: 154.197.26.237
+  type: ss
+  udp: true
+- name: SE_speednode_0014
+  network: ws
+  port: 2052
+  server: 185.146.173.39
+  servername: michalde.lemoex.ir
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 2d14c894-aca5-4854-bcdb-75d4505486c2
+  ws-opts:
+    headers:
+      Host: michalde.lemoex.ir
+    path: /wsmmad
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: SE_speednode_0015
+  port: 443
+  reality-opts:
+    public-key: -P9ZxYZP76-s_0mXFUDZeXxgUllKI1zkxSCqQca3NBM
+    short-id: 8f36094fbbe8e92e
+  server: james2.evovpn.ru
+  servername: speedtest.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d7b157a3-c463-4bd6-909b-64bfbaa379bb
 - cipher: chacha20-ietf-poly1305
-  name: SG_speednode_0015
-  password: YSYPIIGxFOHX0FeSKAr637
-  port: 45029
-  server: 159.65.8.30
+  name: TW_speednode_0016
+  password: 02150e6a-2a32-4028-89b7-a203cb56ad89
+  port: 10047
+  server: 114.33.53.80
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: SG_speednode_0016
-  password: rawFyLwFfDQDAaWOAwhYek
-  port: 26714
-  server: 165.22.248.174
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
   name: TW_speednode_0017
-  port: 35034
-  server: 165.154.195.38
-  skip-cert-verify: false
-  tls: false
-  type: vmess
+  password: 1cdb8dcd-36be-4d54-ae30-7c88b3f04e18
+  port: 10141
+  server: 111.253.197.201
+  type: ss
   udp: true
-  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
-- alterId: 0
-  cipher: auto
-  name: US_speednode_0018
-  port: 15988
-  server: 64.81.33.196
-  skip-cert-verify: false
-  tls: false
-  type: vmess
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0018
+  password: 60df4359-5fe2-4df7-8751-c97ff6a52668
+  port: 10075
+  server: 114.46.83.122
+  type: ss
   udp: true
-  uuid: 8ec3bede-e979-4063-bdab-034fbd16f7f7
-- alterId: 0
-  cipher: auto
-  name: US_speednode_0019
-  port: 31971
-  server: 64.81.34.113
-  skip-cert-verify: false
-  tls: false
-  type: vmess
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0019
+  password: 5aeb7d55-60fc-479d-a35d-f24e3d757f8c
+  port: 10020
+  server: 118.170.217.180
+  type: ss
   udp: true
-  uuid: 983abe73-28fd-4ce5-cee8-dcce8e56d71a
-- alterId: 0
-  cipher: auto
-  name: US_speednode_0020
-  port: 46611
-  server: 64.81.33.109
-  skip-cert-verify: false
-  tls: false
-  type: vmess
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0020
+  password: f1ad222f-b304-40a8-aeab-24a810371ea9
+  port: 10148
+  server: 111.253.199.25
+  type: ss
   udp: true
-  uuid: 363d7952-cd0f-41df-be8a-386a64e15f8b
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0021
+  password: 9cd50d98-7e20-4b5f-8c1c-23a81de7a541
+  port: 10089
+  server: 125.228.180.215
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0022
+  password: 7182ca82-f580-4e2e-9e9a-22b1c3fdfafb
+  port: 10140
+  server: 36.232.127.162
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0023
+  password: 7fc173fa-fbad-4cf1-94d3-3c7fe576a1ce
+  port: 10070
+  server: 114.46.79.69
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0024
+  password: e73c8f9f-d53e-4f34-9237-2212ccc12d63
+  port: 10025
+  server: 118.170.220.47
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0025
+  password: 60f661f4-579c-45c9-8156-e0db88911dc6
+  port: 10080
+  server: 125.231.85.152
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0026
+  password: 5b60ce4f-e6f1-4db8-a8a3-6778e7f3ef53
+  port: 10025
+  server: 118.170.220.47
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0027
+  password: 04066376-d974-4ba0-a76f-20f8aeecd05b
+  port: 10075
+  server: 114.46.83.122
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0028
+  password: 7182ca82-f580-4e2e-9e9a-22b1c3fdfafb
+  port: 10075
+  server: 114.46.83.122
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0029
+  password: c6081e42-2dac-4ca0-ab51-176be0f479e7
+  port: 10070
+  server: 114.46.79.69
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0030
+  password: 5f1cdb54-70ee-4f52-a8d3-db5bf6f2729c
+  port: 10066
+  server: 59.126.32.59
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0031
+  password: 95911f0e-ca9e-4570-89a3-2622ac71ada0
+  port: 10141
+  server: 111.253.197.201
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0032
+  password: 04066376-d974-4ba0-a76f-20f8aeecd05b
+  port: 10140
+  server: 36.232.127.162
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0033
+  password: 5b60ce4f-e6f1-4db8-a8a3-6778e7f3ef53
+  port: 10005
+  server: 118.170.211.35
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0034
+  password: 7182ca82-f580-4e2e-9e9a-22b1c3fdfafb
+  port: 10025
+  server: 118.170.220.47
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0035
+  password: 60df4359-5fe2-4df7-8751-c97ff6a52668
+  port: 10005
+  server: 118.170.211.35
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0036
+  password: 9cd50d98-7e20-4b5f-8c1c-23a81de7a541
+  port: 10047
+  server: 114.33.53.80
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0037
+  password: 7fc173fa-fbad-4cf1-94d3-3c7fe576a1ce
+  port: 10147
+  server: 36.232.126.210
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0038
+  password: 5f1cdb54-70ee-4f52-a8d3-db5bf6f2729c
+  port: 10047
+  server: 114.33.53.80
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0039
+  password: 5b60ce4f-e6f1-4db8-a8a3-6778e7f3ef53
+  port: 10027
+  server: 118.170.208.202
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0040
+  password: 04066376-d974-4ba0-a76f-20f8aeecd05b
+  port: 10126
+  server: 111.253.200.231
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0041
+  password: f1ad222f-b304-40a8-aeab-24a810371ea9
+  port: 10080
+  server: 125.231.85.152
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: TW_speednode_0042
+  password: 02150e6a-2a32-4028-89b7-a203cb56ad89
+  port: 10126
+  server: 111.253.200.231
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: US_speednode_0043
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  plugin: obfs
+  plugin-opts:
+    host: (TG @WangCai2)4fa101a:48723
+    mode: tls
+    tls: false
+  port: 2377
+  server: 95.174.71.28
+  type: ss
+  udp: true
 - alterId: 0
   cipher: auto
   http-opts:
     method: GET
     path:
     - /
-  name: US_speednode_0021
+  name: US_speednode_0044
   network: http
   port: 25740
   server: 192.3.216.180
@@ -267,27 +394,7 @@ proxies:
   uuid: 43cf14a5-5b85-47e2-a4c2-b514beab7054
 - alterId: 0
   cipher: auto
-  name: US_speednode_0022
-  port: 7998
-  server: 206.119.191.9
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 984429ed-3959-4022-e248-cbcb19c96f9a
-- alterId: 0
-  cipher: auto
-  name: US_speednode_0023
-  port: 7998
-  server: 206.119.191.20
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 984429ed-3959-4022-e248-cbcb19c96f9a
-- alterId: 0
-  cipher: auto
-  name: US_speednode_0024
+  name: US_speednode_0045
   port: 40083
   server: 66.253.5.58
   skip-cert-verify: false
@@ -297,54 +404,97 @@ proxies:
   uuid: 19003217-0407-43d5-bf22-9aa642469a83
 - alterId: 0
   cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /
-  name: US_speednode_0025
-  network: http
-  port: 59081
-  server: 156.238.225.160
+  name: US_speednode_0047
+  port: 42940
+  server: 64.81.24.59
   skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
-  uuid: ce42a56d-06fb-4cf0-bddd-18cdc3114622
-- cipher: chacha20-ietf-poly1305
-  name: US_speednode_0026
-  password: YA4zGmd4OPLkKZGyLfR6PN
-  port: 10721
-  server: 159.203.173.101
-  type: ss
+  uuid: f68d852e-cef3-4baf-f4ce-b98c88197bde
+- name: US_speednode_0049
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 209.94.90.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
   udp: true
-- name: US_speednode_0027
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: "/Telegram\U0001F1E8\U0001F1F3"
+- name: US_speednode_0050
   network: ws
   port: 80
-  server: 63.141.128.26
+  server: 63.141.128.14
+  servername: a.joIn.zEdMoDeOn.oNl.
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 18494a96-f6a7-425d-ae82-dc00c4f3f819
+  ws-opts:
+    headers:
+      Host: a.joIn.zEdMoDeOn.oNl.
+    path: /Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON
+- name: US_speednode_0051
+  network: ws
+  port: 8080
+  server: 63.141.128.28
   servername: f.jOin.zEdMoDeOn.oNl.
   skip-cert-verify: false
   tls: false
   type: vless
   udp: true
-  uuid: c032bdcd-bcd6-4d85-99ee-e12a9458ba62
+  uuid: 49e77ea9-62bd-44c4-8a52-0d7569c305c5
   ws-opts:
     headers:
       Host: f.jOin.zEdMoDeOn.oNl.
-    path: /Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON
-- name: US_speednode_0028
+    path: /Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON
+- name: US_speednode_0052
   network: ws
-  port: 8080
+  port: 80
+  server: 63.141.128.23
+  servername: b.jOin.zEdMoDeOn.oNl.
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: d59d49d3-a392-403a-8480-59934008431d
+  ws-opts:
+    headers:
+      Host: b.jOin.zEdMoDeOn.oNl.
+    path: /Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON
+- name: US_speednode_0053
+  network: ws
+  port: 80
   server: 63.141.128.13
   servername: c.jOin.zEdMoDeOn.oNl.
   skip-cert-verify: false
   tls: false
   type: vless
   udp: true
-  uuid: c8919b30-1117-405d-9e0f-9577c7e0f0ff
+  uuid: fdf5ef4d-bf23-4bd1-b04e-39c80ba0c577
   ws-opts:
     headers:
       Host: c.jOin.zEdMoDeOn.oNl.
-    path: /Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON
+    path: /Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON
+- cipher: aes-256-cfb
+  name: VN_speednode_0054
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.19
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: VN_speednode_0055
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.37
+  type: ss
+  udp: true
 proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
@@ -353,30 +503,55 @@ proxy-groups:
   - CN_speednode_0002
   - CN_speednode_0003
   - CN_speednode_0004
-  - CN_speednode_0005
-  - CN_speednode_0006
-  - CY_speednode_0007
-  - DE_speednode_0008
-  - HK_speednode_0009
-  - HK_speednode_0010
-  - HK_speednode_0011
-  - IR_speednode_0012
-  - IR_speednode_0013
-  - JP_speednode_0014
-  - SG_speednode_0015
-  - SG_speednode_0016
+  - CR_speednode_0005
+  - GB_speednode_0006
+  - GB_speednode_0007
+  - HK_speednode_0008
+  - JP_speednode_0009
+  - JP_speednode_0010
+  - RU_speednode_0011
+  - RU_speednode_0012
+  - SC_speednode_0013
+  - SE_speednode_0014
+  - SE_speednode_0015
+  - TW_speednode_0016
   - TW_speednode_0017
-  - US_speednode_0018
-  - US_speednode_0019
-  - US_speednode_0020
-  - US_speednode_0021
-  - US_speednode_0022
-  - US_speednode_0023
-  - US_speednode_0024
-  - US_speednode_0025
-  - US_speednode_0026
-  - US_speednode_0027
-  - US_speednode_0028
+  - TW_speednode_0018
+  - TW_speednode_0019
+  - TW_speednode_0020
+  - TW_speednode_0021
+  - TW_speednode_0022
+  - TW_speednode_0023
+  - TW_speednode_0024
+  - TW_speednode_0025
+  - TW_speednode_0026
+  - TW_speednode_0027
+  - TW_speednode_0028
+  - TW_speednode_0029
+  - TW_speednode_0030
+  - TW_speednode_0031
+  - TW_speednode_0032
+  - TW_speednode_0033
+  - TW_speednode_0034
+  - TW_speednode_0035
+  - TW_speednode_0036
+  - TW_speednode_0037
+  - TW_speednode_0038
+  - TW_speednode_0039
+  - TW_speednode_0040
+  - TW_speednode_0041
+  - TW_speednode_0042
+  - US_speednode_0043
+  - US_speednode_0044
+  - US_speednode_0045
+  - US_speednode_0047
+  - US_speednode_0049
+  - US_speednode_0050
+  - US_speednode_0051
+  - US_speednode_0052
+  - US_speednode_0053
+  - VN_speednode_0054
+  - VN_speednode_0055
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
@@ -385,30 +560,55 @@ proxy-groups:
   - CN_speednode_0002
   - CN_speednode_0003
   - CN_speednode_0004
-  - CN_speednode_0005
-  - CN_speednode_0006
-  - CY_speednode_0007
-  - DE_speednode_0008
-  - HK_speednode_0009
-  - HK_speednode_0010
-  - HK_speednode_0011
-  - IR_speednode_0012
-  - IR_speednode_0013
-  - JP_speednode_0014
-  - SG_speednode_0015
-  - SG_speednode_0016
+  - CR_speednode_0005
+  - GB_speednode_0006
+  - GB_speednode_0007
+  - HK_speednode_0008
+  - JP_speednode_0009
+  - JP_speednode_0010
+  - RU_speednode_0011
+  - RU_speednode_0012
+  - SC_speednode_0013
+  - SE_speednode_0014
+  - SE_speednode_0015
+  - TW_speednode_0016
   - TW_speednode_0017
-  - US_speednode_0018
-  - US_speednode_0019
-  - US_speednode_0020
-  - US_speednode_0021
-  - US_speednode_0022
-  - US_speednode_0023
-  - US_speednode_0024
-  - US_speednode_0025
-  - US_speednode_0026
-  - US_speednode_0027
-  - US_speednode_0028
+  - TW_speednode_0018
+  - TW_speednode_0019
+  - TW_speednode_0020
+  - TW_speednode_0021
+  - TW_speednode_0022
+  - TW_speednode_0023
+  - TW_speednode_0024
+  - TW_speednode_0025
+  - TW_speednode_0026
+  - TW_speednode_0027
+  - TW_speednode_0028
+  - TW_speednode_0029
+  - TW_speednode_0030
+  - TW_speednode_0031
+  - TW_speednode_0032
+  - TW_speednode_0033
+  - TW_speednode_0034
+  - TW_speednode_0035
+  - TW_speednode_0036
+  - TW_speednode_0037
+  - TW_speednode_0038
+  - TW_speednode_0039
+  - TW_speednode_0040
+  - TW_speednode_0041
+  - TW_speednode_0042
+  - US_speednode_0043
+  - US_speednode_0044
+  - US_speednode_0045
+  - US_speednode_0047
+  - US_speednode_0049
+  - US_speednode_0050
+  - US_speednode_0051
+  - US_speednode_0052
+  - US_speednode_0053
+  - VN_speednode_0054
+  - VN_speednode_0055
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
