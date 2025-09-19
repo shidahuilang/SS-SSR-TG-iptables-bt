@@ -86,66 +86,94 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "BR_speednode_0001",
+                "BG_speednode_0001",
                 "CN_speednode_0002",
                 "CN_speednode_0003",
                 "CN_speednode_0004",
-                "CN_speednode_0005",
-                "CN_speednode_0006",
+                "DE_speednode_0005",
+                "DE_speednode_0006",
                 "DE_speednode_0007",
                 "FR_speednode_0008",
                 "FR_speednode_0009",
-                "IN_speednode_0010",
-                "KR_speednode_0011",
-                "LT_speednode_0012",
-                "LT_speednode_0013",
-                "PH_speednode_0014",
-                "PL_speednode_0015",
-                "PY_speednode_0016",
-                "RU_speednode_0017",
-                "TR_speednode_0018",
-                "TW_speednode_0019",
-                "US_speednode_0020",
-                "US_speednode_0021",
-                "US_speednode_0022",
-                "US_speednode_0023",
-                "US_speednode_0024",
-                "US_speednode_0025",
+                "GB_speednode_0010",
+                "HK_speednode_0011",
+                "HK_speednode_0012",
+                "IN_speednode_0013",
+                "IR_speednode_0014",
+                "IR_speednode_0015",
+                "IT_speednode_0016",
+                "IT_speednode_0017",
+                "KR_speednode_0018",
+                "NN_speednode_0019",
+                "PL_speednode_0020",
+                "SE_speednode_0021",
+                "SE_speednode_0022",
+                "SG_speednode_0023",
+                "SI_speednode_0024",
+                "UA_speednode_0025",
                 "US_speednode_0026",
-                "US_speednode_0027"
+                "US_speednode_0027",
+                "US_speednode_0028",
+                "US_speednode_0029",
+                "US_speednode_0030",
+                "US_speednode_0031",
+                "US_speednode_0032",
+                "US_speednode_0033",
+                "US_speednode_0034",
+                "US_speednode_0035",
+                "US_speednode_0036",
+                "US_speednode_0037",
+                "US_speednode_0038",
+                "US_speednode_0039",
+                "US_speednode_0040",
+                "US_speednode_0041"
             ]
         },
         {
             "tag": "auto",
             "type": "urltest",
             "outbounds": [
-                "BR_speednode_0001",
+                "BG_speednode_0001",
                 "CN_speednode_0002",
                 "CN_speednode_0003",
                 "CN_speednode_0004",
-                "CN_speednode_0005",
-                "CN_speednode_0006",
+                "DE_speednode_0005",
+                "DE_speednode_0006",
                 "DE_speednode_0007",
                 "FR_speednode_0008",
                 "FR_speednode_0009",
-                "IN_speednode_0010",
-                "KR_speednode_0011",
-                "LT_speednode_0012",
-                "LT_speednode_0013",
-                "PH_speednode_0014",
-                "PL_speednode_0015",
-                "PY_speednode_0016",
-                "RU_speednode_0017",
-                "TR_speednode_0018",
-                "TW_speednode_0019",
-                "US_speednode_0020",
-                "US_speednode_0021",
-                "US_speednode_0022",
-                "US_speednode_0023",
-                "US_speednode_0024",
-                "US_speednode_0025",
+                "GB_speednode_0010",
+                "HK_speednode_0011",
+                "HK_speednode_0012",
+                "IN_speednode_0013",
+                "IR_speednode_0014",
+                "IR_speednode_0015",
+                "IT_speednode_0016",
+                "IT_speednode_0017",
+                "KR_speednode_0018",
+                "NN_speednode_0019",
+                "PL_speednode_0020",
+                "SE_speednode_0021",
+                "SE_speednode_0022",
+                "SG_speednode_0023",
+                "SI_speednode_0024",
+                "UA_speednode_0025",
                 "US_speednode_0026",
-                "US_speednode_0027"
+                "US_speednode_0027",
+                "US_speednode_0028",
+                "US_speednode_0029",
+                "US_speednode_0030",
+                "US_speednode_0031",
+                "US_speednode_0032",
+                "US_speednode_0033",
+                "US_speednode_0034",
+                "US_speednode_0035",
+                "US_speednode_0036",
+                "US_speednode_0037",
+                "US_speednode_0038",
+                "US_speednode_0039",
+                "US_speednode_0040",
+                "US_speednode_0041"
             ],
             "url": "http://www.gstatic.com/generate_204",
             "interval": "10m",
@@ -164,87 +192,28 @@
             "tag": "block"
         },
         {
-            "tag": "BR_speednode_0001",
-            "server": "38.54.57.90",
-            "server_port": 989,
-            "type": "shadowsocks",
-            "method": "aes-256-cfb",
-            "password": "f8f7aCzcPKbsF8p3"
+            "tag": "BG_speednode_0001",
+            "server": "171.22.16.161",
+            "server_port": 443,
+            "type": "vless",
+            "uuid": "3e7f67de-648e-4871-b51a-a225214d41ee",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "www.starwars.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw",
+                    "short_id": ""
+                }
+            }
         },
         {
             "tag": "CN_speednode_0002",
-            "server": "xg.xfy003.cfd",
-            "server_port": 21333,
-            "type": "hysteria2",
-            "password": "3b788360-3626-4d5b-96e0-cd7d1eb6b612",
-            "tls": {
-                "enabled": true,
-                "server_name": "xg.xfy003.cfd",
-                "insecure": false
-            },
-            "up_mbps": 50,
-            "down_mbps": 100,
-            "obfs": {
-                "type": "salamander",
-                "password": "zTCsHcttqdA0PniW"
-            }
-        },
-        {
-            "tag": "CN_speednode_0003",
-            "server": "xg.xfy003.cfd",
-            "server_port": 21333,
-            "type": "hysteria2",
-            "password": "e4fc0a9c-ea21-4c3e-9ffd-0c1138f0e8f3",
-            "tls": {
-                "enabled": true,
-                "server_name": "xg.xfy003.cfd",
-                "insecure": false
-            },
-            "up_mbps": 50,
-            "down_mbps": 100,
-            "obfs": {
-                "type": "salamander",
-                "password": "zTCsHcttqdA0PniW"
-            }
-        },
-        {
-            "tag": "CN_speednode_0004",
-            "server": "xg.xfy003.cfd",
-            "server_port": 21333,
-            "type": "hysteria2",
-            "password": "87f0d68c-fbb3-4cfc-ad20-9480040f8b9a",
-            "tls": {
-                "enabled": true,
-                "server_name": "xg.xfy003.cfd",
-                "insecure": false
-            },
-            "up_mbps": 50,
-            "down_mbps": 100,
-            "obfs": {
-                "type": "salamander",
-                "password": "zTCsHcttqdA0PniW"
-            }
-        },
-        {
-            "tag": "CN_speednode_0005",
-            "server": "xg.xfy003.cfd",
-            "server_port": 21333,
-            "type": "hysteria2",
-            "password": "4bc431c8-496e-4b8b-ae29-d640f62597d0",
-            "tls": {
-                "enabled": true,
-                "server_name": "xg.xfy003.cfd",
-                "insecure": false
-            },
-            "up_mbps": 50,
-            "down_mbps": 100,
-            "obfs": {
-                "type": "salamander",
-                "password": "zTCsHcttqdA0PniW"
-            }
-        },
-        {
-            "tag": "CN_speednode_0006",
             "server": "v36.heduian.link",
             "server_port": 30836,
             "type": "vmess",
@@ -255,8 +224,59 @@
                 "type": "ws",
                 "path": "/oooo",
                 "headers": {
+                    "Host": "v36.heduian.link"
+                }
+            }
+        },
+        {
+            "tag": "CN_speednode_0003",
+            "server": "v24.heduian.link",
+            "server_port": 30824,
+            "type": "vmess",
+            "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
+            "alter_id": 2,
+            "security": "auto",
+            "transport": {
+                "type": "ws",
+                "path": "/oooo",
+                "headers": {
                     "Host": "baidu.com"
                 }
+            }
+        },
+        {
+            "tag": "CN_speednode_0004",
+            "server": "v8.heduian.link",
+            "server_port": 30808,
+            "type": "vmess",
+            "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
+            "alter_id": 2,
+            "security": "auto",
+            "transport": {
+                "type": "ws",
+                "path": "/oooo",
+                "headers": {
+                    "Host": "v8.heduian.link"
+                }
+            }
+        },
+        {
+            "tag": "DE_speednode_0005",
+            "server": "142.93.166.6",
+            "server_port": 80,
+            "type": "shadowsocks",
+            "method": "chacha20-ietf-poly1305",
+            "password": "O3k5u79Rzc8fAcwLf2cQy3"
+        },
+        {
+            "tag": "DE_speednode_0006",
+            "server": "188.245.119.21",
+            "server_port": 26120,
+            "type": "vless",
+            "uuid": "cd77cddf-9fff-4bbb-a0b8-c33213320e82",
+            "transport": {
+                "type": "ws",
+                "path": "/"
             }
         },
         {
@@ -282,24 +302,6 @@
         },
         {
             "tag": "FR_speednode_0008",
-            "server": "62.210.127.217",
-            "server_port": 50011,
-            "type": "hysteria",
-            "auth_str": "dongtaiwang.com",
-            "up_mbps": 11,
-            "down_mbps": 55,
-            "tls": {
-                "enabled": true,
-                "insecure": true,
-                "alpn": [
-                    "h3"
-                ],
-                "server_name": "apple.com"
-            },
-            "network": "udp"
-        },
-        {
-            "tag": "FR_speednode_0009",
             "server": "51.195.31.95",
             "server_port": 80,
             "type": "vless",
@@ -313,67 +315,191 @@
             }
         },
         {
-            "tag": "IN_speednode_0010",
-            "server": "123.58.203.92",
-            "server_port": 18872,
-            "type": "vmess",
-            "uuid": "edfe29a5-cc54-488d-a31d-ca71f39e38d4",
-            "alter_id": 0,
-            "security": "auto",
-            "transport": {
-                "type": "http",
-                "method": "GET",
-                "path": "/"
-            }
-        },
-        {
-            "tag": "KR_speednode_0011",
-            "server": "154.90.63.177",
-            "server_port": 989,
-            "type": "shadowsocks",
-            "method": "aes-256-cfb",
-            "password": "f8f7aCzcPKbsF8p3"
-        },
-        {
-            "tag": "LT_speednode_0012",
-            "server": "45.87.175.58",
-            "server_port": 8080,
-            "type": "shadowsocks",
-            "method": "chacha20-ietf-poly1305",
-            "password": "oZIoA69Q8yhcQV8ka3Pa3A"
-        },
-        {
-            "tag": "LT_speednode_0013",
-            "server": "ltnl15.saint.ydns.eu",
-            "server_port": 8080,
-            "type": "shadowsocks",
-            "method": "chacha20-ietf-poly1305",
-            "password": "oZIoA69Q8yhcQV8ka3Pa3A"
-        },
-        {
-            "tag": "PH_speednode_0014",
-            "server": "192.142.18.40",
-            "server_port": 2589,
+            "tag": "FR_speednode_0009",
+            "server": "51.158.205.183",
+            "server_port": 443,
             "type": "vless",
-            "uuid": "8f0120f1-ba26-e137-5e06-a99b844741aa",
+            "uuid": "6035325d-399a-5148-9126-29cedfd5966a",
             "flow": "xtls-rprx-vision",
             "tls": {
                 "enabled": true,
-                "insecure": false,
-                "server_name": "tgju.org",
+                "insecure": true,
+                "server_name": "outlook.office.com",
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "firefox"
+                    "fingerprint": "chrome"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "2hoQE6WBJlr4DHrp7TxqPOT8i24iodEaCQp-qugbD3U",
-                    "short_id": "e41865e506628f44"
+                    "public_key": "OHDOdOV5Zdi-bSFlXCstXXdunYLtxZ-6quyX0bA6MFQ",
+                    "short_id": "8aa41f71"
                 }
             }
         },
         {
-            "tag": "PL_speednode_0015",
+            "tag": "GB_speednode_0010",
+            "server": "8.208.53.56",
+            "server_port": 443,
+            "type": "vless",
+            "uuid": "3e7f67de-648e-4871-b51a-a225214d41ee",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "evt.ilovepdf.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw",
+                    "short_id": ""
+                }
+            }
+        },
+        {
+            "tag": "HK_speednode_0011",
+            "server": "xg1.xiaohuolongjc.top",
+            "server_port": 37771,
+            "type": "hysteria2",
+            "password": "c85c5422-97a7-4e9a-a9dc-6e16d474fe8c",
+            "tls": {
+                "enabled": true,
+                "server_name": "xg1.xiaohuolongjc.top",
+                "insecure": false
+            }
+        },
+        {
+            "tag": "HK_speednode_0012",
+            "server": "xg1.xiaohuolongjc.top",
+            "server_port": 37771,
+            "type": "hysteria2",
+            "password": "b15f1706-dbd5-401c-934d-a3325b995875",
+            "tls": {
+                "enabled": true,
+                "server_name": "xg1.xiaohuolongjc.top",
+                "insecure": false
+            }
+        },
+        {
+            "tag": "IN_speednode_0013",
+            "server": "159.65.155.229",
+            "server_port": 80,
+            "type": "shadowsocks",
+            "method": "chacha20-ietf-poly1305",
+            "password": "bvr9u3aeRQwAafhjmvHtwH"
+        },
+        {
+            "tag": "IR_speednode_0014",
+            "server": "hybrid.arvancloud.online",
+            "server_port": 44443,
+            "type": "vless",
+            "uuid": "53fff6cc-b4ec-43e8-ade5-e0c42972fc33",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "www.speedtest.net",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "XHjKkrNBYXOaamOx8IUCrwX0zp5dAQRVErHiQ5bwAEQ",
+                    "short_id": ""
+                }
+            }
+        },
+        {
+            "tag": "IR_speednode_0015",
+            "server": "85.133.206.49",
+            "server_port": 48008,
+            "type": "vless",
+            "uuid": "2ecc1c66-0808-174c-e51a-5274c1428b3c",
+            "transport": {
+                "type": "http",
+                "method": "GET",
+                "path": "/",
+                "host": [
+                    "myket.ir"
+                ]
+            }
+        },
+        {
+            "tag": "IT_speednode_0016",
+            "server": "147.45.51.160",
+            "server_port": 443,
+            "type": "vless",
+            "uuid": "3e7f67de-648e-4871-b51a-a225214d41ee",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "api.company-target.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw",
+                    "short_id": ""
+                }
+            }
+        },
+        {
+            "tag": "IT_speednode_0017",
+            "server": "147.45.51.67",
+            "server_port": 443,
+            "type": "vless",
+            "uuid": "6035325d-399a-5148-9126-29cedfd5966a",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "outlook.office.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "zr1YTtXSRwdO8o5podr88Cz28vQpJGzuTJM9mpMp1AA",
+                    "short_id": "df5e9592"
+                }
+            }
+        },
+        {
+            "tag": "KR_speednode_0018",
+            "server": "115.161.136.145",
+            "server_port": 10099,
+            "type": "shadowsocks",
+            "method": "chacha20-ietf-poly1305",
+            "password": 12242
+        },
+        {
+            "tag": "NN_speednode_0019",
+            "server": "160.187.111.222",
+            "server_port": 443,
+            "type": "vless",
+            "uuid": "3e7f67de-648e-4871-b51a-a225214d41ee",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "images-na.ssl-images-amazon.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw",
+                    "short_id": ""
+                }
+            }
+        },
+        {
+            "tag": "PL_speednode_0020",
             "server": "poland20.clearorbitllc.com",
             "server_port": 443,
             "type": "vless",
@@ -395,23 +521,58 @@
             }
         },
         {
-            "tag": "PY_speednode_0016",
-            "server": "38.165.233.93",
-            "server_port": 989,
-            "type": "shadowsocks",
-            "method": "aes-256-cfb",
-            "password": "f8f7aCzcPKbsF8p3"
+            "tag": "SE_speednode_0021",
+            "server": "70.34.215.221",
+            "server_port": 20335,
+            "type": "hysteria2",
+            "password": "80747420-96c4-4a2f-83e6-eea4e46beb09",
+            "tls": {
+                "enabled": true,
+                "server_name": "drhystuichdfy.samanidempire.org",
+                "insecure": false
+            },
+            "obfs": {
+                "type": "salamander",
+                "password": "U1wBrYQyFm"
+            }
         },
         {
-            "tag": "RU_speednode_0017",
-            "server": "185.105.111.50",
+            "tag": "SE_speednode_0022",
+            "server": "drhystuichdfy.samanidempire.org",
+            "server_port": 20335,
+            "type": "hysteria2",
+            "password": "80747420-96c4-4a2f-83e6-eea4e46beb09",
+            "tls": {
+                "enabled": true,
+                "server_name": "drhystuichdfy.samanidempire.org",
+                "insecure": false
+            },
+            "obfs": {
+                "type": "salamander",
+                "password": "U1wBrYQyFm"
+            }
+        },
+        {
+            "tag": "SG_speednode_0023",
+            "server": "www.tiktok.com.jp2.viefast.net",
+            "server_port": 443,
+            "type": "trojan",
+            "password": "9e76767d-4bfa-4f04-a800-42e2f63afed2",
+            "tls": {
+                "enabled": true,
+                "insecure": true
+            }
+        },
+        {
+            "tag": "SI_speednode_0024",
+            "server": "194.58.66.234",
             "server_port": 443,
             "type": "vless",
             "uuid": "6035325d-399a-5148-9126-29cedfd5966a",
             "flow": "xtls-rprx-vision",
             "tls": {
                 "enabled": true,
-                "insecure": false,
+                "insecure": true,
                 "server_name": "outlook.office.com",
                 "utls": {
                     "enabled": true,
@@ -419,89 +580,49 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "WtKTSZd2ujSiy4M42WgwrSp3flODoh2eHpasVWnySSE",
-                    "short_id": "8074a7f8"
+                    "public_key": "l8CueSIvv8QqvxehXPrpd_8OEGI9xMbX0ZRtXG-DqCA",
+                    "short_id": "4ff781da"
                 }
             }
         },
         {
-            "tag": "TR_speednode_0018",
-            "server": "188.132.183.15",
-            "server_port": 2589,
+            "tag": "UA_speednode_0025",
+            "server": "88.151.192.52",
+            "server_port": 443,
             "type": "vless",
-            "uuid": "8f0120f1-ba26-e137-5e06-a99b844741aa",
+            "uuid": "6035325d-399a-5148-9126-29cedfd5966a",
             "flow": "xtls-rprx-vision",
             "tls": {
                 "enabled": true,
-                "insecure": false,
-                "server_name": "tgju.org",
+                "insecure": true,
+                "server_name": "outlook.office.com",
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "firefox"
+                    "fingerprint": "chrome"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "2hoQE6WBJlr4DHrp7TxqPOT8i24iodEaCQp-qugbD3U",
-                    "short_id": "e41865e506628f44"
+                    "public_key": "Cb6bPG7NAEde5yU3KChBcx_iF3n7UHakfvi6aWT0ezY",
+                    "short_id": "dcaebc34"
                 }
             }
         },
         {
-            "tag": "TW_speednode_0019",
-            "server": "154.223.20.79",
-            "server_port": 989,
-            "type": "shadowsocks",
-            "method": "aes-256-cfb",
-            "password": "f8f7aCzcPKbsF8p3"
-        },
-        {
-            "tag": "US_speednode_0020",
-            "server": "rb1.xiaohuolongjc.top",
-            "server_port": 37771,
-            "type": "hysteria2",
-            "password": "e0fbba03-454c-43d3-9946-24eaa599ec96",
-            "tls": {
-                "enabled": true,
-                "server_name": "rb1.xiaohuolongjc.top",
-                "insecure": false
-            }
-        },
-        {
-            "tag": "US_speednode_0021",
-            "server": "us.xilucloud.top",
-            "server_port": 14558,
-            "type": "hysteria2",
-            "password": "93480fcc-d6ff-4c14-9d31-b482166122b3",
-            "tls": {
-                "enabled": true,
-                "server_name": "us.xilucloud.top",
-                "insecure": false
-            }
-        },
-        {
-            "tag": "US_speednode_0022",
-            "server": "500770.xyz",
-            "server_port": 34074,
+            "tag": "US_speednode_0026",
+            "server": "104.16.142.193",
+            "server_port": 8880,
             "type": "vless",
-            "uuid": "9d0a75d2-f747-4afa-b43f-d208af9e8f9a",
-            "flow": "xtls-rprx-vision",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "www.ucla.edu",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "qq"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "zimSAAs4SyUKAR-MTMaw08PuI7skyi1U5Peb6VGJwjY",
-                    "short_id": "061cca24"
+            "uuid": "2a2f8790-99ab-4788-985c-0fe5627af2a9",
+            "transport": {
+                "type": "ws",
+                "path": "/Telegram-EiV2Ray-Telegram-EiV2Ray-Telegram-EiV2Ray-Telegram-EiV2Ray-Telegram-EiV2Ray-Telegram-EiV2Ray",
+                "headers": {
+                    "Host": "SomeNotificationsChangeYourLife.EiNetwork.News."
                 }
             }
         },
         {
-            "tag": "US_speednode_0023",
+            "tag": "US_speednode_0027",
             "server": "yapc-1.adamhayward.co.uk",
             "server_port": 36600,
             "type": "hysteria2",
@@ -517,11 +638,43 @@
             }
         },
         {
-            "tag": "US_speednode_0024",
+            "tag": "US_speednode_0028",
+            "server": "gavazn.lnmarketplace.net",
+            "server_port": 45000,
+            "type": "hysteria2",
+            "password": "Telegram-->@Ln2Ray",
+            "tls": {
+                "enabled": true,
+                "server_name": "gavazn.55994421.xyz",
+                "insecure": false
+            },
+            "obfs": {
+                "type": "salamander",
+                "password": "Telegram-->@Ln2Ray"
+            }
+        },
+        {
+            "tag": "US_speednode_0029",
+            "server": "yapc-1.adamhayward.co.uk",
+            "server_port": 35000,
+            "type": "hysteria2",
+            "password": "Yet-Another-Public-Config-1",
+            "tls": {
+                "enabled": true,
+                "server_name": "YAPC-1.afshin.ir",
+                "insecure": false
+            },
+            "obfs": {
+                "type": "salamander",
+                "password": "Yet-Another-Public-Config-1"
+            }
+        },
+        {
+            "tag": "US_speednode_0030",
             "server": "rb1.xiaohuolongjc.top",
             "server_port": 37771,
             "type": "hysteria2",
-            "password": "1c3c6df4-6e25-4a32-90d6-519832cfb746",
+            "password": "0c061897-06f8-4211-a767-693412892270",
             "tls": {
                 "enabled": true,
                 "server_name": "rb1.xiaohuolongjc.top",
@@ -529,53 +682,208 @@
             }
         },
         {
-            "tag": "US_speednode_0025",
-            "server": "172.66.40.99",
-            "server_port": 8880,
+            "tag": "US_speednode_0031",
+            "server": "yapc-1.adamhayward.co.uk",
+            "server_port": 35200,
+            "type": "hysteria2",
+            "password": "Yet-Another-Public-Config-1",
+            "tls": {
+                "enabled": true,
+                "server_name": "YAPC-1.afshin.ir",
+                "insecure": false
+            },
+            "obfs": {
+                "type": "salamander",
+                "password": "Yet-Another-Public-Config-1"
+            }
+        },
+        {
+            "tag": "US_speednode_0032",
+            "server": "38.244.39.95",
+            "server_port": 17779,
             "type": "vless",
-            "uuid": "934ad667-dce8-402a-aa45-3c3b52252c0a",
+            "uuid": "a83d7ca8-9ff7-3c65-ace5-b2f53dd5b1dc",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "learn.microsoft.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "zM_4XVYflnr-VmBsc06Qk_KzaUABAriVqqKEsEBb2C8",
+                    "short_id": "ea7bf16e8eb5769d"
+                }
+            }
+        },
+        {
+            "tag": "US_speednode_0033",
+            "server": "54.46.38.22",
+            "server_port": 16888,
+            "type": "shadowsocks",
+            "method": "aes-256-gcm",
+            "password": "amazongreatvpn"
+        },
+        {
+            "tag": "US_speednode_0034",
+            "server": "2aad5e6e-t2v1c0-t300mf-d70y.la.shifen.uk",
+            "server_port": 1743,
+            "type": "hysteria2",
+            "password": "537d7098-fdbe-11ef-8ebc-f23c93141fad",
+            "tls": {
+                "enabled": true,
+                "server_name": "2aad5e6e-t2v1c0-t300mf-d70y.la.shifen.uk",
+                "insecure": false
+            }
+        },
+        {
+            "tag": "US_speednode_0035",
+            "server": "yapc-1.adamhayward.co.uk",
+            "server_port": 36400,
+            "type": "hysteria2",
+            "password": "Yet-Another-Public-Config-1",
+            "tls": {
+                "enabled": true,
+                "server_name": "YAPC-1.afshin.ir",
+                "insecure": false
+            },
+            "obfs": {
+                "type": "salamander",
+                "password": "Yet-Another-Public-Config-1"
+            }
+        },
+        {
+            "tag": "US_speednode_0036",
+            "server": "freeyx.cloudflare88.eu.org",
+            "server_port": 443,
+            "type": "vless",
+            "uuid": "c4253041-7593-447d-a582-5ab80bc85918",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "do-lon1.008883.xyz",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                }
+            },
             "transport": {
                 "type": "ws",
-                "path": "/@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN----@V2rayArgoN",
+                "path": "/freev2.net",
                 "headers": {
-                    "Host": "websocket.network.www.speedtest.net.flutter.dev.russia.python.elmahstyle.xyz."
+                    "Host": "do-lon1.008883.xyz"
                 },
                 "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "US_speednode_0026",
-            "server": "light-presence.oneeat.co",
-            "server_port": 80,
+            "tag": "US_speednode_0037",
+            "server": "yapc-1.adamhayward.co.uk",
+            "server_port": 36300,
+            "type": "hysteria2",
+            "password": "Yet-Another-Public-Config-1",
+            "tls": {
+                "enabled": true,
+                "server_name": "YAPC-1.afshin.ir",
+                "insecure": false
+            },
+            "obfs": {
+                "type": "salamander",
+                "password": "Yet-Another-Public-Config-1"
+            }
+        },
+        {
+            "tag": "US_speednode_0038",
+            "server": "freeyx.cloudflare88.eu.org",
+            "server_port": 443,
             "type": "vless",
-            "uuid": "7e74ff43-3a90-48b3-8372-7d92a045c2d4",
+            "uuid": "c4253041-7593-447d-a582-5ab80bc85918",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "do-sgp1.008883.xyz",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                }
+            },
             "transport": {
                 "type": "ws",
-                "path": "/",
+                "path": "/freev2.net",
                 "headers": {
-                    "Host": "light-presence.oneeat.co"
+                    "Host": "do-sgp1.008883.xyz"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "US_speednode_0039",
+            "server": "freev2.cloudflare.182682.xyz",
+            "server_port": 443,
+            "type": "vless",
+            "uuid": "c4253041-7593-447d-a582-5ab80bc85918",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "do-syd1.008883.xyz",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/freev2.net",
+                "headers": {
+                    "Host": "do-syd1.008883.xyz"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "US_speednode_0040",
+            "server": "FASTSHOVPNTELEGRAM2.vinamarketcenter.ir",
+            "server_port": 80,
+            "type": "vless",
+            "uuid": "f18203b6-f3a3-4aee-de1f-dce5e4228e91",
+            "transport": {
+                "type": "ws",
+                "path": "/FASTSHOVPNTELEGRAM-FASTSHOVPNTELEGRAM-FASTSHOVPNTELEGRAM-FASTSHOVPNTELEGRAM-FASTSHOVPNTELEGRAM",
+                "headers": {
+                    "Host": "eng.vinamarketcenter.ir"
                 }
             }
         },
         {
-            "tag": "US_speednode_0027",
-            "server": "172.233.153.209",
-            "server_port": 10001,
+            "tag": "US_speednode_0041",
+            "server": "172.66.40.99",
+            "server_port": 443,
             "type": "vless",
-            "uuid": "e4412006-94f2-4f3c-b568-22a3e31dc264",
+            "uuid": "0261c8f9-413a-455b-942b-3713c6b0084a",
             "tls": {
                 "enabled": true,
                 "insecure": false,
-                "server_name": "yahoo.com",
+                "server_name": "www.dollardoon.com",
+                "alpn": [
+                    "h2",
+                    "http/1.1"
+                ],
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "1ltSdo2K6D9EEwebaDQPCb5ypbURcXyO9HsX4RUbbUo",
-                    "short_id": "1a24af87"
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7",
+                "headers": {
+                    "Host": "www.dollardoon.com"
                 }
             }
         }
