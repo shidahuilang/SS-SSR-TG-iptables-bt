@@ -18,31 +18,39 @@ external-controller: 127.0.0.1:9090
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  name: CN_speednode_0001
-  port: 6001
-  server: cn01.efan8867801.xyz
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: AE_speednode_0001
+  port: 20223
+  reality-opts:
+    public-key: RsbED0LyE3f2byTPx5t-dQewju6z9R4xqTWrADM4WnM
+    short-id: c6842be1
+  server: ae1-5.9966662.xyz
+  servername: www.cloudflare.com
   skip-cert-verify: false
-  tls: false
-  type: vmess
+  tls: true
+  type: vless
   udp: true
-  uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
-- alterId: 0
-  cipher: auto
-  name: CN_speednode_0002
-  port: 6001
-  server: efan8998.efan-dns78655.com
+  uuid: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: BG_speednode_0002
+  port: 433
+  reality-opts:
+    public-key: ttai5o9sL51jx8MWuQA2glnVnVRe0pzZmDbHnTzlynA
+    short-id: 1A2B3C4D5E6F7890
+  server: sunstar.astracat.ru
+  servername: cdnjs.com
   skip-cert-verify: false
-  tls: false
-  type: vmess
+  tls: true
+  type: vless
   udp: true
-  uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
+  uuid: ea8a4fac-8b8a-4fa5-a7b4-63575499fffb
 - alterId: 0
   cipher: auto
   name: CN_speednode_0003
-  port: 6004
-  server: cn01.efan8867801.xyz
+  port: 6001
+  server: cn01.365cloud8754.com
   skip-cert-verify: false
   tls: false
   type: vmess
@@ -52,7 +60,7 @@ proxies:
   cipher: auto
   name: CN_speednode_0004
   port: 6001
-  server: cn01.365cloud8754.com
+  server: cn01.efan8867801.xyz
   skip-cert-verify: false
   tls: false
   type: vmess
@@ -68,105 +76,20 @@ proxies:
   type: vmess
   udp: true
   uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0006
-  password: NzE1MThkYTQwYWMwYWJmMA==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 19018
-  server: yy2.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0007
-  password: NzE1MThkYTQwYWMwYWJmMA==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 19010
-  server: yy3.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: CN_speednode_0008
-  password: 722a54414ae6ee706ac9
-  plugin: obfs
-  plugin-opts:
-    host: 215996dd9f1c3db1e54b.microsoft.com
-    mode: http
-  port: 45572
-  server: jp07.jd.kunlunpx.com
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0009
-  password: OWI3MTM5NjUyOTM2N2RhNA==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 19750
-  server: yy3.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0010
-  password: MWJlNTY1ZWQ1ZWNiOGMwNQ==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 55003
-  server: yy3.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0011
-  password: MWJlNTY1ZWQ1ZWNiOGMwNQ==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 55002
-  server: yy2.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0012
-  password: OWI3MTM5NjUyOTM2N2RhNA==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 19027
-  server: yy3.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0013
-  password: OWI3MTM5NjUyOTM2N2RhNA==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 19026
-  server: yy2.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0014
-  password: NzE1MThkYTQwYWMwYWJmMA==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 19001
-  server: yy1.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0015
-  password: MzRlY2YwNDQzMzY0OTI3OQ==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 19023
-  server: yy3.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0016
-  password: MzRlY2YwNDQzMzY0OTI3OQ==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 19008
-  server: yy1.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0017
-  password: MzRlY2YwNDQzMzY0OTI3OQ==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 19025
-  server: yy3.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0018
-  password: ODcwYjhjNTJmZWM4ZDhkMQ==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 19017
-  server: yy2.vyunyunnode.top
-  type: ss
-  udp: true
 - alterId: 0
   cipher: auto
-  name: CN_speednode_0019
-  port: 6041
+  name: CN_speednode_0006
+  port: 6004
+  server: cn01.efan8867801.xyz
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
+- alterId: 0
+  cipher: auto
+  name: CN_speednode_0007
+  port: 6001
   server: efan8998.efan-dns78655.com
   skip-cert-verify: false
   tls: false
@@ -175,31 +98,17 @@ proxies:
   uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
 - alterId: 0
   cipher: auto
-  name: CN_speednode_0020
-  port: 6041
-  server: cn01.efan8867801.xyz
+  name: CN_speednode_0008
+  port: 6004
+  server: efan8998.efan-dns78655.com
   skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
   uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0021
-  password: ZTc2Y2VmOWMzOWI2ZDYyNg==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 19088
-  server: yy1.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0022
-  password: ZTc2Y2VmOWMzOWI2ZDYyNg==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 19003
-  server: yy3.vyunyunnode.top
-  type: ss
-  udp: true
 - alterId: 0
   cipher: auto
-  name: CN_speednode_0023
+  name: CN_speednode_0009
   port: 6018
   server: cn01.365cloud8754.com
   skip-cert-verify: false
@@ -207,16 +116,49 @@ proxies:
   type: vmess
   udp: true
   uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0024
-  password: OWUxNzNkZmNhZGFlODlkMQ==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 19791
-  server: yy1.vyunyunnode.top
-  type: ss
-  udp: true
 - alterId: 0
   cipher: auto
-  name: CN_speednode_0025
+  name: CN_speednode_0010
+  port: 6015
+  server: cn01.efan8867801.xyz
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
+- alterId: 0
+  cipher: auto
+  name: CN_speednode_0011
+  port: 6015
+  server: cn01.365cloud8754.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
+- alterId: 0
+  cipher: auto
+  name: CN_speednode_0012
+  port: 6015
+  server: efan8998.efan-dns78655.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
+- alterId: 0
+  cipher: auto
+  name: CN_speednode_0013
+  port: 6018
+  server: efan8998.efan-dns78655.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
+- alterId: 0
+  cipher: auto
+  name: CN_speednode_0014
   port: 6041
   server: cn01.365cloud8754.com
   skip-cert-verify: false
@@ -226,68 +168,7 @@ proxies:
   uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
 - alterId: 0
   cipher: auto
-  name: CN_speednode_0026
-  port: 6021
-  server: cn01.efan8867801.xyz
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
-- alterId: 0
-  cipher: auto
-  name: CN_speednode_0027
-  port: 6021
-  server: efan8998.efan-dns78655.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0028
-  password: ODcwYjhjNTJmZWM4ZDhkMQ==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 19013
-  server: yy2.vyunyunnode.top
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: CN_speednode_0029
-  port: 6021
-  server: cn01.365cloud8754.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0030
-  password: e63e32fc-c4d2-4cb5-9bbd-a5d51b1144bf
-  port: 19009
-  server: yy2.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0031
-  password: e63e32fc-c4d2-4cb5-9bbd-a5d51b1144bf
-  port: 19006
-  server: yy3.vyunyunnode.top
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: CN_speednode_0032
-  port: 6007
-  server: cn01.efan8867801.xyz
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
-- alterId: 0
-  cipher: auto
-  name: CN_speednode_0033
+  name: CN_speednode_0015
   port: 6007
   server: efan8998.efan-dns78655.com
   skip-cert-verify: false
@@ -295,165 +176,41 @@ proxies:
   type: vmess
   udp: true
   uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0034
-  password: NzNmZjJlMGFkOGMxZTY4ZA==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 34333
-  server: yy1.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0035
-  password: e63e32fc-c4d2-4cb5-9bbd-a5d51b1144bf
-  port: 19004
-  server: yy3.vyunyunnode.top
-  type: ss
+- name: CN_speednode_0016
+  password: 2fd0d127-266d-4d0b-b453-f94659a132fc
+  port: 12000
+  server: 106.75.134.1
+  skip-cert-verify: true
+  sni: aliyun.com
+  type: trojan
   udp: true
 - alterId: 0
   cipher: auto
-  name: CN_speednode_0036
-  port: 6007
-  server: cn01.365cloud8754.com
+  name: CN_speednode_0017
+  port: 6021
+  server: efan8998.efan-dns78655.com
   skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
   uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0037
-  password: MzRlY2YwNDQzMzY0OTI3OQ==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 19002
-  server: yy1.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0038
-  password: ZDdkZWM5M2E0ZDVkNmIwZA==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 34501
-  server: yy3.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0039
-  password: e63e32fc-c4d2-4cb5-9bbd-a5d51b1144bf
-  port: 21003
-  server: yy2.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0040
-  password: e63e32fc-c4d2-4cb5-9bbd-a5d51b1144bf
-  port: 19020
-  server: yy2.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0041
-  password: e63e32fc-c4d2-4cb5-9bbd-a5d51b1144bf
-  port: 19019
-  server: yy1.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0042
-  password: e63e32fc-c4d2-4cb5-9bbd-a5d51b1144bf
-  port: 19015
-  server: yy2.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0043
-  password: YTk2YjE5OWQ0MjJkMjU1NA==:ZTYzZTMyZmMtYzRkMi00Yw==
-  port: 45590
-  server: yy1.vyunyunnode.top
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0044
-  password: e63e32fc-c4d2-4cb5-9bbd-a5d51b1144bf
-  port: 19005
-  server: yy1.vyunyunnode.top
-  type: ss
-  udp: true
-- alterId: 2
+- alterId: 0
   cipher: auto
-  name: HK_speednode_0045
-  network: ws
-  port: 80
-  server: 1e426046-t0fds0-t12cnj-1ol97.hk.p5pv.com
-  servername: broadcastlv.chat.bilibili.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 93fb69fc-77cf-11ee-85ee-f23c91369f2d
-- alterId: 2
-  cipher: auto
-  name: HK_speednode_0046
-  network: ws
-  port: 80
-  server: 1e426046-t0fds0-t12cnj-1ol97.hk.p5pv.com
-  servername: broadcastlv.chat.bilibili.com
+  name: CN_speednode_0018
+  port: 6007
+  server: cn01.efan8867801.xyz
   skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
-  uuid: 93fb69fc-77cf-11ee-85ee-f23c91369f2d
-  ws-opts:
-    headers:
-      Host: 1e426046-t0fds0-t12cnj-1ol97.hk.p5pv.com
-    path: /
-- alterId: 2
-  cipher: auto
-  name: HK_speednode_0047
-  network: ws
-  port: 80
-  server: 1e426046-t0fds0-t12cnj-1ol97.hk.p5pv.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 93fb69fc-77cf-11ee-85ee-f23c91369f2d
-  ws-opts:
-    headers:
-      Host: broadcastlv.chat.bilibili.com
-    path: /
-- alterId: 2
-  cipher: auto
-  name: HK_speednode_0048
-  network: ws
-  port: 80
-  server: eb362f92-svukg0-t12cnj-1ol97.hk.p5pv.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 93fb69fc-77cf-11ee-85ee-f23c91369f2d
-  ws-opts:
-    headers:
-      Host: eb362f92-svukg0-t12cnj-1ol97.hk.p5pv.com
-    path: /
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: IL_speednode_0049
-  port: 443
-  reality-opts:
-    public-key: YVDo7U4O-AT2fa5H9E7hyYHKgfZd1vB6UdbAf2ggWQE
-    short-id: 55e6af1a35e64a98
-  server: ilta-wzxrxkdhbjpnprhkkpplsjwawhssvollvxzdhqshiqckwdgrdm.orbnet.xyz
-  servername: i2pd.website
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0e8a6896-ad90-4a3b-89a3-77d64aa409e2
+  uuid: 5af37c85-67d9-4955-ac57-1d682855d0ed
 - alterId: 0
   cipher: auto
   http-opts:
     method: GET
     path:
     - /
-  name: IN_speednode_0050
+  name: IN_speednode_0019
   network: http
   port: 18872
   server: 123.58.203.92
@@ -464,82 +221,20 @@ proxies:
   uuid: edfe29a5-cc54-488d-a31d-ca71f39e38d4
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: IR_speednode_0051
-  port: 44443
+  name: US_speednode_0020
+  port: 30227
   reality-opts:
-    public-key: XHjKkrNBYXOaamOx8IUCrwX0zp5dAQRVErHiQ5bwAEQ
-  server: 193.151.135.21
-  servername: www.speedtest.net
+    public-key: y0QO-mD8hrDE3rV7C8BX-gQiCANoasGKQlq2ReIVXkI
+  server: 216.133.149.235
+  servername: aws.amazon.com
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: 53fff6cc-b4ec-43e8-ade5-e0c42972fc33
+  uuid: 9a54bad8-538d-4744-b7bc-640629840490
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: IR_speednode_0052
-  port: 44443
-  reality-opts:
-    public-key: XHjKkrNBYXOaamOx8IUCrwX0zp5dAQRVErHiQ5bwAEQ
-  server: hybrid.arvancloud.online
-  servername: www.speedtest.net
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 53fff6cc-b4ec-43e8-ade5-e0c42972fc33
-- name: JP_speednode_0053
-  network: ws
-  port: 36003
-  server: 141.11.138.192
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 6a08090f-4e15-49c8-c442-b9c4ab26d196
-- name: JP_speednode_0054
-  network: ws
-  port: 28008
-  server: 103.93.76.157
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: ba11eedf-b03f-452e-b7cb-b1bf92c82b49
-- alterId: 0
-  cipher: auto
-  name: US_speednode_0055
-  network: ws
-  port: 444
-  server: 154.26.176.94
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
-  ws-opts:
-    headers:
-      Host: us.nbee.pp.ua
-    path: /aa
-- alterId: 0
-  cipher: auto
-  name: US_speednode_0056
-  network: ws
-  port: 444
-  server: 154.26.176.94
-  servername: us.nbee.pp.ua
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
-  ws-opts:
-    headers:
-      Host: us.nbee.pp.ua
-    path: /aa
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: US_speednode_0057
+  name: US_speednode_0021
   port: 443
   reality-opts:
     public-key: aG4c_fm7Ylea93OdC1PhCNIDc3DeAsrcxdQMOCppXAU
@@ -554,8 +249,8 @@ proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
   - "\u267B\uFE0F automatic"
-  - CN_speednode_0001
-  - CN_speednode_0002
+  - AE_speednode_0001
+  - BG_speednode_0002
   - CN_speednode_0003
   - CN_speednode_0004
   - CN_speednode_0005
@@ -572,51 +267,15 @@ proxy-groups:
   - CN_speednode_0016
   - CN_speednode_0017
   - CN_speednode_0018
-  - CN_speednode_0019
-  - CN_speednode_0020
-  - CN_speednode_0021
-  - CN_speednode_0022
-  - CN_speednode_0023
-  - CN_speednode_0024
-  - CN_speednode_0025
-  - CN_speednode_0026
-  - CN_speednode_0027
-  - CN_speednode_0028
-  - CN_speednode_0029
-  - CN_speednode_0030
-  - CN_speednode_0031
-  - CN_speednode_0032
-  - CN_speednode_0033
-  - CN_speednode_0034
-  - CN_speednode_0035
-  - CN_speednode_0036
-  - CN_speednode_0037
-  - CN_speednode_0038
-  - CN_speednode_0039
-  - CN_speednode_0040
-  - CN_speednode_0041
-  - CN_speednode_0042
-  - CN_speednode_0043
-  - CN_speednode_0044
-  - HK_speednode_0045
-  - HK_speednode_0046
-  - HK_speednode_0047
-  - HK_speednode_0048
-  - IL_speednode_0049
-  - IN_speednode_0050
-  - IR_speednode_0051
-  - IR_speednode_0052
-  - JP_speednode_0053
-  - JP_speednode_0054
-  - US_speednode_0055
-  - US_speednode_0056
-  - US_speednode_0057
+  - IN_speednode_0019
+  - US_speednode_0020
+  - US_speednode_0021
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
-  - CN_speednode_0001
-  - CN_speednode_0002
+  - AE_speednode_0001
+  - BG_speednode_0002
   - CN_speednode_0003
   - CN_speednode_0004
   - CN_speednode_0005
@@ -633,45 +292,9 @@ proxy-groups:
   - CN_speednode_0016
   - CN_speednode_0017
   - CN_speednode_0018
-  - CN_speednode_0019
-  - CN_speednode_0020
-  - CN_speednode_0021
-  - CN_speednode_0022
-  - CN_speednode_0023
-  - CN_speednode_0024
-  - CN_speednode_0025
-  - CN_speednode_0026
-  - CN_speednode_0027
-  - CN_speednode_0028
-  - CN_speednode_0029
-  - CN_speednode_0030
-  - CN_speednode_0031
-  - CN_speednode_0032
-  - CN_speednode_0033
-  - CN_speednode_0034
-  - CN_speednode_0035
-  - CN_speednode_0036
-  - CN_speednode_0037
-  - CN_speednode_0038
-  - CN_speednode_0039
-  - CN_speednode_0040
-  - CN_speednode_0041
-  - CN_speednode_0042
-  - CN_speednode_0043
-  - CN_speednode_0044
-  - HK_speednode_0045
-  - HK_speednode_0046
-  - HK_speednode_0047
-  - HK_speednode_0048
-  - IL_speednode_0049
-  - IN_speednode_0050
-  - IR_speednode_0051
-  - IR_speednode_0052
-  - JP_speednode_0053
-  - JP_speednode_0054
-  - US_speednode_0055
-  - US_speednode_0056
-  - US_speednode_0057
+  - IN_speednode_0019
+  - US_speednode_0020
+  - US_speednode_0021
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
