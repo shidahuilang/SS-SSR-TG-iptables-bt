@@ -19,214 +19,122 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: BG_speednode_0001
-  port: 433
+  name: AE_speednode_0001
+  port: 8080
   reality-opts:
-    public-key: ttai5o9sL51jx8MWuQA2glnVnVRe0pzZmDbHnTzlynA
-    short-id: 1A2B3C4D5E6F7890
-  server: sunstar.astracat.ru
-  servername: cdnjs.com
+    public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
+    short-id: 27cfa05000c23cc4
+  server: 5.44.42.60
+  servername: yandex.com
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: ea8a4fac-8b8a-4fa5-a7b4-63575499fffb
-- alterId: 2
+  uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37
+- client-fingerprint: chrome
+  name: AT_speednode_0002
+  port: 8080
+  reality-opts:
+    public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
+    short-id: 27cfa05000c23cc4
+  server: 94.228.169.221
+  servername: yandex.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37
+- alterId: 0
   cipher: auto
-  name: CN_speednode_0002
+  name: CN_speednode_0003
   network: ws
-  port: 30806
-  server: v6.heduian.link
+  port: 16617
+  server: m.cnmjin.net
   skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  uuid: ccee44a2-8efa-4909-9c13-1775f088eef0
   ws-opts:
     headers:
-      Host: ocbc.com
-    path: /oooo
-- name: CN_speednode_0003
-  password: 2fd0d127-266d-4d0b-b453-f94659a132fc
-  port: 12000
-  server: 106.75.134.1
-  skip-cert-verify: true
-  sni: aliyun.com
-  type: trojan
-  udp: true
-- alterId: 2
+      Host: a109eacdd4ee3bbb8a4f9d22e9463ae6.mobgslb.tbcache.com
+    path: /
+- alterId: 0
   cipher: auto
   name: CN_speednode_0004
   network: ws
-  port: 30830
-  server: v30.heduian.link
+  port: 16617
+  server: planb.mojcn.com
   skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  uuid: ccee44a2-8efa-4909-9c13-1775f088eef0
   ws-opts:
     headers:
-      Host: ocbc.com
-    path: /oooo
-- cipher: 2022-blake3-aes-128-gcm
+      Host: a109eacdd4ee3bbb8a4f9d22e9463ae6.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
   name: CN_speednode_0005
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 29527
-  server: hzhz1.sssyun.xyz
-  type: ss
+  network: ws
+  port: 16626
+  server: planb.mojcn.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
   udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0006
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 40010
-  server: hzhz2.sssyun.xyz
-  type: ss
+  uuid: ccee44a2-8efa-4909-9c13-1775f088eef0
+  ws-opts:
+    headers:
+      Host: a109eacdd4ee3bbb8a4f9d22e9463ae6.mobgslb.tbcache.com
+    path: /
+- alterId: 2
+  cipher: auto
+  name: HK_speednode_0006
+  network: ws
+  port: 80
+  server: 1e426046-t0fds0-t12cnj-1ol97.hk.p5pv.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
   udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0007
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 39204
-  server: hzhz1.sssyun.xyz
-  type: ss
+  uuid: 93fb69fc-77cf-11ee-85ee-f23c91369f2d
+  ws-opts:
+    headers:
+      Host: 1e426046-t0fds0-t12cnj-1ol97.hk.p5pv.com
+    path: /
+- alterId: 2
+  cipher: auto
+  name: HK_speednode_0007
+  network: ws
+  port: 80
+  server: 1e426046-t0fds0-t12cnj-1ol97.hk.p5pv.com
+  servername: broadcastlv.chat.bilibili.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
   udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0008
-  password: NjVhMWE2YmVmNzg4MTcwMA==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 32207
-  server: hzhz1.sssyun.xyz
-  type: ss
+  uuid: 93fb69fc-77cf-11ee-85ee-f23c91369f2d
+- alterId: 2
+  cipher: auto
+  name: HK_speednode_0008
+  network: ws
+  port: 80
+  server: 1e426046-t0fds0-t12cnj-1ol97.hk.p5pv.com
+  servername: broadcastlv.chat.bilibili.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
   udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0009
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 40011
-  server: hzhz2.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0010
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 39301
-  server: hzhz1.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0011
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 39505
-  server: hzhz1.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0012
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 19527
-  server: hzhz1.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0013
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 40019
-  server: hzhz2.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0014
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 44014
-  server: hzhz2.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0015
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 19529
-  server: hzhz1.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0016
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 40013
-  server: hzhz2.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0017
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 12980
-  server: hzhz1.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0018
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 39203
-  server: hzhz1.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0019
-  password: NjVhMWE2YmVmNzg4MTcwMA==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 39206
-  server: hzhz1.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0020
-  password: NjVhMWE2YmVmNzg4MTcwMA==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 40017
-  server: hzhz2.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0021
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 12984
-  server: hzhz2.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0022
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 12983
-  server: hzhz1.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0023
-  password: NjVhMWE2YmVmNzg4MTcwMA==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 20116
-  server: hzhz2.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0024
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 39987
-  server: hzhz1.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0025
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 39981
-  server: hzhz2.sssyun.xyz
-  type: ss
-  udp: true
-- cipher: 2022-blake3-aes-128-gcm
-  name: CN_speednode_0026
-  password: MDhhMTdjZDI0MjI2ZWRlNg==:NmZlMDM5ZmQtNDFlYS00MQ==
-  port: 12981
-  server: hzhz2.sssyun.xyz
-  type: ss
-  udp: true
+  uuid: 93fb69fc-77cf-11ee-85ee-f23c91369f2d
+  ws-opts:
+    headers:
+      Host: 1e426046-t0fds0-t12cnj-1ol97.hk.p5pv.com
+    path: /
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: IL_speednode_0027
+  name: IL_speednode_0009
   port: 443
   reality-opts:
     public-key: YVDo7U4O-AT2fa5H9E7hyYHKgfZd1vB6UdbAf2ggWQE
@@ -241,40 +149,59 @@ proxies:
 - alterId: 0
   cipher: auto
   http-opts:
-    headers:
-      Host:
-      - www.cloudflare.com
     method: GET
     path:
     - /
-  name: JP_speednode_0028
+  name: IN_speednode_0010
   network: http
-  port: 80
-  server: 45.77.178.67
+  port: 18872
+  server: 123.58.203.92
   skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
-  uuid: 21ca0761-5ec2-5431-9f0c-fd0fac792f2a
-- alterId: 0
-  cipher: auto
-  http-opts:
-    headers:
-      Host:
-      - www.cloudflare.com
-    method: GET
-    path:
-    - /
-  name: JP_speednode_0029
-  network: http
-  port: 80
-  server: 45.77.178.67
+  uuid: edfe29a5-cc54-488d-a31d-ca71f39e38d4
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: IN_speednode_0011
+  port: 443
+  reality-opts:
+    public-key: YPOvUT8wDaEaMQGlWFySLMJ8VFFvSQ8ptzoA6NsdBxM
+    short-id: ed28e58365f38dd3
+  server: 103.88.242.119
+  servername: ru.moktana.digital
   skip-cert-verify: false
-  tls: false
-  type: vmess
+  tls: true
+  type: vless
   udp: true
-  uuid: b6009332-d81f-572d-9f4f-949b86adda5d
-- name: KR_speednode_0030
+  uuid: 9d0d265d-0df6-4bcd-b029-9407a88ec2d8
+- client-fingerprint: chrome
+  name: IR_speednode_0012
+  port: 8080
+  reality-opts:
+    public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
+    short-id: 27cfa05000c23cc4
+  server: 62.60.232.40
+  servername: yandex.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37
+- client-fingerprint: chrome
+  name: JP_speednode_0013
+  port: 8080
+  reality-opts:
+    public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
+    short-id: 27cfa05000c23cc4
+  server: 147.45.49.17
+  servername: yandex.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37
+- name: KR_speednode_0014
   password: test.+
   port: 30446
   server: testkr3.ssv.vc
@@ -283,129 +210,201 @@ proxies:
   type: http
   udp: true
   username: test
-- alterId: 0
-  cipher: auto
-  http-opts:
-    headers:
-      Host:
-      - www.cloudflare.com
-    method: GET
-    path:
-    - /
-  name: SG_speednode_0031
-  network: http
-  port: 80
-  server: 45.76.153.172
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 344ad51e-b080-5328-b9b3-c74c2e56089a
-- alterId: 0
-  cipher: auto
-  http-opts:
-    headers:
-      Host:
-      - www.cloudflare.com
-    method: GET
-    path:
-    - /
-  name: SG_speednode_0032
-  network: http
-  port: 80
-  server: 45.76.153.172
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 44c4f3f6-4bbc-5241-b717-27feef65a9ae
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: US_speednode_0033
-  port: 30227
+  name: KZ_speednode_0015
+  port: 8080
   reality-opts:
-    public-key: y0QO-mD8hrDE3rV7C8BX-gQiCANoasGKQlq2ReIVXkI
-  server: 216.133.149.235
-  servername: aws.amazon.com
+    public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
+    short-id: 27cfa05000c23cc4
+  server: 38.107.234.93
+  servername: yandex.com
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: 9a54bad8-538d-4744-b7bc-640629840490
+  uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37
+- client-fingerprint: chrome
+  name: LB_speednode_0016
+  port: 8080
+  reality-opts:
+    public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
+    short-id: 27cfa05000c23cc4
+  server: 77.110.114.1
+  servername: yandex.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37
+- client-fingerprint: chrome
+  name: NL_speednode_0017
+  port: 8080
+  reality-opts:
+    public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
+    short-id: 27cfa05000c23cc4
+  server: 194.87.31.155
+  servername: yandex.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37
+- client-fingerprint: chrome
+  name: NL_speednode_0018
+  port: 8080
+  reality-opts:
+    public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
+    short-id: 27cfa05000c23cc4
+  server: 77.246.100.169
+  servername: yandex.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37
+- client-fingerprint: chrome
+  name: PL_speednode_0019
+  port: 8080
+  reality-opts:
+    public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
+    short-id: 27cfa05000c23cc4
+  server: 45.144.51.23
+  servername: yandex.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37
+- client-fingerprint: chrome
+  name: PL_speednode_0020
+  port: 8080
+  reality-opts:
+    public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
+    short-id: 27cfa05000c23cc4
+  server: 77.83.245.220
+  servername: yandex.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37
+- client-fingerprint: chrome
+  name: PT_speednode_0021
+  port: 8080
+  reality-opts:
+    public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
+    short-id: 27cfa05000c23cc4
+  server: 31.129.22.117
+  servername: yandex.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37
+- client-fingerprint: chrome
+  name: RU_speednode_0022
+  port: 8080
+  reality-opts:
+    public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
+    short-id: 27cfa05000c23cc4
+  server: 84.22.150.195
+  servername: yandex.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37
+- client-fingerprint: chrome
+  name: RU_speednode_0023
+  port: 8080
+  reality-opts:
+    public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs
+    short-id: 27cfa05000c23cc4
+  server: 5.181.2.51
+  servername: yandex.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37
+- name: US_speednode_0024
+  obfs: salamander
+  obfs-password: Yet-Another-Public-Config-1
+  password: Yet-Another-Public-Config-1
+  port: 36300
+  server: yapc-1.adamhayward.co.uk
+  skip-cert-verify: false
+  sni: YAPC-1.afshin.ir
+  type: hysteria2
+  udp: true
+- name: US_speednode_0025
+  obfs: salamander
+  obfs-password: Yet-Another-Public-Config-1
+  password: Yet-Another-Public-Config-1
+  port: 36600
+  server: yapc-1.adamhayward.co.uk
+  skip-cert-verify: false
+  sni: YAPC-1.afshin.ir
+  type: hysteria2
+  udp: true
 proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
   - "\u267B\uFE0F automatic"
-  - BG_speednode_0001
-  - CN_speednode_0002
+  - AE_speednode_0001
+  - AT_speednode_0002
   - CN_speednode_0003
   - CN_speednode_0004
   - CN_speednode_0005
-  - CN_speednode_0006
-  - CN_speednode_0007
-  - CN_speednode_0008
-  - CN_speednode_0009
-  - CN_speednode_0010
-  - CN_speednode_0011
-  - CN_speednode_0012
-  - CN_speednode_0013
-  - CN_speednode_0014
-  - CN_speednode_0015
-  - CN_speednode_0016
-  - CN_speednode_0017
-  - CN_speednode_0018
-  - CN_speednode_0019
-  - CN_speednode_0020
-  - CN_speednode_0021
-  - CN_speednode_0022
-  - CN_speednode_0023
-  - CN_speednode_0024
-  - CN_speednode_0025
-  - CN_speednode_0026
-  - IL_speednode_0027
-  - JP_speednode_0028
-  - JP_speednode_0029
-  - KR_speednode_0030
-  - SG_speednode_0031
-  - SG_speednode_0032
-  - US_speednode_0033
+  - HK_speednode_0006
+  - HK_speednode_0007
+  - HK_speednode_0008
+  - IL_speednode_0009
+  - IN_speednode_0010
+  - IN_speednode_0011
+  - IR_speednode_0012
+  - JP_speednode_0013
+  - KR_speednode_0014
+  - KZ_speednode_0015
+  - LB_speednode_0016
+  - NL_speednode_0017
+  - NL_speednode_0018
+  - PL_speednode_0019
+  - PL_speednode_0020
+  - PT_speednode_0021
+  - RU_speednode_0022
+  - RU_speednode_0023
+  - US_speednode_0024
+  - US_speednode_0025
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
-  - BG_speednode_0001
-  - CN_speednode_0002
+  - AE_speednode_0001
+  - AT_speednode_0002
   - CN_speednode_0003
   - CN_speednode_0004
   - CN_speednode_0005
-  - CN_speednode_0006
-  - CN_speednode_0007
-  - CN_speednode_0008
-  - CN_speednode_0009
-  - CN_speednode_0010
-  - CN_speednode_0011
-  - CN_speednode_0012
-  - CN_speednode_0013
-  - CN_speednode_0014
-  - CN_speednode_0015
-  - CN_speednode_0016
-  - CN_speednode_0017
-  - CN_speednode_0018
-  - CN_speednode_0019
-  - CN_speednode_0020
-  - CN_speednode_0021
-  - CN_speednode_0022
-  - CN_speednode_0023
-  - CN_speednode_0024
-  - CN_speednode_0025
-  - CN_speednode_0026
-  - IL_speednode_0027
-  - JP_speednode_0028
-  - JP_speednode_0029
-  - KR_speednode_0030
-  - SG_speednode_0031
-  - SG_speednode_0032
-  - US_speednode_0033
+  - HK_speednode_0006
+  - HK_speednode_0007
+  - HK_speednode_0008
+  - IL_speednode_0009
+  - IN_speednode_0010
+  - IN_speednode_0011
+  - IR_speednode_0012
+  - JP_speednode_0013
+  - KR_speednode_0014
+  - KZ_speednode_0015
+  - LB_speednode_0016
+  - NL_speednode_0017
+  - NL_speednode_0018
+  - PL_speednode_0019
+  - PL_speednode_0020
+  - PT_speednode_0021
+  - RU_speednode_0022
+  - RU_speednode_0023
+  - US_speednode_0024
+  - US_speednode_0025
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
