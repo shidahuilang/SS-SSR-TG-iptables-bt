@@ -18,39 +18,10 @@ external-controller: 127.0.0.1:9090
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  name: BD_speednode_0001
-  network: ws
-  port: 7000
-  server: 175.29.23.5
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/Telegram\U0001F1E8\U0001F1F3@WangCai2/?ed=2560"
-- name: BD_speednode_0002
-  network: ws
-  port: 7000
-  server: 175.29.23.5
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/x@\u8282\u70B9\u72C2\u9B54"
 - alpn:
   - h3
   disable-sni: false
-  name: CA_speednode_0003
+  name: CA_speednode_0001
   password: a13a6ce4-cafa-4b26-a710-a03aa91c5418
   port: 52434
   reduce-rtt: false
@@ -60,14 +31,7 @@ proxies:
   sni: www.bing.com
   type: tuic
   uuid: a13a6ce4-cafa-4b26-a710-a03aa91c5418
-- name: CN_speednode_0004
-  password: BxceQaOe
-  port: 4556
-  server: 36.151.195.112
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: CN_speednode_0005
+- name: CN_speednode_0002
   password: 80c9752a41
   port: 20443
   server: nat-hk-37465.strongpipe.cloud
@@ -76,7 +40,7 @@ proxies:
   type: http
   udp: true
   username: dd247fc262
-- name: DE_speednode_0006
+- name: DE_speednode_0003
   network: ws
   port: 2096
   server: 5.10.214.253
@@ -90,53 +54,11 @@ proxies:
     headers:
       Host: vless.muzheng.top
     path: /Telegram @freecodes /?ed=2560
-- name: DE_speednode_0007
-  network: ws
-  port: 443
-  server: 49.13.29.218
-  servername: 49.13.29.218
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: c332c262-b173-4bb2-aba0-cca85eebc5f6
-  ws-opts:
-    headers:
-      Host: 49.13.29.218
-    path: /linkws
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: FI_speednode_0008
-  port: 443
-  reality-opts:
-    public-key: llaiqC-oIhL_bjc236FPq26LSn7IVhIa4cIC6OVytws
-    short-id: 86e999a2cdc2
-  server: 185.77.216.197
-  servername: hls-svod.itunes.apple.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: a32fdc84-95ef-4073-b415-3743c35080b0
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: FI_speednode_0009
-  port: 443
-  reality-opts:
-    public-key: llaiqC-oIhL_bjc236FPq26LSn7IVhIa4cIC6OVytws
-    short-id: 86e999a2cdc2
-  server: fin-0001-xr.packet-drop-society.net
-  servername: hls-svod.itunes.apple.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: a32fdc84-95ef-4073-b415-3743c35080b0
 - alpn:
   - h3
   auth_str: dongtaiwang.com
   down: 100 Mbps
-  name: FR_speednode_0010
+  name: FR_speednode_0004
   port: 15010
   server: 195.154.200.40
   skip-cert-verify: true
@@ -144,127 +66,7 @@ proxies:
   type: hysteria
   udp: true
   up: 100 Mbps
-- alpn:
-  - h3
-  auth_str: dongtaiwang.com
-  down: 55 Mbps
-  name: FR_speednode_0011
-  port: 49003
-  protocol: udp
-  server: 51.159.226.1
-  skip-cert-verify: true
-  sni: apple.com
-  type: hysteria
-  udp: true
-  up: 11 Mbps
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: GR_speednode_0012
-  port: 443
-  reality-opts:
-    public-key: Mjz6Gz75xTMe9ZU08h0y-A_VgRQ6tnt3qoOzdEn1k1M
-    short-id: 0fa84b90
-  server: 185.39.207.121
-  servername: vk.cc
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 677615f7-87d5-5019-a44d-4fc3ff8d59d7
-- name: HK_speednode_0013
-  network: ws
-  port: 443
-  server: 202.85.53.74
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/X@\u8282\u70B9\u72C2\u9B54/?ed=2560"
-- name: HK_speednode_0014
-  network: ws
-  port: 443
-  server: 202.85.53.74
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/Telegram\U0001F1E8\U0001F1F3@WangCai2/?ed=2560"
-- name: HK_speednode_0015
-  network: ws
-  port: 35951
-  server: 36.50.90.241
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: /Telegram@freecodes/?ed=2560
-- name: IR_speednode_0016
-  password: dd55124a-8b64-4fe9-ace4-21d664f750ec
-  port: 54265
-  server: banmabanmabanmabanmabanmabanma3.wanlidag.top
-  skip-cert-verify: false
-  sni: banmabanmabanmabanmabanmabanma3.wanlidag.top
-  type: hysteria2
-  udp: true
-- name: KR_speednode_0017
-  network: ws
-  port: 12290
-  server: 220.118.236.239
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/x @\u8282\u70B9\u72C2\u9B54"
-- client-fingerprint: chrome
-  name: KR_speednode_0018
-  network: ws
-  port: 50001
-  server: 59.11.39.221
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/X@\u8282\u70B9\u72C2\u9B54"
-- name: KR_speednode_0019
-  network: ws
-  port: 10041
-  server: 211.197.161.123
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: /telegram @freecodes
-- name: KR_speednode_0020
+- name: KR_speednode_0005
   network: ws
   port: 50003
   server: 218.154.22.99
@@ -278,212 +80,7 @@ proxies:
     headers:
       Host: gaosir.unfeeling.sbs
     path: "/X@\u8282\u70B9\u72C2\u9B54/?ed=2560"
-- name: KR_speednode_0021
-  password: test.+
-  port: 30446
-  server: testkr3.ssv.vc
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  username: test
-- name: KR_speednode_0022
-  network: ws
-  port: 50001
-  server: 106.240.137.36
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/x @\u8282\u70B9\u72C2\u9B54"
-- name: KR_speednode_0023
-  network: ws
-  port: 20583
-  server: 175.208.202.41
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: /telegram @freecodes
-- name: KR_speednode_0024
-  network: ws
-  port: 30067
-  server: 112.156.154.95
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/x @\u8282\u70B9\u72C2\u9B54"
-- name: KR_speednode_0025
-  network: ws
-  port: 50001
-  server: 118.41.28.45
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: /telegram @freecodes
-- name: KR_speednode_0026
-  network: ws
-  port: 50001
-  server: 220.126.185.107
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/x @\u8282\u70B9\u72C2\u9B54"
-- name: KR_speednode_0027
-  network: ws
-  port: 50001
-  server: 211.228.5.119
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/x @\u8282\u70B9\u72C2\u9B54"
-- name: KR_speednode_0028
-  network: ws
-  port: 12151
-  server: 218.151.91.131
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/x @\u8282\u70B9\u72C2\u9B54"
-- name: KR_speednode_0029
-  network: ws
-  port: 50003
-  server: 121.181.118.220
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: /telegram @freecodes
-- name: KR_speednode_0030
-  network: ws
-  port: 50000
-  server: 222.101.91.204
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: /telegram @freecodes
-- name: KR_speednode_0031
-  network: ws
-  port: 50001
-  server: 59.3.62.251
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/x @\u8282\u70B9\u72C2\u9B54"
-- name: KR_speednode_0032
-  network: ws
-  port: 50000
-  server: 118.47.194.165
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/X@\u8282\u70B9\u72C2\u9B54/?ed=2560"
-- name: KR_speednode_0033
-  network: ws
-  port: 10065
-  server: 119.195.219.150
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: /telegram @freecodes
-- name: KR_speednode_0034
-  network: ws
-  port: 50001
-  server: 220.72.245.245
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/X@\u8282\u70B9\u72C2\u9B54/?ed=2560"
-- name: KR_speednode_0035
-  network: ws
-  port: 10042
-  server: 220.118.109.204
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/Telegram\U0001F1E8\U0001F1F3@WangCai2/?ed=2560"
-- name: KR_speednode_0036
+- name: KR_speednode_0006
   network: ws
   port: 12312
   server: 211.48.77.114
@@ -497,10 +94,38 @@ proxies:
     headers:
       Host: gaosir.unfeeling.sbs
     path: "/x @\u8282\u70B9\u72C2\u9B54"
-- name: KR_speednode_0037
+- name: KR_speednode_0007
   network: ws
   port: 50001
-  server: 122.47.74.139
+  server: 118.41.28.45
+  servername: gaosir.unfeeling.sbs
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+  ws-opts:
+    headers:
+      Host: gaosir.unfeeling.sbs
+    path: /telegram @freecodes
+- name: KR_speednode_0008
+  network: ws
+  port: 10065
+  server: 119.195.219.150
+  servername: gaosir.unfeeling.sbs
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+  ws-opts:
+    headers:
+      Host: gaosir.unfeeling.sbs
+    path: /telegram @freecodes
+- name: KR_speednode_0009
+  network: ws
+  port: 12290
+  server: 220.118.236.239
   servername: gaosir.unfeeling.sbs
   skip-cert-verify: false
   tls: true
@@ -510,11 +135,11 @@ proxies:
   ws-opts:
     headers:
       Host: gaosir.unfeeling.sbs
-    path: "/X@\u8282\u70B9\u72C2\u9B54/?ed=2560"
-- name: KR_speednode_0038
+    path: "/x @\u8282\u70B9\u72C2\u9B54"
+- name: KR_speednode_0010
   network: ws
-  port: 60001
-  server: 119.65.139.101
+  port: 50001
+  server: 211.228.5.119
   servername: gaosir.unfeeling.sbs
   skip-cert-verify: true
   tls: true
@@ -524,11 +149,11 @@ proxies:
   ws-opts:
     headers:
       Host: gaosir.unfeeling.sbs
-    path: "/x@\u8282\u70B9\u72C2\u9B54"
-- name: KR_speednode_0039
+    path: "/x @\u8282\u70B9\u72C2\u9B54"
+- name: KR_speednode_0011
   network: ws
-  port: 30067
-  server: 112.156.154.95
+  port: 50001
+  server: 220.126.185.107
   servername: gaosir.unfeeling.sbs
   skip-cert-verify: true
   tls: true
@@ -538,8 +163,8 @@ proxies:
   ws-opts:
     headers:
       Host: gaosir.unfeeling.sbs
-    path: "/x @\u8282\u70B9\u72C2\u9B54security=tls"
-- name: KR_speednode_0040
+    path: "/x @\u8282\u70B9\u72C2\u9B54"
+- name: KR_speednode_0012
   network: ws
   port: 50001
   server: 211.184.175.180
@@ -553,22 +178,58 @@ proxies:
     headers:
       Host: gaosir.unfeeling.sbs
     path: /telegram @freecodessecurity=tls
-- name: LB_speednode_0041
-  port: 666
-  server: 213.165.56.19
+- name: KR_speednode_0013
+  network: ws
+  port: 30067
+  server: 112.156.154.95
+  servername: gaosir.unfeeling.sbs
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vless
   udp: true
-  uuid: 13e824c8-46a7-458a-b9d5-24ab4058acae
-- cipher: chacha20-ietf-poly1305
-  name: MA_speednode_0042
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-  port: 990
-  server: 188.214.157.30
-  type: ss
+  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+  ws-opts:
+    headers:
+      Host: gaosir.unfeeling.sbs
+    path: "/x @\u8282\u70B9\u72C2\u9B54security=tls"
+- name: KR_speednode_0014
+  network: ws
+  port: 30067
+  server: 112.156.154.95
+  servername: gaosir.unfeeling.sbs
+  skip-cert-verify: true
+  tls: true
+  type: vless
   udp: true
-- name: NL_speednode_0043
+  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+  ws-opts:
+    headers:
+      Host: gaosir.unfeeling.sbs
+    path: "/x @\u8282\u70B9\u72C2\u9B54"
+- name: KR_speednode_0015
+  network: ws
+  port: 60001
+  server: 119.65.139.101
+  servername: gaosir.unfeeling.sbs
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+  ws-opts:
+    headers:
+      Host: gaosir.unfeeling.sbs
+    path: "/x@\u8282\u70B9\u72C2\u9B54"
+- name: KR_speednode_0016
+  password: test.+
+  port: 30446
+  server: testkr3.ssv.vc
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  username: test
+- name: NL_speednode_0017
   network: ws
   port: 2096
   server: 194.152.44.253
@@ -582,7 +243,7 @@ proxies:
     headers:
       Host: vless.muzheng.top
     path: /Telegram @freecodes /?ed=2560
-- name: NL_speednode_0044
+- name: NL_speednode_0018
   network: ws
   port: 2096
   server: 185.18.184.253
@@ -596,7 +257,7 @@ proxies:
     headers:
       Host: vless.muzheng.top
     path: "/Telegram\U0001F1E8\U0001F1F3@WangCai2/?ed=2560"
-- name: NL_speednode_0045
+- name: NL_speednode_0019
   network: ws
   port: 2096
   server: 185.18.184.253
@@ -610,35 +271,7 @@ proxies:
     headers:
       Host: vless.muzheng.top
     path: /telegram@freecodes
-- name: RU_speednode_0046
-  network: ws
-  port: 2096
-  server: 188.42.145.253
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
-- name: RU_speednode_0047
-  network: ws
-  port: 2096
-  server: 188.42.145.253
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: "/freecodes@\u8282\u70B9\u72C2\u9B54/?ed=2560"
-- name: RU_speednode_0048
+- name: RU_speednode_0020
   network: ws
   port: 2096
   server: 188.42.145.253
@@ -652,21 +285,7 @@ proxies:
     headers:
       Host: gaosir.unfeeling.sbs
     path: /Telegram@freecodes/?ed=2560
-- name: RU_speednode_0049
-  network: ws
-  port: 2096
-  server: 188.42.145.253
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
-- name: RU_speednode_0050
+- name: RU_speednode_0021
   network: ws
   port: 2096
   server: 188.42.145.253
@@ -680,7 +299,49 @@ proxies:
     headers:
       Host: gaosir.unfeeling.sbs
     path: /TelegramU0001F1E8U0001F1F3@WangCai2/?ed=2560
-- name: RU_speednode_0051
+- name: RU_speednode_0022
+  network: ws
+  port: 2096
+  server: 188.42.145.253
+  servername: gaosir.unfeeling.sbs
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+  ws-opts:
+    headers:
+      Host: gaosir.unfeeling.sbs
+    path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+- name: RU_speednode_0023
+  network: ws
+  port: 2096
+  server: 188.42.145.253
+  servername: gaosir.unfeeling.sbs
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+  ws-opts:
+    headers:
+      Host: gaosir.unfeeling.sbs
+    path: /TelegramU0001F1E8U0001F1F3 @WangCai2 /?ed=2560
+- name: RU_speednode_0024
+  network: ws
+  port: 2096
+  server: 188.42.145.253
+  servername: gaosir.unfeeling.sbs
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+  ws-opts:
+    headers:
+      Host: gaosir.unfeeling.sbs
+    path: "/freecodes@\u8282\u70B9\u72C2\u9B54/?ed=2560"
+- name: RU_speednode_0025
   network: ws
   port: 2096
   server: 188.42.145.253
@@ -694,21 +355,7 @@ proxies:
     headers:
       Host: gaosir.unfeeling.sbs
     path: "/Telegram\U0001F1E8\U0001F1F3@WangCai2/?ed=2560"
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU_speednode_0052
-  port: 443
-  reality-opts:
-    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
-    short-id: 175d
-  server: 45.144.30.60
-  servername: hls-svod.itunes.apple.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 46788ea0-fdf1-4694-90a0-dec94fc471c3
-- name: RU_speednode_0053
+- name: RU_speednode_0026
   network: ws
   port: 2096
   server: 188.42.145.253
@@ -722,49 +369,7 @@ proxies:
     headers:
       Host: gaosir.unfeeling.sbs
     path: /TelegramU0001F1E8U0001F1F3 @WangCai2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU_speednode_0054
-  port: 443
-  reality-opts:
-    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
-    short-id: 175d
-  server: 45.144.30.36
-  servername: hls-svod.itunes.apple.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 46788ea0-fdf1-4694-90a0-dec94fc471c3
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU_speednode_0055
-  port: 443
-  reality-opts:
-    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
-    short-id: 175d
-  server: ru01-vlr01.tcp-reset-club.net
-  servername: hls-svod.itunes.apple.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 46788ea0-fdf1-4694-90a0-dec94fc471c3
-- name: RU_speednode_0056
-  network: ws
-  port: 2096
-  server: 188.42.145.253
-  servername: gaosir.unfeeling.sbs
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: /
-- name: RU_speednode_0057
+- name: RU_speednode_0027
   network: ws
   port: 2096
   server: 188.42.145.253
@@ -778,10 +383,10 @@ proxies:
     headers:
       Host: gaosir.unfeeling.sbs
     path: /security=tls
-- name: SG_speednode_0058
+- name: RU_speednode_0028
   network: ws
-  port: 443
-  server: 141.11.43.124
+  port: 2096
+  server: 188.42.145.253
   servername: gaosir.unfeeling.sbs
   skip-cert-verify: false
   tls: true
@@ -791,248 +396,50 @@ proxies:
   ws-opts:
     headers:
       Host: gaosir.unfeeling.sbs
-    path: "/Telegram\U0001F1E8\U0001F1F3@WangCai2/?ed=2560"
-- alterId: 0
-  cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /
-  name: SG_speednode_0059
-  network: http
-  port: 22433
-  server: 47.245.106.193
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: bfcb103f-2133-4965-8684-6b4c8ef7a774
+    path: /
 - cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0060
-  password: 9a9dc807-d040-4bec-9e00-c7ebe712717e
-  port: 10056
-  server: 125.231.82.112
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0061
-  password: a7d8b05e-d5ab-4ee2-89c3-983c8cbab06b
-  port: 10133
-  server: 36.235.0.122
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0062
-  password: 8d5c4680-9dd0-43d4-9ea1-2b0e3dbb4684
-  port: 10056
-  server: 125.231.82.112
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0063
+  name: TW_speednode_0029
   password: add8049a-647b-43fc-8de1-97b9261c6be5
   port: 10079
   server: 114.46.81.116
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0064
-  password: 8d93c1c0-f724-4db2-bc20-d6c10e17255c
-  port: 10150
-  server: 36.232.67.5
+  name: TW_speednode_0030
+  password: 9a9dc807-d040-4bec-9e00-c7ebe712717e
+  port: 10056
+  server: 125.231.82.112
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0065
+  name: TW_speednode_0031
   password: 9a9dc807-d040-4bec-9e00-c7ebe712717e
   port: 10051
   server: 114.46.77.45
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0066
-  password: 8d5c4680-9dd0-43d4-9ea1-2b0e3dbb4684
-  port: 10067
-  server: 114.46.76.16
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0067
-  password: 36104473-2ad7-4a2e-b307-60d0f60d4c1e
-  port: 10131
-  server: 36.232.71.39
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0068
-  password: 719adfec-6f6a-468b-a693-61c00002ab9f
-  port: 10057
-  server: 36.234.118.252
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0069
+  name: TW_speednode_0032
   password: 719adfec-6f6a-468b-a693-61c00002ab9f
   port: 10129
   server: 114.35.114.182
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0070
-  password: ce7b4539-2ad6-474d-9461-7f135ff6e55f
-  port: 10120
-  server: 36.235.0.236
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0071
-  password: 9a9dc807-d040-4bec-9e00-c7ebe712717e
-  port: 10120
-  server: 36.235.0.236
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0072
+  name: TW_speednode_0033
   password: add8049a-647b-43fc-8de1-97b9261c6be5
   port: 10067
   server: 114.46.76.16
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0073
-  password: 8d93c1c0-f724-4db2-bc20-d6c10e17255c
-  port: 10131
-  server: 36.232.71.39
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0074
-  password: a7d8b05e-d5ab-4ee2-89c3-983c8cbab06b
-  port: 10055
-  server: 36.234.97.128
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0075
-  password: fc278668-11a9-435a-b025-0bcee442deb5
-  port: 10125
-  server: 36.232.110.221
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0076
-  password: fc278668-11a9-435a-b025-0bcee442deb5
-  port: 10046
-  server: 36.234.69.213
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0077
-  password: 8d5c4680-9dd0-43d4-9ea1-2b0e3dbb4684
-  port: 10051
-  server: 114.46.77.45
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0078
-  password: fc278668-11a9-435a-b025-0bcee442deb5
-  port: 10133
-  server: 36.235.0.122
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0079
-  password: 8d5c4680-9dd0-43d4-9ea1-2b0e3dbb4684
-  port: 10149
-  server: 111.253.216.71
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0080
-  password: 8b4c7144-3231-47ee-a55d-0d0cdfb1b695
-  port: 10036
-  server: 118.170.224.245
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0081
-  password: 8d93c1c0-f724-4db2-bc20-d6c10e17255c
-  port: 10012
-  server: 36.234.99.83
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0082
-  password: fc278668-11a9-435a-b025-0bcee442deb5
-  port: 10051
-  server: 114.46.77.45
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0083
-  password: 8d93c1c0-f724-4db2-bc20-d6c10e17255c
-  port: 10071
-  server: 36.234.125.34
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0084
-  password: a7d8b05e-d5ab-4ee2-89c3-983c8cbab06b
-  port: 10052
-  server: 36.234.70.142
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0085
-  password: 8b4c7144-3231-47ee-a55d-0d0cdfb1b695
-  port: 10067
-  server: 114.46.76.16
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0086
-  password: 8d5c4680-9dd0-43d4-9ea1-2b0e3dbb4684
-  port: 10125
-  server: 36.232.110.221
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0087
+  name: TW_speednode_0034
   password: a7d8b05e-d5ab-4ee2-89c3-983c8cbab06b
   port: 10039
   server: 118.170.222.232
   type: ss
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0088
-  password: ce7b4539-2ad6-474d-9461-7f135ff6e55f
-  port: 10016
-  server: 1.165.120.20
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0089
-  password: add8049a-647b-43fc-8de1-97b9261c6be5
-  port: 10016
-  server: 1.165.120.20
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: TW_speednode_0090
-  password: 36104473-2ad7-4a2e-b307-60d0f60d4c1e
-  port: 10118
-  server: 1.170.58.178
-  type: ss
-  udp: true
-- name: TW_speednode_0091
-  password: 890c928b-9ceb-4048-aff2-944461463ee8
-  port: 25502
-  server: cdnfire.xiaomispeed.com
-  skip-cert-verify: true
-  sni: cdnfire.xiaomispeed.com
-  type: trojan
-  udp: true
-- name: TW_speednode_0092
+- name: TW_speednode_0035
   network: ws
   port: 443
   server: 167.179.27.92
@@ -1046,28 +453,7 @@ proxies:
     headers:
       Host: gaosir.unfeeling.sbs
     path: "/Telegram\U0001F1E8\U0001F1F3@WangCai2/?ed=2560"
-- name: US_speednode_0093
-  password: 47e91fb6-25b8-df52-bc18-3cdc8548192f
-  port: 443
-  server: 39c2b74f-t4fts0-t5rf4m-81nv.us.hyhuawei.com
-  skip-cert-verify: false
-  sni: 39c2b74f-t4fts0-t5rf4m-81nv.us.hyhuawei.com
-  type: hysteria2
-  udp: true
-- alpn:
-  - h3
-  auth_str: dongtaiwang.com
-  down: 100 Mbps
-  name: US_speednode_0094
-  port: 38845
-  protocol: udp
-  server: 208.87.243.151
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria
-  udp: true
-  up: 100 Mbps
-- name: US_speednode_0095
+- name: US_speednode_0036
   network: ws
   port: 2096
   server: 104.19.50.238
@@ -1082,20 +468,7 @@ proxies:
       Host: gaosir.unfeeling.sbs
     path: "/telegram\U0001F1E8\U0001F1F3@wangcai2/?ed=2560"
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: US_speednode_0096
-  port: 443
-  reality-opts:
-    public-key: O53KcL6eOfBmpyfB5rM9qPDI-ZCe8hhHgYzdsZZ0b2Q
-  server: 54.219.42.163
-  servername: dash.cloudflare.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: da640c05-1831-4c6f-a2c8-ff8ff9c18b0c
-- client-fingerprint: chrome
-  name: US_speednode_0097
+  name: US_speednode_0037
   network: ws
   port: 8443
   server: 104.20.2.221
@@ -1110,255 +483,117 @@ proxies:
       Host: bycf.lzjnb.shop
     path: /?ed=2560
 - client-fingerprint: chrome
-  name: US_speednode_0098
-  network: ws
+  flow: xtls-rprx-vision
+  name: US_speednode_0038
   port: 443
-  server: asl-uwiisjjsjdjd-7665.pages.dev
-  servername: asl-uwiisjjsjdjd-7665.pages.dev
+  reality-opts:
+    public-key: O53KcL6eOfBmpyfB5rM9qPDI-ZCe8hhHgYzdsZZ0b2Q
+  server: 54.219.42.163
+  servername: dash.cloudflare.com
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: 0481141b-2807-48f9-8ebc-0b405d2f7d00
-  ws-opts:
-    headers:
-      Host: asl-uwiisjjsjdjd-7665.pages.dev
-    path: /evcszpmoerkdnesg?ed=2560
-- name: US_speednode_0099
-  network: ws
-  port: 80
-  server: 172.66.156.81
-  servername: websocket.network.www.speedtest.net.flutter.dev.russia.pyt.vegaskala.com.
+  uuid: da640c05-1831-4c6f-a2c8-ff8ff9c18b0c
+- alpn:
+  - h3
+  auth_str: dongtaiwang.com
+  down: 100 Mbps
+  name: US_speednode_0039
+  port: 38845
+  protocol: udp
+  server: 208.87.243.151
   skip-cert-verify: true
-  tls: false
-  type: vless
+  sni: www.bing.com
+  type: hysteria
   udp: true
-  uuid: 2e48cc0c-284d-49b0-b7ad-b2f47be3650e
-  ws-opts:
-    headers:
-      Host: websocket.network.www.speedtest.net.flutter.dev.russia.pyt.vegaskala.com.
-    path: /@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy
-- name: US_speednode_0100
-  network: ws
-  password: trojan
-  port: 8443
-  server: www.visa.com.sg
-  skip-cert-verify: false
-  sni: azadnet-f03.pages.dev
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: azadnet-f03.pages.dev
-    path: /?ed=2560
+  up: 100 Mbps
 proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
   - "\u267B\uFE0F automatic"
-  - BD_speednode_0001
-  - BD_speednode_0002
-  - CA_speednode_0003
-  - CN_speednode_0004
-  - CN_speednode_0005
-  - DE_speednode_0006
-  - DE_speednode_0007
-  - FI_speednode_0008
-  - FI_speednode_0009
-  - FR_speednode_0010
-  - FR_speednode_0011
-  - GR_speednode_0012
-  - HK_speednode_0013
-  - HK_speednode_0014
-  - HK_speednode_0015
-  - IR_speednode_0016
-  - KR_speednode_0017
-  - KR_speednode_0018
-  - KR_speednode_0019
-  - KR_speednode_0020
-  - KR_speednode_0021
-  - KR_speednode_0022
-  - KR_speednode_0023
-  - KR_speednode_0024
-  - KR_speednode_0025
-  - KR_speednode_0026
-  - KR_speednode_0027
-  - KR_speednode_0028
-  - KR_speednode_0029
-  - KR_speednode_0030
-  - KR_speednode_0031
-  - KR_speednode_0032
-  - KR_speednode_0033
-  - KR_speednode_0034
-  - KR_speednode_0035
-  - KR_speednode_0036
-  - KR_speednode_0037
-  - KR_speednode_0038
-  - KR_speednode_0039
-  - KR_speednode_0040
-  - LB_speednode_0041
-  - MA_speednode_0042
-  - NL_speednode_0043
-  - NL_speednode_0044
-  - NL_speednode_0045
-  - RU_speednode_0046
-  - RU_speednode_0047
-  - RU_speednode_0048
-  - RU_speednode_0049
-  - RU_speednode_0050
-  - RU_speednode_0051
-  - RU_speednode_0052
-  - RU_speednode_0053
-  - RU_speednode_0054
-  - RU_speednode_0055
-  - RU_speednode_0056
-  - RU_speednode_0057
-  - SG_speednode_0058
-  - SG_speednode_0059
-  - TW_speednode_0060
-  - TW_speednode_0061
-  - TW_speednode_0062
-  - TW_speednode_0063
-  - TW_speednode_0064
-  - TW_speednode_0065
-  - TW_speednode_0066
-  - TW_speednode_0067
-  - TW_speednode_0068
-  - TW_speednode_0069
-  - TW_speednode_0070
-  - TW_speednode_0071
-  - TW_speednode_0072
-  - TW_speednode_0073
-  - TW_speednode_0074
-  - TW_speednode_0075
-  - TW_speednode_0076
-  - TW_speednode_0077
-  - TW_speednode_0078
-  - TW_speednode_0079
-  - TW_speednode_0080
-  - TW_speednode_0081
-  - TW_speednode_0082
-  - TW_speednode_0083
-  - TW_speednode_0084
-  - TW_speednode_0085
-  - TW_speednode_0086
-  - TW_speednode_0087
-  - TW_speednode_0088
-  - TW_speednode_0089
-  - TW_speednode_0090
-  - TW_speednode_0091
-  - TW_speednode_0092
-  - US_speednode_0093
-  - US_speednode_0094
-  - US_speednode_0095
-  - US_speednode_0096
-  - US_speednode_0097
-  - US_speednode_0098
-  - US_speednode_0099
-  - US_speednode_0100
+  - CA_speednode_0001
+  - CN_speednode_0002
+  - DE_speednode_0003
+  - FR_speednode_0004
+  - KR_speednode_0005
+  - KR_speednode_0006
+  - KR_speednode_0007
+  - KR_speednode_0008
+  - KR_speednode_0009
+  - KR_speednode_0010
+  - KR_speednode_0011
+  - KR_speednode_0012
+  - KR_speednode_0013
+  - KR_speednode_0014
+  - KR_speednode_0015
+  - KR_speednode_0016
+  - NL_speednode_0017
+  - NL_speednode_0018
+  - NL_speednode_0019
+  - RU_speednode_0020
+  - RU_speednode_0021
+  - RU_speednode_0022
+  - RU_speednode_0023
+  - RU_speednode_0024
+  - RU_speednode_0025
+  - RU_speednode_0026
+  - RU_speednode_0027
+  - RU_speednode_0028
+  - TW_speednode_0029
+  - TW_speednode_0030
+  - TW_speednode_0031
+  - TW_speednode_0032
+  - TW_speednode_0033
+  - TW_speednode_0034
+  - TW_speednode_0035
+  - US_speednode_0036
+  - US_speednode_0037
+  - US_speednode_0038
+  - US_speednode_0039
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
-  - BD_speednode_0001
-  - BD_speednode_0002
-  - CA_speednode_0003
-  - CN_speednode_0004
-  - CN_speednode_0005
-  - DE_speednode_0006
-  - DE_speednode_0007
-  - FI_speednode_0008
-  - FI_speednode_0009
-  - FR_speednode_0010
-  - FR_speednode_0011
-  - GR_speednode_0012
-  - HK_speednode_0013
-  - HK_speednode_0014
-  - HK_speednode_0015
-  - IR_speednode_0016
-  - KR_speednode_0017
-  - KR_speednode_0018
-  - KR_speednode_0019
-  - KR_speednode_0020
-  - KR_speednode_0021
-  - KR_speednode_0022
-  - KR_speednode_0023
-  - KR_speednode_0024
-  - KR_speednode_0025
-  - KR_speednode_0026
-  - KR_speednode_0027
-  - KR_speednode_0028
-  - KR_speednode_0029
-  - KR_speednode_0030
-  - KR_speednode_0031
-  - KR_speednode_0032
-  - KR_speednode_0033
-  - KR_speednode_0034
-  - KR_speednode_0035
-  - KR_speednode_0036
-  - KR_speednode_0037
-  - KR_speednode_0038
-  - KR_speednode_0039
-  - KR_speednode_0040
-  - LB_speednode_0041
-  - MA_speednode_0042
-  - NL_speednode_0043
-  - NL_speednode_0044
-  - NL_speednode_0045
-  - RU_speednode_0046
-  - RU_speednode_0047
-  - RU_speednode_0048
-  - RU_speednode_0049
-  - RU_speednode_0050
-  - RU_speednode_0051
-  - RU_speednode_0052
-  - RU_speednode_0053
-  - RU_speednode_0054
-  - RU_speednode_0055
-  - RU_speednode_0056
-  - RU_speednode_0057
-  - SG_speednode_0058
-  - SG_speednode_0059
-  - TW_speednode_0060
-  - TW_speednode_0061
-  - TW_speednode_0062
-  - TW_speednode_0063
-  - TW_speednode_0064
-  - TW_speednode_0065
-  - TW_speednode_0066
-  - TW_speednode_0067
-  - TW_speednode_0068
-  - TW_speednode_0069
-  - TW_speednode_0070
-  - TW_speednode_0071
-  - TW_speednode_0072
-  - TW_speednode_0073
-  - TW_speednode_0074
-  - TW_speednode_0075
-  - TW_speednode_0076
-  - TW_speednode_0077
-  - TW_speednode_0078
-  - TW_speednode_0079
-  - TW_speednode_0080
-  - TW_speednode_0081
-  - TW_speednode_0082
-  - TW_speednode_0083
-  - TW_speednode_0084
-  - TW_speednode_0085
-  - TW_speednode_0086
-  - TW_speednode_0087
-  - TW_speednode_0088
-  - TW_speednode_0089
-  - TW_speednode_0090
-  - TW_speednode_0091
-  - TW_speednode_0092
-  - US_speednode_0093
-  - US_speednode_0094
-  - US_speednode_0095
-  - US_speednode_0096
-  - US_speednode_0097
-  - US_speednode_0098
-  - US_speednode_0099
-  - US_speednode_0100
+  - CA_speednode_0001
+  - CN_speednode_0002
+  - DE_speednode_0003
+  - FR_speednode_0004
+  - KR_speednode_0005
+  - KR_speednode_0006
+  - KR_speednode_0007
+  - KR_speednode_0008
+  - KR_speednode_0009
+  - KR_speednode_0010
+  - KR_speednode_0011
+  - KR_speednode_0012
+  - KR_speednode_0013
+  - KR_speednode_0014
+  - KR_speednode_0015
+  - KR_speednode_0016
+  - NL_speednode_0017
+  - NL_speednode_0018
+  - NL_speednode_0019
+  - RU_speednode_0020
+  - RU_speednode_0021
+  - RU_speednode_0022
+  - RU_speednode_0023
+  - RU_speednode_0024
+  - RU_speednode_0025
+  - RU_speednode_0026
+  - RU_speednode_0027
+  - RU_speednode_0028
+  - TW_speednode_0029
+  - TW_speednode_0030
+  - TW_speednode_0031
+  - TW_speednode_0032
+  - TW_speednode_0033
+  - TW_speednode_0034
+  - TW_speednode_0035
+  - US_speednode_0036
+  - US_speednode_0037
+  - US_speednode_0038
+  - US_speednode_0039
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
