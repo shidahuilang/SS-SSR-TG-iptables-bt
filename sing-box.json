@@ -88,13 +88,13 @@
                 "direct",
                 "CA_speednode_0001",
                 "CN_speednode_0002",
-                "DE_speednode_0003",
+                "CN_speednode_0003",
                 "FR_speednode_0004",
-                "KR_speednode_0005",
-                "KR_speednode_0006",
-                "KR_speednode_0007",
-                "KR_speednode_0008",
-                "KR_speednode_0009",
+                "FR_speednode_0005",
+                "GR_speednode_0006",
+                "HK_speednode_0007",
+                "HK_speednode_0008",
+                "HK_speednode_0009",
                 "KR_speednode_0010",
                 "KR_speednode_0011",
                 "KR_speednode_0012",
@@ -102,29 +102,27 @@
                 "KR_speednode_0014",
                 "KR_speednode_0015",
                 "KR_speednode_0016",
-                "NL_speednode_0017",
-                "NL_speednode_0018",
-                "NL_speednode_0019",
-                "RU_speednode_0020",
-                "RU_speednode_0021",
-                "RU_speednode_0022",
-                "RU_speednode_0023",
-                "RU_speednode_0024",
+                "KR_speednode_0017",
+                "KR_speednode_0018",
+                "KR_speednode_0019",
+                "KR_speednode_0020",
+                "KR_speednode_0021",
+                "KR_speednode_0022",
+                "KR_speednode_0023",
+                "MA_speednode_0024",
                 "RU_speednode_0025",
                 "RU_speednode_0026",
                 "RU_speednode_0027",
                 "RU_speednode_0028",
-                "TW_speednode_0029",
-                "TW_speednode_0030",
-                "TW_speednode_0031",
+                "RU_speednode_0029",
+                "RU_speednode_0030",
+                "RU_speednode_0031",
                 "TW_speednode_0032",
                 "TW_speednode_0033",
-                "TW_speednode_0034",
-                "TW_speednode_0035",
+                "US_speednode_0034",
+                "US_speednode_0035",
                 "US_speednode_0036",
-                "US_speednode_0037",
-                "US_speednode_0038",
-                "US_speednode_0039"
+                "US_speednode_0037"
             ]
         },
         {
@@ -133,13 +131,13 @@
             "outbounds": [
                 "CA_speednode_0001",
                 "CN_speednode_0002",
-                "DE_speednode_0003",
+                "CN_speednode_0003",
                 "FR_speednode_0004",
-                "KR_speednode_0005",
-                "KR_speednode_0006",
-                "KR_speednode_0007",
-                "KR_speednode_0008",
-                "KR_speednode_0009",
+                "FR_speednode_0005",
+                "GR_speednode_0006",
+                "HK_speednode_0007",
+                "HK_speednode_0008",
+                "HK_speednode_0009",
                 "KR_speednode_0010",
                 "KR_speednode_0011",
                 "KR_speednode_0012",
@@ -147,29 +145,27 @@
                 "KR_speednode_0014",
                 "KR_speednode_0015",
                 "KR_speednode_0016",
-                "NL_speednode_0017",
-                "NL_speednode_0018",
-                "NL_speednode_0019",
-                "RU_speednode_0020",
-                "RU_speednode_0021",
-                "RU_speednode_0022",
-                "RU_speednode_0023",
-                "RU_speednode_0024",
+                "KR_speednode_0017",
+                "KR_speednode_0018",
+                "KR_speednode_0019",
+                "KR_speednode_0020",
+                "KR_speednode_0021",
+                "KR_speednode_0022",
+                "KR_speednode_0023",
+                "MA_speednode_0024",
                 "RU_speednode_0025",
                 "RU_speednode_0026",
                 "RU_speednode_0027",
                 "RU_speednode_0028",
-                "TW_speednode_0029",
-                "TW_speednode_0030",
-                "TW_speednode_0031",
+                "RU_speednode_0029",
+                "RU_speednode_0030",
+                "RU_speednode_0031",
                 "TW_speednode_0032",
                 "TW_speednode_0033",
-                "TW_speednode_0034",
-                "TW_speednode_0035",
+                "US_speednode_0034",
+                "US_speednode_0035",
                 "US_speednode_0036",
-                "US_speednode_0037",
-                "US_speednode_0038",
-                "US_speednode_0039"
+                "US_speednode_0037"
             ],
             "url": "http://www.gstatic.com/generate_204",
             "interval": "10m",
@@ -189,22 +185,36 @@
         },
         {
             "tag": "CA_speednode_0001",
-            "server": "40.233.77.57",
-            "server_port": 52434,
-            "type": "tuic",
-            "password": "a13a6ce4-cafa-4b26-a710-a03aa91c5418",
-            "uuid": "a13a6ce4-cafa-4b26-a710-a03aa91c5418",
+            "server": "81.19.140.131",
+            "server_port": 443,
+            "type": "vless",
+            "uuid": "677615f7-87d5-5019-a44d-4fc3ff8d59d7",
+            "flow": "xtls-rprx-vision",
             "tls": {
                 "enabled": true,
-                "insecure": true,
-                "server_name": "www.bing.com",
-                "alpn": [
-                    "h3"
-                ]
+                "insecure": false,
+                "server_name": "vk.cc",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "18otPJIOnisNtfhP_PxpdJgPYqFbkYQAM-pecy90xwk",
+                    "short_id": "5ec229f9"
+                }
             }
         },
         {
             "tag": "CN_speednode_0002",
+            "server": "2nosbobo.1010.jscpai.com",
+            "server_port": 16004,
+            "type": "shadowsocks",
+            "method": "aes-256-gcm",
+            "password": "455ecab1-a8ea-4b89-a2d8-fafc70130e2d"
+        },
+        {
+            "tag": "CN_speednode_0003",
             "server": "nat-hk-37465.strongpipe.cloud",
             "server_port": 20443,
             "type": "http",
@@ -216,28 +226,25 @@
             }
         },
         {
-            "tag": "DE_speednode_0003",
-            "server": "5.10.214.253",
-            "server_port": 2096,
-            "type": "vless",
-            "uuid": "7556317c-dff6-46e8-ad29-b408f2a6456e",
+            "tag": "FR_speednode_0004",
+            "server": "51.159.226.1",
+            "server_port": 49003,
+            "type": "hysteria",
+            "auth_str": "dongtaiwang.com",
+            "up_mbps": 11,
+            "down_mbps": 55,
             "tls": {
                 "enabled": true,
-                "insecure": false,
-                "server_name": "vless.muzheng.top"
+                "insecure": true,
+                "alpn": [
+                    "h3"
+                ],
+                "server_name": "apple.com"
             },
-            "transport": {
-                "type": "ws",
-                "path": "/Telegram @freecodes /",
-                "headers": {
-                    "Host": "vless.muzheng.top"
-                },
-                "max_early_data": 2560,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
+            "network": "udp"
         },
         {
-            "tag": "FR_speednode_0004",
+            "tag": "FR_speednode_0005",
             "server": "195.154.200.40",
             "server_port": 15010,
             "type": "hysteria",
@@ -254,8 +261,304 @@
             }
         },
         {
-            "tag": "KR_speednode_0005",
-            "server": "218.154.22.99",
+            "tag": "GR_speednode_0006",
+            "server": "185.39.207.121",
+            "server_port": 443,
+            "type": "vless",
+            "uuid": "677615f7-87d5-5019-a44d-4fc3ff8d59d7",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "vk.cc",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "Mjz6Gz75xTMe9ZU08h0y-A_VgRQ6tnt3qoOzdEn1k1M",
+                    "short_id": "0fa84b90"
+                }
+            }
+        },
+        {
+            "tag": "HK_speednode_0007",
+            "server": "202.85.53.74",
+            "server_port": 443,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/X@\u8282\u70b9\u72c2\u9b54/",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                },
+                "max_early_data": 2560,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "HK_speednode_0008",
+            "server": "202.85.53.74",
+            "server_port": 443,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/Telegram\ud83c\udde8\ud83c\uddf3@WangCai2/",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                },
+                "max_early_data": 2560,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "HK_speednode_0009",
+            "server": "47.76.218.163",
+            "server_port": 443,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/Telegram@freecodes/",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                },
+                "max_early_data": 2560,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "KR_speednode_0010",
+            "server": "175.208.202.41",
+            "server_port": 20583,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/telegram @freecodes",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                }
+            }
+        },
+        {
+            "tag": "KR_speednode_0011",
+            "server": "211.48.77.114",
+            "server_port": 12312,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/telegram @freecodes",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                }
+            }
+        },
+        {
+            "tag": "KR_speednode_0012",
+            "server": "118.41.28.45",
+            "server_port": 50001,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/telegram @freecodes",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                }
+            }
+        },
+        {
+            "tag": "KR_speednode_0013",
+            "server": "175.201.95.5",
+            "server_port": 30051,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/telegram @freecodes",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                }
+            }
+        },
+        {
+            "tag": "KR_speednode_0014",
+            "server": "222.101.91.204",
+            "server_port": 50000,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/telegram @freecodes",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                }
+            }
+        },
+        {
+            "tag": "KR_speednode_0015",
+            "server": "211.48.77.114",
+            "server_port": 12312,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/x @\u8282\u70b9\u72c2\u9b54security=tls",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                }
+            }
+        },
+        {
+            "tag": "KR_speednode_0016",
+            "server": "119.201.195.135",
+            "server_port": 10001,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/x @\u8282\u70b9\u72c2\u9b54",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                }
+            }
+        },
+        {
+            "tag": "KR_speednode_0017",
+            "server": "211.48.77.114",
+            "server_port": 12312,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/x @\u8282\u70b9\u72c2\u9b54",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                }
+            }
+        },
+        {
+            "tag": "KR_speednode_0018",
+            "server": "121.145.253.124",
+            "server_port": 50002,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/telegram @freecodes",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                }
+            }
+        },
+        {
+            "tag": "KR_speednode_0019",
+            "server": "122.47.74.139",
+            "server_port": 50001,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/X@\u8282\u70b9\u72c2\u9b54/",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                },
+                "max_early_data": 2560,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "KR_speednode_0020",
+            "server": "119.65.139.101",
+            "server_port": 60001,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/x@\u8282\u70b9\u72c2\u9b54",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                }
+            }
+        },
+        {
+            "tag": "KR_speednode_0021",
+            "server": "222.109.206.218",
             "server_port": 50003,
             "type": "vless",
             "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
@@ -275,45 +578,7 @@
             }
         },
         {
-            "tag": "KR_speednode_0006",
-            "server": "211.48.77.114",
-            "server_port": 12312,
-            "type": "vless",
-            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
-            "tls": {
-                "enabled": true,
-                "insecure": true,
-                "server_name": "gaosir.unfeeling.sbs"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/x @\u8282\u70b9\u72c2\u9b54",
-                "headers": {
-                    "Host": "gaosir.unfeeling.sbs"
-                }
-            }
-        },
-        {
-            "tag": "KR_speednode_0007",
-            "server": "118.41.28.45",
-            "server_port": 50001,
-            "type": "vless",
-            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
-            "tls": {
-                "enabled": true,
-                "insecure": true,
-                "server_name": "gaosir.unfeeling.sbs"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/telegram @freecodes",
-                "headers": {
-                    "Host": "gaosir.unfeeling.sbs"
-                }
-            }
-        },
-        {
-            "tag": "KR_speednode_0008",
+            "tag": "KR_speednode_0022",
             "server": "119.195.219.150",
             "server_port": 10065,
             "type": "vless",
@@ -332,9 +597,9 @@
             }
         },
         {
-            "tag": "KR_speednode_0009",
-            "server": "220.118.236.239",
-            "server_port": 12290,
+            "tag": "KR_speednode_0023",
+            "server": "211.219.241.28",
+            "server_port": 31337,
             "type": "vless",
             "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
             "tls": {
@@ -344,213 +609,7 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/x @\u8282\u70b9\u72c2\u9b54",
-                "headers": {
-                    "Host": "gaosir.unfeeling.sbs"
-                }
-            }
-        },
-        {
-            "tag": "KR_speednode_0010",
-            "server": "211.228.5.119",
-            "server_port": 50001,
-            "type": "vless",
-            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
-            "tls": {
-                "enabled": true,
-                "insecure": true,
-                "server_name": "gaosir.unfeeling.sbs"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/x @\u8282\u70b9\u72c2\u9b54",
-                "headers": {
-                    "Host": "gaosir.unfeeling.sbs"
-                }
-            }
-        },
-        {
-            "tag": "KR_speednode_0011",
-            "server": "220.126.185.107",
-            "server_port": 50001,
-            "type": "vless",
-            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
-            "tls": {
-                "enabled": true,
-                "insecure": true,
-                "server_name": "gaosir.unfeeling.sbs"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/x @\u8282\u70b9\u72c2\u9b54",
-                "headers": {
-                    "Host": "gaosir.unfeeling.sbs"
-                }
-            }
-        },
-        {
-            "tag": "KR_speednode_0012",
-            "server": "211.184.175.180",
-            "server_port": 50001,
-            "type": "vless",
-            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
-            "tls": {
-                "enabled": true,
-                "insecure": true,
-                "server_name": "gaosir.unfeeling.sbs"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/telegram @freecodessecurity=tls",
-                "headers": {
-                    "Host": "gaosir.unfeeling.sbs"
-                }
-            }
-        },
-        {
-            "tag": "KR_speednode_0013",
-            "server": "112.156.154.95",
-            "server_port": 30067,
-            "type": "vless",
-            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
-            "tls": {
-                "enabled": true,
-                "insecure": true,
-                "server_name": "gaosir.unfeeling.sbs"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/x @\u8282\u70b9\u72c2\u9b54security=tls",
-                "headers": {
-                    "Host": "gaosir.unfeeling.sbs"
-                }
-            }
-        },
-        {
-            "tag": "KR_speednode_0014",
-            "server": "112.156.154.95",
-            "server_port": 30067,
-            "type": "vless",
-            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
-            "tls": {
-                "enabled": true,
-                "insecure": true,
-                "server_name": "gaosir.unfeeling.sbs"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/x @\u8282\u70b9\u72c2\u9b54",
-                "headers": {
-                    "Host": "gaosir.unfeeling.sbs"
-                }
-            }
-        },
-        {
-            "tag": "KR_speednode_0015",
-            "server": "119.65.139.101",
-            "server_port": 60001,
-            "type": "vless",
-            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
-            "tls": {
-                "enabled": true,
-                "insecure": true,
-                "server_name": "gaosir.unfeeling.sbs"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/x@\u8282\u70b9\u72c2\u9b54",
-                "headers": {
-                    "Host": "gaosir.unfeeling.sbs"
-                }
-            }
-        },
-        {
-            "tag": "KR_speednode_0016",
-            "server": "testkr3.ssv.vc",
-            "server_port": 30446,
-            "type": "http",
-            "username": "test",
-            "password": "test.+",
-            "tls": {
-                "enabled": true,
-                "insecure": true
-            }
-        },
-        {
-            "tag": "NL_speednode_0017",
-            "server": "194.152.44.253",
-            "server_port": 2096,
-            "type": "vless",
-            "uuid": "7556317c-dff6-46e8-ad29-b408f2a6456e",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "vless.muzheng.top"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/Telegram @freecodes /",
-                "headers": {
-                    "Host": "vless.muzheng.top"
-                },
-                "max_early_data": 2560,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "NL_speednode_0018",
-            "server": "185.18.184.253",
-            "server_port": 2096,
-            "type": "vless",
-            "uuid": "7556317c-dff6-46e8-ad29-b408f2a6456e",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "vless.muzheng.top"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/Telegram\ud83c\udde8\ud83c\uddf3@WangCai2/",
-                "headers": {
-                    "Host": "vless.muzheng.top"
-                },
-                "max_early_data": 2560,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "NL_speednode_0019",
-            "server": "185.18.184.253",
-            "server_port": 2096,
-            "type": "vless",
-            "uuid": "7556317c-dff6-46e8-ad29-b408f2a6456e",
-            "tls": {
-                "enabled": true,
-                "insecure": true,
-                "server_name": "vless.muzheng.top"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/telegram@freecodes",
-                "headers": {
-                    "Host": "vless.muzheng.top"
-                }
-            }
-        },
-        {
-            "tag": "RU_speednode_0020",
-            "server": "188.42.145.253",
-            "server_port": 2096,
-            "type": "vless",
-            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "gaosir.unfeeling.sbs"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/Telegram@freecodes/",
+                "path": "/X@\u8282\u70b9\u72c2\u9b54/",
                 "headers": {
                     "Host": "gaosir.unfeeling.sbs"
                 },
@@ -559,88 +618,12 @@
             }
         },
         {
-            "tag": "RU_speednode_0021",
-            "server": "188.42.145.253",
-            "server_port": 2096,
-            "type": "vless",
-            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "gaosir.unfeeling.sbs"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/TelegramU0001F1E8U0001F1F3@WangCai2/",
-                "headers": {
-                    "Host": "gaosir.unfeeling.sbs"
-                },
-                "max_early_data": 2560,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "RU_speednode_0022",
-            "server": "188.42.145.253",
-            "server_port": 2096,
-            "type": "vless",
-            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "gaosir.unfeeling.sbs"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/Telegram\ud83c\udde8\ud83c\uddf3 @WangCai2 /",
-                "headers": {
-                    "Host": "gaosir.unfeeling.sbs"
-                },
-                "max_early_data": 2560,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "RU_speednode_0023",
-            "server": "188.42.145.253",
-            "server_port": 2096,
-            "type": "vless",
-            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "gaosir.unfeeling.sbs"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/TelegramU0001F1E8U0001F1F3 @WangCai2 /",
-                "headers": {
-                    "Host": "gaosir.unfeeling.sbs"
-                },
-                "max_early_data": 2560,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "RU_speednode_0024",
-            "server": "188.42.145.253",
-            "server_port": 2096,
-            "type": "vless",
-            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "gaosir.unfeeling.sbs"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/freecodes@\u8282\u70b9\u72c2\u9b54/",
-                "headers": {
-                    "Host": "gaosir.unfeeling.sbs"
-                },
-                "max_early_data": 2560,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
+            "tag": "MA_speednode_0024",
+            "server": "188.214.157.30",
+            "server_port": 990,
+            "type": "shadowsocks",
+            "method": "chacha20-ietf-poly1305",
+            "password": "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
         },
         {
             "tag": "RU_speednode_0025",
@@ -671,6 +654,90 @@
             "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
             "tls": {
                 "enabled": true,
+                "insecure": false,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/TelegramU0001F1E8U0001F1F3@WangCai2/",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                },
+                "max_early_data": 2560,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "RU_speednode_0027",
+            "server": "188.42.145.253",
+            "server_port": 2096,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/Telegram@freecodes/",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                },
+                "max_early_data": 2560,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "RU_speednode_0028",
+            "server": "188.42.145.253",
+            "server_port": 2096,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/Telegram\ud83c\udde8\ud83c\uddf3 @WangCai2 /",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                },
+                "max_early_data": 2560,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "RU_speednode_0029",
+            "server": "188.42.145.253",
+            "server_port": 2096,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/freecodes@\u8282\u70b9\u72c2\u9b54/",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                },
+                "max_early_data": 2560,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "RU_speednode_0030",
+            "server": "188.42.145.253",
+            "server_port": 2096,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
                 "insecure": true,
                 "server_name": "gaosir.unfeeling.sbs"
             },
@@ -683,7 +750,7 @@
             }
         },
         {
-            "tag": "RU_speednode_0027",
+            "tag": "RU_speednode_0031",
             "server": "188.42.145.253",
             "server_port": 2096,
             "type": "vless",
@@ -702,74 +769,7 @@
             }
         },
         {
-            "tag": "RU_speednode_0028",
-            "server": "188.42.145.253",
-            "server_port": 2096,
-            "type": "vless",
-            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "gaosir.unfeeling.sbs"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "gaosir.unfeeling.sbs"
-                }
-            }
-        },
-        {
-            "tag": "TW_speednode_0029",
-            "server": "114.46.81.116",
-            "server_port": 10079,
-            "type": "shadowsocks",
-            "method": "chacha20-ietf-poly1305",
-            "password": "add8049a-647b-43fc-8de1-97b9261c6be5"
-        },
-        {
-            "tag": "TW_speednode_0030",
-            "server": "125.231.82.112",
-            "server_port": 10056,
-            "type": "shadowsocks",
-            "method": "chacha20-ietf-poly1305",
-            "password": "9a9dc807-d040-4bec-9e00-c7ebe712717e"
-        },
-        {
-            "tag": "TW_speednode_0031",
-            "server": "114.46.77.45",
-            "server_port": 10051,
-            "type": "shadowsocks",
-            "method": "chacha20-ietf-poly1305",
-            "password": "9a9dc807-d040-4bec-9e00-c7ebe712717e"
-        },
-        {
             "tag": "TW_speednode_0032",
-            "server": "114.35.114.182",
-            "server_port": 10129,
-            "type": "shadowsocks",
-            "method": "chacha20-ietf-poly1305",
-            "password": "719adfec-6f6a-468b-a693-61c00002ab9f"
-        },
-        {
-            "tag": "TW_speednode_0033",
-            "server": "114.46.76.16",
-            "server_port": 10067,
-            "type": "shadowsocks",
-            "method": "chacha20-ietf-poly1305",
-            "password": "add8049a-647b-43fc-8de1-97b9261c6be5"
-        },
-        {
-            "tag": "TW_speednode_0034",
-            "server": "118.170.222.232",
-            "server_port": 10039,
-            "type": "shadowsocks",
-            "method": "chacha20-ietf-poly1305",
-            "password": "a7d8b05e-d5ab-4ee2-89c3-983c8cbab06b"
-        },
-        {
-            "tag": "TW_speednode_0035",
             "server": "167.179.27.92",
             "server_port": 443,
             "type": "vless",
@@ -790,19 +790,19 @@
             }
         },
         {
-            "tag": "US_speednode_0036",
-            "server": "104.19.50.238",
-            "server_port": 2096,
+            "tag": "TW_speednode_0033",
+            "server": "167.179.27.92",
+            "server_port": 443,
             "type": "vless",
             "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
             "tls": {
                 "enabled": true,
-                "insecure": true,
+                "insecure": false,
                 "server_name": "gaosir.unfeeling.sbs"
             },
             "transport": {
                 "type": "ws",
-                "path": "/telegram\ud83c\udde8\ud83c\uddf3@wangcai2/",
+                "path": "/TelegramU0001F1E8U0001F1F3@WangCai2/",
                 "headers": {
                     "Host": "gaosir.unfeeling.sbs"
                 },
@@ -811,7 +811,29 @@
             }
         },
         {
-            "tag": "US_speednode_0037",
+            "tag": "US_speednode_0034",
+            "server": "54.219.42.163",
+            "server_port": 443,
+            "type": "vless",
+            "uuid": "da640c05-1831-4c6f-a2c8-ff8ff9c18b0c",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "dash.cloudflare.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "O53KcL6eOfBmpyfB5rM9qPDI-ZCe8hhHgYzdsZZ0b2Q",
+                    "short_id": ""
+                }
+            }
+        },
+        {
+            "tag": "US_speednode_0035",
             "server": "104.20.2.221",
             "server_port": 8443,
             "type": "vless",
@@ -836,29 +858,7 @@
             }
         },
         {
-            "tag": "US_speednode_0038",
-            "server": "54.219.42.163",
-            "server_port": 443,
-            "type": "vless",
-            "uuid": "da640c05-1831-4c6f-a2c8-ff8ff9c18b0c",
-            "flow": "xtls-rprx-vision",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "dash.cloudflare.com",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "O53KcL6eOfBmpyfB5rM9qPDI-ZCe8hhHgYzdsZZ0b2Q",
-                    "short_id": ""
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0039",
+            "tag": "US_speednode_0036",
             "server": "208.87.243.151",
             "server_port": 38845,
             "type": "hysteria",
@@ -874,6 +874,25 @@
                 "server_name": "www.bing.com"
             },
             "network": "udp"
+        },
+        {
+            "tag": "US_speednode_0037",
+            "server": "195.13.45.253",
+            "server_port": 2096,
+            "type": "vless",
+            "uuid": "f61a4285-7264-4d07-9408-7b9ba1922c26",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "gaosir.unfeeling.sbs"
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/x @\u8282\u70b9\u72c2\u9b54",
+                "headers": {
+                    "Host": "gaosir.unfeeling.sbs"
+                }
+            }
         }
     ],
     "route": {
