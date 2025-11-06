@@ -21,33 +21,40 @@ proxies:
 - cipher: aes-128-gcm
   name: CN_speednode_0001
   password: I1qrYxOXxPYCOkhT
-  port: 51069
-  server: vn1.web3sp.com
+  port: 50049
+  server: hk4.web3sp.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
   name: CN_speednode_0002
   password: I1qrYxOXxPYCOkhT
-  port: 50609
-  server: in1.web3sp.com
+  port: 50229
+  server: sg1.web3sp.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
   name: CN_speednode_0003
   password: I1qrYxOXxPYCOkhT
-  port: 50529
-  server: us1.web3sp.com
+  port: 50829
+  server: nl1.web3sp.com
   type: ss
   udp: true
 - cipher: aes-128-gcm
   name: CN_speednode_0004
   password: I1qrYxOXxPYCOkhT
-  port: 50329
-  server: kr1.web3sp.com
+  port: 50619
+  server: in2.web3sp.com
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: CN_speednode_0005
+  password: I1qrYxOXxPYCOkhT
+  port: 50339
+  server: kr2.web3sp.com
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0005
+  name: CN_speednode_0006
   password: dc9ea653-becc-44f1-95f9-16773a0519e9
   port: 31013
   server: fl01.lr9soflhleb.top
@@ -56,45 +63,17 @@ proxies:
 - alpn:
   - h3
   auth_str: dongtaiwang.com
-  down: '100'
-  name: FR_speednode_0006
-  port: 15010
+  down: 55 Mbps
+  name: FR_speednode_0007
+  port: 49003
   protocol: udp
-  server: 195.154.200.40
+  server: 51.159.226.1
   skip-cert-verify: true
   sni: apple.com
   type: hysteria
   udp: true
-  up: '100'
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: RU_speednode_0007
-  port: 30865
-  reality-opts:
-    public-key: RQGgenaHaaros5JI8XOnAuv4k7t43Gug_mpHjQTRdjE
-    short-id: a242c9aa
-  server: g72oiqhd.tun.nodeflex.cc
-  servername: www.varejaodasmaquinas.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d43bc5b9-21f8-42a7-adf8-8db943de75eb
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: RU_speednode_0008
-  port: 30866
-  reality-opts:
-    public-key: RQGgenaHaaros5JI8XOnAuv4k7t43Gug_mpHjQTRdjE
-    short-id: a242c9aa
-  server: g72oiqhd.tun.nodeflex.cc
-  servername: www.varejaodasmaquinas.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1922fd72-8ebf-44f8-86ea-a032be1d26d7
-- name: TW_speednode_0009
+  up: 11 Mbps
+- name: TW_speednode_0008
   password: exaxgqkKkd0TAMrCxeonWg==
   port: 1443
   server: twmoon1-cdn-route.couldflare-cdn.com
@@ -102,6 +81,13 @@ proxies:
   type: http
   udp: true
   username: mrwdfNTD8M79LCukCieldrqZWqs=
+- cipher: aes-256-cfb
+  name: US_speednode_0009
+  password: amazonskr05
+  port: 443
+  server: 13.59.110.241
+  type: ss
+  udp: true
 proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
@@ -111,10 +97,10 @@ proxy-groups:
   - CN_speednode_0003
   - CN_speednode_0004
   - CN_speednode_0005
-  - FR_speednode_0006
-  - RU_speednode_0007
-  - RU_speednode_0008
-  - TW_speednode_0009
+  - CN_speednode_0006
+  - FR_speednode_0007
+  - TW_speednode_0008
+  - US_speednode_0009
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
@@ -124,10 +110,10 @@ proxy-groups:
   - CN_speednode_0003
   - CN_speednode_0004
   - CN_speednode_0005
-  - FR_speednode_0006
-  - RU_speednode_0007
-  - RU_speednode_0008
-  - TW_speednode_0009
+  - CN_speednode_0006
+  - FR_speednode_0007
+  - TW_speednode_0008
+  - US_speednode_0009
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:

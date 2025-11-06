@@ -91,10 +91,10 @@
                 "CN_speednode_0003",
                 "CN_speednode_0004",
                 "CN_speednode_0005",
-                "FR_speednode_0006",
-                "RU_speednode_0007",
-                "RU_speednode_0008",
-                "TW_speednode_0009"
+                "CN_speednode_0006",
+                "FR_speednode_0007",
+                "TW_speednode_0008",
+                "US_speednode_0009"
             ]
         },
         {
@@ -106,10 +106,10 @@
                 "CN_speednode_0003",
                 "CN_speednode_0004",
                 "CN_speednode_0005",
-                "FR_speednode_0006",
-                "RU_speednode_0007",
-                "RU_speednode_0008",
-                "TW_speednode_0009"
+                "CN_speednode_0006",
+                "FR_speednode_0007",
+                "TW_speednode_0008",
+                "US_speednode_0009"
             ],
             "url": "http://www.gstatic.com/generate_204",
             "interval": "10m",
@@ -129,38 +129,46 @@
         },
         {
             "tag": "CN_speednode_0001",
-            "server": "vn1.web3sp.com",
-            "server_port": 51069,
+            "server": "hk4.web3sp.com",
+            "server_port": 50049,
             "type": "shadowsocks",
             "method": "aes-128-gcm",
             "password": "I1qrYxOXxPYCOkhT"
         },
         {
             "tag": "CN_speednode_0002",
-            "server": "in1.web3sp.com",
-            "server_port": 50609,
+            "server": "sg1.web3sp.com",
+            "server_port": 50229,
             "type": "shadowsocks",
             "method": "aes-128-gcm",
             "password": "I1qrYxOXxPYCOkhT"
         },
         {
             "tag": "CN_speednode_0003",
-            "server": "us1.web3sp.com",
-            "server_port": 50529,
+            "server": "nl1.web3sp.com",
+            "server_port": 50829,
             "type": "shadowsocks",
             "method": "aes-128-gcm",
             "password": "I1qrYxOXxPYCOkhT"
         },
         {
             "tag": "CN_speednode_0004",
-            "server": "kr1.web3sp.com",
-            "server_port": 50329,
+            "server": "in2.web3sp.com",
+            "server_port": 50619,
             "type": "shadowsocks",
             "method": "aes-128-gcm",
             "password": "I1qrYxOXxPYCOkhT"
         },
         {
             "tag": "CN_speednode_0005",
+            "server": "kr2.web3sp.com",
+            "server_port": 50339,
+            "type": "shadowsocks",
+            "method": "aes-128-gcm",
+            "password": "I1qrYxOXxPYCOkhT"
+        },
+        {
+            "tag": "CN_speednode_0006",
             "server": "fl01.lr9soflhleb.top",
             "server_port": 31013,
             "type": "shadowsocks",
@@ -168,13 +176,13 @@
             "password": "dc9ea653-becc-44f1-95f9-16773a0519e9"
         },
         {
-            "tag": "FR_speednode_0006",
-            "server": "195.154.200.40",
-            "server_port": 15010,
+            "tag": "FR_speednode_0007",
+            "server": "51.159.226.1",
+            "server_port": 49003,
             "type": "hysteria",
             "auth_str": "dongtaiwang.com",
-            "up_mbps": 100,
-            "down_mbps": 100,
+            "up_mbps": 11,
+            "down_mbps": 55,
             "tls": {
                 "enabled": true,
                 "insecure": true,
@@ -186,51 +194,7 @@
             "network": "udp"
         },
         {
-            "tag": "RU_speednode_0007",
-            "server": "g72oiqhd.tun.nodeflex.cc",
-            "server_port": 30865,
-            "type": "vless",
-            "uuid": "d43bc5b9-21f8-42a7-adf8-8db943de75eb",
-            "flow": "xtls-rprx-vision",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "www.varejaodasmaquinas.com",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "RQGgenaHaaros5JI8XOnAuv4k7t43Gug_mpHjQTRdjE",
-                    "short_id": "a242c9aa"
-                }
-            }
-        },
-        {
-            "tag": "RU_speednode_0008",
-            "server": "g72oiqhd.tun.nodeflex.cc",
-            "server_port": 30866,
-            "type": "vless",
-            "uuid": "1922fd72-8ebf-44f8-86ea-a032be1d26d7",
-            "flow": "xtls-rprx-vision",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "www.varejaodasmaquinas.com",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "qq"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "RQGgenaHaaros5JI8XOnAuv4k7t43Gug_mpHjQTRdjE",
-                    "short_id": "a242c9aa"
-                }
-            }
-        },
-        {
-            "tag": "TW_speednode_0009",
+            "tag": "TW_speednode_0008",
             "server": "twmoon1-cdn-route.couldflare-cdn.com",
             "server_port": 1443,
             "type": "http",
@@ -240,6 +204,14 @@
                 "enabled": true,
                 "insecure": false
             }
+        },
+        {
+            "tag": "US_speednode_0009",
+            "server": "13.59.110.241",
+            "server_port": 443,
+            "type": "shadowsocks",
+            "method": "aes-256-cfb",
+            "password": "amazonskr05"
         }
     ],
     "route": {
