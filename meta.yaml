@@ -18,32 +18,69 @@ external-controller: 127.0.0.1:9090
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-cfb
+- alpn:
+  - h3
+  disable-sni: false
   name: CA_speednode_0001
-  password: amazonskr05
-  port: 443
-  server: 15.223.194.229
-  type: ss
+  password: a13a6ce4-cafa-4b26-a710-a03aa91c5418
+  port: 52434
+  reduce-rtt: false
+  request-timeout: '0'
+  server: 40.233.77.57
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: tuic
+  uuid: a13a6ce4-cafa-4b26-a710-a03aa91c5418
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CA_speednode_0002
+  port: 26113
+  reality-opts:
+    public-key: GUcD8LK1DFNuVun5yhsqeEego_p3PF2yIdvE2KY2Nng
+    short-id: 1fbd20fd
+  server: 40.233.71.65
+  servername: www.yahoo.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: DK_speednode_0002
-  password: SDaFISr3Gfm6YkBSSrFIEwwWjEEU7Xbo
-  port: 443
-  server: 95.164.10.228
-  type: ss
+  uuid: cfe032e4-1bc3-454f-9d09-301b0aea08ff
+- name: CN_speednode_0003
+  password: dce3c42b-f259-4b18-b5c1-a42ebef4e732
+  port: 13007
+  server: naiu-hk.05vr9nyqg5.download
+  skip-cert-verify: false
+  sni: cloudflare.node-ssl.cdn-alibaba.com
+  type: trojan
   udp: true
+- name: CN_speednode_0004
+  password: c3a66484-bde4-11ef-9410-f23c93141fad
+  port: 3236
+  server: 7e5f8639-t5jc00-t5v27d-88rr.h2tkydc1.cdnbytescm.com
+  tls: true
+  type: http
+  udp: true
+  username: c3a66484-bde4-11ef-9410-f23c93141fad
+- name: CN_speednode_0005
+  password: c3a66484-bde4-11ef-9410-f23c93141fad
+  port: 3235
+  server: 9e7e3f53-t5jc00-t5v27d-88rr.h2tkydc2.cdnbytescm.com
+  tls: true
+  type: http
+  udp: true
+  username: c3a66484-bde4-11ef-9410-f23c93141fad
 - cipher: chacha20-ietf-poly1305
-  name: FI_speednode_0003
-  password: passxzHDLxkZoSAzqgKyq24Z
-  port: 31043
-  server: solar-3xui-hel-40-002.devastation.ru
+  name: CY_speednode_0006
+  password: HfAiyrdFbKJuKIQkGjvJrDFefmH8YDSC
+  port: 443
+  server: 45.83.131.43
   type: ss
   udp: true
 - alpn:
   - h3
   auth_str: dongtaiwang.com
   down: 100 Mbps
-  name: FR_speednode_0004
+  name: FR_speednode_0007
   port: 15010
   protocol: udp
   server: 195.154.200.40
@@ -56,8 +93,8 @@ proxies:
   - h3
   auth_str: dongtaiwang.com
   down: 55 Mbps
-  name: FR_speednode_0005
-  port: 50011
+  name: FR_speednode_0008
+  port: 35511
   protocol: udp
   server: 62.210.10.186
   skip-cert-verify: true
@@ -69,8 +106,8 @@ proxies:
   - h3
   auth_str: dongtaiwang.com
   down: 55 Mbps
-  name: FR_speednode_0006
-  port: 35511
+  name: FR_speednode_0009
+  port: 50011
   protocol: udp
   server: 62.210.10.186
   skip-cert-verify: true
@@ -79,176 +116,263 @@ proxies:
   udp: true
   up: 11 Mbps
 - cipher: aes-256-cfb
-  name: GB_speednode_0007
+  name: GB_speednode_0010
   password: amazonskr05
   port: 443
   server: 3.8.172.214
   type: ss
   udp: true
-- cipher: aes-256-cfb
-  name: GB_speednode_0008
-  password: amazonskr05
-  port: 443
-  server: 18.171.250.2
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: GB_speednode_0009
-  password: amazonskr05
-  port: 443
-  server: 3.9.16.64
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: GB_speednode_0010
-  password: amazonskr05
-  port: 443
-  server: 35.178.40.2
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
   name: GB_speednode_0011
-  password: amazonskr05
-  port: 443
-  server: 18.175.224.25
-  type: ss
+  port: 20579
+  reality-opts:
+    public-key: mT6lh-gtbEuWk3Zk6XGF_hYvpLwxTyvwtH7F-_fRbxI
+    short-id: 89f1da93
+  server: dl.darkterror.fonixapp.org
+  servername: ilovepdf.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
   udp: true
-- cipher: aes-256-cfb
-  name: GB_speednode_0012
-  password: amazonskr05
-  port: 443
-  server: 3.8.49.30
-  type: ss
+  uuid: 93cd7e0f-8a81-4076-be8b-6d3bf3f8f810
+- alterId: 0
+  cipher: auto
+  name: HK_speednode_0012
+  port: 30651
+  server: 123.254.106.68
+  skip-cert-verify: true
+  tls: false
+  type: vmess
   udp: true
+  uuid: 669c37c3-0e5a-4e68-a28e-ab6d5d85669a
+- name: HK_speednode_0013
+  password: BxceQaOe
+  port: 443
+  server: 58.152.46.98
+  skip-cert-verify: true
+  sni: 58.152.46.98
+  type: trojan
+  udp: true
+- name: IR_speednode_0014
+  password: d9bdb765-773d-42a8-8fe0-1fcd85a84afc
+  port: 54265
+  server: banmabanmabanmabanmabanmabanma4.wanlidag.top
+  skip-cert-verify: false
+  sni: banmabanmabanmabanmabanmabanma4.wanlidag.top
+  type: hysteria2
+  udp: true
+- name: IR_speednode_0015
+  password: d416b408-e7e0-4ea0-8ffc-415f87cec12e
+  port: 54265
+  server: banmabanmabanmabanmabanmabanma5.wanlidag.top
+  skip-cert-verify: false
+  sni: banmabanmabanmabanmabanmabanma5.wanlidag.top
+  type: hysteria2
+  udp: true
+- name: IR_speednode_0016
+  password: fb8e3265-9725-490e-92c5-ccfcca43b00b
+  port: 54265
+  server: banmabanmabanmabanmabanmabanma5.wanlidag.top
+  skip-cert-verify: false
+  sni: banmabanmabanmabanmabanmabanma5.wanlidag.top
+  type: hysteria2
+  udp: true
+- name: IR_speednode_0017
+  password: fb8e3265-9725-490e-92c5-ccfcca43b00b
+  port: 54265
+  server: banmabanmabanmabanmabanmabanma3.wanlidag.top
+  skip-cert-verify: false
+  sni: banmabanmabanmabanmabanmabanma3.wanlidag.top
+  type: hysteria2
+  udp: true
+- name: JP_speednode_0018
+  password: c3a66484-bde4-11ef-9410-f23c93141fad
+  port: 3443
+  server: 665cb53b-t5jc00-t5v27d-88rr.tky02.east.189ti.com
+  tls: true
+  type: http
+  udp: true
+  username: c3a66484-bde4-11ef-9410-f23c93141fad
 - cipher: aes-256-cfb
-  name: GR_speednode_0013
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  server: 192.71.166.100
+  name: KR_speednode_0019
+  password: qwerREWQ@@
+  port: 37008
+  server: 221.139.79.57
   type: ss
   udp: true
 - alterId: 0
   cipher: auto
-  http-opts:
-    headers:
-      Host:
-      - 43.247.135.64
-    method: GET
-    path:
-    - /
-  name: HK_speednode_0014
-  network: http
-  port: 54804
-  server: 43.247.135.64
+  name: NL_speednode_0020
+  port: 2083
+  server: nl-v2ray.freevmess.com
+  servername: nl-v2ray.freevmess.com
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vmess
   udp: true
-  uuid: 4f8db425-47ac-420e-b2d7-6e85bbc25562
-- cipher: chacha20-ietf-poly1305
-  name: IR_speednode_0015
-  password: QCXDxuDlTTMD7jtgHUjIoj
-  port: 8080
-  server: 151.242.251.147
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: IR_speednode_0016
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 151.242.251.133
-  type: ss
-  udp: true
-- name: US_speednode_0017
-  password: be8cc8f6-0c6a-11f0-a5a3-f23c93141fad
-  port: 1743
-  server: ea9466bf-t3dk00-t3i5yp-b4pt.la.shifen.uk
+  uuid: c3d066bc-4170-4006-a95c-0012367e8f13
+- alterId: 0
+  cipher: auto
+  name: NL_speednode_0021
+  port: 2083
+  server: nl-v2ray.freevmess.com
   skip-cert-verify: false
-  type: hysteria2
+  tls: true
+  type: vmess
   udp: true
-- name: US_speednode_0018
-  port: 47387
-  server: 198.186.131.216
+  uuid: c3d066bc-4170-4006-a95c-0012367e8f13
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: RO_speednode_0022
+  port: 11133
+  reality-opts:
+    public-key: y3umRzGnap4t5V4C_rlt870Rku-TG4F8ttsq-_5gKTY
+    short-id: d3e9
+  server: london.fonixapp.org
+  servername: cloudtalk.io
   skip-cert-verify: false
-  tls: false
+  tls: true
   type: vless
   udp: true
-  uuid: cdc453bb-34c8-4405-a322-56f6878ccd40
-- cipher: aes-256-cfb
-  name: US_speednode_0019
-  password: amazonskr05
+  uuid: 160a7b5d-fd67-4e83-8d8e-73dcfb6d91c2
+- cipher: chacha20-ietf-poly1305
+  name: RU_speednode_0023
+  password: 7HQ8w1YWMdNjq68bZt1tNfpDHLFA1BPA
   port: 443
-  server: 16.52.152.103
+  server: 45.144.31.24
   type: ss
   udp: true
-- cipher: aes-256-cfb
-  name: US_speednode_0020
-  password: amazonskr05
+- name: US_speednode_0024
+  obfs: salamander
+  obfs-password: fdrccJDGatdFDDRp
+  password: 4b099758-bbf6-4558-9884-240635bd1c9d
+  port: 20000
+  server: mg2.aeccghuyjftyg.shop
+  skip-cert-verify: false
+  sni: mg2.aeccghuyjftyg.shop
+  type: hysteria2
+  udp: true
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: US_speednode_0025
+  network: ws
   port: 443
-  server: 3.147.64.175
+  server: ef87bb2b.meti-e9q.pages.dev
+  servername: ef87bb2b.meti-e9q.pages.dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 923509aa-bfb0-4758-a5a1-a6c2d0468169
+  ws-opts:
+    headers:
+      Host: ef87bb2b.meti-e9q.pages.dev
+    path: /ck2vlelfdajoybac?ed=2560
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: US_speednode_0026
+  port: 52230
+  reality-opts:
+    public-key: DdhKUXb4ICPfsWixehUQ56-4p6H5eE0DfEYtEvbKkUs
+    short-id: 42c0ec0a
+  server: virginia.fonixapp.org
+  servername: ilovepdf.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: dd2961de-3cff-4b6d-bbd1-819d571df66b
+- name: US_speednode_0027
+  password: c3a66484-bde4-11ef-9410-f23c93141fad
+  port: 3443
+  server: 9508ec4c-t5jc00-t5v27d-88rr.tky05.east.189ti.com
+  tls: true
+  type: http
+  udp: true
+  username: c3a66484-bde4-11ef-9410-f23c93141fad
+- alterId: 0
+  cipher: auto
+  name: US_speednode_0028
+  network: ws
+  port: 443
+  server: 1762596741.bilibiliapp.cn
+  servername: 84nmwex.speed.jpsacibnb.cccp.useraaca.pp.ua
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: f744cd83-ecc4-46c5-a2ad-cf3dfa9e12a0
+  ws-opts:
+    headers:
+      Host: 84nmwex.speed.jpsacibnb.cccp.useraaca.pp.ua
+    path: /
+- alterId: 0
+  cipher: auto
+  name: US_speednode_0029
+  network: ws
+  port: 443
+  server: 1762596741.bilibiliapp.cn
+  servername: 7wl26h.speed.jpsacibna.cccp.useraaca.pp.ua
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: f744cd83-ecc4-46c5-a2ad-cf3dfa9e12a0
+  ws-opts:
+    headers:
+      Host: 7wl26h.speed.jpsacibna.cccp.useraaca.pp.ua
+    path: /
+- alterId: 0
+  cipher: auto
+  name: US_speednode_0030
+  network: ws
+  port: 443
+  server: 1762596741.bilibiliapp.cn
+  servername: i5z5l83j3.speed.ydnxya.cccp.useraaca.pp.ua
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: f744cd83-ecc4-46c5-a2ad-cf3dfa9e12a0
+  ws-opts:
+    headers:
+      Host: i5z5l83j3.speed.ydnxya.cccp.useraaca.pp.ua
+    path: /
+- cipher: aes-256-cfb
+  name: VN_speednode_0031
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.155.153
   type: ss
   udp: true
 - cipher: aes-256-cfb
-  name: VN_speednode_0021
+  name: VN_speednode_0032
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   port: 38388
-  server: 103.186.154.248
+  server: 103.186.155.110
   type: ss
   udp: true
 - cipher: aes-256-cfb
-  name: VN_speednode_0022
+  name: VN_speednode_0033
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   port: 38388
-  server: 103.186.154.53
+  server: 103.186.155.50
   type: ss
   udp: true
 - cipher: aes-256-cfb
-  name: VN_speednode_0023
+  name: VN_speednode_0034
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   port: 38388
-  server: 103.186.154.191
+  server: 103.186.155.23
   type: ss
   udp: true
 - cipher: aes-256-cfb
-  name: VN_speednode_0024
+  name: VN_speednode_0035
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   port: 38388
-  server: 103.186.155.137
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: VN_speednode_0025
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.154.254
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: VN_speednode_0026
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.154.35
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: VN_speednode_0027
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.155.126
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: VN_speednode_0028
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.155.139
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: VN_speednode_0029
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.154.194
+  server: 103.186.154.226
   type: ss
   udp: true
 proxy-groups:
@@ -256,67 +380,79 @@ proxy-groups:
   proxies:
   - "\u267B\uFE0F automatic"
   - CA_speednode_0001
-  - DK_speednode_0002
-  - FI_speednode_0003
-  - FR_speednode_0004
-  - FR_speednode_0005
-  - FR_speednode_0006
-  - GB_speednode_0007
-  - GB_speednode_0008
-  - GB_speednode_0009
+  - CA_speednode_0002
+  - CN_speednode_0003
+  - CN_speednode_0004
+  - CN_speednode_0005
+  - CY_speednode_0006
+  - FR_speednode_0007
+  - FR_speednode_0008
+  - FR_speednode_0009
   - GB_speednode_0010
   - GB_speednode_0011
-  - GB_speednode_0012
-  - GR_speednode_0013
-  - HK_speednode_0014
+  - HK_speednode_0012
+  - HK_speednode_0013
+  - IR_speednode_0014
   - IR_speednode_0015
   - IR_speednode_0016
-  - US_speednode_0017
-  - US_speednode_0018
-  - US_speednode_0019
-  - US_speednode_0020
-  - VN_speednode_0021
-  - VN_speednode_0022
-  - VN_speednode_0023
-  - VN_speednode_0024
-  - VN_speednode_0025
-  - VN_speednode_0026
-  - VN_speednode_0027
-  - VN_speednode_0028
-  - VN_speednode_0029
+  - IR_speednode_0017
+  - JP_speednode_0018
+  - KR_speednode_0019
+  - NL_speednode_0020
+  - NL_speednode_0021
+  - RO_speednode_0022
+  - RU_speednode_0023
+  - US_speednode_0024
+  - US_speednode_0025
+  - US_speednode_0026
+  - US_speednode_0027
+  - US_speednode_0028
+  - US_speednode_0029
+  - US_speednode_0030
+  - VN_speednode_0031
+  - VN_speednode_0032
+  - VN_speednode_0033
+  - VN_speednode_0034
+  - VN_speednode_0035
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
   - CA_speednode_0001
-  - DK_speednode_0002
-  - FI_speednode_0003
-  - FR_speednode_0004
-  - FR_speednode_0005
-  - FR_speednode_0006
-  - GB_speednode_0007
-  - GB_speednode_0008
-  - GB_speednode_0009
+  - CA_speednode_0002
+  - CN_speednode_0003
+  - CN_speednode_0004
+  - CN_speednode_0005
+  - CY_speednode_0006
+  - FR_speednode_0007
+  - FR_speednode_0008
+  - FR_speednode_0009
   - GB_speednode_0010
   - GB_speednode_0011
-  - GB_speednode_0012
-  - GR_speednode_0013
-  - HK_speednode_0014
+  - HK_speednode_0012
+  - HK_speednode_0013
+  - IR_speednode_0014
   - IR_speednode_0015
   - IR_speednode_0016
-  - US_speednode_0017
-  - US_speednode_0018
-  - US_speednode_0019
-  - US_speednode_0020
-  - VN_speednode_0021
-  - VN_speednode_0022
-  - VN_speednode_0023
-  - VN_speednode_0024
-  - VN_speednode_0025
-  - VN_speednode_0026
-  - VN_speednode_0027
-  - VN_speednode_0028
-  - VN_speednode_0029
+  - IR_speednode_0017
+  - JP_speednode_0018
+  - KR_speednode_0019
+  - NL_speednode_0020
+  - NL_speednode_0021
+  - RO_speednode_0022
+  - RU_speednode_0023
+  - US_speednode_0024
+  - US_speednode_0025
+  - US_speednode_0026
+  - US_speednode_0027
+  - US_speednode_0028
+  - US_speednode_0029
+  - US_speednode_0030
+  - VN_speednode_0031
+  - VN_speednode_0032
+  - VN_speednode_0033
+  - VN_speednode_0034
+  - VN_speednode_0035
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
