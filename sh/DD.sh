@@ -134,7 +134,7 @@ clashheji(){
 }
 #30x-ui安装（支持的协议：vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http）
 x-ui(){
-      bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/x-ui.sh)"
+      bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/3x-ui.sh)"
 }
 
 #31docker-青龙-elecv2p-emby-AdGuardHome-宝塔国际版-MaiARK
