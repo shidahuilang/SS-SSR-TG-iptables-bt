@@ -10,17 +10,8 @@ info()  { echo -e "${GREEN}[INFO]${NC} $*"; }
 warn()  { echo -e "${YELLOW}[WARN]${NC} $*"; }
 error() { echo -e "${RED}[ERROR]${NC} $*"; }
 
-# 判断系统
-if [[ -f /etc/os-release ]]; then
-    . /etc/os-release
-    OS=$ID
-else
-    error "无法判断操作系统，脚本退出"; exit 1
-fi
-
 has_docker() { command -v docker &>/dev/null; }
 
-# Shell 版安装
 install_shell() {
     info "开始 Shell 版安装 3x-ui …"
     bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
@@ -29,12 +20,10 @@ install_shell() {
     info "默认账号：admin   默认密码：admin"
 }
 
-# Docker 版安装
 install_docker() {
     info "开始 Docker-CLI 版安装 3x-ui …"
     mkdir -p "$PWD/db" "$PWD/cert"
 
-    # 端口占用检查（2053）
     if netstat -tuln 2>/dev/null | grep -q ':2053 '; then
         warn "宿主机 2053 端口已被占用，请先处理后再运行脚本"
         exit 1
@@ -55,7 +44,6 @@ install_docker() {
     info "默认账号：admin   默认密码：admin"
 }
 
-# 主流程
 main() {
     echo "======================================================"
     echo "        3x-ui 一键安装脚本（Shell 版 / Docker 版）"
@@ -81,4 +69,4 @@ main() {
     info "安装流程结束，祝使用愉快！"
 }
 
-main "$@
+main "$@"
