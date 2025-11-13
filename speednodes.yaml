@@ -18,35 +18,11 @@ external-controller: 127.0.0.1:9090
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: CY_speednode_0001
-  password: gXOXk2FJwsz9P6nXIICuDNOqF9gWX1dn
-  port: 443
-  server: 185.156.110.92
-  type: ss
-  udp: true
-- name: HK_speednode_0004
-  password: BxceQaOe
-  port: 4569
-  server: 116.49.237.130
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-  udp: true
-- name: KR_speednode_0005
-  password: test.+
-  port: 30446
-  server: testkr3.ssv.vc
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  username: test
-- name: NL_speednode_0006
+- name: BE_speednode_0001
   network: ws
-  password: c2d6a850-7e35-44f5-ab9f-8299f6f8c72b
+  password: 88701884-7690-4b79-ac5d-36d299e05e83
   port: 443
-  server: 194.147.115.149
+  server: 34.22.190.30
   skip-cert-verify: false
   sni: joss.dus.biz.id
   type: trojan
@@ -54,12 +30,12 @@ proxies:
   ws-opts:
     headers:
       Host: joss.dus.biz.id
-    path: /Free-VPN-CF-Geo-Project/194.147.115.149=443
-- name: PL_speednode_0007
+    path: /Free-VPN-CF-Geo-Project/34.22.190.30=443
+- name: IL_speednode_0008
   network: ws
-  password: 49d416e1-4cec-41e1-bff6-3748c466f275
-  port: 8443
-  server: 45.144.48.158
+  password: a5a3350e-6ea2-4e12-ae84-20db849ce1fc
+  port: 81
+  server: 94.131.114.50
   skip-cert-verify: false
   sni: joss.dus.biz.id
   type: trojan
@@ -67,11 +43,86 @@ proxies:
   ws-opts:
     headers:
       Host: joss.dus.biz.id
-    path: /Free-VPN-CF-Geo-Project/45.144.48.158=8443
+    path: /Free-VPN-CF-Geo-Project/94.131.114.50=81
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: RU_speednode_0008
-  port: 10012
+  name: IQ_speednode_0010
+  port: 443
+  reality-opts:
+    public-key: MNTWCLyV7EquFn-J0a6KRlQZ0dt6QY5mmu7Dq8uDkxw
+    short-id: 4c02bbbfa833b3b6
+  server: ges.jykvpn.com
+  servername: cdnjs.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 56718b04-3fe6-4ef3-a61f-cd9b3b5f64f1
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: IQ_speednode_0011
+  port: 443
+  reality-opts:
+    public-key: MNTWCLyV7EquFn-J0a6KRlQZ0dt6QY5mmu7Dq8uDkxw
+    short-id: 4c02bbbfa833b3b6
+  server: fis.jykvpn.com
+  servername: cdnjs.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 56718b04-3fe6-4ef3-a61f-cd9b3b5f64f1
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: IQ_speednode_0012
+  port: 443
+  reality-opts:
+    public-key: MNTWCLyV7EquFn-J0a6KRlQZ0dt6QY5mmu7Dq8uDkxw
+    short-id: 4c02bbbfa833b3b6
+  server: sws.jykvpn.com
+  servername: cdnjs.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 56718b04-3fe6-4ef3-a61f-cd9b3b5f64f1
+- cipher: chacha20-ietf-poly1305
+  name: MD_speednode_0013
+  password: pl2XtR0pzwknQOGwewbwXtPYDw1zn9Vu
+  port: 443
+  server: 213.159.66.206
+  type: ss
+  udp: true
+- name: NL_speednode_0015
+  network: ws
+  password: 5ad5fe82-6b60-4f59-977b-93910ef7a9ca
+  port: 443
+  server: 86.107.197.239
+  skip-cert-verify: false
+  sni: joss.dus.biz.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: joss.dus.biz.id
+    path: /Free-VPN-CF-Geo-Project/86.107.197.239=443
+- name: PL_speednode_0016
+  network: ws
+  password: 55d19115-ec40-407b-a674-74e6a948347a
+  port: 2053
+  server: 45.144.48.55
+  skip-cert-verify: false
+  sni: joss.dus.biz.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: joss.dus.biz.id
+    path: /Free-VPN-CF-Geo-Project/45.144.48.55=2053
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: RU_speednode_0017
+  port: 10007
   reality-opts:
     public-key: X8bSZA_Q-ReshpPEd17oMU7YfZlHWoOEGB7HM8ZSmXk
     short-id: abc82912
@@ -82,7 +133,7 @@ proxies:
   type: vless
   udp: true
   uuid: 258a5f07-d07e-4de4-90b6-69a0ca34bab7
-- name: RU_speednode_0009
+- name: RU_speednode_0018
   network: ws
   password: 14d6efcf-b0d3-4054-9d4e-e1347e3ceaa2
   port: 2053
@@ -95,44 +146,83 @@ proxies:
     headers:
       Host: joss.dus.biz.id
     path: /Free-VPN-CF-Geo-Project/213.159.208.88=2053
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: US_speednode_0019
+- name: SE_speednode_0020
+  network: ws
+  password: edeff73d-065d-4b0a-b848-aad9d3380223
   port: 443
-  reality-opts:
-    public-key: g0EvKBte8zYrEc8oF0VNhxvIqqUvNXCp54UWYekc60k
-    short-id: f529bb49dc4de6
-  server: 104.167.199.50
-  servername: bit-site.ru
+  server: 77.221.141.207
   skip-cert-verify: false
-  tls: true
+  sni: joss.dus.biz.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: joss.dus.biz.id
+    path: /Free-VPN-CF-Geo-Project/77.221.141.207=443
+- name: US_speednode_0025
+  network: ws
+  port: 2052
+  server: br.pouriau.com
+  servername: rosiassn.digikala.com.snnapfood.ir.varzesh3.com.shobb.ir.kdvhgkri558rvhnfjrdghriuygfkrdhihifjdfjssiedhfgjung2.bonyadedocker.ir.2.xziba.com.
+  skip-cert-verify: false
+  tls: false
   type: vless
   udp: true
-  uuid: b25e3c62-f4eb-45df-adda-eb738959b845
+  uuid: bc4ee22b-87f5-4bc0-b0f5-3cd802d716e2
+  ws-opts:
+    headers:
+      Host: rosiassn.digikala.com.snnapfood.ir.varzesh3.com.shobb.ir.kdvhgkri558rvhnfjrdghriuygfkrdhihifjdfjssiedhfgjung2.bonyadedocker.ir.2.xziba.com.
+    path: /---ping---www.speedtest.net?ed=2080
+- cipher: aes-256-cfb
+  name: VN_speednode_0026
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.155.103
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: VN_speednode_0027
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.57
+  type: ss
+  udp: true
 proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
   - "\u267B\uFE0F automatic"
-  - CY_speednode_0001
-  - HK_speednode_0004
-  - KR_speednode_0005
-  - NL_speednode_0006
-  - PL_speednode_0007
-  - RU_speednode_0008
-  - RU_speednode_0009
-  - US_speednode_0019
+  - BE_speednode_0001
+  - IL_speednode_0008
+  - IQ_speednode_0010
+  - IQ_speednode_0011
+  - IQ_speednode_0012
+  - MD_speednode_0013
+  - NL_speednode_0015
+  - PL_speednode_0016
+  - RU_speednode_0017
+  - RU_speednode_0018
+  - SE_speednode_0020
+  - US_speednode_0025
+  - VN_speednode_0026
+  - VN_speednode_0027
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
-  - CY_speednode_0001
-  - HK_speednode_0004
-  - KR_speednode_0005
-  - NL_speednode_0006
-  - PL_speednode_0007
-  - RU_speednode_0008
-  - RU_speednode_0009
-  - US_speednode_0019
+  - BE_speednode_0001
+  - IL_speednode_0008
+  - IQ_speednode_0010
+  - IQ_speednode_0011
+  - IQ_speednode_0012
+  - MD_speednode_0013
+  - NL_speednode_0015
+  - PL_speednode_0016
+  - RU_speednode_0017
+  - RU_speednode_0018
+  - SE_speednode_0020
+  - US_speednode_0025
+  - VN_speednode_0026
+  - VN_speednode_0027
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
