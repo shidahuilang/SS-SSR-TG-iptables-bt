@@ -18,19 +18,25 @@ external-controller: 127.0.0.1:9090
 mode: rule
 port: 7890
 proxies:
-- name: CH_speednode_0001
-  password: 019a8c1f-3d28-74e8-8a8e-40045d7ec77f
+- cipher: chacha20-ietf-poly1305
+  name: CN_speednode_0001
+  password: db8a0e6b-5fd7-435d-9558-5c86b0679c4d
+  port: 48907
+  server: slur.izenny.com
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: DE_speednode_0002
+  password: amazonskr05
   port: 443
-  server: 194.87.18.124
-  skip-cert-verify: true
-  sni: www.bilibili.com
-  type: trojan
+  server: 18.199.91.56
+  type: ss
   udp: true
 - alpn:
   - h3
   auth_str: dongtaiwang.com
   down: 100 Mbps
-  name: FR_speednode_0002
+  name: FR_speednode_0003
   port: 15010
   protocol: udp
   server: 195.154.200.40
@@ -43,7 +49,7 @@ proxies:
   - h3
   auth_str: dongtaiwang.com
   down: 55 Mbps
-  name: FR_speednode_0003
+  name: FR_speednode_0004
   port: 49003
   protocol: udp
   server: 51.159.226.1
@@ -56,7 +62,7 @@ proxies:
   - h3
   auth_str: dongtaiwang.com
   down: 55 Mbps
-  name: FR_speednode_0004
+  name: FR_speednode_0005
   port: 50011
   protocol: udp
   server: 62.210.10.186
@@ -67,7 +73,7 @@ proxies:
   up: 11 Mbps
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: GB_speednode_0005
+  name: GB_speednode_0006
   port: 443
   reality-opts:
     public-key: Mn0DIMKW6zu0_D3E1qKO7xMlIVZvB-rqO_-f7Le2vAs
@@ -79,50 +85,86 @@ proxies:
   type: vless
   udp: true
   uuid: bccbecc9-c1d2-45d1-b3fa-771a19b9831c
-- name: IL_speednode_0006
-  password: 019a8c1f-3d28-74e8-8a8e-40045d7ec77f
+- cipher: chacha20-ietf-poly1305
+  name: HK_speednode_0007
+  password: aa5dbc25-0377-4e1d-8b81-bec6cf9ecff5
+  port: 10012
+  server: 154.16.10.201
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: HK_speednode_0008
+  password: 3079fa79-fb20-45a6-8e42-cb332a8e26b1
+  port: 10012
+  server: 154.16.10.201
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: HK_speednode_0009
+  password: 8bd43408-d561-4bf7-b5fb-152acaa8fe34
+  port: 10012
+  server: 154.16.10.201
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: HK_speednode_0010
+  password: 6ee5a5d3-c2c8-4549-b09d-7a9e90f607e2
+  port: 10012
+  server: 154.16.10.201
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: HK_speednode_0011
+  password: 715ed7ef-db8d-4e21-94d6-e0fc14e3ce18
+  port: 10012
+  server: 154.16.10.201
+  type: ss
+  udp: true
+- name: HK_speednode_0012
+  password: BxceQaOe
   port: 443
-  server: 45.144.172.243
+  server: 58.152.26.173
   skip-cert-verify: true
-  sni: www.bilibili.com
+  sni: t.me%2Fripaojiedian
   type: trojan
   udp: true
-- cipher: aes-256-gcm
-  name: JP_speednode_0007
-  password: dada0801
-  port: 80
-  server: 43.206.240.31
-  type: ss
+- name: HK_speednode_0013
+  password: BxceQaOe
+  port: 443
+  server: 58.152.26.173
+  skip-cert-verify: true
+  sni: t.me/ripaojiedian
+  type: trojan
   udp: true
-- cipher: aes-256-gcm
-  name: KR_speednode_0008
-  password: dada0801
-  port: 80
-  server: 43.201.70.24
-  type: ss
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: IL_speednode_0014
+  port: 443
+  reality-opts:
+    public-key: YVDo7U4O-AT2fa5H9E7hyYHKgfZd1vB6UdbAf2ggWQE
+    short-id: 55e6af1a35e64a98
+  server: ilta-wzxrxkdhbjpnprhkkpplsjwawhssvollvxzdhqshiqckwdgrdm.orbnet.xyz
+  servername: i2pd.website
+  skip-cert-verify: false
+  tls: true
+  type: vless
   udp: true
-- cipher: aes-256-gcm
-  name: KR_speednode_0009
-  password: dada0801
-  port: 80
-  server: 54.180.202.139
-  type: ss
+  uuid: 0e8a6896-ad90-4a3b-89a3-77d64aa409e2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: RU_speednode_0015
+  port: 51224
+  reality-opts:
+    public-key: DvKMFkm82Jkp6Jk_7pXYb0fMXq1MsLMNxDeQfcCSbEA
+    short-id: ab12cd34
+  server: ru-msk.shvurgceo.online
+  servername: download.max.ru
+  skip-cert-verify: false
+  tls: true
+  type: vless
   udp: true
-- cipher: aes-256-gcm
-  name: KR_speednode_0010
-  password: dada0801
-  port: 80
-  server: 43.203.199.246
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: KR_speednode_0011
-  password: dada0801
-  port: 80
-  server: 13.209.14.105
-  type: ss
-  udp: true
-- name: RU_speednode_0012
+  uuid: 14305246-dc93-4b3c-9f6c-d0b29fa7e4fa
+- name: RU_speednode_0016
   network: ws
   port: 1443
   server: 81.161.98.228
@@ -136,58 +178,57 @@ proxies:
     headers:
       Host: cdn.filterai.ru
     path: /websocketpl
-- name: US_speednode_0013
-  password: 019a8c1f-3d28-74e8-8a8e-40045d7ec77f
+- name: US_speednode_0017
+  password: ea93064c-176c-11f0-885d-f23c91cfbbc9
   port: 443
-  server: 108.165.255.5
-  skip-cert-verify: true
-  sni: www.bilibili.com
-  type: trojan
-  udp: true
-- name: US_speednode_0014
-  password: 019a8c1f-3d28-74e8-8a8e-40045d7ec77f
-  port: 443
-  server: 96.126.190.132
-  skip-cert-verify: true
-  sni: www.bilibili.com
-  type: trojan
+  ports: 30000-60000
+  server: 2f09a1f8-t63340-t7hjku-1rgxu.us.hyhuawei.com
+  skip-cert-verify: false
+  sni: 2f09a1f8-t63340-t7hjku-1rgxu.us.hyhuawei.com
+  type: hysteria2
   udp: true
 proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
   - "\u267B\uFE0F automatic"
-  - CH_speednode_0001
-  - FR_speednode_0002
+  - CN_speednode_0001
+  - DE_speednode_0002
   - FR_speednode_0003
   - FR_speednode_0004
-  - GB_speednode_0005
-  - IL_speednode_0006
-  - JP_speednode_0007
-  - KR_speednode_0008
-  - KR_speednode_0009
-  - KR_speednode_0010
-  - KR_speednode_0011
-  - RU_speednode_0012
-  - US_speednode_0013
-  - US_speednode_0014
+  - FR_speednode_0005
+  - GB_speednode_0006
+  - HK_speednode_0007
+  - HK_speednode_0008
+  - HK_speednode_0009
+  - HK_speednode_0010
+  - HK_speednode_0011
+  - HK_speednode_0012
+  - HK_speednode_0013
+  - IL_speednode_0014
+  - RU_speednode_0015
+  - RU_speednode_0016
+  - US_speednode_0017
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
-  - CH_speednode_0001
-  - FR_speednode_0002
+  - CN_speednode_0001
+  - DE_speednode_0002
   - FR_speednode_0003
   - FR_speednode_0004
-  - GB_speednode_0005
-  - IL_speednode_0006
-  - JP_speednode_0007
-  - KR_speednode_0008
-  - KR_speednode_0009
-  - KR_speednode_0010
-  - KR_speednode_0011
-  - RU_speednode_0012
-  - US_speednode_0013
-  - US_speednode_0014
+  - FR_speednode_0005
+  - GB_speednode_0006
+  - HK_speednode_0007
+  - HK_speednode_0008
+  - HK_speednode_0009
+  - HK_speednode_0010
+  - HK_speednode_0011
+  - HK_speednode_0012
+  - HK_speednode_0013
+  - IL_speednode_0014
+  - RU_speednode_0015
+  - RU_speednode_0016
+  - US_speednode_0017
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
