@@ -18,25 +18,124 @@ external-controller: 127.0.0.1:9090
 mode: rule
 port: 7890
 proxies:
+- client-fingerprint: chrome
+  name: BG_speednode_0001
+  network: ws
+  port: 24443
+  server: 178.239.123.216
+  servername: vless3.datatestvless.click
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: aa7f42cc-616f-4550-9a87-4b85bb409121
+  ws-opts:
+    headers:
+      Host: vless3.datatestvless.click
+    path: /?ed=2560
 - cipher: chacha20-ietf-poly1305
-  name: CN_speednode_0001
+  name: CN_speednode_0002
+  password: db8a0e6b-5fd7-435d-9558-5c86b0679c4d
+  port: 55407
+  server: slur.izenny.com
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: CN_speednode_0003
+  password: d9b85218-da37-42a7-8906-67bab810252c
+  port: 55407
+  server: slur.izenny.com
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: CN_speednode_0004
+  password: db8a0e6b-5fd7-435d-9558-5c86b0679c4d
+  port: 40063
+  server: slur.izenny.com
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: CN_speednode_0005
   password: db8a0e6b-5fd7-435d-9558-5c86b0679c4d
   port: 48907
   server: slur.izenny.com
   type: ss
   udp: true
-- cipher: aes-256-cfb
-  name: DE_speednode_0002
-  password: amazonskr05
-  port: 443
-  server: 18.199.91.56
+- cipher: aes-128-gcm
+  name: CN_speednode_0006
+  password: 79ad2852-eb76-4c3e-ba4d-3668ee5ece74
+  port: 23344
+  server: 103.219.103.217
   type: ss
   udp: true
+- name: EE_speednode_0007
+  network: ws
+  password: 3208e968-b862-4e2e-ad90-2b49e7ce7afb
+  port: 443
+  server: 37.252.5.75
+  skip-cert-verify: false
+  sni: joss.gpj1.web.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: joss.gpj1.web.id
+    path: /Free-VPN-CF-Geo-Project/37.252.5.75=443
+- name: ES_speednode_0008
+  network: ws
+  password: 1e1a7efa-a4f1-4936-a470-a001e0c3c85b
+  port: 8443
+  server: 212.227.144.37
+  skip-cert-verify: false
+  sni: joss.gpj1.web.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: joss.gpj1.web.id
+    path: /Free-VPN-CF-Geo-Project/212.227.144.37=8443
+- congestion-controller: bbr
+  disable-sni: false
+  name: FI_speednode_0009
+  password: 341e05a4-aa65-480c-82d2-02e8070e236b
+  port: 20800
+  reduce-rtt: false
+  request-timeout: 0
+  server: fi5.bot-hosting.net
+  skip-cert-verify: true
+  sni: example.com
+  type: tuic
+  uuid: 341e05a4-aa65-480c-82d2-02e8070e236b
+- congestion-controller: bbr
+  disable-sni: false
+  name: FI_speednode_0010
+  password: 93446edf-f12d-4a6f-85eb-13c7670c0dd6
+  port: 20800
+  reduce-rtt: false
+  request-timeout: 0
+  server: fi5.bot-hosting.net
+  skip-cert-verify: true
+  sni: example.com
+  type: tuic
+  uuid: 93446edf-f12d-4a6f-85eb-13c7670c0dd6
+- name: FR_speednode_0011
+  network: ws
+  password: e6f0e8b0-3dc5-4d53-a23a-86c02d5ba098
+  port: 443
+  server: 51.15.210.1
+  skip-cert-verify: false
+  sni: joss.gpj1.web.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: joss.gpj1.web.id
+    path: /Free-VPN-CF-Geo-Project/51.15.210.1=443
 - alpn:
   - h3
   auth_str: dongtaiwang.com
   down: 100 Mbps
-  name: FR_speednode_0003
+  name: FR_speednode_0012
   port: 15010
   protocol: udp
   server: 195.154.200.40
@@ -45,126 +144,134 @@ proxies:
   type: hysteria
   udp: true
   up: 100 Mbps
-- alpn:
-  - h3
-  auth_str: dongtaiwang.com
-  down: 55 Mbps
-  name: FR_speednode_0004
-  port: 49003
-  protocol: udp
-  server: 51.159.226.1
-  skip-cert-verify: true
-  sni: apple.com
-  type: hysteria
-  udp: true
-  up: 11 Mbps
-- alpn:
-  - h3
-  auth_str: dongtaiwang.com
-  down: 55 Mbps
-  name: FR_speednode_0005
-  port: 50011
-  protocol: udp
-  server: 62.210.10.186
-  skip-cert-verify: true
-  sni: apple.com
-  type: hysteria
-  udp: true
-  up: 11 Mbps
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: GB_speednode_0006
-  port: 443
-  reality-opts:
-    public-key: Mn0DIMKW6zu0_D3E1qKO7xMlIVZvB-rqO_-f7Le2vAs
-    short-id: 428ef87fd47a3a32
-  server: nl.nodes.rocketnetwork.ru
-  servername: nl.nodes.rocketnetwork.ru
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: bccbecc9-c1d2-45d1-b3fa-771a19b9831c
-- cipher: chacha20-ietf-poly1305
-  name: HK_speednode_0007
-  password: aa5dbc25-0377-4e1d-8b81-bec6cf9ecff5
-  port: 10012
-  server: 154.16.10.201
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: HK_speednode_0008
-  password: 3079fa79-fb20-45a6-8e42-cb332a8e26b1
-  port: 10012
-  server: 154.16.10.201
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: HK_speednode_0009
-  password: 8bd43408-d561-4bf7-b5fb-152acaa8fe34
-  port: 10012
-  server: 154.16.10.201
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: HK_speednode_0010
-  password: 6ee5a5d3-c2c8-4549-b09d-7a9e90f607e2
-  port: 10012
-  server: 154.16.10.201
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: HK_speednode_0011
-  password: 715ed7ef-db8d-4e21-94d6-e0fc14e3ce18
-  port: 10012
-  server: 154.16.10.201
-  type: ss
-  udp: true
-- name: HK_speednode_0012
+- name: HK_speednode_0013
   password: BxceQaOe
   port: 443
-  server: 58.152.26.173
+  server: 58.152.25.241
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
   udp: true
-- name: HK_speednode_0013
-  password: BxceQaOe
+- name: IL_speednode_0014
+  network: ws
+  password: 8f58ba37-a117-4ad3-9422-37b62e01d2e6
   port: 443
-  server: 58.152.26.173
-  skip-cert-verify: true
-  sni: t.me/ripaojiedian
+  server: 77.91.74.6
+  skip-cert-verify: false
+  sni: joss.gpj1.web.id
   type: trojan
   udp: true
-- client-fingerprint: chrome
+  ws-opts:
+    headers:
+      Host: joss.gpj1.web.id
+    path: /Free-VPN-CF-Geo-Project/77.91.74.6=443
+- cipher: chacha20-ietf-poly1305
+  name: IR_speednode_0015
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 151.242.251.142
+  type: ss
+  udp: true
+- client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: IL_speednode_0014
+  name: IR_speednode_0016
+  port: 18000
+  reality-opts:
+    public-key: hlRqquCI6AiCSbifwaNIlf_fVoHols95S2A1OG8xnVk
+  server: hl.kunlun01.com
+  servername: s0.awsstatic.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2f1b82ea-7186-4655-88d3-b06478519fef
+- http-opts:
+    headers:
+      Host:
+      - Telewebion.com
+    method: GET
+    path:
+    - /
+  name: IR_speednode_0017
+  network: http
+  port: 20532
+  server: 94.182.137.12
+  servername: Telewebion.com
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 8496c102-4094-4dd3-ad63-7bb7a35cbaee
+- alterId: 0
+  cipher: auto
+  name: JP_speednode_0018
+  network: ws
+  port: 11655
+  server: 131.186.63.89
+  servername: hk.nbee.pp.ua
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 4bf075f5-4d5e-4d39-f5ab-b32a86250f0e
+  ws-opts:
+    headers:
+      Host: hk.nbee.pp.ua
+    path: /aa
+- cipher: aes-256-gcm
+  name: KR_speednode_0019
+  password: dada0801
+  port: 80
+  server: 13.124.194.133
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: MD_speednode_0020
+  password: pl2XtR0pzwknQOGwewbwXtPYDw1zn9Vu
   port: 443
-  reality-opts:
-    public-key: YVDo7U4O-AT2fa5H9E7hyYHKgfZd1vB6UdbAf2ggWQE
-    short-id: 55e6af1a35e64a98
-  server: ilta-wzxrxkdhbjpnprhkkpplsjwawhssvollvxzdhqshiqckwdgrdm.orbnet.xyz
-  servername: i2pd.website
-  skip-cert-verify: false
-  tls: true
-  type: vless
+  server: 213.159.66.206
+  type: ss
   udp: true
-  uuid: 0e8a6896-ad90-4a3b-89a3-77d64aa409e2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU_speednode_0015
-  port: 51224
-  reality-opts:
-    public-key: DvKMFkm82Jkp6Jk_7pXYb0fMXq1MsLMNxDeQfcCSbEA
-    short-id: ab12cd34
-  server: ru-msk.shvurgceo.online
-  servername: download.max.ru
+- name: NL_speednode_0021
+  network: ws
+  password: 0311306e-56d4-4aa1-bde5-8cede7fcd3e4
+  port: 443
+  server: 138.124.30.8
   skip-cert-verify: false
-  tls: true
-  type: vless
+  sni: joss.gpj1.web.id
+  type: trojan
   udp: true
-  uuid: 14305246-dc93-4b3c-9f6c-d0b29fa7e4fa
-- name: RU_speednode_0016
+  ws-opts:
+    headers:
+      Host: joss.gpj1.web.id
+    path: /Free-VPN-CF-Geo-Project/138.124.30.8=443
+- name: PL_speednode_0022
+  network: ws
+  password: 422d402c-58f1-4473-abeb-fe6e69dc97ed
+  port: 8443
+  server: 217.30.10.31
+  skip-cert-verify: false
+  sni: joss.gpj1.web.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: joss.gpj1.web.id
+    path: /Free-VPN-CF-Geo-Project/217.30.10.31=8443
+- name: PT_speednode_0023
+  network: ws
+  password: 6ead60c4-4321-45d5-81a9-ba4835f7c692
+  port: 81
+  server: 45.159.251.8
+  skip-cert-verify: false
+  sni: joss.gpj1.web.id
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: joss.gpj1.web.id
+    path: /Free-VPN-CF-Geo-Project/45.159.251.8=81
+- name: RU_speednode_0024
   network: ws
   port: 1443
   server: 81.161.98.228
@@ -178,57 +285,160 @@ proxies:
     headers:
       Host: cdn.filterai.ru
     path: /websocketpl
-- name: US_speednode_0017
-  password: ea93064c-176c-11f0-885d-f23c91cfbbc9
-  port: 443
-  ports: 30000-60000
-  server: 2f09a1f8-t63340-t7hjku-1rgxu.us.hyhuawei.com
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: RU_speednode_0025
+  port: 51224
+  reality-opts:
+    public-key: DvKMFkm82Jkp6Jk_7pXYb0fMXq1MsLMNxDeQfcCSbEA
+    short-id: ab12cd34
+  server: ru-msk.shvurgceo.online
+  servername: download.max.ru
   skip-cert-verify: false
-  sni: 2f09a1f8-t63340-t7hjku-1rgxu.us.hyhuawei.com
-  type: hysteria2
+  tls: true
+  type: vless
+  udp: true
+  uuid: 14305246-dc93-4b3c-9f6c-d0b29fa7e4fa
+- name: TW_speednode_0026
+  password: exaxgqkKkd0TAMrCxeonWg==
+  port: 1443
+  server: twmoon1-cdn-route.couldflare-cdn.com
+  tls: true
+  type: http
+  udp: true
+  username: mrwdfNTD8M79LCukCieldrqZWqs=
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: TW_speednode_0027
+  port: 14090
+  reality-opts:
+    public-key: hlRqquCI6AiCSbifwaNIlf_fVoHols95S2A1OG8xnVk
+  server: tw.kunlun01.com
+  servername: s0.awsstatic.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2f1b82ea-7186-4655-88d3-b06478519fef
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: TW_speednode_0028
+  port: 20519
+  reality-opts:
+    public-key: fbABzUObM1ehY0C9V83p34p8ah9w2s4lDrdAiXdzGxI
+    short-id: 4b070735
+  server: hinet2.gzcloud.shop
+  servername: buylite.music.apple.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 04793d5b-1b79-49fc-b5f9-2e8ce0e3ebc6
+- name: US_speednode_0029
+  network: ws
+  port: 80
+  server: www.speedtest.net
+  servername: websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: e1f6bc5b-cbc2-49bb-8f26-1bf8bb85d18a
+  ws-opts:
+    headers:
+      Host: websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.
+    path: /@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy
+- name: US_speednode_0030
+  network: ws
+  port: 80
+  server: 172.66.156.81
+  servername: websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: e1f6bc5b-cbc2-49bb-8f26-1bf8bb85d18a
+  ws-opts:
+    headers:
+      Host: websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.
+    path: /@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy
+- cipher: aes-256-cfb
+  name: VN_speednode_0031
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.252
+  type: ss
   udp: true
 proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
   - "\u267B\uFE0F automatic"
-  - CN_speednode_0001
-  - DE_speednode_0002
-  - FR_speednode_0003
-  - FR_speednode_0004
-  - FR_speednode_0005
-  - GB_speednode_0006
-  - HK_speednode_0007
-  - HK_speednode_0008
-  - HK_speednode_0009
-  - HK_speednode_0010
-  - HK_speednode_0011
-  - HK_speednode_0012
+  - BG_speednode_0001
+  - CN_speednode_0002
+  - CN_speednode_0003
+  - CN_speednode_0004
+  - CN_speednode_0005
+  - CN_speednode_0006
+  - EE_speednode_0007
+  - ES_speednode_0008
+  - FI_speednode_0009
+  - FI_speednode_0010
+  - FR_speednode_0011
+  - FR_speednode_0012
   - HK_speednode_0013
   - IL_speednode_0014
-  - RU_speednode_0015
-  - RU_speednode_0016
-  - US_speednode_0017
+  - IR_speednode_0015
+  - IR_speednode_0016
+  - IR_speednode_0017
+  - JP_speednode_0018
+  - KR_speednode_0019
+  - MD_speednode_0020
+  - NL_speednode_0021
+  - PL_speednode_0022
+  - PT_speednode_0023
+  - RU_speednode_0024
+  - RU_speednode_0025
+  - TW_speednode_0026
+  - TW_speednode_0027
+  - TW_speednode_0028
+  - US_speednode_0029
+  - US_speednode_0030
+  - VN_speednode_0031
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
-  - CN_speednode_0001
-  - DE_speednode_0002
-  - FR_speednode_0003
-  - FR_speednode_0004
-  - FR_speednode_0005
-  - GB_speednode_0006
-  - HK_speednode_0007
-  - HK_speednode_0008
-  - HK_speednode_0009
-  - HK_speednode_0010
-  - HK_speednode_0011
-  - HK_speednode_0012
+  - BG_speednode_0001
+  - CN_speednode_0002
+  - CN_speednode_0003
+  - CN_speednode_0004
+  - CN_speednode_0005
+  - CN_speednode_0006
+  - EE_speednode_0007
+  - ES_speednode_0008
+  - FI_speednode_0009
+  - FI_speednode_0010
+  - FR_speednode_0011
+  - FR_speednode_0012
   - HK_speednode_0013
   - IL_speednode_0014
-  - RU_speednode_0015
-  - RU_speednode_0016
-  - US_speednode_0017
+  - IR_speednode_0015
+  - IR_speednode_0016
+  - IR_speednode_0017
+  - JP_speednode_0018
+  - KR_speednode_0019
+  - MD_speednode_0020
+  - NL_speednode_0021
+  - PL_speednode_0022
+  - PT_speednode_0023
+  - RU_speednode_0024
+  - RU_speednode_0025
+  - TW_speednode_0026
+  - TW_speednode_0027
+  - TW_speednode_0028
+  - US_speednode_0029
+  - US_speednode_0030
+  - VN_speednode_0031
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
