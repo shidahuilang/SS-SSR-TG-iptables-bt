@@ -18,42 +18,11 @@ external-controller: 127.0.0.1:9090
 mode: rule
 port: 7890
 proxies:
-- cipher: aes-256-gcm
-  name: CA_speednode_0001
-  password: 0690659746980c46
-  port: 10081
-  server: 167.17.179.197
-  type: ss
-  udp: true
-- name: DE_speednode_0002
-  network: ws
-  port: 80
-  server: fs.ir-sub.fun
-  servername: zedd.global.ssl.fastly.net
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 2e9177ce-d1cc-45cd-b27f-f16f8fbc117a
-  ws-opts:
-    headers:
-      Host: zedd.global.ssl.fastly.net
-    path: /ZEDMODEON-ZEDMODEON-bia-ZEDMODEON
-- alterId: 0
-  cipher: auto
-  name: ES_speednode_0003
-  port: 29431
-  server: 185.221.23.251
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 8b78363e-3c3a-44ab-f0d8-f13d950c8572
 - alpn:
   - h3
   auth_str: dongtaiwang.com
-  down: 100 Mbps
-  name: FR_speednode_0004
+  down: '100'
+  name: FR_speednode_0001
   port: 15010
   protocol: udp
   server: 195.154.200.40
@@ -61,87 +30,132 @@ proxies:
   sni: apple.com
   type: hysteria
   udp: true
-  up: 100 Mbps
-- name: HK_speednode_0005
-  password: a664d16a-4e47-11ef-9d7e-f23c9164ca5d
-  port: 443
-  ports: 30000-60000
-  server: e9a7425a-t729s0-t7u86c-1s2ks.hk2.hyhuawei.com
-  skip-cert-verify: false
-  type: hysteria2
+  up: '100'
+- alpn:
+  - h3
+  auth_str: dongtaiwang.com
+  down: '55'
+  name: FR_speednode_0002
+  port: 49003
+  protocol: udp
+  server: 51.159.226.1
+  skip-cert-verify: true
+  sni: apple.com
+  type: hysteria
   udp: true
+  up: '11'
 - alterId: 2
   cipher: auto
-  name: HK_speednode_0006
+  name: HK_speednode_0003
   network: ws
   port: 80
-  server: 73d73acd-sv2sg0-t7bo2t-1psmw.hk3.p5pv.com
+  server: 6b961a0a-sv4n40-t83wtx-2rrb.hk3.p5pv.com
   servername: broadcastlv.chat.bilibili.com
   skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
-  uuid: 42bb6d36-97c7-11ee-be7f-f23c9164ca5d
-- name: KR_speednode_0007
-  port: 1090
-  server: 121.169.46.116
-  type: socks5
+  uuid: ba64cdc5-c79a-326d-8e63-6903be8183a1
+- name: HK_speednode_0004
+  password: 76d630f2af6619c4a5de0ef953df3c6a
+  port: 443
+  server: 58.152.110.82
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
   udp: true
+- client-fingerprint: chrome
+  name: IL_speednode_0005
+  port: 24170
+  reality-opts:
+    public-key: VsmNi1ZMXVOwhCWpbCp51w-D_DzrxWX4jgfpcU0S9G4
+    short-id: 2fb2106a629b
+  server: 185.136.132.171
+  servername: speedtest.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: fe21e399-ec6f-4cb5-8441-e911178665b1
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: RU_speednode_0008
-  port: 2443
+  name: RU_speednode_0006
+  port: 4443
   reality-opts:
-    public-key: IgaNLuUg1JOIoUdX4CegMU_XBU35B5RAYRL_-KZfpSY
-    short-id: c84a28bb05989ff4
-  server: 158.160.175.98
-  servername: yandex.ru
+    public-key: 5XB_N3ATilH-6tp_MXht-84_y5YaJnx_Z7MbuY2otHE
+    short-id: aa7e96542880027a
+  server: 80.90.186.91
+  servername: github.com
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: 62b0e46b-d2a5-423d-8457-95bde707fc19
+  uuid: 3121850a-24aa-41f9-936d-dbdf10a3b31f
 - client-fingerprint: chrome
-  name: US_speednode_0009
-  network: ws
-  port: 443
-  server: 69.84.182.13
-  servername: fr-1-fr-1.aiopen.sbs
+  name: RU_speednode_0007
+  port: 52900
+  reality-opts:
+    public-key: AjYSCSFHfqOg-NbP_ngiRvJkKNKZXuHNDa1sJd4TRRQ
+    short-id: 1fbc
+  server: 62.113.42.65
+  servername: ozon.ru
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: 1347acec-0c12-46c0-9436-19603093d9ab
-  ws-opts:
-    headers:
-      Host: fr-1-fr-1.aiopen.sbs
-    path: /kbjc/fr1
+  uuid: 97e7c83c-9346-49b4-85a5-1e3bbf7488b9
+- client-fingerprint: chrome
+  name: RU_speednode_0008
+  port: 52900
+  reality-opts:
+    public-key: AjYSCSFHfqOg-NbP_ngiRvJkKNKZXuHNDa1sJd4TRRQ
+    short-id: 1fbc
+  server: wolfy.ufavpn.ru
+  servername: ozon.ru
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 97e7c83c-9346-49b4-85a5-1e3bbf7488b9
+- client-fingerprint: chrome
+  name: RU_speednode_0009
+  port: 35728
+  reality-opts:
+    public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
+    short-id: 69a2
+  server: 178.236.16.98
+  servername: yahoo.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
 proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
   - "\u267B\uFE0F automatic"
-  - CA_speednode_0001
-  - DE_speednode_0002
-  - ES_speednode_0003
-  - FR_speednode_0004
-  - HK_speednode_0005
-  - HK_speednode_0006
-  - KR_speednode_0007
+  - FR_speednode_0001
+  - FR_speednode_0002
+  - HK_speednode_0003
+  - HK_speednode_0004
+  - IL_speednode_0005
+  - RU_speednode_0006
+  - RU_speednode_0007
   - RU_speednode_0008
-  - US_speednode_0009
+  - RU_speednode_0009
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
-  - CA_speednode_0001
-  - DE_speednode_0002
-  - ES_speednode_0003
-  - FR_speednode_0004
-  - HK_speednode_0005
-  - HK_speednode_0006
-  - KR_speednode_0007
+  - FR_speednode_0001
+  - FR_speednode_0002
+  - HK_speednode_0003
+  - HK_speednode_0004
+  - IL_speednode_0005
+  - RU_speednode_0006
+  - RU_speednode_0007
   - RU_speednode_0008
-  - US_speednode_0009
+  - RU_speednode_0009
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
