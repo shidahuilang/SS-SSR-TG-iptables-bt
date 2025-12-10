@@ -90,7 +90,7 @@ bash <(curl -sSL "https://proxy.freecdn.workers.dev/?url=https://raw.githubuserc
 }
 #19VPS一键3网测速脚本
 superspeed(){
-	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/superspeed.sh)
+	wget -qO- bench.sh | bash
 }
 #20FRP内网穿刺
 install-frps(){
