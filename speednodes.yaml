@@ -18,28 +18,52 @@ external-controller: 127.0.0.1:9090
 mode: rule
 port: 7890
 proxies:
+- cipher: aes-256-cfb
+  name: FR_speednode_0001
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 195.154.119.77
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: GB_speednode_0002
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.191
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: GB_speednode_0003
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.194
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: GB_speednode_0004
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.217
+  type: ss
+  udp: true
 - alterId: 2
   cipher: auto
-  name: HK_speednode_0003
+  name: HK_speednode_0005
   network: ws
   port: 80
-  server: 6b961a0a-sv4n40-t83wtx-2rrb.hk3.p5pv.com
+  server: 8685e774-sv2sg0-svq7uu-1gevg.hk3.p5pv.com
   servername: broadcastlv.chat.bilibili.com
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
-  uuid: ba64cdc5-c79a-326d-8e63-6903be8183a1
-- name: HK_speednode_0004
-  password: 76d630f2af6619c4a5de0ef953df3c6a
-  port: 443
-  server: 58.152.110.82
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-  udp: true
+  uuid: f02ee2b4-d760-11ec-bd7c-f23c913c8d2b
+  ws-opts:
+    headers:
+      Host: broadcastlv.chat.bilibili.com
+    path: /
 - client-fingerprint: chrome
-  name: IL_speednode_0005
+  name: IL_speednode_0006
   port: 24170
   reality-opts:
     public-key: VsmNi1ZMXVOwhCWpbCp51w-D_DzrxWX4jgfpcU0S9G4
@@ -51,48 +75,57 @@ proxies:
   type: vless
   udp: true
   uuid: fe21e399-ec6f-4cb5-8441-e911178665b1
+- name: KR_speednode_0007
+  port: 1090
+  server: 121.169.46.116
+  type: socks5
+  udp: true
+- name: KR_speednode_0008
+  password: test.+
+  port: 30446
+  server: testkr3.ssv.vc
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  username: test
+- cipher: chacha20-ietf-poly1305
+  name: NL_speednode_0009
+  password: 7kJQs2RYHhViTYWaf1RobB
+  port: 7749
+  server: 77.246.97.187
+  type: ss
+  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: RU_speednode_0006
-  port: 4443
+  name: RU_speednode_0010
+  port: 443
   reality-opts:
-    public-key: 5XB_N3ATilH-6tp_MXht-84_y5YaJnx_Z7MbuY2otHE
-    short-id: aa7e96542880027a
-  server: 80.90.186.91
-  servername: github.com
+    public-key: lJscl0GgEiVZtTVrMVI6O0-zSJTgmug9Cs-KJqpxWw0
+    short-id: f6fb0261a102c0c8
+  server: 89.23.101.203
+  servername: www.vk.com
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: 3121850a-24aa-41f9-936d-dbdf10a3b31f
+  uuid: d5f7970e-121f-4e6f-9acf-250effc0715b
 - client-fingerprint: chrome
-  name: RU_speednode_0007
-  port: 52900
+  flow: xtls-rprx-vision
+  name: RU_speednode_0011
+  port: 443
   reality-opts:
-    public-key: AjYSCSFHfqOg-NbP_ngiRvJkKNKZXuHNDa1sJd4TRRQ
-    short-id: 1fbc
-  server: 62.113.42.65
-  servername: ozon.ru
+    public-key: i3AAHIiAZOk2-3BFfQlPN5eRBfBpLt53M3p0JKuE0Cw
+    short-id: 0d680ba281cb229b
+  server: 85.192.24.131
+  servername: web.max.ru
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: 97e7c83c-9346-49b4-85a5-1e3bbf7488b9
+  uuid: 07e0d9f5-6ed1-4bfb-8c19-311a312cba7d
 - client-fingerprint: chrome
-  name: RU_speednode_0008
-  port: 52900
-  reality-opts:
-    public-key: AjYSCSFHfqOg-NbP_ngiRvJkKNKZXuHNDa1sJd4TRRQ
-    short-id: 1fbc
-  server: wolfy.ufavpn.ru
-  servername: ozon.ru
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 97e7c83c-9346-49b4-85a5-1e3bbf7488b9
-- client-fingerprint: chrome
-  name: RU_speednode_0009
+  name: RU_speednode_0012
   port: 35728
   reality-opts:
     public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
@@ -108,24 +141,34 @@ proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
   - "\u267B\uFE0F automatic"
-  - HK_speednode_0003
-  - HK_speednode_0004
-  - IL_speednode_0005
-  - RU_speednode_0006
-  - RU_speednode_0007
-  - RU_speednode_0008
-  - RU_speednode_0009
+  - FR_speednode_0001
+  - GB_speednode_0002
+  - GB_speednode_0003
+  - GB_speednode_0004
+  - HK_speednode_0005
+  - IL_speednode_0006
+  - KR_speednode_0007
+  - KR_speednode_0008
+  - NL_speednode_0009
+  - RU_speednode_0010
+  - RU_speednode_0011
+  - RU_speednode_0012
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
-  - HK_speednode_0003
-  - HK_speednode_0004
-  - IL_speednode_0005
-  - RU_speednode_0006
-  - RU_speednode_0007
-  - RU_speednode_0008
-  - RU_speednode_0009
+  - FR_speednode_0001
+  - GB_speednode_0002
+  - GB_speednode_0003
+  - GB_speednode_0004
+  - HK_speednode_0005
+  - IL_speednode_0006
+  - KR_speednode_0007
+  - KR_speednode_0008
+  - NL_speednode_0009
+  - RU_speednode_0010
+  - RU_speednode_0011
+  - RU_speednode_0012
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
