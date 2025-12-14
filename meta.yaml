@@ -18,24 +18,11 @@ external-controller: 127.0.0.1:9090
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: BG_speednode_0001
-  port: 2443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: 178.239.126.118
-  servername: pizzastrada.jp
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d6b62381-8d75-4a0c-9946-bf8f40772afe
 - alpn:
   - h3
   auth_str: dongtaiwang.com
-  down: '100'
-  name: FR_speednode_0002
+  down: 100 Mbps
+  name: FR_speednode_0001
   port: 15010
   protocol: udp
   server: 195.154.200.40
@@ -43,22 +30,43 @@ proxies:
   sni: apple.com
   type: hysteria
   udp: true
-  up: '100'
+  up: 100 Mbps
 - alpn:
   - h3
   auth_str: dongtaiwang.com
-  down: '55'
-  name: FR_speednode_0003
-  port: 49003
+  down: 55 Mbps
+  name: FR_speednode_0002
+  port: 35511
   protocol: udp
-  server: 51.159.226.1
+  server: 62.210.10.186
   skip-cert-verify: true
   sni: apple.com
   type: hysteria
   udp: true
-  up: '11'
+  up: 11 Mbps
+- cipher: chacha20-ietf-poly1305
+  name: GB_speednode_0003
+  password: Kmn7dHPw5wNfkqQMPcGWQA
+  port: 28212
+  server: 31.3.209.183
+  type: ss
+  udp: true
+- cipher: chacha20-ietf
+  name: HK_speednode_0004
+  password: asd123456
+  port: 8388
+  server: 103.149.183.200
+  type: ss
+  udp: true
+- cipher: chacha20-ietf
+  name: HK_speednode_0005
+  password: asd123456
+  port: 8388
+  server: 103.149.182.86
+  type: ss
+  udp: true
 - client-fingerprint: chrome
-  name: IL_speednode_0004
+  name: IL_speednode_0006
   port: 24170
   reality-opts:
     public-key: VsmNi1ZMXVOwhCWpbCp51w-D_DzrxWX4jgfpcU0S9G4
@@ -70,158 +78,146 @@ proxies:
   type: vless
   udp: true
   uuid: fe21e399-ec6f-4cb5-8441-e911178665b1
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU_speednode_0005
-  port: 443
-  reality-opts:
-    public-key: bYPDMM7Z7s3brAUozWIqspE24dQwgHyI60lDRZvscVo
-    short-id: a20d3ed244c76426
-  server: 51.250.20.121
-  servername: ads.x5.ru
+- alterId: 0
+  cipher: auto
+  http-opts:
+    method: GET
+    path:
+    - /
+  name: KR_speednode_0007
+  network: http
+  port: 80
+  server: 152.70.92.69
   skip-cert-verify: false
-  tls: true
-  type: vless
+  tls: false
+  type: vmess
   udp: true
-  uuid: 20cf5921-f7fa-47c5-81ae-947fbef83a4d
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU_speednode_0006
-  port: 1488
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: 6ba85179e30d4fc2
-  server: 51.250.109.47
-  servername: ads.x5.ru
-  skip-cert-verify: false
-  tls: true
-  type: vless
+  uuid: bb9c3993-a4b9-4dad-aeb9-ac86371ae68b
+- cipher: aes-128-gcm
+  name: RO_speednode_0008
+  password: kfuzkwdg4oynv495aywc
+  port: 13262
+  server: 86.106.84.195
+  type: ss
   udp: true
-  uuid: 4a6de183-2ad3-456c-b420-feeac81f6257
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU_speednode_0007
-  port: 443
-  reality-opts:
-    public-key: lJscl0GgEiVZtTVrMVI6O0-zSJTgmug9Cs-KJqpxWw0
-    short-id: f6fb0261a102c0c8
-  server: 89.23.101.203
-  servername: www.vk.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d5f7970e-121f-4e6f-9acf-250effc0715b
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU_speednode_0008
-  port: 1488
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: 6ba85179e30d4fc2
-  server: 51.250.25.11
-  servername: ads.x5.ru
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4a6de183-2ad3-456c-b420-feeac81f6257
-- client-fingerprint: chrome
-  name: RU_speednode_0009
-  port: 35728
-  reality-opts:
-    public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
-    short-id: 69a2
-  server: 178.236.16.98
-  servername: yahoo.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
-- name: SG_speednode_0010
-  port: 10808
-  server: 213.35.126.34
-  type: socks5
-  udp: true
-- name: TW_speednode_0011
-  password: exaxgqkKkd0TAMrCxeonWg==
-  port: 1443
-  server: twmoon1-cdn-route.couldflare-cdn.com
-  tls: true
-  type: http
-  udp: true
-  username: mrwdfNTD8M79LCukCieldrqZWqs=
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: US_speednode_0012
+- name: US_speednode_0009
   network: ws
-  port: 2083
-  server: www.speedtest.net
-  servername: golestan.hajalwi.ir.
+  port: 2095
+  server: ns.cloudflare.com
+  servername: snippets.pusytroller.cf
   skip-cert-verify: false
-  tls: true
+  tls: false
   type: vless
   udp: true
-  uuid: 94a64eb4-b438-4088-b2bd-6f3ac279c418
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
   ws-opts:
     headers:
-      Host: golestan.hajalwi.ir.
-    path: /---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN?ed=8080
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
+      Host: snippets.pusytroller.cf
+    path: /
+- name: US_speednode_0010
+  network: ws
+  port: 2095
+  server: www.shopify.com
+  servername: snippets.pusytroller.cf
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  ws-opts:
+    headers:
+      Host: snippets.pusytroller.cf
+    path: /
+- name: US_speednode_0011
+  network: ws
+  password: b1fec179-3d5a-4ec5-bf3c-e10668543b4b
+  port: 8443
+  server: 69.84.182.108
+  skip-cert-verify: false
+  sni: cdn-node-oss-61.anycdn.de
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: cdn-node-oss-61.anycdn.de
+    path: /profile/us1
+- name: US_speednode_0012
+  network: ws
+  password: b1fec179-3d5a-4ec5-bf3c-e10668543b4b
+  port: 8443
+  server: 69.84.182.18
+  skip-cert-verify: false
+  sni: cdn-node-oss-62.anycdn.de
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: cdn-node-oss-62.anycdn.de
+    path: /profile/us2
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
   name: US_speednode_0013
-  network: ws
-  port: 2083
-  server: www.speedtest.net
-  servername: golestan.hajalwi.ir.
+  port: 16823
+  reality-opts:
+    public-key: E_shv34FH2gd70EMyMqogqpq-nY7tFHFLs7hJnUjpGU
+  server: 45.41.204.122
+  servername: www.iij.ad.jp
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: a47338c5-c793-4da3-acd8-c583fb6f344d
+  uuid: ccd725e6-38fb-4a37-be0b-830533c4242f
+- client-fingerprint: chrome
+  name: US_speednode_0014
+  network: ws
+  port: 443
+  server: 69.84.182.13
+  servername: jp1-jp1.aiopen.sbs
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e4dbde8d-b194-4a64-afe0-093ffd258e8e
   ws-opts:
     headers:
-      Host: golestan.hajalwi.ir.
-    path: /---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN---Golestanv_VPN?ed=8080
+      Host: jp1-jp1.aiopen.sbs
+    path: /kbjc/jp1
 proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
   - "\u267B\uFE0F automatic"
-  - BG_speednode_0001
+  - FR_speednode_0001
   - FR_speednode_0002
-  - FR_speednode_0003
-  - IL_speednode_0004
-  - RU_speednode_0005
-  - RU_speednode_0006
-  - RU_speednode_0007
-  - RU_speednode_0008
-  - RU_speednode_0009
-  - SG_speednode_0010
-  - TW_speednode_0011
+  - GB_speednode_0003
+  - HK_speednode_0004
+  - HK_speednode_0005
+  - IL_speednode_0006
+  - KR_speednode_0007
+  - RO_speednode_0008
+  - US_speednode_0009
+  - US_speednode_0010
+  - US_speednode_0011
   - US_speednode_0012
   - US_speednode_0013
+  - US_speednode_0014
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
-  - BG_speednode_0001
+  - FR_speednode_0001
   - FR_speednode_0002
-  - FR_speednode_0003
-  - IL_speednode_0004
-  - RU_speednode_0005
-  - RU_speednode_0006
-  - RU_speednode_0007
-  - RU_speednode_0008
-  - RU_speednode_0009
-  - SG_speednode_0010
-  - TW_speednode_0011
+  - GB_speednode_0003
+  - HK_speednode_0004
+  - HK_speednode_0005
+  - IL_speednode_0006
+  - KR_speednode_0007
+  - RO_speednode_0008
+  - US_speednode_0009
+  - US_speednode_0010
+  - US_speednode_0011
   - US_speednode_0012
   - US_speednode_0013
+  - US_speednode_0014
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
