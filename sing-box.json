@@ -87,37 +87,14 @@
                 "auto",
                 "direct",
                 "FR_speednode_0001",
-                "LT_speednode_0002",
-                "NN_speednode_0003",
-                "RU_speednode_0004",
+                "HK_speednode_0002",
+                "HK_speednode_0003",
+                "NN_speednode_0004",
                 "RU_speednode_0005",
-                "SE_speednode_0006",
-                "US_speednode_0007",
-                "US_speednode_0008",
-                "US_speednode_0009",
-                "US_speednode_0010",
-                "US_speednode_0011",
-                "US_speednode_0012",
-                "US_speednode_0013",
-                "US_speednode_0014",
-                "US_speednode_0015",
-                "US_speednode_0016",
-                "US_speednode_0017",
-                "US_speednode_0018",
-                "US_speednode_0019",
-                "US_speednode_0020",
-                "US_speednode_0021",
-                "US_speednode_0022",
-                "US_speednode_0023",
-                "US_speednode_0024",
-                "US_speednode_0025",
-                "US_speednode_0026",
-                "US_speednode_0028",
-                "US_speednode_0029",
-                "VN_speednode_0030",
-                "VN_speednode_0031",
-                "VN_speednode_0032",
-                "VN_speednode_0033"
+                "RU_speednode_0006",
+                "RU_speednode_0007",
+                "SE_speednode_0008",
+                "US_speednode_0009"
             ]
         },
         {
@@ -125,37 +102,14 @@
             "type": "urltest",
             "outbounds": [
                 "FR_speednode_0001",
-                "LT_speednode_0002",
-                "NN_speednode_0003",
-                "RU_speednode_0004",
+                "HK_speednode_0002",
+                "HK_speednode_0003",
+                "NN_speednode_0004",
                 "RU_speednode_0005",
-                "SE_speednode_0006",
-                "US_speednode_0007",
-                "US_speednode_0008",
-                "US_speednode_0009",
-                "US_speednode_0010",
-                "US_speednode_0011",
-                "US_speednode_0012",
-                "US_speednode_0013",
-                "US_speednode_0014",
-                "US_speednode_0015",
-                "US_speednode_0016",
-                "US_speednode_0017",
-                "US_speednode_0018",
-                "US_speednode_0019",
-                "US_speednode_0020",
-                "US_speednode_0021",
-                "US_speednode_0022",
-                "US_speednode_0023",
-                "US_speednode_0024",
-                "US_speednode_0025",
-                "US_speednode_0026",
-                "US_speednode_0028",
-                "US_speednode_0029",
-                "VN_speednode_0030",
-                "VN_speednode_0031",
-                "VN_speednode_0032",
-                "VN_speednode_0033"
+                "RU_speednode_0006",
+                "RU_speednode_0007",
+                "SE_speednode_0008",
+                "US_speednode_0009"
             ],
             "url": "http://www.gstatic.com/generate_204",
             "interval": "10m",
@@ -192,15 +146,40 @@
             "network": "udp"
         },
         {
-            "tag": "LT_speednode_0002",
-            "server": "45.87.175.190",
-            "server_port": 8080,
-            "type": "shadowsocks",
-            "method": "chacha20-ietf-poly1305",
-            "password": "cvII85TrW6n0OGyfpHVS1u"
+            "tag": "HK_speednode_0002",
+            "server": "203.198.84.221",
+            "server_port": 443,
+            "type": "trojan",
+            "password": "BxceQaOe",
+            "tls": {
+                "enabled": true,
+                "insecure": true
+            }
         },
         {
-            "tag": "NN_speednode_0003",
+            "tag": "HK_speednode_0003",
+            "server": "1.36.189.217",
+            "server_port": 10122,
+            "type": "vless",
+            "uuid": "7f60f6e7-8419-4cff-9e1b-14179f677a5e",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "music.apple.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "TU2OTQBiMyK-mKCI3G6fENadfG-fdNlWJF7Qv9ywkFY",
+                    "short_id": "8a6394aa28d6"
+                }
+            }
+        },
+        {
+            "tag": "NN_speednode_0004",
             "server": "sakura.bunnywaffle.org",
             "server_port": 26978,
             "type": "vless",
@@ -222,25 +201,50 @@
             }
         },
         {
-            "tag": "RU_speednode_0004",
-            "server": "freeyx.cloudflare88.eu.org",
+            "tag": "RU_speednode_0005",
+            "server": "51.250.4.181",
             "server_port": 443,
-            "type": "trojan",
-            "password": "5a2c16f9",
+            "type": "vless",
+            "uuid": "846c5d45-936c-42f6-9120-2d13830d5fa0",
             "tls": {
                 "enabled": true,
-                "insecure": false
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
+                "insecure": false,
+                "server_name": "eh.vk.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "t0Gj0moa6d8jMp9LazLtWPenE3wl_M9tMHveifor8GU",
+                    "short_id": "4d4421a0bac569"
                 }
             }
         },
         {
-            "tag": "RU_speednode_0005",
+            "tag": "RU_speednode_0006",
+            "server": "78.159.246.66",
+            "server_port": 443,
+            "type": "vless",
+            "uuid": "2c8adcaa-e428-4cea-9c88-e88166651ab3",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "insecure": false,
+                "server_name": "eh.vk.com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0",
+                    "short_id": "d1579a8745398e34"
+                }
+            }
+        },
+        {
+            "tag": "RU_speednode_0007",
             "server": "89.169.137.193",
             "server_port": 443,
             "type": "vless",
@@ -262,7 +266,7 @@
             }
         },
         {
-            "tag": "SE_speednode_0006",
+            "tag": "SE_speednode_0008",
             "server": "dd.openaccessnode.com",
             "server_port": 989,
             "type": "hysteria2",
@@ -278,485 +282,15 @@
             }
         },
         {
-            "tag": "US_speednode_0007",
-            "server": "104.17.162.3",
-            "server_port": 443,
-            "type": "trojan",
-            "password": "5a2c16f9",
-            "tls": {
-                "enabled": true,
-                "insecure": false
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0008",
-            "server": "104.17.202.10",
-            "server_port": 443,
-            "type": "vless",
-            "uuid": "5a2c16f9-e365-4080-8d38-6924c3835586",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "snippets.kkii.eu.org",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
             "tag": "US_speednode_0009",
-            "server": "108.162.198.185",
-            "server_port": 443,
-            "type": "vless",
-            "uuid": "5a2c16f9-e365-4080-8d38-6924c3835586",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "snippets.kkii.eu.org",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "randomized"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0010",
-            "server": "104.17.167.134",
-            "server_port": 443,
+            "server": "64.94.95.118",
+            "server_port": 57142,
             "type": "trojan",
-            "password": "5a2c16f9",
-            "tls": {
-                "enabled": true,
-                "insecure": false
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0011",
-            "server": "104.19.220.22",
-            "server_port": 443,
-            "type": "trojan",
-            "password": "5a2c16f9",
-            "tls": {
-                "enabled": true,
-                "insecure": false
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0012",
-            "server": "104.17.69.244",
-            "server_port": 443,
-            "type": "vless",
-            "uuid": "5a2c16f9-e365-4080-8d38-6924c3835586",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "snippets.kkii.eu.org",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0013",
-            "server": "104.19.220.22",
-            "server_port": 443,
-            "type": "vless",
-            "uuid": "5a2c16f9-e365-4080-8d38-6924c3835586",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "snippets.kkii.eu.org",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0014",
-            "server": "198.41.208.234",
-            "server_port": 443,
-            "type": "vless",
-            "uuid": "5a2c16f9-e365-4080-8d38-6924c3835586",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "snippets.kkii.eu.org",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0015",
-            "server": "104.16.65.1",
-            "server_port": 443,
-            "type": "vless",
-            "uuid": "5a2c16f9-e365-4080-8d38-6924c3835586",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "snippets.kkii.eu.org",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0016",
-            "server": "one.cf.cdn.hyli.xyz",
-            "server_port": 443,
-            "type": "trojan",
-            "password": "5a2c16f9",
-            "tls": {
-                "enabled": true,
-                "insecure": false
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0017",
-            "server": "104.16.246.188",
-            "server_port": 443,
-            "type": "trojan",
-            "password": "5a2c16f9",
+            "password": "kkzh2prsyr2ik47as615",
             "tls": {
                 "enabled": true,
                 "insecure": true
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
             }
-        },
-        {
-            "tag": "US_speednode_0018",
-            "server": "172.64.148.110",
-            "server_port": 2087,
-            "type": "vless",
-            "uuid": "e258977b-e413-4718-a3af-02d75492c349",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "jp-9de.pages.dev",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "jp-9de.pages.dev"
-                },
-                "max_early_data": 2560,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "US_speednode_0019",
-            "server": "104.19.212.207",
-            "server_port": 443,
-            "type": "vless",
-            "uuid": "5a2c16f9-e365-4080-8d38-6924c3835586",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "snippets.kkii.eu.org"
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0020",
-            "server": "104.26.1.110",
-            "server_port": 443,
-            "type": "trojan",
-            "password": "5a2c16f9",
-            "tls": {
-                "enabled": true,
-                "insecure": false
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0021",
-            "server": "cf.130519.xyz",
-            "server_port": 443,
-            "type": "trojan",
-            "password": "5a2c16f9",
-            "tls": {
-                "enabled": true,
-                "insecure": false
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0022",
-            "server": "172.64.229.169",
-            "server_port": 443,
-            "type": "trojan",
-            "password": "5a2c16f9",
-            "tls": {
-                "enabled": true,
-                "insecure": true
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0023",
-            "server": "162.159.128.253",
-            "server_port": 443,
-            "type": "trojan",
-            "password": "5a2c16f9",
-            "tls": {
-                "enabled": true,
-                "insecure": false
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0024",
-            "server": "172.64.53.226",
-            "server_port": 443,
-            "type": "vless",
-            "uuid": "5a2c16f9-e365-4080-8d38-6924c3835586",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "snippets.kkii.eu.org",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0025",
-            "server": "172.64.229.2",
-            "server_port": 443,
-            "type": "trojan",
-            "password": "5a2c16f9",
-            "tls": {
-                "enabled": true,
-                "insecure": true
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0026",
-            "server": "162.159.24.131",
-            "server_port": 443,
-            "type": "trojan",
-            "password": "5a2c16f9",
-            "tls": {
-                "enabled": true,
-                "insecure": false
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0028",
-            "server": "nrtcfdns.zone.id",
-            "server_port": 443,
-            "type": "vless",
-            "uuid": "5a2c16f9-e365-4080-8d38-6924c3835586",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "snippets.kkii.eu.org",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "US_speednode_0029",
-            "server": "cdn.204910.best",
-            "server_port": 443,
-            "type": "vless",
-            "uuid": "5a2c16f9-e365-4080-8d38-6924c3835586",
-            "tls": {
-                "enabled": true,
-                "insecure": false,
-                "server_name": "snippets.kkii.eu.org",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "snippets.kkii.eu.org"
-                }
-            }
-        },
-        {
-            "tag": "VN_speednode_0030",
-            "server": "103.186.155.83",
-            "server_port": 38388,
-            "type": "shadowsocks",
-            "method": "aes-256-cfb",
-            "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"
-        },
-        {
-            "tag": "VN_speednode_0031",
-            "server": "103.186.155.114",
-            "server_port": 38388,
-            "type": "shadowsocks",
-            "method": "aes-256-cfb",
-            "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"
-        },
-        {
-            "tag": "VN_speednode_0032",
-            "server": "103.186.155.8",
-            "server_port": 38388,
-            "type": "shadowsocks",
-            "method": "aes-256-cfb",
-            "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"
-        },
-        {
-            "tag": "VN_speednode_0033",
-            "server": "103.186.154.34",
-            "server_port": 38388,
-            "type": "shadowsocks",
-            "method": "aes-256-cfb",
-            "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"
         }
     ],
     "route": {
