@@ -12,3 +12,4 @@ wget -qO - https://api.github.com/repos/cutelua/mtg-dist/releases/latest \
 bash $BIN
 rm -rf $TMPDIR
 echo 卸载："rm -rf /usr/local/bin/mtg && rm -rf /etc/mtg.toml"
+echo 拼接示例："tg://proxy?server=38.175.200.120&port=25890&secret=7pw12w01l2h22na4S0x87UNob3kYXRlLnZtd2FyZS5jb20"
