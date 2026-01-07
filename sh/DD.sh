@@ -62,7 +62,7 @@ View_huicheng(){
 }
 #12安装哪吒探针
 nezha(){
-	wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/nezha.sh && chmod +x status.sh && bash nezha.sh
+	curl -L https://gitee.com/naibahq/scripts/raw/main/install.sh -o nezha.sh && chmod +x nezha.sh && sudo CN=true ./nezha.sh
 }
 #13一键DD包（OD源）
 DD_OD(){
@@ -94,7 +94,7 @@ superspeed(){
 }
 #20FRP内网穿刺
 install-frps(){
-        wget -N --no-check-certificate https://raw.githubusercontent.com/MvsCode/frps-onekey/master/install-frps.sh -O ./install-frps.sh && chmod 700 ./install-frps.sh && bash install-frps.sh install
+        wget -N --no-check-certificate https://gitee.com/mvscode/frps-onekey/raw/master/install-frps.sh -O ./install-frps.sh && chmod 700 ./install-frps.sh && bash install-frps.sh install
 }
 #21Docker-Compose安装
 DockerInstallation(){
@@ -108,9 +108,9 @@ x-uiyijian(){
 xiandan(){
        bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/xiandan/xiandan.sh')
 }
-#24宝塔面板一键搭建
+#24宝塔开心面板一键搭建
 install_panel(){
-       curl -sSO http://download.bt.cn/install/install_panel.sh && bash install_panel.sh
+       if [ -f /usr/bin/curl ];then curl -sSO https://io.bt.sb/install/install_latest.sh;else wget -O install_latest.sh https://io.bt.sb/install/install_latest.sh;fi;bash install_latest.sh && rm -rf install_latest.sh
 }
 #25流媒体检测
 liumeiti(){
@@ -218,7 +218,7 @@ echo && echo -e "
  ${Green_font_prefix}21.${Font_color_suffix} Docker-Compose安装
  ${Green_font_prefix}22.${Font_color_suffix} 支持多协议多用户的X-ui面板+证书一键安装
  ${Green_font_prefix}23.${Font_color_suffix} 闲蛋探针+中转一键搭建
- ${Green_font_prefix}24.${Font_color_suffix} 宝塔面板一键搭建
+ ${Green_font_prefix}24.${Font_color_suffix} 宝塔开心面板一键搭建
  ${Green_font_prefix}25.${Font_color_suffix} 流媒体检测
  ${Green_font_prefix}26.${Font_color_suffix} NPS穿透一键安装
  ${Green_font_prefix}27.${Font_color_suffix} portainer可视化容器中文版一键安装
