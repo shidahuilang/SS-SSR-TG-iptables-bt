@@ -39,9 +39,9 @@ ssrmu(){
 Install_V2ray(){
 	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/V2Ray.sh)
 }
-#7安装Tg专用代理（Go版）
+#7安装MTG专用代理
 Tg_socks(){
-	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy_go.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/MTG.sh)
 }
 #8安装TG专用代理（中文版）
 mtproxy(){
@@ -201,7 +201,7 @@ echo && echo -e "
  ${Green_font_prefix}4.${Font_color_suffix}  安装SS
  ${Green_font_prefix}5.${Font_color_suffix}  安装ssrmu脚本(arm)
  ${Green_font_prefix}6.${Font_color_suffix}  安装V2ary_233一键
- ${Green_font_prefix}7.${Font_color_suffix}  TG专用代理（Go版）
+ ${Green_font_prefix}7.${Font_color_suffix}  MTG专用代理
  ${Green_font_prefix}8.${Font_color_suffix}  TG专用代理（中文版）
  ${Green_font_prefix}9.${Font_color_suffix}  PVE开启直通+CPU硬盘温度显示,风扇转速+一键开启换源，去订阅+CPU睿频模式选择
  ${Green_font_prefix}10.${Font_color_suffix} 黑群晖cpu正确识别
