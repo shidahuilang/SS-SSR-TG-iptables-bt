@@ -18,32 +18,9 @@ external-controller: 127.0.0.1:9090
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: firefox
-  name: BG_speednode_0001
-  port: 2255
-  reality-opts:
-    public-key: Cs7yLk8XXPksSjf6GB1JFYyFICqWVL3nL-10K7jQ7xc
-    short-id: 983c9303725c67
-  server: 79.110.63.79
-  servername: radar.arvancloud.ir
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 02b320ce-09f8-4cb5-9c46-9024f5585881
-- alterId: 0
-  cipher: auto
-  name: CN_speednode_0002
-  port: 47083
-  server: tunnel2.qqa678.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f66df097-93a0-43a1-b4c7-586e13f61f46
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: CY_speednode_0003
+  name: CY_speednode_0001
   port: 8443
   reality-opts:
     public-key: gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY
@@ -55,35 +32,36 @@ proxies:
   type: vless
   udp: true
   uuid: 309fa273-6579-4cb2-9143-7cad50401eba
-- client-fingerprint: firefox
-  name: CZ_speednode_0004
-  port: 587
-  reality-opts:
-    public-key: HnPEhCDTcZnDejsAiidoOSx2-h0EvJMILj4bv3X1mBc
-    short-id: 916e8258c4a01b02
-  server: chkeg.torprospeed.ir
-  servername: excoino.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 65a1e22c-d37e-4b92-b6ca-1d09dcd1d441
-- client-fingerprint: firefox
-  name: ES_speednode_0005
-  port: 587
-  reality-opts:
-    public-key: HnPEhCDTcZnDejsAiidoOSx2-h0EvJMILj4bv3X1mBc
-    short-id: 916e8258c4a01b02
-  server: spain.torprospeed.ir
-  servername: excoino.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 65a1e22c-d37e-4b92-b6ca-1d09dcd1d441
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: GB_speednode_0006
+  name: FI_speednode_0002
+  port: 4443
+  reality-opts:
+    public-key: 5XB_N3ATilH-6tp_MXht-84_y5YaJnx_Z7MbuY2otHE
+    short-id: aa7e96542880027a
+  server: 138.249.117.30
+  servername: github.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d5d5b641-dd56-4f39-9754-8d3c45cc2c5e
+- alpn:
+  - h3
+  auth_str: dongtaiwang.com
+  down: 55 Mbps
+  name: FR_speednode_0003
+  port: 26691
+  protocol: udp
+  server: 62.210.196.68
+  skip-cert-verify: true
+  sni: apple.com
+  type: hysteria
+  udp: true
+  up: 11 Mbps
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: GB_speednode_0004
   port: 443
   reality-opts:
     public-key: _dsOu_vxEU7pY3sIeGJxIpR0Ac2KoqIyBor2Bx0CwGA
@@ -96,20 +74,7 @@ proxies:
   udp: true
   uuid: 582f44d4-4511-402c-a0b7-b5771a2a5c9d
 - client-fingerprint: firefox
-  name: GB_speednode_0007
-  port: 587
-  reality-opts:
-    public-key: HnPEhCDTcZnDejsAiidoOSx2-h0EvJMILj4bv3X1mBc
-    short-id: 916e8258c4a01b02
-  server: turkiye.torprospeed.ir
-  servername: excoino.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 65a1e22c-d37e-4b92-b6ca-1d09dcd1d441
-- client-fingerprint: firefox
-  name: GB_speednode_0008
+  name: GB_speednode_0005
   port: 587
   reality-opts:
     public-key: HnPEhCDTcZnDejsAiidoOSx2-h0EvJMILj4bv3X1mBc
@@ -121,85 +86,9 @@ proxies:
   type: vless
   udp: true
   uuid: 65a1e22c-d37e-4b92-b6ca-1d09dcd1d441
-- alpn:
-  - h3
-  client-fingerprint: random
-  name: IE_speednode_0009
-  network: ws
-  port: 443
-  server: 37.0.6.46
-  servername: snippet.danfeng.frii.site
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 00a85603-d8c6-437d-a8bd-ea521107bd87
-  ws-opts:
-    headers:
-      Host: snippet.danfeng.frii.site
-    path: /?ed=2560
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: LB_speednode_0010
-  port: 443
-  reality-opts:
-    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
-    short-id: 86e999a2cdc2
-  server: us01-vlr01-gmn03.vpnvezdehod.net
-  servername: hls-svod.itunes.apple.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: e9dbc178-3656-40f8-8833-5023f306ef1d
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: LB_speednode_0011
-  port: 443
-  reality-opts:
-    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
-    short-id: 86e999a2cdc2
-  server: 213.165.60.36
-  servername: hls-svod.itunes.apple.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: e9dbc178-3656-40f8-8833-5023f306ef1d
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: LV_speednode_0012
-  port: 443
-  reality-opts:
-    public-key: 9ged75OhdD4P8yzPPXDESnRkdFM4br4I44OwXLWd_iY
-    short-id: 0a50b13e8fa3a7ef
-  server: lv.fasti.win
-  servername: lv.fasti.win
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0d93b787-b66b-4696-a036-a0f549764f69
-- http-opts:
-    headers:
-      Host:
-      - mdundo.com
-    method: GET
-    path:
-    - /
-  name: NL_speednode_0013
-  network: http
-  port: 8949
-  server: miow.thecommit.sbs
-  servername: mdundo.com
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 28f609a0-ce33-4431-97be-64d650d78157
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: NL_speednode_0014
+  name: NL_speednode_0006
   port: 443
   reality-opts:
     public-key: Ax50I4wgBCS5ejrqH-QGRL28oyr5-ocbBw6U7rHFzXI
@@ -213,21 +102,35 @@ proxies:
   uuid: 582f44d4-4511-402c-a0b7-b5771a2a5c9d
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: NN_speednode_0015
-  port: 41579
+  name: RU_speednode_0007
+  port: 443
   reality-opts:
-    public-key: 3W_eKpL975AF7oI-mkgVtf2iK954luxwaT6C41re0RI
-    short-id: 2efb6c97c1
-  server: 161.248.63.15
-  servername: www.icloud.com
+    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
+    short-id: 1ed136481e0ede74
+  server: 91.243.82.82
+  servername: khabarovsk.geodema.network
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: f64cdd9d-57c3-45b2-e999-c46006719646
+  uuid: a91e64f0-9295-499d-bf4a-661ad99d4938
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: RU_speednode_0016
+  name: RU_speednode_0008
+  port: 443
+  reality-opts:
+    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
+    short-id: 1ed136481e0ede74
+  server: khabarovsk.geodema.network
+  servername: khabarovsk.geodema.network
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: a91e64f0-9295-499d-bf4a-661ad99d4938
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: RU_speednode_0009
   port: 443
   reality-opts:
     public-key: dEHsPQQSnMJiHJKnJRbbLFKQmwIemUXQsQ1zIYbLZng
@@ -241,7 +144,7 @@ proxies:
   uuid: 5725a60c-34a5-476d-9ae3-9e43d945ca8f
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: RU_speednode_0017
+  name: RU_speednode_0010
   port: 443
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
@@ -254,46 +157,7 @@ proxies:
   uuid: d684cb56-e4b8-4453-8a7b-a1ad8c81935a
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: RU_speednode_0018
-  port: 443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: ru-msk-yan-1gbit-02.sssrvpn.pro
-  servername: ya.ru
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d684cb56-e4b8-4453-8a7b-a1ad8c81935a
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU_speednode_0019
-  port: 443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: ru-msk-yan-1gbit-02.sssrvpn.pro
-  servername: sun6-20.userapi.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d684cb56-e4b8-4453-8a7b-a1ad8c81935a
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU_speednode_0020
-  port: 443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: ru-msk-yan-1gbit-02.sssrvpn.pro
-  servername: ads.x5.ru
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d684cb56-e4b8-4453-8a7b-a1ad8c81935a
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU_speednode_0021
+  name: RU_speednode_0011
   port: 443
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
@@ -304,50 +168,9 @@ proxies:
   type: vless
   udp: true
   uuid: d684cb56-e4b8-4453-8a7b-a1ad8c81935a
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU_speednode_0022
-  port: 443
-  reality-opts:
-    public-key: CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw
-    short-id: c7e42004e5f024be
-  server: 84.23.53.252
-  servername: sun6-21.userapi.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: cc61ea7c-92f2-4c2d-b272-32cfe8fdf99f
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU_speednode_0023
-  port: 443
-  reality-opts:
-    public-key: FkmYFobwxLMLEktYXywmjthuEYCZggITsxwPNasTKUg
-    short-id: 048fe5c8be4bb687
-  server: 217.12.40.76
-  servername: sun9-38.userapi.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4371ad14-b981-4699-bedf-83fb79bde3e6
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: SI_speednode_0024
-  port: 443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: 45.144.52.37
-  servername: fi.reality.tv123.ru
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d684cb56-e4b8-4453-8a7b-a1ad8c81935a
 - client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: US_speednode_0025
+  name: US_speednode_0012
   port: 443
   reality-opts:
     public-key: _TIQSjojgpdSBoSVXuQjFSqIdPeXjQIQkM5cFSv6Gnc
@@ -361,7 +184,7 @@ proxies:
   uuid: 582f44d4-4511-402c-a0b7-b5771a2a5c9d
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: US_speednode_0026
+  name: US_speednode_0013
   port: 443
   reality-opts:
     public-key: 9mkPUmY5M-N81bSDf3lP9X3JnH25l4SfeUTnlwV04Eo
@@ -373,9 +196,23 @@ proxies:
   type: vless
   udp: true
   uuid: 582f44d4-4511-402c-a0b7-b5771a2a5c9d
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: US_speednode_0014
+  port: 33873
+  reality-opts:
+    public-key: RV6FhlbDmMyc_qCuuTbUZt3QMUsKZU7EjyjGkYxHS34
+    short-id: de550428
+  server: 139.144.199.41
+  servername: www.nokia.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: ffb5a850-edbc-4831-ad0b-e29483949ea8
 - client-fingerprint: ios
   flow: xtls-rprx-vision
-  name: US_speednode_0027
+  name: US_speednode_0015
   port: 443
   reality-opts:
     public-key: deEvuAAA_iJigkbck4yU_UmE8d491Dqt5V49y3n3DRw
@@ -389,7 +226,7 @@ proxies:
   uuid: 582f44d4-4511-402c-a0b7-b5771a2a5c9d
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: US_speednode_0028
+  name: US_speednode_0016
   port: 443
   reality-opts:
     public-key: WC40e9QWe66kR6Zb1qkk9OeJBDQivKzqBczp9natHjk
@@ -401,118 +238,46 @@ proxies:
   type: vless
   udp: true
   uuid: 582f44d4-4511-402c-a0b7-b5771a2a5c9d
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: US_speednode_0029
-  port: 33873
-  reality-opts:
-    public-key: RV6FhlbDmMyc_qCuuTbUZt3QMUsKZU7EjyjGkYxHS34
-    short-id: de550428
-  server: 139.144.199.41
-  servername: www.nokia.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: ffb5a850-edbc-4831-ad0b-e29483949ea8
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: US_speednode_0030
-  port: 443
-  reality-opts:
-    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
-    short-id: 1ed136481e0ede74
-  server: 142.91.106.176
-  servername: japan.geodema.network
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: a11ab9c5-4155-430b-9efc-7a7122531382
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: US_speednode_0031
-  port: 443
-  reality-opts:
-    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
-    short-id: 1ed136481e0ede74
-  server: japan.geodema.network
-  servername: japan.geodema.network
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: a11ab9c5-4155-430b-9efc-7a7122531382
 proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
   - "\u267B\uFE0F automatic"
-  - BG_speednode_0001
-  - CN_speednode_0002
-  - CY_speednode_0003
-  - CZ_speednode_0004
-  - ES_speednode_0005
-  - GB_speednode_0006
-  - GB_speednode_0007
-  - GB_speednode_0008
-  - IE_speednode_0009
-  - LB_speednode_0010
-  - LB_speednode_0011
-  - LV_speednode_0012
-  - NL_speednode_0013
-  - NL_speednode_0014
-  - NN_speednode_0015
-  - RU_speednode_0016
-  - RU_speednode_0017
-  - RU_speednode_0018
-  - RU_speednode_0019
-  - RU_speednode_0020
-  - RU_speednode_0021
-  - RU_speednode_0022
-  - RU_speednode_0023
-  - SI_speednode_0024
-  - US_speednode_0025
-  - US_speednode_0026
-  - US_speednode_0027
-  - US_speednode_0028
-  - US_speednode_0029
-  - US_speednode_0030
-  - US_speednode_0031
+  - CY_speednode_0001
+  - FI_speednode_0002
+  - FR_speednode_0003
+  - GB_speednode_0004
+  - GB_speednode_0005
+  - NL_speednode_0006
+  - RU_speednode_0007
+  - RU_speednode_0008
+  - RU_speednode_0009
+  - RU_speednode_0010
+  - RU_speednode_0011
+  - US_speednode_0012
+  - US_speednode_0013
+  - US_speednode_0014
+  - US_speednode_0015
+  - US_speednode_0016
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
-  - BG_speednode_0001
-  - CN_speednode_0002
-  - CY_speednode_0003
-  - CZ_speednode_0004
-  - ES_speednode_0005
-  - GB_speednode_0006
-  - GB_speednode_0007
-  - GB_speednode_0008
-  - IE_speednode_0009
-  - LB_speednode_0010
-  - LB_speednode_0011
-  - LV_speednode_0012
-  - NL_speednode_0013
-  - NL_speednode_0014
-  - NN_speednode_0015
-  - RU_speednode_0016
-  - RU_speednode_0017
-  - RU_speednode_0018
-  - RU_speednode_0019
-  - RU_speednode_0020
-  - RU_speednode_0021
-  - RU_speednode_0022
-  - RU_speednode_0023
-  - SI_speednode_0024
-  - US_speednode_0025
-  - US_speednode_0026
-  - US_speednode_0027
-  - US_speednode_0028
-  - US_speednode_0029
-  - US_speednode_0030
-  - US_speednode_0031
+  - CY_speednode_0001
+  - FI_speednode_0002
+  - FR_speednode_0003
+  - GB_speednode_0004
+  - GB_speednode_0005
+  - NL_speednode_0006
+  - RU_speednode_0007
+  - RU_speednode_0008
+  - RU_speednode_0009
+  - RU_speednode_0010
+  - RU_speednode_0011
+  - US_speednode_0012
+  - US_speednode_0013
+  - US_speednode_0014
+  - US_speednode_0015
+  - US_speednode_0016
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
