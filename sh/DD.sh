@@ -56,9 +56,9 @@ Install_V2ray(){
 Tg_socks(){
 	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/MTG.sh)
 }
-#8安装TG专用代理（中文版）
+#8安装MTG专用代理（docker版）
 mtproxy(){
-        wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy.sh && chmod +x mtproxy.sh && bash mtproxy.sh
+        wget -N --no-check-certificate https://raw.githubusercontent.com/shidahuilang/mtg/refs/heads/main/tg.install.sh && chmod +x tg.install.sh && bash tg.install.sh
 }
 #9PVE开启直通
 pve(){
@@ -224,7 +224,7 @@ green " 6.  安装 SS"
 green " 7.  安装 SSR 脚本 (ARM)"
 green " 8.  安装 V2Ray 233一键"
 green " 9.  MTG 专用代理"
-green " 10. TG 专用代理 (中文版)"
+green " 10. MTG 专用代理 (docker版)"
 green " 11. L2TP 一键安装"
 green " 12. 新版 3X-UI 独立安装"
 green " 13. Hysteria (歇斯底里) 一键安装"
