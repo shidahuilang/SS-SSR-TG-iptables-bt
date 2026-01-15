@@ -165,9 +165,9 @@ pve(){
       bash -c  "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/pve.sh)"
 }
 
-#34X-UI-v6版一键申请证书
+#343X-UI-docker版
 x-ui-v6(){
-      bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/x-ui-v6.sh)"
+      bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/3x-ui-docker.sh)"
 }
 #35TrojanPanel支持Xray/Trojan-Go/Hysteria/NaiveProxy的多用户Web管理面板
 TrojanPanel(){
@@ -228,7 +228,7 @@ green " 10. MTG 专用代理 (docker版)"
 green " 11. L2TP 一键安装"
 green " 12. 新版 3X-UI 独立安装"
 green " 13. Hysteria (歇斯底里) 一键安装"
-green " 14. X-UI IPV6+V4版 一键申请证书"
+green " 14. 3X-UI-docker版"
 green " 15. Trojan Panel 多用户Web管理面板"
 green " 16. 世界上最简单的Trojan部署脚本"
 green " 17. NPS-Socks5 服务一键搭建"
@@ -333,7 +333,7 @@ case "$num" in
 	Hysteria
 	;;
 	14)
-	x-ui-v6
+	3X-UI-docker
 	;;
 	15)
 	TrojanPanel
