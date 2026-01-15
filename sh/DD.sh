@@ -165,7 +165,7 @@ pve(){
       bash -c  "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/shidahuilang/pve/main/pve.sh)"
 }
 
-#343X-UI-docker版
+#343x-ui-docker版
 x-ui-v6(){
       bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/3x-ui-docker.sh)"
 }
