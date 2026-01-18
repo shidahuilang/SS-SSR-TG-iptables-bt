@@ -333,7 +333,7 @@ case "$num" in
 	Hysteria
 	;;
 	14)
-	mtproxy
+	3x-ui-docker
 	;;
 	15)
 	TrojanPanel
