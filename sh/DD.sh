@@ -167,7 +167,7 @@ pve(){
 
 #343x-ui-docker版
 3x-ui-docker(){
-      bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/3x-ui-docker.sh)"
+      bash -c "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/refs/heads/main/sh/3x-ui-docker.sh)"
 }
 #35TrojanPanel支持Xray/Trojan-Go/Hysteria/NaiveProxy的多用户Web管理面板
 TrojanPanel(){
