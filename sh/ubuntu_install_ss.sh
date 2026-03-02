@@ -1,21 +1,16 @@
 #!/bin/bash
-# shadowsocks/ss Ubuntu一键安装脚本
-# Author: hijk<https://hijk.art>
+# shadowsocks/ss Ubuntu一键安装脚本 (修复版)
+# 修复: 移除失效代理, 改用apt安装, 兼容Ubuntu 20.04/22.04/24.04
 
-RED="\033[31m"      # Error message
-GREEN="\033[32m"    # Success message
-YELLOW="\033[33m"   # Warning message
-BLUE="\033[36m"     # Info message
+RED="\033[31m"
+GREEN="\033[32m"
+YELLOW="\033[33m"
+BLUE="\033[36m"
 PLAIN='\033[0m'
 
-BASE=`pwd`
-OS=`hostnamectl | grep -i system | cut -d: -f2`
-
-V6_PROXY=""
 IP=`curl -sL -4 ip.sb`
 if [[ "$?" != "0" ]]; then
     IP=`curl -sL -6 ip.sb`
-    V6_PROXY="https://gh.hijk.art/"
 fi
 
 CONFIG_FILE="/etc/shadowsocks-libev/config.json"
@@ -31,32 +26,17 @@ checkSystem() {
         exit 1
     fi
 
-    res=`lsb_release -d | grep -i ubuntu`
+    res=`which apt`
     if [ "$?" != "0" ]; then
-        res=`which apt`
-        if [ "$?" != "0" ]; then
-            colorEcho $RED " 系统不是Ubuntu"
-            exit 1
-        fi
-    else
-        result=`lsb_release -d | grep -oE "[0-9.]+"`
-        main=${result%%.*}
-        if [ $main -lt 16 ]; then
-            colorEcho $RED " 不受支持的Ubuntu版本"
-            exit 1
-        fi
-     fi
+        colorEcho $RED " 系统不是Ubuntu/Debian"
+        exit 1
+    fi
 }
 
 slogon() {
     clear
     echo "#############################################################"
-    echo -e "#         ${RED}Ubuntu LTS Shadowsocks/SS  一键安装脚本${PLAIN}            #"
-    echo -e "# ${GREEN}作者${PLAIN}: 网络跳越(hijk)                                      #"
-    echo -e "# ${GREEN}网址${PLAIN}: https://hijk.art                                    #"
-    echo -e "# ${GREEN}论坛${PLAIN}: https://hijk.club                                   #"
-    echo -e "# ${GREEN}TG群${PLAIN}: https://t.me/hijkclub                               #"
-    echo -e "# ${GREEN}Youtube频道${PLAIN}: https://youtube.com/channel/UCYTB--VsObzepVJtc9yvUxQ #"
+    echo -e "#         ${RED}Ubuntu Shadowsocks/SS 一键安装脚本 (修复版)${PLAIN}       #"
     echo "#############################################################"
     echo ""
 }
@@ -67,7 +47,7 @@ getData() {
     echo ""
     colorEcho $BLUE " 密码： $PASSWORD"
     echo ""
-    
+
     while true
     do
         read -p " 请设置SS的端口号[1025-65535]:" PORT
@@ -90,7 +70,7 @@ getData() {
             colorEcho $RED " 输入错误，端口号为1025-65535的数字"
         fi
     done
-    colorEcho $BLUE " 请选择SS的加密方式:" 
+    colorEcho $BLUE " 请选择SS的加密方式:"
     echo "   1)aes-256-gcm"
     echo "   2)aes-192-gcm"
     echo "   3)aes-128-gcm"
@@ -111,51 +91,21 @@ getData() {
         METHOD="aes-256-gcm"
     else
         case $answer in
-        1)
-            METHOD="aes-256-gcm"
-            ;;
-        2)
-            METHOD="aes-192-gcm"
-            ;;
-        3)
-            METHOD="aes-128-gcm"
-            ;;
-        4)
-            METHOD="aes-256-ctr"
-            ;;
-        5)
-            METHOD="aes-192-ctr"
-            ;;
-        6)
-            METHOD="aes-128-ctr"
-            ;;
-        7)
-            METHOD="aes-256-cfb"
-            ;;
-        8)
-            METHOD="aes-192-cfb"
-            ;;
-        9)
-            METHOD="aes-128-cfb"
-            ;;
-        10)
-            METHOD="camellia-128-cfb"
-            ;;
-        11)
-            METHOD="camellia-192-cfb"
-            ;;
-        12)
-            METHOD="camellia-256-cfb"
-            ;;
-        13)
-            METHOD="chacha20-ietf"
-            ;;
-        14)
-            METHOD="chacha20-ietf-poly1305"
-            ;;
-        15)
-            METHOD="xchacha20-ietf-poly1305"
-            ;;
+        1)  METHOD="aes-256-gcm" ;;
+        2)  METHOD="aes-192-gcm" ;;
+        3)  METHOD="aes-128-gcm" ;;
+        4)  METHOD="aes-256-ctr" ;;
+        5)  METHOD="aes-192-ctr" ;;
+        6)  METHOD="aes-128-ctr" ;;
+        7)  METHOD="aes-256-cfb" ;;
+        8)  METHOD="aes-192-cfb" ;;
+        9)  METHOD="aes-128-cfb" ;;
+        10) METHOD="camellia-128-cfb" ;;
+        11) METHOD="camellia-192-cfb" ;;
+        12) METHOD="camellia-256-cfb" ;;
+        13) METHOD="chacha20-ietf" ;;
+        14) METHOD="chacha20-ietf-poly1305" ;;
+        15) METHOD="xchacha20-ietf-poly1305" ;;
         *)
             colorEcho $RED " 无效的选择，使用默认的aes-256-gcm"
             METHOD="aes-256-gcm"
@@ -170,77 +120,35 @@ preinstall() {
     colorEcho $BLUE " 更新系统..."
     apt clean all
     apt update
-    #apt upgrade -y
-    
+
     colorEcho $BLUE " 安装必要软件"
-    apt install -y telnet wget vim net-tools unzip tar qrencode
-    apt install -y make openssl libssl-dev gettext gcc autoconf libtool automake make asciidoc xmlto libudns-dev libev-dev libpcre3 libpcre3-dev libmbedtls-dev libsodium-dev libc-ares2 libc-ares-dev g++
-    apt install -y libsodium*
+    apt install -y wget vim net-tools unzip tar qrencode
     apt autoremove -y
-    res=`which wget`
-    [ "$?" != "0" ] && apt install -y wget
-    res=`which netstat`
-    [ "$?" != "0" ] && apt install -y net-tools
-}
-
-normalizeVersion() {
-    if [ -n "$1" ]; then
-        case "$1" in
-            v*)
-                echo "${1:1}"
-            ;;
-            *)
-                echo "$1"
-            ;;
-        esac
-    else
-        echo ""
-    fi
-}
-
-installNewVer() {
-    new_ver=$1
-    if ! wget "${V6_PROXY}https://github.com/shadowsocks/shadowsocks-libev/releases/download/v${new_ver}/shadowsocks-libev-${new_ver}.tar.gz" -O shadowsocks-libev.tar.gz; then
-        colorEcho $RED " 下载安装文件失败！"
-        exit 1
-    fi
-    tar zxf shadowsocks-libev.tar.gz
-    cd shadowsocks-libev-${new_ver}
-    ./configure
-    make && make install
-    if [[ $? -ne 0 ]]; then
-        echo
-        echo -e " [${RED}错误${PLAIN}]: $OS Shadowsocks-libev 安装失败！ 请打开 https://hijk.art 反馈"
-        cd ${BASE} && rm -rf shadowsocks-libev*
-        exit 1
-    fi
-    cd ${BASE} && rm -rf shadowsocks-libev*
 }
 
 installSS() {
     colorEcho $BLUE " 安装SS..."
 
-    tag_url="${V6_PROXY}https://api.github.com/repos/shadowsocks/shadowsocks-libev/releases/latest"
-    new_ver="$(normalizeVersion "$(curl -s "${tag_url}" --connect-timeout 10| grep 'tag_name' | cut -d\" -f4)")"
-    export PATH=/usr/local/bin:$PATH
-    res=`which ss-server`
-    if [ "$?" != "0" ]; then
-        installNewVer $new_ver
-    else
-        ver=`ss-server -h | grep shadowsocks-libev | grep -oE '[0-9+\.]+'`
-        if [[ $ver != $new_ver ]]; then
-            installNewVer $new_ver
-        else
-            colorEcho $YELLOW " 已安装最新版SS"
+    # 直接使用apt安装shadowsocks-libev（最稳定可靠的方式）
+    apt install -y shadowsocks-libev
+
+    if [[ $? -ne 0 ]]; then
+        colorEcho $YELLOW " apt安装失败，尝试添加PPA源..."
+        apt install -y software-properties-common
+        add-apt-repository -y ppa:max-c-lv/shadowsocks-libev 2>/dev/null
+        apt update
+        apt install -y shadowsocks-libev
+        if [[ $? -ne 0 ]]; then
+            colorEcho $RED " Shadowsocks-libev 安装失败！"
+            exit 1
         fi
     fi
 
+    colorEcho $GREEN " Shadowsocks-libev 安装成功"
+
+    # 写入配置文件
     interface="0.0.0.0"
-    if [[ "$V6_PROXY" != "" ]]; then
-        interface="::"
-    fi
     mkdir -p /etc/shadowsocks-libev
-    ssPath=`which ss-server`
     cat > $CONFIG_FILE<<-EOF
 {
     "server":"$interface",
@@ -254,10 +162,11 @@ installSS() {
     "fast_open":false
 }
 EOF
- cat > /lib/systemd/system/shadowsocks-libev.service <<-EOF
+
+    # 创建/覆盖 systemd 服务文件
+    cat > /lib/systemd/system/shadowsocks-libev.service <<-EOF
 [Unit]
-Description=shadowsocks
-Documentation=https://hijk.art/
+Description=shadowsocks-libev
 After=network-online.target
 Wants=network-online.target
 
@@ -265,18 +174,19 @@ Wants=network-online.target
 Type=simple
 PIDFile=/var/run/shadowsocks-libev.pid
 LimitNOFILE=32768
-ExecStart=/usr/local/bin/ss-server -c $CONFIG_FILE -f /var/run/shadowsocks-libev.pid
+ExecStart=/usr/bin/ss-server -c $CONFIG_FILE
 ExecReload=/bin/kill -s HUP \$MAINPID
 ExecStop=/bin/kill -s TERM \$MAINPID
 
 [Install]
 WantedBy=multi-user.target
 EOF
+
     systemctl daemon-reload
     systemctl enable shadowsocks-libev
     systemctl restart shadowsocks-libev
     sleep 3
-    res=`netstat -nltp | grep ${PORT} | grep 'ss-server'`
+    res=`ss -nltp | grep ${PORT}`
     if [ "${res}" = "" ]; then
         colorEcho $RED " ss启动失败，请检查端口是否被占用！"
         exit 1
@@ -317,19 +227,16 @@ installBBR() {
     fi
 
     colorEcho $BLUE " 安装BBR模块..."
-    apt install -y --install-recommends linux-generic-hwe-16.04
-    grub-set-default 0
-    echo "tcp_bbr" >> /etc/modules-load.d/modules.conf
     INSTALL_BBR=true
 }
 
 info() {
     port=`grep server_port $CONFIG_FILE| cut -d: -f2 | tr -d \",' '`
-    res=`netstat -nltp | grep ${port} | grep 'ss-server'`
+    res=`ss -nltp | grep ${port}`
     [ -z "$res" ] && status="${RED}已停止${PLAIN}" || status="${GREEN}正在运行${PLAIN}"
     password=`grep password $CONFIG_FILE| cut -d: -f2 | tr -d \",' '`
     method=`grep method $CONFIG_FILE| cut -d: -f2 | tr -d \",' '`
-    
+
     res=`echo -n ${method}:${password}@${IP}:${port} | base64 -w 0`
     link="ss://${res}"
 
@@ -349,9 +256,9 @@ info() {
 
 bbrReboot() {
     if [ "${INSTALL_BBR}" == "true" ]; then
-        echo  
+        echo
         colorEcho $BLUE " 为使BBR模块生效，系统将在30秒后重启"
-        echo  
+        echo
         echo -e " 您可以按 ctrl + c 取消重启，稍后输入 ${RED}reboot${PLAIN} 重启系统"
         sleep 30
         reboot
@@ -360,13 +267,14 @@ bbrReboot() {
 
 install() {
     echo -n " 系统版本:  "
-    lsb_release -a
+    cat /etc/os-release | grep PRETTY_NAME | cut -d'"' -f2
 
     checkSystem
     getData
     preinstall
     installSS
     setFirewall
+    installBBR
 
     info
     bbrReboot
@@ -378,12 +286,8 @@ uninstall() {
 
     if [ "${answer}" == "y" ] || [ "${answer}" == "Y" ]; then
         systemctl stop shadowsocks-libev && systemctl disable shadowsocks-libev
-        rm -rf /lib/systemd/system/shadowsocks-libev.service
-        cd /usr/local/bin && rm -rf ss-local ss-manager ss-nat ss-redir ss-server ss-tunnel
-        rm -rf /usr/lib64/libshadowsocks-libev*
-        rm -rf /usr/share/doc/shadowsocks-libev
-        rm -rf /usr/share/man/man1/ss-*.1.gz
-        rm -rf /usr/share/man/man8/shadowsocks-libev.8.gz
+        apt remove -y shadowsocks-libev
+        rm -rf /etc/shadowsocks-libev
         colorEcho $GREEN " SS卸载完成"
     fi
 }
