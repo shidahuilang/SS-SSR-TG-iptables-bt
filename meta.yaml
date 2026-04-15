@@ -18,247 +18,114 @@ external-controller: 127.0.0.1:9090
 mode: rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  name: CN_speednode_0001
-  network: ws
-  port: 16622
-  server: planb.mojcn.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 9c57c421-1d87-475b-8ec1-5595a304b19d
-  ws-opts:
-    headers:
-      Host: 6a52001e3651ccdc8ef7740494916ad2.mobgslb.tbcache.com
-    path: /
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: GB_speednode_0002
+  name: CY_speednode_0001
+  port: 6443
+  reality-opts:
+    public-key: x-VSf_bBIC1iELDvaoM4SKMTK2YAAnUlVkhAWBbvpSc
+    short-id: b9605803fb4b
+  server: gbr1.frostbot.ru
+  servername: gbr1.frostbot.ru
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5b77fb18-cece-4759-9a81-571f1be53e0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: CY_speednode_0002
+  port: 46110
+  reality-opts:
+    public-key: 7q3_m65wkw4AlZ0tk2SGw5PQePvYPh2kaU-UCkHUb2g
+    short-id: 5e
+  server: 185.153.181.118
+  servername: www.deepl.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6ec3c298-1058-43bd-81e3-54b155c4ae21
+- cipher: none
+  name: DE_speednode_0003
+  password: 79960b0b-7d31-4263-8915-6511b0e137a8
+  plugin: v2ray-plugin
+  plugin-opts:
+    host: woshinidie-et3.pages.dev
+    mode: websocket
+    mux: false
+    path: /79960b0b-7d31-4263-8915-6511b0e137a8/?ed=2560
+    tls: true
+  port: 8443
+  server: 136.244.80.24
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  name: HK_speednode_0004
+  network: ws
+  port: 3389
+  server: 203.168.131.105
+  servername: q40ivxuck.danfeng.qzz.io
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: q40ivxuck.danfeng.qzz.io
+    path: /danfeng
+- cipher: none
+  name: HK_speednode_0005
+  password: 3e96ef7d-8637-42c2-ac73-75182196e755
+  plugin: v2ray-plugin
+  plugin-opts:
+    host: mfvpn.fuchen.indevs.in
+    mode: websocket
+    mux: false
+    path: 3e96ef7d-8637-42c2-ac73-75182196e755/?ed=2560
+    tls: true
+  port: 443
+  server: 47.57.182.141
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: HK_speednode_0006
   port: 443
   reality-opts:
-    public-key: BhTJ3phnq-Z-10aFKSsj1lzhA8mULR4L6leE4-0WTAs
-  server: 138.124.186.202
-  servername: www.fh-aachen.de
+    public-key: _t05V9DbgwyxSJOgRBhWYHt8d4Xt-qFfUXONotbUnCE
+    short-id: f37fb7531c60780d
+  server: polands.stardevs.top
+  servername: polands.stardevs.top
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: e346f220-4ca4-4f69-a66b-52e992b3b625
-- name: HK_speednode_0003
-  network: ws
-  port: 7443
-  server: 222.167.202.21
-  servername: 2026.hhhhh.eu.org
-  skip-cert-verify: true
-  tls: true
-  type: vless
+  uuid: f00984ef-f57e-41db-9182-b25f7bc3a1e2
+- name: KR_speednode_0007
+  port: 1090
+  server: 121.169.46.116
+  type: socks5
   udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.21:7443
-- name: HK_speednode_0004
-  network: ws
-  port: 7443
-  server: 222.167.202.23
-  servername: 2026.hhhhh.eu.org
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.23:7443
-- name: HK_speednode_0005
-  network: ws
-  port: 7443
-  server: 222.167.202.10
-  servername: 2026.hhhhh.eu.org
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.10:7443
-- name: HK_speednode_0006
-  network: ws
-  port: 7443
-  server: 222.167.202.14
-  servername: 2026.hhhhh.eu.org
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.14:7443
-- name: HK_speednode_0007
-  network: ws
-  port: 7443
-  server: 222.167.202.16
-  servername: 2026.hhhhh.eu.org
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.16:7443
-- name: HK_speednode_0008
-  network: ws
-  port: 7443
-  server: 222.167.202.47
-  servername: 2026.hhhhh.eu.org
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.47:7443
-- name: HK_speednode_0009
-  network: ws
-  port: 7443
-  server: 222.167.202.6
-  servername: 2026.hhhhh.eu.org
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.6:7443
-- name: HK_speednode_0010
-  network: ws
-  port: 7443
-  server: 222.167.202.15
-  servername: 2026.hhhhh.eu.org
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.15:7443
-- name: HK_speednode_0011
-  network: ws
-  port: 7443
-  server: 222.167.202.22
-  servername: 2026.hhhhh.eu.org
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.22:7443
-- name: HK_speednode_0012
-  network: ws
-  port: 7443
-  server: 222.167.202.50
-  servername: 2026.hhhhh.eu.org
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.50:7443
-- name: HK_speednode_0013
-  network: ws
-  port: 7443
-  server: 222.167.202.52
-  servername: 2026.hhhhh.eu.org
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.52:7443
-- name: HK_speednode_0014
-  network: ws
-  port: 7443
-  server: 222.167.202.45
-  servername: 2026.hhhhh.eu.org
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.45:7443
-- name: HK_speednode_0015
-  network: ws
-  port: 7443
-  server: 222.167.202.36
-  servername: 2026.hhhhh.eu.org
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.36:7443
-- name: HK_speednode_0016
-  network: ws
-  port: 7443
-  server: 222.167.202.2
-  servername: 2026.hhhhh.eu.org
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.2:7443
-- name: HK_speednode_0017
-  network: ws
-  port: 7443
-  server: 222.167.202.32
-  servername: 2026.hhhhh.eu.org
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.32:7443
+  username: T2clM0QlM0Q6
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: RO_speednode_0018
+  name: NL_speednode_0008
+  port: 7443
+  reality-opts:
+    public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI
+    short-id: d82fb387
+  server: 45.43.92.20
+  servername: chat.deepseek.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 248d1886-8ae0-4079-a281-4d21bdb74ba4
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: RO_speednode_0009
   port: 443
   reality-opts:
     public-key: kkRsTNjRh_XrrTM6eZllllldzoL5Z9IqlBkDtmYLMhw
@@ -271,7 +138,7 @@ proxies:
   udp: true
   uuid: 43488128-319e-f480-64ea-0acdc712e2a8
 - cipher: none
-  name: RU_speednode_0019
+  name: RU_speednode_0010
   password: 79960b0b-7d31-4263-8915-6511b0e137a8
   plugin: v2ray-plugin
   plugin-opts:
@@ -285,53 +152,61 @@ proxies:
   type: ss
   udp: true
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: SC_speednode_0020
-  port: 52000
-  reality-opts:
-    public-key: dUMRGt4pHvNO-YjS6lWsEZhoiHe6DH1Dw92nqVAx_T0
-    short-id: f1002d6b
-  server: direct.illusion-vpn.ru
-  servername: ozon.ru
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: bf263367-bb63-4663-b4a1-34946107a72e
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: TR_speednode_0021
-  port: 8443
-  reality-opts:
-    public-key: 7gzxsxnqwoh1HEfp02BQpEmMaIFHqz4RL8h68hZqsjc
-    short-id: 6ea3daaac3d6bede
-  server: 188.132.184.148
-  servername: greenpepper.ir
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d6cbf3e4-b7ca-a4b2-0b04-eacbdc28bc5a
-- cipher: none
-  name: US_speednode_0022
-  password: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
-  plugin: v2ray-plugin
-  plugin-opts:
-    host: ylnhh.us.ci
-    mode: websocket
-    mux: false
-    path: /14b02e2a-8930-4afb-8412-ea4a4954ca5b/?ed=2560
-    tls: true
+  name: SG_speednode_0011
+  network: ws
   port: 443
-  server: 198.12.144.16
-  type: ss
+  server: 43.168.16.112
+  servername: q40ivxuck.danfeng.qzz.io
+  skip-cert-verify: false
+  tls: true
+  type: vless
   udp: true
-- name: US_speednode_0023
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: q40ivxuck.danfeng.qzz.io
+    path: /danfeng
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: US_speednode_0012
+  network: ws
+  port: 443
+  server: 18.245.54.3
+  servername: d2241b25w3zftf.cloudfront.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 97b2cd5b-b98d-494f-8f97-3a06e8c1bbd2
+  ws-opts:
+    headers:
+      Host: d2241b25w3zftf.cloudfront.net
+    path: /
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: US_speednode_0013
+  network: ws
+  port: 25557
+  server: 69.63.208.141
+  servername: snippet.gfw.qzz.io
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: snippet.gfw.qzz.io
+    path: /danfeng
+- name: US_speednode_0014
   network: ws
   password: trojan
-  port: 8025
-  server: 54.46.72.234
-  skip-cert-verify: true
+  port: 54321
+  server: 154.12.53.125
+  skip-cert-verify: false
   sni: jflsjlaf.pages.dev
   type: trojan
   udp: true
@@ -339,60 +214,306 @@ proxies:
     headers:
       Host: jflsjlaf.pages.dev
     path: /
+- client-fingerprint: chrome
+  name: US_speednode_0015
+  network: ws
+  port: 443
+  server: 74.120.174.180
+  servername: q40ivxuck.danfeng.qzz.io
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: q40ivxuck.danfeng.qzz.io
+    path: /danfeng
+- cipher: none
+  name: US_speednode_0016
+  password: 79960b0b-7d31-4263-8915-6511b0e137a8
+  plugin: v2ray-plugin
+  plugin-opts:
+    host: woshinidie-et3.pages.dev
+    mode: websocket
+    mux: false
+    path: /79960b0b-7d31-4263-8915-6511b0e137a8/?ed=2560
+    tls: true
+  port: 443
+  server: cf.130519.xyz
+  type: ss
+  udp: true
+- cipher: none
+  name: US_speednode_0017
+  password: 79960b0b-7d31-4263-8915-6511b0e137a8
+  plugin: v2ray-plugin
+  plugin-opts:
+    host: woshinidie-et3.pages.dev
+    mode: websocket
+    mux: false
+    path: /79960b0b-7d31-4263-8915-6511b0e137a8/?ed=2560
+    tls: true
+  port: 443
+  server: 108.162.198.215
+  type: ss
+  udp: true
+- cipher: none
+  name: US_speednode_0018
+  password: 79960b0b-7d31-4263-8915-6511b0e137a8
+  plugin: v2ray-plugin
+  plugin-opts:
+    host: woshinidie-et3.pages.dev
+    mode: websocket
+    mux: false
+    path: /79960b0b-7d31-4263-8915-6511b0e137a8/?ed=2560
+    tls: true
+  port: 443
+  server: 198.41.211.222
+  type: ss
+  udp: true
+- cipher: none
+  name: US_speednode_0019
+  password: 3e96ef7d-8637-42c2-ac73-75182196e755
+  plugin: v2ray-plugin
+  plugin-opts:
+    host: mfvpn.fuchen.indevs.in
+    mode: websocket
+    mux: false
+    path: 3e96ef7d-8637-42c2-ac73-75182196e755/?ed=2560
+    tls: true
+  port: 443
+  server: 199.181.197.38
+  type: ss
+  udp: true
+- cipher: none
+  name: US_speednode_0020
+  password: 79960b0b-7d31-4263-8915-6511b0e137a8
+  plugin: v2ray-plugin
+  plugin-opts:
+    host: woshinidie-et3.pages.dev
+    mode: websocket
+    mux: false
+    path: /79960b0b-7d31-4263-8915-6511b0e137a8/?ed=2560
+    tls: true
+  port: 443
+  server: 162.159.39.207
+  type: ss
+  udp: true
+- name: US_speednode_0021
+  network: ws
+  port: 8443
+  server: 162.159.45.202
+  servername: zoro.jakesolo.eu.org
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: dcda262b-0d36-4032-edd9-da4fd2d53711
+  ws-opts:
+    headers:
+      Host: zoro.jakesolo.eu.org
+    path: /ws
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: US_speednode_0022
+  port: 7443
+  reality-opts:
+    public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI
+    short-id: d82fb387
+  server: 144.31.122.171
+  servername: chat.deepseek.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 248d1886-8ae0-4079-a281-4d21bdb74ba4
+- cipher: aes-256-cfb
+  name: VN_speednode_0023
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.155.113
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: VN_speednode_0024
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.142
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: VN_speednode_0025
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.155.236
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: VN_speednode_0026
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.21
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: VN_speednode_0027
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.155.29
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: VN_speednode_0028
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.55
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: VN_speednode_0029
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.149
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: VN_speednode_0030
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.208
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: VN_speednode_0031
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.158
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: VN_speednode_0032
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.212
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: VN_speednode_0033
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.161
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: VN_speednode_0034
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.241
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: VN_speednode_0035
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.155.134
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: VN_speednode_0036
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.155.239
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: VN_speednode_0037
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.155.141
+  type: ss
+  udp: true
 proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
   - "\u267B\uFE0F automatic"
-  - CN_speednode_0001
-  - GB_speednode_0002
-  - HK_speednode_0003
+  - CY_speednode_0001
+  - CY_speednode_0002
+  - DE_speednode_0003
   - HK_speednode_0004
   - HK_speednode_0005
   - HK_speednode_0006
-  - HK_speednode_0007
-  - HK_speednode_0008
-  - HK_speednode_0009
-  - HK_speednode_0010
-  - HK_speednode_0011
-  - HK_speednode_0012
-  - HK_speednode_0013
-  - HK_speednode_0014
-  - HK_speednode_0015
-  - HK_speednode_0016
-  - HK_speednode_0017
-  - RO_speednode_0018
-  - RU_speednode_0019
-  - SC_speednode_0020
-  - TR_speednode_0021
+  - KR_speednode_0007
+  - NL_speednode_0008
+  - RO_speednode_0009
+  - RU_speednode_0010
+  - SG_speednode_0011
+  - US_speednode_0012
+  - US_speednode_0013
+  - US_speednode_0014
+  - US_speednode_0015
+  - US_speednode_0016
+  - US_speednode_0017
+  - US_speednode_0018
+  - US_speednode_0019
+  - US_speednode_0020
+  - US_speednode_0021
   - US_speednode_0022
-  - US_speednode_0023
+  - VN_speednode_0023
+  - VN_speednode_0024
+  - VN_speednode_0025
+  - VN_speednode_0026
+  - VN_speednode_0027
+  - VN_speednode_0028
+  - VN_speednode_0029
+  - VN_speednode_0030
+  - VN_speednode_0031
+  - VN_speednode_0032
+  - VN_speednode_0033
+  - VN_speednode_0034
+  - VN_speednode_0035
+  - VN_speednode_0036
+  - VN_speednode_0037
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
-  - CN_speednode_0001
-  - GB_speednode_0002
-  - HK_speednode_0003
+  - CY_speednode_0001
+  - CY_speednode_0002
+  - DE_speednode_0003
   - HK_speednode_0004
   - HK_speednode_0005
   - HK_speednode_0006
-  - HK_speednode_0007
-  - HK_speednode_0008
-  - HK_speednode_0009
-  - HK_speednode_0010
-  - HK_speednode_0011
-  - HK_speednode_0012
-  - HK_speednode_0013
-  - HK_speednode_0014
-  - HK_speednode_0015
-  - HK_speednode_0016
-  - HK_speednode_0017
-  - RO_speednode_0018
-  - RU_speednode_0019
-  - SC_speednode_0020
-  - TR_speednode_0021
+  - KR_speednode_0007
+  - NL_speednode_0008
+  - RO_speednode_0009
+  - RU_speednode_0010
+  - SG_speednode_0011
+  - US_speednode_0012
+  - US_speednode_0013
+  - US_speednode_0014
+  - US_speednode_0015
+  - US_speednode_0016
+  - US_speednode_0017
+  - US_speednode_0018
+  - US_speednode_0019
+  - US_speednode_0020
+  - US_speednode_0021
   - US_speednode_0022
-  - US_speednode_0023
+  - VN_speednode_0023
+  - VN_speednode_0024
+  - VN_speednode_0025
+  - VN_speednode_0026
+  - VN_speednode_0027
+  - VN_speednode_0028
+  - VN_speednode_0029
+  - VN_speednode_0030
+  - VN_speednode_0031
+  - VN_speednode_0032
+  - VN_speednode_0033
+  - VN_speednode_0034
+  - VN_speednode_0035
+  - VN_speednode_0036
+  - VN_speednode_0037
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
