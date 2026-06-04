@@ -21,62 +21,108 @@ proxies:
 - alterId: 0
   cipher: auto
   name: CN_speednode_0001
-  network: ws
-  port: 10021
-  server: 1b267619c4812cc46ee281747884ca50.qos.onl
+  port: 11973
+  server: board-04.ddnskunlun.com
   skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
-  uuid: 52f9cbfb-5bb3-3dd3-b947-725e365c59f3
-  ws-opts:
-    headers:
-      Host: v2pr9feoh0z86anj2gz9onnjg9viuev0j.mobgslb.tbcache.com
-    path: /
-- cipher: aes-256-gcm
-  name: CZ_speednode_0002
-  password: c770a24nZJYv
-  port: 8388
-  server: 194.87.10.139
-  type: ss
+  uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+- alterId: 0
+  cipher: auto
+  name: CN_speednode_0002
+  port: 11885
+  server: board-02.ddnskunlun.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+- name: CN_speednode_0003
+  password: aafedc64-9c23-11ef-a79f-f23c91cfbbc9
+  port: 31233
+  server: c54d0241-t9zts0-tnfe2z-1s4hc.my.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: aafedc64-9c23-11ef-a79f-f23c91cfbbc9
+- name: CN_speednode_0004
+  password: 0de37cdc-abff-11ef-b7c6-f23c913c8d2b
+  port: 31233
+  server: 41bb1fa0-t9zts0-tcr22d-1rsuw.my.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: 0de37cdc-abff-11ef-b7c6-f23c913c8d2b
+- name: CN_speednode_0005
+  password: 6e3ee1de-381f-11ee-87f9-f23c91cfbbc9
+  port: 31233
+  server: 43c68e5c-ta1og0-tnqudu-1mim2.my.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: 6e3ee1de-381f-11ee-87f9-f23c91cfbbc9
+- name: CN_speednode_0006
+  password: f5c0eda2-4b97-11ed-bd7c-f23c913c8d2b
+  port: 32233
+  server: a12b6942-ta1og0-taxf6m-ieln.id.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: f5c0eda2-4b97-11ed-bd7c-f23c913c8d2b
+- name: CN_speednode_0007
+  password: 4eedcde6-d16a-11ef-973a-f23c913c8d2b
+  port: 32233
+  server: 85af7e0c-t9zts0-ta7ccz-1j0a4.id.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: 4eedcde6-d16a-11ef-973a-f23c913c8d2b
+- name: CN_speednode_0008
+  password: a2313fba-74a6-11ed-a8bf-f23c91cfbbc9
+  port: 32233
+  server: d33fa2df-t9zts0-trg4wh-z65w.id.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: a2313fba-74a6-11ed-a8bf-f23c91cfbbc9
+- name: CN_speednode_0009
+  password: 0da8651e-e1f6-11ec-bd7c-f23c913c8d2b
+  port: 32233
+  server: 9541dbe9-t9zts0-tcinla-hrtf.id.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: 0da8651e-e1f6-11ec-bd7c-f23c913c8d2b
+- name: CN_speednode_0010
+  password: 0fcf5a7a-e1b7-11ec-a352-f23c91cfbbc9
+  port: 32233
+  server: c711fb09-t9zts0-tq9o8d-1d3bw.id.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: 0fcf5a7a-e1b7-11ec-a352-f23c91cfbbc9
+- name: DE_speednode_0011
+  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
+  port: 9443
+  server: de-1.hysteria.ltd
+  skip-cert-verify: false
+  sni: de-1.hysteria.ltd
+  type: trojan
   udp: true
 - alterId: 0
-  cipher: aes-128-gcm
-  name: GB_speednode_0004
+  cipher: auto
+  name: GB_speednode_0012
   port: 180
-  server: 82.198.246.37
+  server: 82.198.246.250
   skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- alterId: 2
-  cipher: auto
-  name: GB_speednode_0005
-  port: 30833
-  server: v33.hdacd.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: GB_speednode_0006
-  port: 443
-  reality-opts:
-    public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-    short-id: 7a3f9e2b1c8d4f6a
-  server: 31.76.113.114
-  servername: it.s3-cloud.xyz
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: GB_speednode_0007
+  name: GB_speednode_0013
   port: 443
   reality-opts:
     public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
@@ -90,21 +136,7 @@ proxies:
   uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: GB_speednode_0008
-  port: 443
-  reality-opts:
-    public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
-    short-id: 7a3f9e2b1c8d4f6a
-  server: 31.76.113.110
-  servername: it.s3-cloud.xyz
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: GB_speednode_0009
+  name: GB_speednode_0014
   port: 443
   reality-opts:
     public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
@@ -116,38 +148,69 @@ proxies:
   type: vless
   udp: true
   uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
-- name: HK_speednode_0010
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: GB_speednode_0015
+  port: 443
+  reality-opts:
+    public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
+    short-id: 7a3f9e2b1c8d4f6a
+  server: 31.76.113.91
+  servername: it.s3-cloud.xyz
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
+- name: HK_speednode_0016
   password: <password>
   port: 8443
-  server: 14468f84-te5ts0-tflsjv-zn8y.hkt.cdnhuawei.com
+  server: 88456c11-ta1og0-tnqudu-1mim2.hkt.cdnhuawei.com
   tls: true
   type: http
   udp: true
-  username: 44e76f8c-7362-11ec-bb74-f23c9164ca5d
-- cipher: aes-256-gcm
-  name: JP_speednode_0011
-  password: 6c4bd474-ac23-47fc-8742-c8f990357836
-  port: 29004
-  server: ss.022.node-for-bigairport.win
-  type: ss
+  username: 6e3ee1de-381f-11ee-87f9-f23c91cfbbc9
+- name: HK_speednode_0017
+  password: <password>
+  port: 8443
+  server: 90d955b3-t9zts0-trg4wh-z65w.hkt.cdnhuawei.com
+  tls: true
+  type: http
   udp: true
-- name: JP_speednode_0012
-  password: d84665c37878196ecf983cf6910e3b44
-  port: 8066
-  server: 18.181.199.223
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
+  username: a2313fba-74a6-11ed-a8bf-f23c91cfbbc9
+- name: KR_speednode_0018
+  port: 1090
+  server: 121.169.46.116
+  type: socks5
   udp: true
-- name: JP_speednode_0013
-  password: d84665c37878196ecf983cf6910e3b44
-  port: 3842
-  server: 18.181.199.223
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
+  username: T2clM0QlM0Q6
+- cipher: chacha20-ietf
+  name: NL_speednode_0019
+  obfs: tls1.2_ticket_auth
+  obfs-param: ''
+  password: dongtaiwang.com
+  port: 33336
+  protocol: auth_chain_a
+  protocol-param: ''
+  server: ssr2.762988.xyz
+  type: ssr
   udp: true
-- name: NN_speednode_0014
+- client-fingerprint: chrome
+  name: NN_speednode_0020
+  network: ws
+  port: 17512
+  server: 142.248.151.249
+  servername: qi4rysu2u-e8j2zzhk.bsld.de5.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 00000000-0000-4000-8000-000000000000
+  ws-opts:
+    headers:
+      Host: qi4rysu2u-e8j2zzhk.bsld.de5.net
+    path: /@Marisa_kristi
+- name: NN_speednode_0021
   password: 16955d72-1794-11f0-a035-f23c95b6f51d
   port: 3233
   server: 4b41083b-tea5c0-tequ5b-dnss.fourtwo.cdnbytescm.com
@@ -155,7 +218,7 @@ proxies:
   type: http
   udp: true
   username: 16955d72-1794-11f0-a035-f23c95b6f51d
-- name: NN_speednode_0015
+- name: NN_speednode_0022
   password: 1b609740-eec2-11ef-8543-f23c93136cb3
   port: 3233
   server: b5eb2edf-te8ao0-tfnl0i-au6.fourtwo.cdnbytescm.com
@@ -163,209 +226,189 @@ proxies:
   type: http
   udp: true
   username: 1b609740-eec2-11ef-8543-f23c93136cb3
-- name: RO_speednode_0016
+- name: NN_speednode_0023
+  password: 20f87b02-0eaa-11eb-8684-f23c913c8d2b
+  port: 5228
+  server: 2de0e51d-teisg0-tg0j4k-gacy.cm4.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: 20f87b02-0eaa-11eb-8684-f23c913c8d2b
+- name: NN_speednode_0024
+  password: a4c9b7cc-a816-11ed-9f65-f23c9164ca5d
+  port: 5228
+  server: 9ae34110-t9zts0-tb592v-4lg6.cm4.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: a4c9b7cc-a816-11ed-9f65-f23c9164ca5d
+- name: NN_speednode_0025
+  password: 91df5a86-fcdd-11ef-94aa-f23c913c8d2b
+  port: 5228
+  server: 19b7ea9d-t9zts0-tbnk1n-ueq.cm4.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: 91df5a86-fcdd-11ef-94aa-f23c913c8d2b
+- name: NN_speednode_0026
+  password: 22308988-8548-11ea-a22e-f23c91cfbbc9
+  port: 5228
+  server: b21cad55-t9zts0-tiaexf-ufc0.cm4.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: 22308988-8548-11ea-a22e-f23c91cfbbc9
+- name: NN_speednode_0027
+  password: ae5338ae-9a70-58c9-3d47-7d54a5675715
+  port: 5228
+  server: 1d603f3e-t9zts0-tc9wl2-py5w.cm4.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: ae5338ae-9a70-58c9-3d47-7d54a5675715
+- name: NN_speednode_0028
+  password: 520b9126-9870-11ef-81b0-f23c9164ca5d
+  port: 5228
+  server: 64a99740-t9zts0-tipjoa-1slop.cm4.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: 520b9126-9870-11ef-81b0-f23c9164ca5d
+- name: NN_speednode_0029
+  password: 1ec223c0-1ed9-11ec-a8bf-f23c91cfbbc9
+  port: 5228
+  server: a18418b5-t9zts0-tsjk4v-1atkp.cm4.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: 1ec223c0-1ed9-11ec-a8bf-f23c91cfbbc9
+- name: NN_speednode_0030
+  password: de629d50-1711-11ed-bd7c-f23c913c8d2b
+  port: 5228
+  server: c4c796bb-t9zts0-tlpfci-1jdha.cm4.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: de629d50-1711-11ed-bd7c-f23c913c8d2b
+- name: RO_speednode_0031
   port: 9002
   server: 84.239.14.158
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
-- name: RO_speednode_0017
+- name: RO_speednode_0032
   port: 9002
   server: 84.239.49.201
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
-- name: RO_speednode_0018
+- name: RO_speednode_0033
   port: 9002
   server: 84.239.49.239
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
-- name: RO_speednode_0019
+- name: RO_speednode_0034
   port: 9002
   server: 84.239.49.185
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
-- name: RO_speednode_0020
-  port: 9002
-  server: 84.239.49.211
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-- name: RO_speednode_0021
+- name: RO_speednode_0035
   port: 9002
   server: 84.239.49.154
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: RU_speednode_0022
-  port: 22231
-  server: r1.mizulina.top
-  servername: r1.mizulina.top
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: RU_speednode_0023
-  port: 443
-  server: 85.234.114.53
-  servername: r1.mizulina.top
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU_speednode_0024
-  port: 22231
-  server: r1.mizulina.top
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-- client-fingerprint: edge
-  flow: xtls-rprx-vision-udp443
-  name: RU_speednode_0025
-  port: 443
-  server: 85.234.114.53
-  servername: r1.mizulina.top
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: RU_speednode_0026
-  port: 22231
-  server: 85.234.114.53
-  servername: r1.mizulina.top
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-- client-fingerprint: edge
-  flow: xtls-rprx-vision-udp443
-  name: RU_speednode_0027
-  port: 22231
-  server: 85.234.114.53
-  servername: r1.mizulina.top
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU_speednode_0028
-  port: 443
-  reality-opts:
-    public-key: FurqA-2jJHS4vNj92Ya5i2ZTxf0sWSjUTaz5Y_KMBgk
-    short-id: 57cc65bfd5ef7465
-  server: 185.212.117.34
-  servername: www.scaleway.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: bb2b0112-577f-4862-886a-3c2ee004ca23
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision-udp443
-  name: RU_speednode_0029
-  port: 22231
-  server: r1.mizulina.top
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: RU_speednode_0030
-  port: 443
-  reality-opts:
-    public-key: D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY
-    short-id: c1a7e9b4711d5f60
-  server: 193.168.46.180
-  servername: rruu.persik.host
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 54b2b357-c66c-4bb0-9e01-0afc9b85c1e4
-- alterId: 0
-  cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /ABCDE
-  name: TW_speednode_0032
-  network: http
-  port: 53229
-  server: 103.127.243.54
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 2f50f5ef-1a3a-4585-a3c9-3a860d37b134
-- name: TW_speednode_0033
-  password: mrwdfNTD8M79LCukCieldrqZWqs=
-  port: 1443
-  server: twmoon1-cdn-route.couldflare-cdn.com
+- name: RO_speednode_0036
+  port: 9002
+  server: 84.239.14.146
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
-  username: mrwdfNTD8M79LCukCieldrqZWqs=
-- name: TW_speednode_0034
-  password: exaxgqkKkd0TAMrCxeonWg==
-  port: 1443
-  server: twmoon1-cdn-route.couldflare-cdn.com
+- name: RO_speednode_0037
+  port: 9002
+  server: 84.239.49.175
+  skip-cert-verify: true
   tls: true
   type: http
   udp: true
-  username: mrwdfNTD8M79LCukCieldrqZWqs=
-- name: US_speednode_0035
-  password: BxceQaOe
-  port: 2520
-  server: 95.40.4.37
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
+- client-fingerprint: edge
+  flow: xtls-rprx-vision-udp443
+  name: RU_speednode_0038
+  port: 22231
+  server: r1.mizulina.top
+  servername: r1.mizulina.top
+  skip-cert-verify: false
+  tls: true
+  type: vless
   udp: true
-- name: US_speednode_0036
-  password: BxceQaOe
-  port: 17801
-  server: 95.40.68.192
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-  udp: true
-- name: US_speednode_0037
-  password: BxceQaOe
-  port: 2520
-  server: 95.40.4.37
-  skip-cert-verify: true
-  sni: t.me/ripaojiedian
-  type: trojan
-  udp: true
+  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
 - client-fingerprint: chrome
-  name: US_speednode_0038
+  flow: xtls-rprx-vision
+  name: RU_speednode_0039
+  port: 22231
+  server: r1.mizulina.top
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+- client-fingerprint: edge
+  flow: xtls-rprx-vision-udp443
+  name: RU_speednode_0040
+  port: 443
+  server: 85.234.114.53
+  servername: r1.mizulina.top
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: RU_speednode_0041
+  port: 22231
+  server: 85.234.114.53
+  servername: r1.mizulina.top
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: RU_speednode_0042
+  port: 443
+  reality-opts:
+    public-key: c9eCHF41FReFLIdarpg8M5edw4_E133EJBzrvYS02Ck
+    short-id: cd9a5f0edff48da4
+  server: 213.108.2.130
+  servername: cloudflare.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5e8ee155-0962-4307-98f2-b65f6bbbd5bb
+- client-fingerprint: edge
+  flow: xtls-rprx-vision-udp443
+  name: RU_speednode_0043
+  port: 22231
+  server: 85.234.114.53
+  servername: r1.mizulina.top
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+- client-fingerprint: chrome
+  name: US_speednode_0045
   port: 443
   reality-opts:
     public-key: HlxgAXuwwby0lujjT2LKBPF0udWK4SVjtMPyKtiNdEw
@@ -377,86 +420,139 @@ proxies:
   type: vless
   udp: true
   uuid: 6d088fbd-528d-4f2a-be26-317dcda3c6ee
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: US_speednode_0046
+  packet-encoding: xudp
+  port: 443
+  reality-opts:
+    public-key: M1a5zeQ6Ckoo1UybbRYD8696xaWb-fRcCY-7iaQ4wCA
+    short-id: fd3f0f2bce8083fe
+  server: nld02.helpbot.click
+  servername: nld02.helpbot.click
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b95e6017-d54e-4016-b651-91c86aeaa463
+- name: US_speednode_0047
+  password: 28a8a4d0-3e02-11eb-a8bf-f23c91cfbbc9
+  port: 443
+  server: 8e2d06c5-teisg0-ts3rye-mrtr.jp.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: 28a8a4d0-3e02-11eb-a8bf-f23c91cfbbc9
+- name: US_speednode_0048
+  password: f13f964e-f06c-11ec-a858-f23c91cfbbc9
+  port: 443
+  server: 3c3915de-t9zts0-ta5i1s-1j61y.jp.oshuawei.com
+  tls: true
+  type: http
+  udp: true
+  username: f13f964e-f06c-11ec-a858-f23c91cfbbc9
 proxy-groups:
 - name: "\u2B55 proxinode"
   proxies:
   - "\u267B\uFE0F automatic"
   - CN_speednode_0001
-  - CZ_speednode_0002
-  - GB_speednode_0004
-  - GB_speednode_0005
-  - GB_speednode_0006
-  - GB_speednode_0007
-  - GB_speednode_0008
-  - GB_speednode_0009
-  - HK_speednode_0010
-  - JP_speednode_0011
-  - JP_speednode_0012
-  - JP_speednode_0013
-  - NN_speednode_0014
-  - NN_speednode_0015
-  - RO_speednode_0016
-  - RO_speednode_0017
-  - RO_speednode_0018
-  - RO_speednode_0019
-  - RO_speednode_0020
-  - RO_speednode_0021
-  - RU_speednode_0022
-  - RU_speednode_0023
-  - RU_speednode_0024
-  - RU_speednode_0025
-  - RU_speednode_0026
-  - RU_speednode_0027
-  - RU_speednode_0028
-  - RU_speednode_0029
-  - RU_speednode_0030
-  - TW_speednode_0032
-  - TW_speednode_0033
-  - TW_speednode_0034
-  - US_speednode_0035
-  - US_speednode_0036
-  - US_speednode_0037
-  - US_speednode_0038
+  - CN_speednode_0002
+  - CN_speednode_0003
+  - CN_speednode_0004
+  - CN_speednode_0005
+  - CN_speednode_0006
+  - CN_speednode_0007
+  - CN_speednode_0008
+  - CN_speednode_0009
+  - CN_speednode_0010
+  - DE_speednode_0011
+  - GB_speednode_0012
+  - GB_speednode_0013
+  - GB_speednode_0014
+  - GB_speednode_0015
+  - HK_speednode_0016
+  - HK_speednode_0017
+  - KR_speednode_0018
+  - NL_speednode_0019
+  - NN_speednode_0020
+  - NN_speednode_0021
+  - NN_speednode_0022
+  - NN_speednode_0023
+  - NN_speednode_0024
+  - NN_speednode_0025
+  - NN_speednode_0026
+  - NN_speednode_0027
+  - NN_speednode_0028
+  - NN_speednode_0029
+  - NN_speednode_0030
+  - RO_speednode_0031
+  - RO_speednode_0032
+  - RO_speednode_0033
+  - RO_speednode_0034
+  - RO_speednode_0035
+  - RO_speednode_0036
+  - RO_speednode_0037
+  - RU_speednode_0038
+  - RU_speednode_0039
+  - RU_speednode_0040
+  - RU_speednode_0041
+  - RU_speednode_0042
+  - RU_speednode_0043
+  - US_speednode_0045
+  - US_speednode_0046
+  - US_speednode_0047
+  - US_speednode_0048
   type: select
 - interval: 300
   name: "\u267B\uFE0F automatic"
   proxies:
   - CN_speednode_0001
-  - CZ_speednode_0002
-  - GB_speednode_0004
-  - GB_speednode_0005
-  - GB_speednode_0006
-  - GB_speednode_0007
-  - GB_speednode_0008
-  - GB_speednode_0009
-  - HK_speednode_0010
-  - JP_speednode_0011
-  - JP_speednode_0012
-  - JP_speednode_0013
-  - NN_speednode_0014
-  - NN_speednode_0015
-  - RO_speednode_0016
-  - RO_speednode_0017
-  - RO_speednode_0018
-  - RO_speednode_0019
-  - RO_speednode_0020
-  - RO_speednode_0021
-  - RU_speednode_0022
-  - RU_speednode_0023
-  - RU_speednode_0024
-  - RU_speednode_0025
-  - RU_speednode_0026
-  - RU_speednode_0027
-  - RU_speednode_0028
-  - RU_speednode_0029
-  - RU_speednode_0030
-  - TW_speednode_0032
-  - TW_speednode_0033
-  - TW_speednode_0034
-  - US_speednode_0035
-  - US_speednode_0036
-  - US_speednode_0037
-  - US_speednode_0038
+  - CN_speednode_0002
+  - CN_speednode_0003
+  - CN_speednode_0004
+  - CN_speednode_0005
+  - CN_speednode_0006
+  - CN_speednode_0007
+  - CN_speednode_0008
+  - CN_speednode_0009
+  - CN_speednode_0010
+  - DE_speednode_0011
+  - GB_speednode_0012
+  - GB_speednode_0013
+  - GB_speednode_0014
+  - GB_speednode_0015
+  - HK_speednode_0016
+  - HK_speednode_0017
+  - KR_speednode_0018
+  - NL_speednode_0019
+  - NN_speednode_0020
+  - NN_speednode_0021
+  - NN_speednode_0022
+  - NN_speednode_0023
+  - NN_speednode_0024
+  - NN_speednode_0025
+  - NN_speednode_0026
+  - NN_speednode_0027
+  - NN_speednode_0028
+  - NN_speednode_0029
+  - NN_speednode_0030
+  - RO_speednode_0031
+  - RO_speednode_0032
+  - RO_speednode_0033
+  - RO_speednode_0034
+  - RO_speednode_0035
+  - RO_speednode_0036
+  - RO_speednode_0037
+  - RU_speednode_0038
+  - RU_speednode_0039
+  - RU_speednode_0040
+  - RU_speednode_0041
+  - RU_speednode_0042
+  - RU_speednode_0043
+  - US_speednode_0045
+  - US_speednode_0046
+  - US_speednode_0047
+  - US_speednode_0048
   type: url-test
   url: https://www.google.com/favicon.ico
 rules:
